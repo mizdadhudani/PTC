@@ -1,0 +1,615 @@
+/*===================================
+Page grid atau kotak
+
+====================================*/
+.container {
+	width: 100%;
+}
+
+.judul {
+	font-size: 24px;
+	font-family: Arial;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+ .three:first-child, .six:first-child { 
+	margin-left: 0; 
+}
+.row {
+	width: 100%;
+	clear: both; 
+	padding: 0px;
+	margin: 0px;
+}
+.row1 .six, .row1 .three {
+	height: 300px;
+}
+
+.row1 .nomargin, .row3 .nomargin1{
+	height: 300px;
+	background-color: white;
+}
+.row2 .six, .row2 .three {
+	height: 300px;
+	background-color: white;
+}
+.row3 .six1, .row3 .three1 {
+	height: 300px;
+	background-color: #083b5c;
+
+}
+.row4 .beda1, .row4 .beda3 {
+	height: 300px;
+	background-color: white;
+}
+
+.row4 .beda2 {
+	height: 300px;
+}
+
+.three {
+	width: 30%;
+	float:left;
+	margin-left: 3%;
+	margin-bottom: 3%;
+}
+.three img {
+	margin-left: 0%;
+	margin-bottom: 0%;
+
+}
+.nomargin {
+	width: 33%;
+	float:left;
+}
+.six {
+	width: 31.5%; 
+	float: left;
+	margin-left: 3%;
+	margin-bottom: 3%;
+
+}
+
+.three1 {
+	width: 37.5%;
+	float:left;
+	margin-left: 3%;
+
+}
+.nomargin1 {
+	width: 30%;
+	float:left;
+}
+.six1 {
+	width: 27%;  
+	float: left;
+	margin-bottom: 3%;
+}
+.six1 img {
+	clear: both;
+	width: 100%;
+}
+.beda1 {
+	width: 40%;  
+	float: left;
+	margin-right: 3%;
+	margin-bottom: 3%;
+}
+.beda2 {
+	width: 25%;  
+	float: left;
+	
+}
+.beda3 {
+	width: 26.5%;  
+	float: left;
+	margin-left: 3%;
+}
+
+.btn-fb{
+	color: white;
+	width: 40px;
+	height: 40px;
+	background : #3b5998;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+}
+
+.btn-tw{
+	color: white;
+	width: 40px;
+	height: 40px;
+	background : #1da1f2;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+}
+.btn-pin{
+	color: white;
+	width: 40px;
+	height: 40px;
+	background : #cb2027;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+}
+.btn-vine{
+	color: white;
+	width: 40px;
+	height: 40px;
+	background : #00bf8f;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.btn-fb:hover, .btn-tw:hover, 
+.btn-pin:hover .btn-vine:hover,  {
+ filter: brightness(.5);
+
+}
+
+.bordericon {
+	width: 70px;
+    background: #FFF;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.clear {
+	font-family: 'Cabin';
+    font-weight: 400;
+    color: #111111;
+    clear: both;
+    font-size: 16px;
+        line-height: 1.375;
+        color: #5e5e5e;
+}
+
+.clear div {
+	text-align: justify;
+	margin-top: 20px;"
+}
+
+.imghover{
+	filter: brightness(.6);
+}
+.imghover:hover {
+	cursor: pointer;
+    filter: brightness(.5);
+}
+
+
+.borderar {
+	margin-left: 30px;
+	padding-top: 30px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+
+}
+.borderhe{
+	height: 197px;
+    max-height: 197px;
+    overflow: hidden;
+}
+.bordermar {
+	margin: 0px; padding: 0px; border: 0px;
+}
+
+.margingambar {
+	position: absolute;
+	width: 20%;
+	margin-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: white;
+
+}
+/*===================================
+Akhir page grid atau kotak
+
+====================================*/
+
+
+/*===================================
+Page artikel semua
+
+====================================*/
+
+.font {
+	font-size: 20px;
+
+}
+.bordericon1 {
+	width: 70px;
+    background: #FFF;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 0;
+    float: left;
+    margin-top: -35px;
+}
+.marginartikel {
+    margin-top: -75px;
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 730px;
+
+}
+.borderartikelku{
+padding: 40px 60px 50px 60px;
+}
+.artikelku {
+	width: 100%;
+	height: 1100px;
+	background-color: white;
+	margin-top: -75px;
+	display: block;
+}
+.teng{
+	width: 100%;
+	height: 100px;
+	background-color: #C0C0C0;
+	padding-top: 25px;
+	display: block;
+	font-family: Chlorinar;
+	color:black;
+}
+
+.margincomment{
+	margin-top: 30px;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.comment{
+	height: 550px;
+	width: 100%;
+	background-color: white;
+
+}
+.commentku{
+	height: 100%;
+	width: 100%;
+	background-color: white;
+
+}
+.marginform {
+	padding: 40px 60px 50px;
+}
+.judulform {
+	font-family: "impact"
+}
+.form p {
+	margin-bottom: 5px;
+}
+.form label {
+	font-size: 12px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #5e5e5e;
+}
+.comentnama, .comentemail, .comentwebsite {
+    float: left;
+    width: 33.33%;
+    padding: 0 15px 0 0;
+    margin-bottom: 20px;
+} 
+
+input[type="text"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="date"], input[type="password"], select, textarea {
+    border: 1px solid;
+    padding: 10px;
+    outline: 0;
+    line-height: 1;
+    width: 100%;
+    font-size: 100%;
+    margin: 0;
+    height: 40px;
+    vertical-align: baseline;
+    border-radius: 2px;
+    resize: vertical;
+    overflow: auto;
+    border-color: rgba(94,94,94,0.2);
+}
+textarea {
+	min-height: 200px;
+    line-height: 22px;
+
+}
+input[type="submit"] {
+	color: #FFF;
+    background-color: #009cff;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    padding: 14px 20px;
+    font-weight: 700;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1), inset 0 0 0 transparent;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.marginartikelbawah {
+	float: left;
+	margin-top: 10px;
+	display: block;
+	width: 100%;	
+}
+
+.displaysite{
+	    float: left;
+
+}
+
+.marginsite {
+	margin-left: 30px;
+	display: block;
+	margin-top: -40px;
+	height: 300px;
+	width: 300px;
+	margin-bottom: 30px;
+
+}
+.bordersite {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+
+}
+.marginlist {
+	padding: 25px 30px 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.aboutku {
+	width: 100%;
+	height: 800px;
+	background-color: white;
+	margin-top: -75px;
+	display: block;
+}
+.imageku {
+	position: relative;
+    min-height: 1px;
+    padding-right: 120px;
+    padding-left: 60px;
+    width: 100px;
+    height: 200px;
+    float: left;
+}
+img {
+	height: auto;
+	border-style: none;
+	vertical-align: middle;
+}
+.imageku img {
+	border-radius: 50%;
+	float: left;
+	width: 100px;
+	
+
+}
+.tentangku {
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    height: 200px;
+}
+.tentangku h4 {
+	font-size: 20px;
+	color: #111111;
+    font-family: 'Lato';
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0px;
+    float: left;
+    width: 500px;
+}
+.katakataku p {
+	    margin-bottom: 24px;
+	    float: left;
+	    width: 500px;
+}
+.buttonku {
+	color: #fff;
+	background-color: #009cff;
+
+}
+.borderbuttonku {
+	line-height: 40px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-left:50px;
+}
+.bordericon2 {
+    width: 500px;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 0;
+    float: left;
+    margin-left: 110px;
+}
+.bordericon2 ul li {
+    float: left;
+}
+.hoverlink {
+	position: absolute;
+	z-index: 1;
+	display: none;
+	top: -47px;
+    left: 320px;
+
+}
+.hoverlink1 {
+	position: absolute;
+	z-index: 1;
+	display: none;
+	top: 375px;
+    left: 320px;
+}
+.btn-fb:hover .hoverlink {
+	display: block;
+	padding: 5px;
+	background-color: #3b5998;
+}
+.btn-fb:hover .hoverlink1 {
+	display: block;
+	padding: 5px;
+	background-color: #3b5998;
+
+}
+.hoverlink img:hover {
+    cursor: pointer;
+    filter: none;
+
+    }
+.hoverlink1 img:hover {
+    cursor: pointer;
+    filter: none;
+
+    }
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+    transition-timing-function: ease;
+
+
+}
+
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+  border: 1px solid #dddddd;
+}
+.panel-white  .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.panel-white  .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.post .post-heading {
+  height: 95px;
+  padding: 20px 15px;
+}
+.post .post-heading .avatar {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 15px;
+}
+.post .post-heading .meta .title {
+  margin-bottom: 0;
+}
+.post .post-heading .meta .title a {
+  color: black;
+}
+.post .post-heading .meta .title a:hover {
+  color: #aaaaaa;
+}
+.post .post-heading .meta .time {
+  margin-top: 8px;
+  color: #999;
+}
+.post .post-image .image {
+  width: 100%;
+  height: auto;
+}
+.post .post-description {
+  padding: 15px;
+}
+.post .post-description p {
+  font-size: 14px;
+}
+.post .post-description .stats {
+  margin-top: 20px;
+}
+.post .post-description .stats .stat-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.post .post-description .stats .stat-item .icon {
+  margin-right: 8px;
+}
+.post .post-footer {
+  border-top: 1px solid #ddd;
+  padding: 15px;
+}
+.post .post-footer .input-group-addon a {
+  color: #454545;
+}
+.post .post-footer .comments-list {
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.post .post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.post .post-footer .comments-list .comment .avatar {
+  width: 35px;
+  height: 35px;
+}
+.post .post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.post .post-footer .comments-list .comment .comment-heading .user {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.post .post-footer .comments-list .comment .comment-heading .time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.post .post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.post .post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}
+
+
+

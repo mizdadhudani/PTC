@@ -1,0 +1,101 @@
+@media screen and (max-width: 768px) {
+  .selection1 {
+    height: 400px;
+  }
+    .mySlides {
+    height: 400px;
+  }
+ .row .six, 
+  .row .three1, .row .six1, .row .nomargin1,
+  .row .beda1, .row .beda2, .row .beda3,
+  .rowfooter .footerisi1, .rowfooter .footerisi{
+    display: block;
+    width: 100%;
+    margin-bottom: 3%;
+  }
+  .row .three {
+    display: block;
+    width: 100%;
+    margin-bottom: 3%;
+
+  }
+  .three, .six, .three1, .beda3 {
+    margin-left: 0%;
+  }
+.row .nomargin, .row .nomargin1 {
+display: none;
+margin-right: 3%;
+}
+.nomargin, .nomargin1 {
+display: none;
+}
+
+  .row1, .row2, .row3, .row4, .marginfo{
+    display: block;
+    width: 100%
+  }
+
+}
+
+@media screen and (max-width: 912px) {
+  .ulnavigation a {display: none;}
+  .ulnavigation a.icon {
+    float: right;
+    display: block;
+  }
+  .ulnavigation a.ilang {
+    display: block; padding-bottom: 50px;
+  }
+
+}
+
+@media screen and (max-width: 912px) {
+  .ulnavigation.responsive {position: relative;}
+  .ulnavigation.responsive .icon {
+    position: relative;
+    float: right;
+  }
+  .ulnavigation li {
+  float: none;
+}
+  .ulnavigation.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  .ulnavigation.responsive {
+    margin-right: -50px;
+    width: 200%;
+    overflow: hidden;
+    background-color: white;
+    margin-top: -50px;
+    padding-top: 60px;
+    z-index: -1; 
+     }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+
+  .iniartikel p {
+    font-size: 2.4rem;
+  }
+  .selection1 {
+    height: 500px;
+  }
+  .mySlides {
+    height: 500px;
+  }
+
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+
+}
+
+
+
+
+
