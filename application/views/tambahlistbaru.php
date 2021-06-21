@@ -153,9 +153,9 @@
 
               <div class="form-group">
 
-              <label for="staticEmail">Alamat</label>
+              <label for="staticEmail">RT</label>
 
-                 <textarea type="text" readonly class="form-control" id="staticEmail" required rows="3"><?php echo $data->alamat?></textarea>
+                 <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $data->alamat?>">
 
               </div>
 
@@ -279,12 +279,23 @@
 
   
  <div class="form-group">
-
-    <label for="Alamat">Alamat (berdasarkan KTP)</label>
-
-    <textarea type="text" class="form-control" id="Alamat" name="alamat" rows="3"placeholder="Masukkan alamat lengkap" >   </textarea> 
-
+    <label for="Alamat">Pilih RT</label><br>
+        <select id="Alamat" name="alamat" class="select" >
+          <option name="alamat" value="RT 01">RT 01</option>
+          <option name="alamat" value="RT 02">RT 02</option>
+          <option name="alamat" value="RT 03">RT 03</option>
+          <option name="alamat" value="RT 04">RT 04</option>
+          <option name="alamat" value="RT 05">RT 05</option>
+          <option name="alamat" value="RT 06">RT 06</option>
+          <option name="alamat" value="RT 07">RT 07</option>
+          <option name="alamat" value="RT 08">RT 08</option>
+          <option name="alamat" value="RT 09">RT 09</option>
+          <option name="alamat" value="RT 10">RT 10</option>
+          <option name="alamat" value="RT 10">RT 11</option>
+          <option name="alamat" value="RT 10">RT 12</option>
+        </select>
   </div>
+  
     <div class="form-group">
       <label for="Alamat">Alamat Domisili</label>
       <div class="row">
