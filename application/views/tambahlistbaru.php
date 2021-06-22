@@ -145,6 +145,30 @@
 
               <div class="form-group">
 
+              <label for="staticEmail">Usia</label>
+
+                 <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $data->usia?>">
+
+              </div>
+
+              <div class="form-group">
+
+              <label for="staticEmail">Mulai Isolasi</label>
+
+                 <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $data->mulai_isolasi?>">
+
+              </div>
+
+              <div class="form-group">
+
+              <label for="staticEmail">Status dalam Keluarga</label>
+
+                 <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $data->status_dlm_keluarga?>">
+
+              </div>
+
+              <div class="form-group">
+
               <label for="staticEmail">Jenis Kelamin</label>
 
                  <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $data->jeniskelamin?>">
@@ -240,6 +264,52 @@
           }
 
          </script>
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="Nama">Usia</label>
+
+    <input type="text" class="form-control" id="Nama" placeholder="Masukkan Nama" required="" name="usia" >
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="Nama">Mulai Isolasi</label>
+
+    <input type="text" class="form-control" id="Nama" placeholder="Masukkan Nama" required="" name="mulai_isolasi" >
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="JenisKelamin">Status dalam Keluarga</label>
+
+    <div class="form-check">
+
+  <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Kepala Keluarga" required="">
+
+  <label class="form-check-label" for="exampleRadios1">
+
+    Kepala Keluarga
+
+  </label>
+
+</div>
+
+<div class="form-check">
+
+  <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Anggota Keluarga" required="">
+
+  <label class="form-check-label" for="exampleRadios2">
+
+    Anggota Keluarga
+
+  </label>
+
+</div>
 
   </div>
 

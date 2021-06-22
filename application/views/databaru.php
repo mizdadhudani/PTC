@@ -103,6 +103,53 @@
 
   </div>
 
+  <div class="form-group">
+
+    <label for="Nama">Usia</label>
+
+    <input type="text" class="form-control" id="Nama" placeholder="Masukkan Nama" required="" name="usia" value="<?php echo $data->usia?>">
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="Nama">Mulai Isolasi</label>
+
+    <input type="text" class="form-control" id="Nama" placeholder="Masukkan Nama" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="JenisKelamin">Status dalam Keluarga</label>
+
+    <div class="form-check">
+
+  <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Kepala Keluarga" required="">
+
+  <label class="form-check-label" for="exampleRadios1">
+
+    Kepala Keluarga
+
+  </label>
+
+</div>
+
+<div class="form-check">
+
+  <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Anggota Keluarga" required="">
+
+  <label class="form-check-label" for="exampleRadios2">
+
+    Anggota Keluarga
+
+  </label>
+
+</div>
+
+  </div>
+
+
 
 
     <input type="number" hidden class="form-control" id="NomorHP" placeholder="Masukkan nomor HP" required="" name="nomorhp" value="<?php echo $data->link?>" disable>
@@ -296,6 +343,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
 </body>
 

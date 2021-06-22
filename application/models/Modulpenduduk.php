@@ -8,6 +8,9 @@ class Modulpenduduk extends CI_Model{
     public $nomorhp;
     public $penduduk;
     public $alamat;
+    public $usia;
+    public $mulai_isolasi;
+    public $status_dlm_keluarga;
     public $jeniskelamin;
     public $link;
     public $harisatu;
@@ -32,6 +35,9 @@ class Modulpenduduk extends CI_Model{
     $this->nomorhp =$nomorhp;
     $this->penduduk = 'Panggungharjo';
     $this->alamat = '';
+    $this->usia = '';
+    $this->mulai_isolasi = '';
+    $this->status_dlm_keluarga = '';
     $this->harisatu = '';
     $this->haridua = '';
     $this->jeniskelamin = 'Laki-Laki';
@@ -96,6 +102,9 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
+        $this->usia = $post["usia"];
+        $this->mulai_isolasi = $post["mulai_isolasi"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["penduduk"];
         $this->harisatu='';
         $this->haridua='';
@@ -109,6 +118,9 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
+        $this->usia = $post["usia"];
+        $this->mulai_isolasi = $post["mulai_isolasi"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["penduduk"];
         $this->harisatu=$post['harisatu'];
         $this->haridua=$post['haridua'];
@@ -123,6 +135,9 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelaminpenduduk"];
         $this->nomorhp = $post["nomorhppenduduk"];
         $this->alamat = $post["alamatpenduduk"];
+        $this->usia = $post["usia"];
+        $this->mulai_isolasi = $post["mulai_isolasi"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["pendudukpenduduk"];
         if ($post['harisatu']==14){
                 $this->harisatu=$post['harisatu']+1;
@@ -145,6 +160,9 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelaminpenduduk"];
         $this->nomorhp = $post["nomorhppenduduk"];
         $this->alamat = $post["alamatpenduduk"];
+        $this->usia = $post["usia"];
+        $this->mulai_isolasi = $post["mulai_isolasi"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["pendudukpenduduk"];
         $this->harisatu=$post['harisatu'];
         $this->haridua=$post['haridua'];
@@ -159,6 +177,9 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
+        $this->usia = $post["usia"];
+        $this->mulai_isolasi = $post["mulai_isolasi"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["penduduk"];
         $this->harisatu=$post['harisatu'];
         $this->haridua=$post['haridua'];
