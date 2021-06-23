@@ -48,7 +48,7 @@
 
                 <a class="navbar-brand mx-auto" href="#">
 
-                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid"" class="center">
+                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid" class="center">
 
                 </a>
 
@@ -107,7 +107,7 @@
 
     <label for="Nama">Usia</label>
 
-    <input type="text" class="form-control" id="Nama" placeholder="Masukkan Nama" required="" name="usia" value="<?php echo $data->usia?>">
+    <input type="number" class="form-control" id="Nama" placeholder="Masukkan Usia" required="" name="usia" value="<?php echo $data->usia?>">
 
   </div>
 
@@ -115,7 +115,7 @@
 
     <label for="Nama">Mulai Isolasi</label>
 
-    <input type="text" class="form-control" id="Nama" placeholder="Masukkan Nama" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
+    <input type="text" class="form-control" id="Nama" placeholder="20-06-2021" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
 
   </div>
 
@@ -294,12 +294,6 @@
             <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Garon" required="">
             <label class="form-check-label">
               Dukuh Garon
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Luar Panggungharjo" required="">
-            <label class="form-check-label">
-              Luar Panggungharjo
             </label>
           </div>
         </div>

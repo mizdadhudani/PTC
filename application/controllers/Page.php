@@ -246,7 +246,7 @@ public function laporanharian($nik=null) {
 			$update=$this->modulpenduduk->tambahhari($nik);
 
 		}else {
-			echo "tanggal tidak samsa";
+			echo "tanggal tidak sama";
 			$tambah=$this->kuisoner->tambah($nik);
 			$update=$this->modulpenduduk->updatehari($nik);
 			//update tanggal

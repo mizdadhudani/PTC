@@ -38,6 +38,22 @@ class Kuisoner extends CI_Model{
 
     public $kempatbelas;
 
+    public $kelimabelas;
+
+    public $keenambelas;
+
+    public $ketujuhbelas;
+
+    public $kedelapanbelas;
+
+    public $kesembilanbelas;
+
+    public $keduapuluh;
+
+    public $keduasatu;
+
+    public $keduadua;
+
     public $score;
 
     public $tanggal;
@@ -109,7 +125,24 @@ class Kuisoner extends CI_Model{
 
         $this->kempatbelas=$post['kempatbelas'];
 
+        $this->kelimabelas=$post['kelimabelas'];
+
+        $this->keenambelas=$post['keenambelas'];
+
+        $this->ketujuhbelas=$post['ketujuhbelas'];
+
+        $this->kedelapanbelas=$post['kedelapanbelas'];
+
+        $this->kesembilanbelas=$post['kesembilanbelas'];
+
+        $this->keduapuluh=$post['keduapuluh'];
+
+        $this->keduasatu=$post['keduasatu'];
+
+        $this->keduadua=$post['keduadua'];
+
         $this->score=$post['score'];
+
         $this->time=$post['time'];
 
         $this->db->where('tanggal=',$this->tanggal = $post["tanggal"]);
@@ -180,6 +213,22 @@ class Kuisoner extends CI_Model{
 
         $this->kempatbelas = '0';
 
+        $this->kelimabelas = '0';
+
+        $this->keenambelas = '0';
+
+        $this->ketujuhbelas = '0';
+
+        $this->kedelapanbelas = '0';
+
+        $this->kesembilanbelas = '0';
+
+        $this->keduapuluh = '0';
+
+        $this->keduasatu = '0';
+
+        $this->keduadua = '0';
+
         $this->tanggal = date("Y-m-d");
 
         $this->time = date("h:i");
@@ -227,6 +276,22 @@ class Kuisoner extends CI_Model{
         $this->ktigabelas = '0';
 
         $this->kempatbelas = '0';
+
+        $this->kelimabelas = '0';
+
+        $this->keenambelas = '0';
+
+        $this->ketujuhbelas = '0';
+
+        $this->kedelapanbelas = '0';
+
+        $this->kesembilanbelas = '0';
+
+        $this->keduapuluh = '0';
+
+        $this->keduasatu = '0';
+
+        $this->keduadua = '0';
 
         $this->tanggal = date("Y-m-d");
 
@@ -288,6 +353,22 @@ class Kuisoner extends CI_Model{
 
         $this->kempatbelas = '0';
 
+        $this->kelimabelas = '0';
+
+        $this->keenambelas = '0';
+
+        $this->ketujuhbelas = '0';
+
+        $this->kedelapanbelas = '0';
+
+        $this->kesembilanbelas = '0';
+
+        $this->keduapuluh = '0';
+
+        $this->keduasatu = '0';
+
+        $this->keduadua = '0';
+
         $this->tanggal = date("Y-m-d");
 
         $this->time = date("h:i");
@@ -336,6 +417,22 @@ class Kuisoner extends CI_Model{
 
         $this->kempatbelas=$post['kempatbelas'];
 
+        $this->kelimabelas=$post['kelimabelas'];
+
+        $this->keenambelas=$post['keenambelas'];
+
+        $this->ketujuhbelas=$post['ketujuhbelas'];
+
+        $this->kedelapanbelas=$post['kedelapanbelas'];
+
+        $this->kesembilanbelas=$post['kesembilanbelas'];
+
+        $this->keduapuluh=$post['keduapuluh'];
+
+        $this->keduasatu=$post['keduasatu'];
+
+        $this->keduadua=$post['keduadua'];
+
         $this->score=$post['score'];
 
         $this->db->where('tanggal=',$this->tanggal = $post["tanggal"]);
@@ -381,143 +478,179 @@ class Kuisoner extends CI_Model{
         $this->kduabelas = $post["kduabelas"];
         //$this->score=$post['score'];
 
-        $this->ktigabelas = '0';
+        $this->ktigabelas = $post['ktigabelas'];
 
-        $this->kempatbelas = '0';
+        $this->kempatbelas = $post['kempatbelas'];
+
+        $this->kelimabelas=$post['kelimabelas'];
+
+        $this->keenambelas=$post['keenambelas'];
+
+        $this->ketujuhbelas=$post['ketujuhbelas'];
+
+        $this->kedelapanbelas=$post['kedelapanbelas'];
+
+        $this->kesembilanbelas=$post['kesembilanbelas'];
+
+        $this->keduapuluh=$post['keduapuluh'];
+
+        $this->keduasatu=$post['keduasatu'];
+
+        $this->keduadua=$post['keduadua'];
 
         $this->tanggal = $post["tanggal"];
 
         $this->time = date("h:i");
 
-$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
+        //1-6
 
-        //7-8
+$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam;
+// $gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
 
-$gejalatinggi=$this->ktujuh+$this->kdelapan;
+        //7-12
 
-        //10
+$gejalasedang=$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksepuluh+$this->ksebelas+$this->kduabelas;
+// $gejalatinggi=$this->ktujuh+$this->kdelapan;
 
-$sepuluh=$this->ksepuluh;
+        //13-18
+
+$gejalatinggi=$this->ktigabelas+$this->kempatbelas+$this->kelimabelas+$this->keenambelas+$this->ketujuhbelas+$this->kedelapanbelas;
+
+        //19
+
+$sembilanbelas=$this->kesembilanbelas;
+// $sepuluh=$this->ksepuluh;
 
         //11
-
-$sebelas=$this->ksebelas;
+$duapuluh=$this->keduapuluh;
+// $sebelas=$this->ksebelas;
 
         //12 
+$duasatu=$this->keduasatu;
+// $duabelas=$this->kduabelas;
 
-$duabelas=$this->kduabelas;
+$duadua=$this->keduadua;
 
 
 
-if (
-//gejala rendah + 10 tidak ada karena ODP 1
-    ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) ||
-//gejala rendah + 10 + 11 tidak ada karena ODP 1
-    //gejala rendah   +     10        +   11        +     12
-    ( $gejalarendah>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
-    //gejala rendah    +    10        +     12
-    ( $gejalarendah>0 && $sepuluh==1 && $duabelas==1) || //ada
+// if (
+// //gejala rendah + 10 tidak ada karena ODP 1
+//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) ||
+// //gejala rendah + 10 + 11 tidak ada karena ODP 1
+//     //gejala rendah   +     10        +   11        +     12
+//     ( $gejalarendah>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
+//     //gejala rendah    +    10        +     12
+//     ( $gejalarendah>0 && $sepuluh==1 && $duabelas==1) || //ada
 
-//gejala rendah + 11 tidak ada karena ODP 1
+// //gejala rendah + 11 tidak ada karena ODP 1
     
-    //gejala rendah +    11         +       12
-    ($gejalarendah>0 && $sebelas==1 && $duabelas==1) ||
+//     //gejala rendah +    11         +       12
+//     ($gejalarendah>0 && $sebelas==1 && $duabelas==1) ||
     
-//gejala rendah + 12 tidak ada karena Resiko
+// //gejala rendah + 12 tidak ada karena Resiko
     
-    //gejala tinggi  +    10
-    ($gejalatinggi>0 && $sepuluh==1) || //ada
-    //gejala tinggi  +     10       +     11
-    ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1) || //ada
-    //gejala tinggi  +      10          + 12
-    ($gejalatinggi>0 && $sepuluh==1 && $duabelas==1) ||
-    //gejala tinngi + 10             +      11      +      12
-    ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1 ) || //ada
-    //gejala tinggi  +      11
-    ($gejalatinggi>0 && $sebelas==1) || //ada 
-    //gejala tinggi  +      11      +       12
-    ($gejalatinggi>0 && $sebelas==1 && $duabelas==1) || //ada
-    //gejala tinggi  +      12
-    ($gejalatinggi>0 && $duabelas==1) ||
+//     //gejala tinggi  +    10
+//     ($gejalatinggi>0 && $sepuluh==1) || //ada
+//     //gejala tinggi  +     10       +     11
+//     ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1) || //ada
+//     //gejala tinggi  +      10          + 12
+//     ($gejalatinggi>0 && $sepuluh==1 && $duabelas==1) ||
+//     //gejala tinngi + 10             +      11      +      12
+//     ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1 ) || //ada
+//     //gejala tinggi  +      11
+//     ($gejalatinggi>0 && $sebelas==1) || //ada 
+//     //gejala tinggi  +      11      +       12
+//     ($gejalatinggi>0 && $sebelas==1 && $duabelas==1) || //ada
+//     //gejala tinggi  +      12
+//     ($gejalatinggi>0 && $duabelas==1) ||
     
 
-//10+11 tidak ada karena ODP1
+// //10+11 tidak ada karena ODP1
 
-    //10+11+12
-    ($sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
-    //10+12
-    ($sepuluh==1 && $duabelas==1) || //ada
-    //11+12
-    ($sebelas==1 && $duabelas==1) //ada
+//     //10+11+12
+//     ($sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
+//     //10+12
+//     ($sepuluh==1 && $duabelas==1) || //ada
+//     //11+12
+//     ($sebelas==1 && $duabelas==1) //ada
 
-//12 tidak ada karena Sehat beresiko
+// //12 tidak ada karena Sehat beresiko
 
-) {
+// ) {
 
-$this->score = '6'; 
+// $this->score = '6'; 
 
-}
+// }
 
+// else if (
+
+// ($gejalarendah>0 && $sepuluh==1) ||
+// ($gejalarendah>0 && $sebelas==1 ) ||
+// ($gejalarendah>0 && $sepuluh==1 && $sebelas==1) 
+
+// ){
+
+// //11 sampai 13
+
+// $this->score = '5'; 
+
+// }
+
+
+
+
+
+// else if (
+// ($sepuluh==1 && $sebelas==1) ||
+// ($sebelas==1) 
+
+
+// )
+
+// {
+
+// //kuning
+
+// $this->score = '4';  
+
+// }
+
+ if ( 
+        ($gejalatinggi>0) ||
+        ($gejalatinggi>0 && $gejalarendah>0) ||
+        ($gejalatinggi>0 && $gejalarendah>0 && $gejalasedang>0) ||
+        ($gejalatinggi>0 && $gejalasedang>0)
+    )
+
+    {
+
+    $this->score = '3'; 
+
+    }
 else if (
 
-($gejalarendah>0 && $sepuluh==1) ||
-($gejalarendah>0 && $sebelas==1 ) ||
-($gejalarendah>0 && $sepuluh==1 && $sebelas==1) 
+        ($gejalasedang>0) ||
+        ($gejalarendah>0 && $gejalasedang>0) 
 
-){
+    )
 
-//11 sampai 13
+    {
 
-$this->score = '5'; 
+    $this->score = '2'; 
 
-}
-
-
-
-
-
-else if (
-($sepuluh==1 && $sebelas==1) ||
-($sebelas==1) 
-
-
-)
-
-{
-
-//kuning
-
-$this->score = '4';  
-
-}
-
-else if ($sepuluh==1)
-
-{
-
-$this->score = '3'; 
-
-}
+    }
 else if (
 
-    ($gejalatinggi>0) ||
-    ($gejalarendah>0 && $duabelas==1) ||
-    ($duabelas==1)
-)
+    ($gejalarendah>0)
 
-{
+    )
 
-$this->score = '2'; 
+    { 
 
-}
-else if (($gejalarendah==0 && $gejalatinggi==0 && $sepuluh==0 && $sebelas==0 && $duabelas==0) || 
-    ($gejalarendah>0) ) 
+    $this->score = '1';  
 
-{ 
+    }
 
-$this->score = '1';  
-
-}
 
         $this->db->insert($this->table,$this);
 
@@ -555,158 +688,182 @@ $this->score = '1';
 
         $this->kduabelas = $post["kduabelas"];
 
-        $this->ktigabelas = '0';
+        $this->ktigabelas=$post['ktigabelas'];
 
-        $this->kempatbelas = '0';
+        $this->kempatbelas=$post['kempatbelas'];
+
+        $this->kelimabelas=$post['kelimabelas'];
+
+        $this->keenambelas=$post['keenambelas'];
+
+        $this->ketujuhbelas=$post['ketujuhbelas'];
+
+        $this->kedelapanbelas=$post['kedelapanbelas'];
+
+        $this->kesembilanbelas=$post['kesembilanbelas'];
+
+        $this->keduapuluh=$post['keduapuluh'];
+
+        $this->keduasatu=$post['keduasatu'];
+
+        $this->keduadua=$post['keduadua'];
 
         $this->time = date("h:i");
 
-$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
+$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam;
+// $gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
 
-        //7-8
+        //7-12
 
-$gejalatinggi=$this->ktujuh+$this->kdelapan;
+$gejalasedang=$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksepuluh+$this->ksebelas+$this->kduabelas;
+// $gejalatinggi=$this->ktujuh+$this->kdelapan;
 
-        //10
+        //13-18
 
-$sepuluh=$this->ksepuluh;
+$gejalatinggi=$this->ktigabelas+$this->kempatbelas+$this->kelimabelas+$this->keenambelas+$this->ketujuhbelas+$this->kedelapanbelas;
+
+        //19
+
+$sembilanbelas=$this->kesembilanbelas;
+// $sepuluh=$this->ksepuluh;
 
         //11
-
-$sebelas=$this->ksebelas;
+$duapuluh=$this->keduapuluh;
+// $sebelas=$this->ksebelas;
 
         //12 
+$duasatu=$this->keduasatu;
+// $duabelas=$this->kduabelas;
 
-$duabelas=$this->kduabelas;
+$duadua=$this->keduadua;
 
 
- if (
-    ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) ||
-//gejala rendah + 10 tidak ada karena ODP 1
+//  if (
+//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) ||
+// //gejala rendah + 10 tidak ada karena ODP 1
     
-//gejala rendah + 10 + 11 tidak ada karena ODP 1
+// //gejala rendah + 10 + 11 tidak ada karena ODP 1
     
-    //gejala rendah   +     10        +   11        +     12
-    ( $gejalarendah>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
-    //gejala rendah    +    10        +     12
-    ( $gejalarendah>0 && $sepuluh==1 && $duabelas==1) || //ada
+//     //gejala rendah   +     10        +   11        +     12
+//     ( $gejalarendah>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
+//     //gejala rendah    +    10        +     12
+//     ( $gejalarendah>0 && $sepuluh==1 && $duabelas==1) || //ada
 
-//gejala rendah + 11 tidak ada karena ODP 1
+// //gejala rendah + 11 tidak ada karena ODP 1
     
-    //gejala rendah +    11         +       12
-    ($gejalarendah>0 && $sebelas==1 && $duabelas==1) ||
-    //gejala rendah   +  gejala tinggi   +    10 
-    ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 ) ||
-    //gejala rendah   +  gejala tinggi   +    11 
-    ($gejalarendah>0 && $gejalatinggi>0 && $sebelas==1 ) ||
-    //gejala rendah   +  gejala tinggi   +    10        + 12
-    ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1) ||
+//     //gejala rendah +    11         +       12
+//     ($gejalarendah>0 && $sebelas==1 && $duabelas==1) ||
+//     //gejala rendah   +  gejala tinggi   +    10 
+//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 ) ||
+//     //gejala rendah   +  gejala tinggi   +    11 
+//     ($gejalarendah>0 && $gejalatinggi>0 && $sebelas==1 ) ||
+//     //gejala rendah   +  gejala tinggi   +    10        + 12
+//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1) ||
     
-    //gejala tinggi  +    10
-    ($gejalatinggi>0 && $sepuluh==1) || //ada
-    //gejala tinggi  +     10       +     11
-    ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1) || //ada
-    //gejala tinggi  +      10          + 12
-    ($gejalatinggi>0 && $sepuluh==1 && $duabelas==1) ||
-    //gejala tinngi + 10             +      11      +      12
-    ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1 ) || //ada
-    //gejala tinggi  +      11
-    ($gejalatinggi>0 && $sebelas==1) || //ada 
-    //gejala tinggi  +      11      +       12
-    ($gejalatinggi>0 && $sebelas==1 && $duabelas==1) || //ada
+//     //gejala tinggi  +    10
+//     ($gejalatinggi>0 && $sepuluh==1) || //ada
+//     //gejala tinggi  +     10       +     11
+//     ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1) || //ada
+//     //gejala tinggi  +      10          + 12
+//     ($gejalatinggi>0 && $sepuluh==1 && $duabelas==1) ||
+//     //gejala tinngi + 10             +      11      +      12
+//     ($gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1 ) || //ada
+//     //gejala tinggi  +      11
+//     ($gejalatinggi>0 && $sebelas==1) || //ada 
+//     //gejala tinggi  +      11      +       12
+//     ($gejalatinggi>0 && $sebelas==1 && $duabelas==1) || //ada
 
     
 
-//10+11 tidak ada karena ODP1
+// //10+11 tidak ada karena ODP1
 
-    //10+11+12
-    ($sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
-    //10+12
-    ($sepuluh==1 && $duabelas==1) || //ada
-    //11+12
-    ($sebelas==1 && $duabelas==1)  //ada
+//     //10+11+12
+//     ($sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
+//     //10+12
+//     ($sepuluh==1 && $duabelas==1) || //ada
+//     //11+12
+//     ($sebelas==1 && $duabelas==1)  //ada
 
-//12 tidak ada karena Sehat beresiko
+// //12 tidak ada karena Sehat beresiko
 
-) {
+// ) {
 
-$this->score = '6'; 
+// $this->score = '6'; 
 
-}
+// }
 
-else if (
-//gejala rendah+10 
-($gejalarendah>0 && $sepuluh==1) ||
-//gejala rendah+11 
-($gejalarendah>0 && $sebelas==1 ) ||
-//gejala rendah+10+11 
-($gejalarendah>0 && $sepuluh==1 && $sebelas==1) 
+// else if (
+// //gejala rendah+10 
+// ($gejalarendah>0 && $sepuluh==1) ||
+// //gejala rendah+11 
+// ($gejalarendah>0 && $sebelas==1 ) ||
+// //gejala rendah+10+11 
+// ($gejalarendah>0 && $sepuluh==1 && $sebelas==1) 
 
-){
+// ){
 
-//11 sampai 13
+// //11 sampai 13
 
-$this->score = '5'; 
+// $this->score = '5'; 
 
-}
-
-
+// }
 
 
 
-else if (
-    //10+11
-($sepuluh==1 && $sebelas==1) ||
-//11
-($sebelas==1) 
 
 
-)
+// else if (
+//     //10+11
+// ($sepuluh==1 && $sebelas==1) ||
+// //11
+// ($sebelas==1) 
 
-{
 
-//kuning
+// )
 
-$this->score = '4';  
+// {
 
-}
+// //kuning
+
+// $this->score = '4';  
+
+// }
 //10
-else if ($sepuluh==1)
+if ( 
+        ($gejalatinggi>0) ||
+        ($gejalatinggi>0 && $gejalarendah>0) ||
+        ($gejalatinggi>0 && $gejalarendah>0 && $gejalasedang>0) ||
+        ($gejalatinggi>0 && $gejalasedang>0)
+    )
 
-{
+    {
 
-$this->score = '3'; 
+    $this->score = '3'; 
 
-}
+    }
 else if (
-    //gejala tinggi  +      12
-    ($gejalatinggi>0 && $duabelas==1) ||
-    //gejala rendah+gejala tinggi
-    ($gejalarendah>0 && $gejalatinggi>0) || 
-    //gejala tinggi
-    ($gejalatinggi>0) ||
-    //gejala rendah+12
-    ($gejalarendah>0 && $duabelas==1) ||
-    //12
-    ($duabelas==1)
-)
 
-{
+        ($gejalasedang>0) ||
+        ($gejalarendah>0 && $gejalasedang>0) 
 
-$this->score = '2'; 
+    )
 
-}
-else if (
-    ($gejalarendah==0 && $gejalatinggi==0 && $sepuluh==0 && $sebelas==0 && $duabelas==0 )
-|| ($gejalarendah>0)
-) 
+    {
 
-{ 
+    $this->score = '2'; 
 
-$this->score = '1';  
+    }
+    else if (
+        
+        ($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $sembilanbelas==0 && $duapuluh==0 && $duasatu==0 && $duadua==0) ||
+        ($gejalarendah>0)
+    )
 
-}
+    { 
 
+    $this->score = '1';  
+
+    }
         $this->db->where('tanggal=',$this->tanggal = $post["tanggal"]);
 
         $this->db->where('id=',$this->id = $post["id"]);
@@ -720,16 +877,9 @@ $this->score = '1';
 
 
     }
-public function deletekuisoner($nik) {
+
+    public function deletekuisoner($nik) {
     return $this->db->delete("tb_qusoner",array("nik"=>$nik));
+    }
+
 }
-
-
-}
-
-
-
-
-
-
-

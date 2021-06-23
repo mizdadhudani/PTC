@@ -92,6 +92,20 @@
 
   <tbody>
 
+  </tr>
+  
+    <tr>
+
+    <td><b>A</b></td>
+
+    <td><b>Gejala</b></td>
+
+    <td></td>
+
+    <td></td>
+
+  </tr>
+
 <tr>
 
     <td>1</td>
@@ -132,7 +146,7 @@
 
     <td>3</td>
 
-    <td>Apakah anda sedang menderita diare?</td>
+    <td>Apakah anda sedang menderita sakit atau nyeri kepala?</td>
 
     <td>  <div class="form-check">
 
@@ -168,7 +182,7 @@
 
     <td>5</td>
 
-    <td>Apakah anda sedang menderita nyeri di seluruh bagian tubuh?</td>
+    <td>Apakah badan anda sekarang terasa lemas dan lesu?</td>
 
     <td>  <div class="form-check">
 
@@ -186,7 +200,7 @@
 
     <td>6</td>
 
-    <td>Apakah anda sedang menderita sakit atau nyeri kepala?</td>
+    <td>Apakah anda sedang menderita diare?</td>
 
     <td>  <div class="form-check">
 
@@ -204,7 +218,7 @@
 
     <td>7</td>
 
-    <td>Apakah anda sedang mengalami demam atau suhu tubuh di atas 38 C?</td>
+    <td>Apakah anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
 
     <td>  <div class="form-check">
 
@@ -222,7 +236,7 @@
 
     <td>8</td>
 
-    <td>Apakah anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
+    <td>Apakah anda sedang menderita nyeri di seluruh bagian tubuh?</td>
 
     <td>  <div class="form-check">
 
@@ -240,7 +254,7 @@
 
     <td>9</td>
 
-    <td>Apakah badan anda sekarang terasa lemas dan lesu?</td>
+    <td>Apakah mulut anda terasa kering?</td>
 
     <td>  <div class="form-check">
 
@@ -254,213 +268,281 @@
 
   </tr>
 
-  
-
-  </tr>
-
-    <tr>
-
-    <td>B</td>
-
-    <td>Riwayat Perjalanan</td>
-
-    <td></td>
-
-    <td></td>
-
-  </tr>
-
-  <?php if (!empty($datas)) {?>
-
   <tr>
 
     <td>10</td>
-    <?php if($datap->harisatu==0 || $datas->ksepuluh==0 || ($datap->harisatu>0 && $datas->ksepuluh==0)) { ?>
 
-    <td>
-    	Apakah dalam 14 hari terakhir anda pernah berkunjung ke daerah di mana Corona tersebar? (contoh: Jakarta)
-	 	<select id="select" name="harisatu">
-		    <option value="0">Pilih</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		    <option value="5">5</option>
-		    <option value="6">6</option>
-		    <option value="7">7</option>
-		    <option value="8">8</option>
-		    <option value="9">9</option>
-		    <option value="10">10</option>
-		    <option value="11">11</option>
-		    <option value="12">12</option>
-		    <option value="13">13</option>
-		    <option value="14">14</option>
-  		</select> Hari yang lalu.
-
-    </td>
-<?php } else {?>
-	<td>
-	Apakah dalam 14 hari terakhir anda pernah berkunjung ke daerah di mana Corona tersebar? (contoh: Jakarta)
-	<input type="text" hidden name="harisatu" value="<?php echo $datap->harisatu ?>">
-	</td>
-<?php }?>
-
-
-
-
-
-
-<?php if ($datas->ksepuluh==0 ) { ?>
+    <td>Apakah nafsu makan anda berkurang?</td>
 
     <td>  <div class="form-check">
 
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="1" ></div>
+          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="1"></div>
 
-    </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="0" checked>
-
-    </td>
-
-  <?php } else {?>
+      </td>
 
     <td>  <div class="form-check">
 
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="1" checked></div>
-
-    </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="0" disabled="">
-
-    </td>
-
-  <?php } ?>
+          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="0" checked=""></td>
 
   </tr>
 
   <tr>
 
-
-
     <td>11</td>
-    <?php if($datap->haridua==0 || $datas->ksebelas==0 || ($datap->haridua>0 && $datas->ksebelas==0)) { ?>
-    <td>
-    Apakah dalam 14 hari terakhir anda pernah melakukan kontak langsung dengan pasien positif Corona?
-		<select id="select" name="haridua">
-		    <option value="0">Pilih</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		    <option value="5">5</option>
-		    <option value="6">6</option>
-		    <option value="7">7</option>
-		    <option value="8">8</option>
-		    <option value="9">9</option>
-		    <option value="10">10</option>
-		    <option value="11">11</option>
-		    <option value="12">12</option>
-		    <option value="13">13</option>
-		    <option value="14">14</option>
-  		</select> Hari yang lalu.
-	</td>
-<?php } else {?>
-	<td>
-		Apakah dalam 14 hari terakhir anda pernah melakukan kontak langsung dengan pasien positif Corona?
-	<input type="text" hidden name="haridua" value="<?php echo $datap->haridua ?>">
-	</td>
-<?php }?>
 
-
-    <?php if ($datas->ksebelas==0 ) {?>
+    <td>Apakah anda mengalami mual/muntah?</td>
 
     <td>  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="1"></div>
 
-    </td>
+      </td>
 
     <td>  <div class="form-check">
 
-          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="0" checked="">
-
-    </td>
-
-  <?php } else {?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="1" checked></div>
-
-    </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="0" disabled >
-
-    </td>
-
-  <?php } ?>
+          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="0" checked=""></td>
 
   </tr>
-
-
-
-    <tr>
-
-    <td>C</td>
-
-    <td>Riwayat Penyakit</td>
-
-    <td></td>
-
-    <td></td>
-
-  </tr>
-
-  
 
   <tr>
 
     <td>12</td>
 
-    <td>Apakah anda memiliki riwayat penyakit jantung/diabetes/ISTA atau penyakit kronis lainnya?</td>
-
-    <?php if ($datas->kduabelas==0) {?>
+    <td>Apakah anda tidak bisa mencium bau atau merasakan makanan?</td>
 
     <td>  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="1"></div>
 
-    </td>
+      </td>
 
     <td>  <div class="form-check">
 
-          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="0" checked="">
-
-    </td>
-
-  <?php } else {?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="1" checked ></div>
-
-    </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="0" disabled>
-
-    </td>
-
-  <?php } ?>
+          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="0" checked=""></td>
 
   </tr>
+
+  <tr>
+
+    <td>13</td>
+
+    <td>Apakah dada anda terasa nyeri dan berdebar-debar?</td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="ktigabelas" value="1"></div>
+
+      </td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="ktigabelas" value="0" checked=""></td>
+
+  </tr>
+
+  <tr>
+
+    <td>14</td>
+
+    <td>Apakah bibir, kulit dan wajah anda tampak kebiruan?</td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="kempatbelas" value="1"></div>
+
+      </td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="kempatbelas" value="0" checked=""></td>
+
+  </tr>
+
+  <tr>
+
+    <td>15</td>
+
+    <td>Apakah kulit anda pucat dan berkeringat dingin?</td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="kelimabelas" value="1"></div>
+
+      </td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="kelimabelas" value="0" checked=""></td>
+
+  </tr>
+
+  <tr>
+
+    <td>16</td>
+
+    <td>Apakah pernah merasa linglung secara tiba-tiba?</td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keenambelas" value="1"></div>
+
+      </td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keenambelas" value="0" checked=""></td>
+
+  </tr>
+
+  <tr>
+
+    <td>17</td>
+
+    <td>Apakah merasakan pusing atau sakit kepala berat?</td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="ketujuhbelas" value="1"></div>
+
+      </td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="ketujuhbelas" value="0" checked=""></td>
+
+  </tr>
+
+  <tr>
+
+    <td>18</td>
+
+    <td>Apakah mengalami demam tinggi selama lebih dari 7 hari?</td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="kedelapanbelas" value="1"></div>
+
+      </td>
+
+    <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="kedelapanbelas" value="0" checked=""></td>
+
+  </tr>
+
+
+    <tr>
+
+      <td><b>B</b></td>
+
+      <td><b>Tekanan Darah</b></td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+      <tr>
+
+        <td>19</td>
+
+        <td>Berapakah Tekanan Darah Anda?</td>
+
+        <td>  <div class="form-check">
+
+             <input type="text" class="form-check-input" id="kesembilanbelas" required="" name="kesembilanbelas" value="0"></div>
+
+        </td>
+
+      </tr>
+
+    <tr>
+
+      <td><b>C</b></td>
+
+      <td><b>Nadi</b></td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+      <tr>
+
+        <td>20</td>
+
+        <td>Berapakah Denyut Nadi Anda?</td>
+
+        <td>  <div class="form-check">
+
+             <input type="text" class="form-check-input" id="keduapuluh" required="" name="keduapuluh" value="0"></div>
+
+        </td>
+
+      </tr>
+
+    <tr>
+
+      <td><b>D</b></td>
+
+      <td><b>Suhu</b></td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+      <tr>
+
+        <td>21</td>
+
+        <td>Apakah suhu anda diatas 38 C?</td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduasatu" value="1"></div>
+
+        </td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduasatu" value="0" checked="">
+        </td>
+
+      </tr>
+
+    <tr>
+
+      <td><b>D</b></td>
+
+      <td><b>Saturasi</b></td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+      <tr>
+
+        <td>22</td>
+
+        <td>Berapakah Saturasi Anda?</td>
+
+        <td>  <div class="form-check">
+
+             <input type="text" class="form-check-input" id="keduadua" required="" name="keduadua" value="0"></div>
+
+        </td>
+
+      </tr>
+
+    <tr>
+
+
 
   </tbody>
 
@@ -503,237 +585,7 @@
         </div>
 
       </div>
-<?php } else {?>
-<tr>
-    <td>10</td>
-    <?php if($datap->harisatu==0 || $dataku->ksepuluh==0 || ($datap->harisatu>0 && $dataku->ksepuluh==0)) { ?>
 
-    <td>
-    	Apakah dalam 14 hari terakhir anda pernah berkunjung ke daerah di mana Corona tersebar? (contoh: Jakarta)
-	 	<select id="select" name="harisatu">
-		    <option value="0">Pilih</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		    <option value="5">5</option>
-		    <option value="6">6</option>
-		    <option value="7">7</option>
-		    <option value="8">8</option>
-		    <option value="9">9</option>
-		    <option value="10">10</option>
-		    <option value="11">11</option>
-		    <option value="12">12</option>
-		    <option value="13">13</option>
-		    <option value="14">14</option>
-  		</select> Hari yang lalu.
-
-    </td>
-<?php } else {?>
-	<td>
-	Apakah dalam 14 hari terakhir anda pernah berkunjung ke daerah di mana Corona tersebar? (contoh: Jakarta)
-	<input type="text" hidden name="harisatu" value="<?php echo $datap->harisatu ?>">
-	</td>
-<?php }?>
-
-    <?php if ($dataku->ksepuluh==0 ) { ?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="1" ></div>
-
-    </td>
-
-    <td>	<div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="0" checked>
-
-  	</td>
-
-  <?php } else {?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="1" checked></div>
-
-    </td>
-
-    <td>	<div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="0" disabled="">
-
-  	</td>
-
-  <?php } ?>
-
-  </tr>
-
-  <tr>
-
-
-
-     <td>11</td>
-    <?php if($datap->haridua==0 || $dataku->ksebelas==0 || ($datap->haridua>0 && $dataku->ksebelas==0)) { ?>
-    <td>
-    Apakah dalam 14 hari terakhir anda pernah melakukan kontak langsung dengan pasien positif Corona?
-		<select id="select" name="haridua">
-			<option value="0">Pilih</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		    <option value="5">5</option>
-		    <option value="6">6</option>
-		    <option value="7">7</option>
-		    <option value="8">8</option>
-		    <option value="9">9</option>
-		    <option value="10">10</option>
-		    <option value="11">11</option>
-		    <option value="12">12</option>
-		    <option value="13">13</option>
-		    <option value="14">14</option>
-  		</select> Hari yang lalu.
-	</td>
-<?php } else {?>
-	<td>
-		Apakah dalam 14 hari terakhir anda pernah melakukan kontak langsung dengan pasien positif Corona?
-	<input type="text" hidden name="haridua" value="<?php echo $datap->haridua ?>">
-	</td>
-<?php }?>
-
-    <?php if ($dataku->ksebelas==0 ) {?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="1"></div>
-
-    </td>
-
-    <td>	<div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="0" checked="">
-
-  	</td>
-
-  <?php } else {?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="1" checked></div>
-
-    </td>
-
-    <td>	<div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="0" disabled >
-
-  	</td>
-
-  <?php } ?>
-
-  </tr>
-
-
-
-    <tr>
-
-    <td>C</td>
-
-    <td>Riwayat Penyakit</td>
-
-    <td></td>
-
-    <td></td>
-
-  </tr>
-
-  
-
-  <tr>
-
-    <td>12</td>
-
-    <td>Apakah anda memiliki riwayat penyakit jantung/diabetes/ISTA atau penyakit kronis lainnya?</td>
-
-    <?php if ($dataku->kduabelas==0 ) {?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="1"></div>
-
-    </td>
-
-    <td>	<div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="0" checked="">
-
-  	</td>
-
-  <?php } else {?>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="1" checked ></div>
-
-    </td>
-
-    <td>	<div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="0" disabled>
-
-  	</td>
-
-  <?php } ?>
-
-  </tr>
-
-  </tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div id="submit1">
-
-  <input type="text" name="nik" placeholder="nik" hidden="" value="<?php echo $dataku->nik?>">
-   <input type="text" name="score" placeholder="score" hidden="" value="<?php echo $dataku->score?>">
-
-  <input type="number" name="id" placeholder="id"  hidden="" value="<?php echo $dataku->id?>">
-
-    <input type="number" name="link" placeholder="id"  hidden="" value="<?php echo $dataku->link?>">
-
-  <input type="text" name="tanggal"  hidden="" value="<?php echo date("Y-m-d") ?>">
-
-  <input type="text" name="time"  hidden="" value="<?php echo date("h:i");?>">
-       <input type="text" hidden name="idpenduduk" value="<?php echo $datap->id?>">
-      <input type="text" hidden name="linkpenduduk" value="<?php echo $datap->link?>">
-      <input type="text" hidden name="namapenduduk" value="<?php echo $datap->nama?>">
-      <input type="text" hidden name="nikpenduduk" value="<?php echo $datap->nik?>">
-      <input type="text" hidden name="jeniskelaminpenduduk" value="<?php echo $datap->jeniskelamin?>">
-      <input type="text" hidden name="nomorhppenduduk" value="<?php echo $datap->nomorhp?>">
-      <input type="text" hidden name="alamatpenduduk" value="<?php echo $datap->alamat?>">
-      <input type="text" hidden name="pendudukpenduduk" value="<?php echo $datap->penduduk?>">
- <button type="submit" class="btn btn-primary" style="margin-right: 5%">Kirim</button>
-
-
-</div>
-
-         <!-- Remind Passowrd -->
-
-        </div>
-
-      </div>
-
-
-
-
-<?php }?>
 
     </form>
 
