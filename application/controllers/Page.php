@@ -398,13 +398,9 @@ public function sehat($nomorhp=null){
 	$ubahstatus = $this->modulpenduduk->ubahsehat($nik);
 
 
-	$dataku = array('isi'=>'listdata',
-			'data'=>$this->modulpenduduk->getdatalist($nomorhp),
-			'datalist'=>$this->modulpenduduk->getdataid($nomorhp),
-			'status'=>$this->modulpenduduk->getstatus($nomorhp)  
-			);
+	$dataku = array('isi'=>'listdata');
 	
-		// redirect('page/listdata/'.$link);
+		 redirect('page/listdata/'.$link);
 }
 public function submitalamatbaru($nomorhp=null) {
 			$nik=$this->input->post('nik');
