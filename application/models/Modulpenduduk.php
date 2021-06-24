@@ -589,16 +589,6 @@ public function dataaplikasi() {
     }
 
 
-
-
-
-
-
-
-
-
-
-
     function datalengkapodpalamat() {
         $post = $this->input->post();
         $alamat=$post['alamat'];
