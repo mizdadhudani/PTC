@@ -48,7 +48,7 @@
 
                 <a class="navbar-brand mx-auto" href="#">
 
-                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid"" class="center">
+                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid" class="center">
 
                 </a>
 

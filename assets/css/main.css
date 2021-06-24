@@ -57,13 +57,13 @@ h2 {
 
 #formContent2 {
   -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 20px;
   background: #FFFAFA;
-  padding: 30px;
+  /*padding: 30px;*/
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   position: relative;
-  padding: 0px 0px 50px 0px;
+  padding: 0px 0px 50px 10px;
   text-align: left;
 }
 

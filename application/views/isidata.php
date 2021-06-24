@@ -38,7 +38,7 @@
 
                 <a class="navbar-brand mx-auto" href="#">
 
-                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid"" class="center">
+                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid" class="center">
 
                 </a>
 
@@ -449,9 +449,9 @@
 
         <td>Berapakah Tekanan Darah Anda?</td>
 
-        <td>  <div class="form-check">
+        <td colspan="2">  <div class="form-check">
 
-             <input type="text" class="form-check-input" id="kesembilanbelas" required="" name="kesembilanbelas" value="0"></div>
+             <input type="text" class="form-control" id="kesembilanbelas" required="" name="kesembilanbelas" value="0"></div>
 
         </td>
 
@@ -474,10 +474,9 @@
         <td>20</td>
 
         <td>Berapakah Denyut Nadi Anda?</td>
+        <td colspan="2">  <div class="form-check">
 
-        <td>  <div class="form-check">
-
-             <input type="text" class="form-check-input" id="keduapuluh" required="" name="keduapuluh" value="0"></div>
+             <input type="text" class="form-control" id="keduapuluh" required="" name="keduapuluh" value="0"></div>
 
         </td>
 
@@ -530,11 +529,12 @@
 
         <td>22</td>
 
+
         <td>Berapakah Saturasi Anda?</td>
 
-        <td>  <div class="form-check">
+        <td colspan="2">  <div class="form-check">
 
-             <input type="text" class="form-check-input" id="keduadua" required="" name="keduadua" value="0"></div>
+             <input type="text" class="form-control" id="keduadua" required="" name="keduadua" value="0"></div>
 
         </td>
 

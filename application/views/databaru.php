@@ -188,7 +188,7 @@
 
   <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
-        <select id="Alamat" name="alamat" class="select" >
+        <select id="Alamat" class="form-control" name="alamat" class="select" >
           <option name="alamat" value="RT 01">RT 01</option>
           <option name="alamat" value="RT 02">RT 02</option>
           <option name="alamat" value="RT 03">RT 03</option>
@@ -298,7 +298,7 @@
     </div>
       <div class="form-group">
     <label for="status">Status</label><br>
-        <select id="status" name="status" class="select" >
+        <select id="status" class="form-control" name="status" class="select" >
           <option name="status" value="KE">Kontak Erat</option>
           <option name="status" value="positif">Positif</option>
         </select>
