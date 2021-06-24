@@ -164,27 +164,27 @@ public function databaru($nomorhp=null){
 		
 		$this->load->view('part/content', $dataku);
 }
-// public function gantialamat($nomorhp=null){
-// 	$datap=$this->modulpenduduk->getdataid($nomorhp);
-// 	$nik=$datap->nik;
-// 	$dataq=$this->kuisoner->getdataidk($nik);
-// 		$dataku = array(	'title' => 'Welcome to MyBlog' ,
+public function gantialamat($nomorhp=null){
+	$datap=$this->modulpenduduk->getdataid($nomorhp);
+	$nik=$datap->nik;
+	$dataq=$this->kuisoner->getdataidk($nik);
+		$dataku = array(	'title' => 'Welcome to MyBlog' ,
 
-// 					  	'isi'=>'gantialamat',
+					  	'isi'=>'gantialamat',
 
-// 					  	//'postku'=> $this->tampilan->postku(),
+					  	//'postku'=> $this->tampilan->postku(),
 
-// 					  	// 'rows'=> $this->rows->sliderku(),
+					  	// 'rows'=> $this->rows->sliderku(),
 
-// 					  	// 'logo'=>$this->inti->logo(),
+					  	// 'logo'=>$this->inti->logo(),
 
-// 					  'data'=>$datap,
-// 					  'datak'=>$dataq
-// 					  );
+					  'data'=>$datap,
+					  'datak'=>$dataq
+					  );
 
 		
-// 		$this->load->view('part/content', $dataku);
-// }
+		$this->load->view('part/content', $dataku);
+}
 public function gantidata($nik=null){
 	$datap=$this->modulpenduduk->ubahdatadiri($nik);
 	//$nik=$datap->nik;
@@ -401,9 +401,16 @@ public function footer() {
 	
 		$this->load->view('part/content', $dataku);
 }
-function sehat($nik){
+function sehat($nomorhp=null){
+	$datap=$this->modulpenduduk->getdataid($nomorhp);
+	$nik=$datap->nik;
+	$dataq=$this->kuisoner->getdataidk($nik);
 	$status = 'sehat';
-	$this->modulpenduduk->sehat($status);
+	$nik=$this->input->post('nik');
+	$cek = $this->modulpenduduk->getdataidnik($nomorhp);
+	$link=$this->input->post('link');
+	$query = $this->modulpenduduk->sehat($nik);
+
 
 	$dataku = array('isi'=>'listdata',
 			'data'=>$this->modulpenduduk->getdatalist($nomorhp),

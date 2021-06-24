@@ -63,22 +63,13 @@ class Modulpenduduk extends CI_Model{
         return $query->row();
 
     }
-    function sehat($status) {
+    function sehat($nik) {
         $post = $this->input->post();
-        $this->link = $post["nomorhp"];
-        $this->nama = $post["nama"];
-        $this->nik = $post["nik"];
-        $this->jeniskelamin = $post["jeniskelamin"];
-        $this->nomorhp = $post["nomorhp"];
-        $this->alamat = $post["alamat"];
-        $this->usia = $post["usia"];
-        $this->mulai_isolasi = $post["mulai_isolasi"];
-        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
-        $this->penduduk = $post["penduduk"];
-        $this->harisatu=$post['harisatu'];
-        $this->haridua=$post['haridua'];
-        $this->db->where('nik=',$this->nik = $post["nik"]);
-        $this->db->update('status', $status);
+        $this->db->select ('* ');
+        $this->db->from ('tb_penduduk ');
+        //$this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik');
+        $this->db->where('tb_penduduk.nik', $nik);
+        $query = $this->db->update(status ,array('status' => 'sehat'));
         return TRUE;
     }
     function getdataidnik($nomorhp){
