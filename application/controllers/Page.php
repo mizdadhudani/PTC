@@ -332,7 +332,8 @@ public function listdata($nomorhp=null) {
 					  	// 'logo'=>$this->inti->logo(),
 
 					  'data'=>$this->modulpenduduk->getdatalist($nomorhp),
-					  'datalist'=>$this->modulpenduduk->getdataid($nomorhp)
+					  'datalist'=>$this->modulpenduduk->getdataid($nomorhp),
+					  'status'=>$this->modulpenduduk->getstatus($nomorhp)
 					  
 
 
@@ -397,6 +398,18 @@ public function footer() {
 
 
 					  );
+	
+		$this->load->view('part/content', $dataku);
+}
+function sehat($nik){
+	$status = 'sehat';
+	$this->modulpenduduk->sehat($status);
+
+	$dataku = array('isi'=>'listdata',
+			'data'=>$this->modulpenduduk->getdatalist($nomorhp),
+			'datalist'=>$this->modulpenduduk->getdataid($nomorhp),
+			'status'=>$this->modulpenduduk->getstatus($nomorhp)  
+			);
 	
 		$this->load->view('part/content', $dataku);
 }

@@ -137,6 +137,13 @@
                       <td>
 
                         <button  class="btn btn-primary" onclick="location.href='<?php echo base_url("page/isidata"),'/',$datatku['nik']?>'" >Isi Laporan Harian</button>
+                        <?php if ($datatku['status'] == 'sehat') {?> 
+
+                        <?php }else {?>
+                          
+                          <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['nik']?>'" >Sudah Sehat</button>
+
+                          <?php }?>
                         <!-- <button  class="btn btn-primary" onclick="location.href='<?php echo base_url("page/gantialamat"),'/',$datatku['link']?>'" >Ubah Data Diri</button> -->
 
 
