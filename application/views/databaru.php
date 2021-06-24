@@ -188,7 +188,7 @@
 
   <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
-        <select id="Alamat" class="form-control" name="alamat" class="select" >
+        <select id="Alamat" class="form-control" name="alamat" class="select">
           <option name="alamat" value="RT 01">RT 01</option>
           <option name="alamat" value="RT 02">RT 02</option>
           <option name="alamat" value="RT 03">RT 03</option>
@@ -199,8 +199,8 @@
           <option name="alamat" value="RT 08">RT 08</option>
           <option name="alamat" value="RT 09">RT 09</option>
           <option name="alamat" value="RT 10">RT 10</option>
-          <option name="alamat" value="RT 10">RT 11</option>
-          <option name="alamat" value="RT 10">RT 12</option>
+          <option name="alamat" value="RT 11">RT 11</option>
+          <option name="alamat" value="RT 12">RT 12</option>
         </select>
   </div>
     <div class="form-group">
@@ -296,13 +296,20 @@
         </div>
       </div>
     </div>
-      <div class="form-group">
-    <label for="status">Status</label><br>
-        <select id="status" class="form-control" name="status" class="select" >
-          <option name="status" value="KE">Kontak Erat</option>
-          <option name="status" value="positif">Positif</option>
-        </select>
-  </div>
+    <div class="form-group">
+      <label for="status">Status</label><br>
+          <select id="status" class="form-control" name="status" class="select" >
+            <option name="status" value="KE">Kontak Erat</option>
+            <option name="status" value="positif">Positif</option>
+          </select>
+    </div>
+    <div class="form-group">
+      <label for="status">Tempat Isolasi</label><br>
+          <select id="status" class="form-control" name="tempat_isolasi" class="select" >
+            <option name="tempat_isolasi" value="Rumah">Rumah</option>
+            <option name="tempat_isolasi" value="Shelter">Shelter</option>
+          </select>
+    </div>
 
 
 

@@ -139,13 +139,14 @@
                        
                         <?php if ($datatku['status'] == 'sehat')  {?>
 
-                        <button  class="btn btn-danger" onclick="location.href='<?php echo base_url("page/gantialamat"),'/',$datatku['link']?>'" >ubah status</button>  
+                        <button  class="btn btn-danger" onclick="location.href='<?php echo base_url("page/gantistatus"),'/',$datatku['nik']?>'" >ubah status</button>  
 
                         <?php }else {?>
 
                           <button  class="btn btn-primary" onclick="location.href='<?php echo base_url("page/isidata"),'/',$datatku['nik']?>'" >Isi Laporan Harian</button>
 
-                          <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['link']?>'" >Sudah Sehat</button>
+                          <!-- <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['link']?>'" >Sudah Sehat</button> -->
+                          <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['nik'] ?>'" >Sudah Sehat</button>
 
                           <?php }?>
 

@@ -271,7 +271,7 @@
 
      <label for="Nama">Usia</label>
 
-    <input type="number" class="form-control" id="Nama" placeholder="Masukkan Usia" required="" name="usia" value="<?php echo $data->usia?>">
+    <input type="number" class="form-control" id="Nama" placeholder="Masukkan Usia" required="" name="usia" >
 
   </div>
 
@@ -279,7 +279,7 @@
 
     <label for="Nama">Mulai Isolasi</label>
 
-    <input type="date" class="form-control" id="Nama" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
+    <input type="date" class="form-control" id="Nama" required="" name="mulai_isolasi">
   </div>
 
   <div class="form-group">
@@ -346,10 +346,9 @@
 
 
 
-  
- <div class="form-group">
+<div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
-        <select id="Alamat" name="alamat" class="select" >
+        <select id="Alamat" class="form-control" name="alamat" class="select">
           <option name="alamat" value="RT 01">RT 01</option>
           <option name="alamat" value="RT 02">RT 02</option>
           <option name="alamat" value="RT 03">RT 03</option>
@@ -360,8 +359,8 @@
           <option name="alamat" value="RT 08">RT 08</option>
           <option name="alamat" value="RT 09">RT 09</option>
           <option name="alamat" value="RT 10">RT 10</option>
-          <option name="alamat" value="RT 10">RT 11</option>
-          <option name="alamat" value="RT 10">RT 12</option>
+          <option name="alamat" value="RT 11">RT 11</option>
+          <option name="alamat" value="RT 12">RT 12</option>
         </select>
   </div>
   
@@ -468,13 +467,21 @@
     </div>
  <input class="form-check-input" hidden type="text" name="score" id="Kependudukan" value="">
 
-      <div class="form-group">
-    <label for="status">Status</label><br>
-        <select id="status" name="status" class="select" >
-          <option name="status" value="KE">Kontak Erat</option>
-          <option name="status" value="positif">Positif</option>
-        </select>
-  </div>
+ <div class="form-group">
+      <label for="status">Status</label><br>
+          <select id="status" class="form-control" name="status" class="select" >
+            <option name="status" value="KE">Kontak Erat</option>
+            <option name="status" value="positif">Positif</option>
+          </select>
+    </div>
+
+  <div class="form-group">
+      <label for="status">Tempat Isolasi</label><br>
+          <select id="status" class="form-control" name="tempat_isolasi" class="select" >
+            <option name="tempat_isolasi" value="Rumah">Rumah</option>
+            <option name="tempat_isolasi" value="Shelter">Shelter</option>
+          </select>
+    </div>
 
 
 

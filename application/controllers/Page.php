@@ -153,9 +153,8 @@ public function databaru($nomorhp=null){
 		$this->load->view('part/content', $dataku);
 }
 public function gantialamat($nomorhp=null){
-	$datap=$this->modulpenduduk->getdataid($nomorhp);
-	$nik=$datap->nik;
-	$dataq=$this->kuisoner->getdataidk($nik);
+	// $nik=$datap->nik;
+	// $dataq=$this->kuisoner->getdataidn($nomorhp);
 		$dataku = array(	'title' => 'Welcome to MyBlog' ,
 
 					  	'isi'=>'gantialamat',
@@ -166,8 +165,8 @@ public function gantialamat($nomorhp=null){
 
 					  	// 'logo'=>$this->inti->logo(),
 
-					  'data'=>$datap,
-					  'datak'=>$dataq
+					  'data'=>$this->modulpenduduk->getdataid($nomorhp),
+					  'datak'=>$this->kuisoner->getdataidn($nomorhp)
 					  );
 
 		
@@ -389,19 +388,51 @@ public function footer() {
 	
 		$this->load->view('part/content', $dataku);
 }
-public function sehat($nomorhp=null){
-	$datap=$this->modulpenduduk->getdataid($nomorhp);
-	$nik=$datap->nik;
-	$link=$datap->link;
-	$dataq=$this->kuisoner->getdataidk($nik);
+public function sehat($nik=null){
+	// $cek = $this->modulpenduduk->penduduknik($nik);
+	// $data =>$this->modulpenduduk->datadetailhari($nik);
+	// $nik=$datap->nik;
+	// $link=$datap->link;
+	// $dataq=$this->kuisoner->getdataidk($nik);
+	$datap=$this->modulpenduduk->ubahdatadiri($nik);
 	$status = 'sehat';
 	$ubahstatus = $this->modulpenduduk->ubahsehat($nik);
 
 
-	$dataku = array('isi'=>'listdata');
-	
-		 redirect('page/listdata/'.$link);
+	$dataku = array(
+				'isi'=>'sehat',
+				'dataku'=>$this->kuisoner->penduduk($nik),
+				'data' => $datap,
+				'datas'=>$this->kuisoner->penduduktanggal($nik)
+				// 'datap'=>$this->modulpenduduk->datadetailhari($nik)
+				);
+		$this->load->view('part/content', $dataku);
+		//  redirect('page/sehat/'.$nik);
 }
+
+public function gantistatus($nik=null){
+	$datap=$this->modulpenduduk->ubahdatadiri($nik);
+	//$nik=$datap->nik;
+	$dataq=$this->kuisoner->getdataidk($nik);
+		$dataku = array(	'title' => 'Welcome to MyBlog' ,
+
+					  	'isi'=>'gantistatus',
+
+					  	//'postku'=> $this->tampilan->postku(),
+
+					  	// 'rows'=> $this->rows->sliderku(),
+
+					  	// 'logo'=>$this->inti->logo(),
+
+					  'data'=>$datap,
+					  'datak'=>$dataq
+					  );
+
+		
+		$this->load->view('part/content', $dataku);
+
+}
+
 public function submitalamatbaru($nomorhp=null) {
 			$nik=$this->input->post('nik');
 			$cek = $this->modulpenduduk->getdataidnik($nomorhp);
