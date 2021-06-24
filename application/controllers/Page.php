@@ -116,19 +116,7 @@ public function submitdatabaru($nomorhp=null) {
 	// echo $link=$this->input->post('nik');
 		 
 	}
-public function submitalamatbaru($nomorhp=null) {
-			$nik=$this->input->post('nik');
-			$cek = $this->modulpenduduk->getdataidnik($nomorhp);
-			$link=$this->input->post('link');
-			$idk=$this->input->post('idk');
 
-			//$tambahnik=$this->kuisoner->barunik();
-			$tambahdata= $this->modulpenduduk->updatedataalamatnik();
-		 	redirect('page/listdata/'.$link);
-	// echo $link=$this->input->post('idk');
-	// echo $link=$this->input->post('nik');
-		 
-	}
 public function submitlistbaru($nomorhp=null) {
 			$nik=$this->input->post('nik');
 			$link=$this->input->post('link');
@@ -406,10 +394,7 @@ function sehat($nomorhp=null){
 	$nik=$datap->nik;
 	$dataq=$this->kuisoner->getdataidk($nik);
 	$status = 'sehat';
-	$nik=$this->input->post('nik');
-	$cek = $this->modulpenduduk->getdataidnik($nomorhp);
-	$link=$this->input->post('link');
-	$query = $this->modulpenduduk->sehat($nik);
+	$ubahstatus = $this->modulpenduduk->ubahsehat($nik);
 
 
 	$dataku = array('isi'=>'listdata',
@@ -420,5 +405,18 @@ function sehat($nomorhp=null){
 	
 		$this->load->view('part/content', $dataku);
 }
+public function submitalamatbaru($nomorhp=null) {
+			$nik=$this->input->post('nik');
+			$cek = $this->modulpenduduk->getdataidnik($nomorhp);
+			$link=$this->input->post('link');
+			$idk=$this->input->post('idk');
+
+			//$tambahnik=$this->kuisoner->barunik();
+			$tambahdata= $this->modulpenduduk->updatedataalamatnik();
+		 	redirect('page/listdata/'.$link);
+	// echo $link=$this->input->post('idk');
+	// echo $link=$this->input->post('nik');
+		 
+	}
 } 
 
