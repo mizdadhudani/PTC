@@ -74,7 +74,7 @@
 
                 <a class="navbar-brand mx-auto" href="#">
 
-                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid"" class="center">
+                    <img src="<?php echo base_url('assets/images/KL-PTC-19.png')?>"  width="575" height="100" class="img-fluid" class="center">
 
                 </a>
 
@@ -101,7 +101,7 @@
           <?php echo validation_errors(); ?>
          <label for="login"><a class="font-weight-bold"><p class="text-danger">MASUKKAN NOMOR HP ANDA</p></a></label>
 <center>
-         <input type="number" minlength="11" id="login" required="" minlength="11" autofocus class="form-control" name="nomorhp"placeholder="(08XXXXXXXXXX) minimal 10 karakter"onkeypress="return isNumber(event)" style="width: 80%;">
+         <input type="number" minlength="11" id="login" required="" minlength="11" autofocus class="form-control" name="nomorhp"placeholder="(08XXXXXXXXXX) minimal 10 digit"onkeypress="return isNumber(event)" style="width: 80%;">
          </center>
 
          <script type="text/javascript">     
@@ -158,7 +158,7 @@
     alert("Nomor HP Harus Disi");
     return false;
   } else if (<=9) {
-    alert("Nomor HP Harus lebih dari 10");
+    alert("Nomor HP Harus lebih dari 10 digit");
   }
 }
 </script>

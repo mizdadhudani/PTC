@@ -115,8 +115,7 @@
 
     <label for="Nama">Mulai Isolasi</label>
 
-    <input type="text" class="form-control" id="Nama" placeholder="20-06-2021" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
-
+    <input type="date" class="form-control" id="Nama" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
   </div>
 
   <div class="form-group">
@@ -257,8 +256,6 @@
             </label>
           </div>
         </div>
-
-
         <div class="col-lg-6">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Glondong" required="">
@@ -299,6 +296,13 @@
         </div>
       </div>
     </div>
+      <div class="form-group">
+    <label for="status">Status</label><br>
+        <select id="status" name="status" class="select" >
+          <option name="status" value="KE">Kontak Erat</option>
+          <option name="status" value="positif">Positif</option>
+        </select>
+  </div>
 
 
 

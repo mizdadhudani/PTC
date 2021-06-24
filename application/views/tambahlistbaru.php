@@ -269,9 +269,9 @@
 
   <div class="form-group">
 
-    <label for="Nama">Usia</label>
+     <label for="Nama">Usia</label>
 
-    <input type="number" class="form-control" id="Nama" placeholder="Masukkan Usia" required="" name="usia" >
+    <input type="number" class="form-control" id="Nama" placeholder="Masukkan Usia" required="" name="usia" value="<?php echo $data->usia?>">
 
   </div>
 
@@ -279,8 +279,7 @@
 
     <label for="Nama">Mulai Isolasi</label>
 
-    <input type="text" class="form-control" id="Nama" placeholder="20-06-2021" required="" name="mulai_isolasi" >
-
+    <input type="date" class="form-control" id="Nama" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
   </div>
 
   <div class="form-group">
@@ -468,6 +467,15 @@
       </div>
     </div>
  <input class="form-check-input" hidden type="text" name="score" id="Kependudukan" value="">
+
+      <div class="form-group">
+    <label for="status">Status</label><br>
+        <select id="status" name="status" class="select" >
+          <option name="status" value="KE">Kontak Erat</option>
+          <option name="status" value="positif">Positif</option>
+        </select>
+  </div>
+
 
 
   <button type="submit" class="btn btn-primary" style="margin-bottom: 5%;">Kirim</button>

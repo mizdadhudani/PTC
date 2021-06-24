@@ -12,6 +12,7 @@ class Modulpenduduk extends CI_Model{
     public $mulai_isolasi;
     public $status_dlm_keluarga;
     public $jeniskelamin;
+    public $status;
     public $link;
     public $harisatu;
     public $haridua;
@@ -40,6 +41,7 @@ class Modulpenduduk extends CI_Model{
     $this->status_dlm_keluarga = '';
     $this->harisatu = '';
     $this->haridua = '';
+    $this->status = '';
     $this->jeniskelamin = 'Laki-Laki';
     $this->db->insert($this->table,$this);
     }
@@ -105,6 +107,7 @@ class Modulpenduduk extends CI_Model{
         $this->usia = $post["usia"];
         $this->mulai_isolasi = $post["mulai_isolasi"];
         $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
+        $this->status = $post["status"];
         $this->penduduk = $post["penduduk"];
         $this->harisatu='';
         $this->haridua='';
@@ -122,6 +125,7 @@ class Modulpenduduk extends CI_Model{
         $this->mulai_isolasi = $post["mulai_isolasi"];
         $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["penduduk"];
+        $this->status = $post["status"];
         $this->harisatu=$post['harisatu'];
         $this->haridua=$post['haridua'];
         $this->db->where('id=',$this->id = $post["id"]);
@@ -139,6 +143,7 @@ class Modulpenduduk extends CI_Model{
         $this->mulai_isolasi = $post["mulai_isolasi"];
         $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["pendudukpenduduk"];
+        $this->status = $post["status"];
         if ($post['harisatu']==14){
                 $this->harisatu=$post['harisatu']+1;
         } else {
@@ -164,6 +169,7 @@ class Modulpenduduk extends CI_Model{
         $this->mulai_isolasi = $post["mulai_isolasi"];
         $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["pendudukpenduduk"];
+        $this->status = $post["status"];
         $this->harisatu=$post['harisatu'];
         $this->haridua=$post['haridua'];
         $this->db->where('id=',$this->id = $post["idpenduduk"]);
@@ -181,6 +187,7 @@ class Modulpenduduk extends CI_Model{
         $this->mulai_isolasi = $post["mulai_isolasi"];
         $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
         $this->penduduk = $post["penduduk"];
+        $this->status = $post["status"];
         $this->harisatu=$post['harisatu'];
         $this->haridua=$post['haridua'];
         $this->db->where('id=',$this->id = $post["id"]);
