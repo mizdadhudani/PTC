@@ -39,8 +39,8 @@ class Admin extends CI_Controller {
 					  'dataj'=>$this->modulpenduduk->datalengkapodpj(),
 					  'datat'=>$this->modulpenduduk->datalengkapkert(),
 					  'datar'=>$this->modulpenduduk->datalengkapkerr(),
-					  'datag'=>$this->modulpenduduk->datalengkapgejala(),
-					  'datas'=>$this->modulpenduduk->datalengkapsehat(),
+					  // 'datag'=>$this->modulpenduduk->datalengkapgejala(),
+					  // 'datas'=>$this->modulpenduduk->datalengkapsehat(),
 					  'datasemua'=>$this->modulpenduduk->datalengkapscore(),
 
 					  //'dataku'=>$this->kuisoner->getdataid($id),

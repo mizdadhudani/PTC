@@ -128,7 +128,7 @@
 
     <td>2</td>
 
-    <td>Apakah anda sedang mengalami gejala seperti meriang?</td>
+    <td>Apakah nafsu makan anda berkurang?</td>
 
     <td>  <div class="form-check">
 
@@ -200,7 +200,7 @@
 
     <td>6</td>
 
-    <td>Apakah anda sedang menderita diare?</td>
+    <td>Apakah mulut anda terasa kering?</td>
 
     <td>  <div class="form-check">
 
@@ -218,7 +218,7 @@
 
     <td>7</td>
 
-    <td>Apakah anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
+    <td>Apakah anda sedang mengalami gejala seperti meriang?</td>
 
     <td>  <div class="form-check">
 
@@ -254,7 +254,7 @@
 
     <td>9</td>
 
-    <td>Apakah mulut anda terasa kering?</td>
+    <td>Apakah anda sedang menderita diare?</td>
 
     <td>  <div class="form-check">
 
@@ -272,7 +272,7 @@
 
     <td>10</td>
 
-    <td>Apakah nafsu makan anda berkurang?</td>
+    <td>Apakah anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
 
     <td>  <div class="form-check">
 
@@ -326,7 +326,7 @@
 
     <td>13</td>
 
-    <td>Apakah dada anda terasa nyeri dan berdebar-debar?</td>
+    <td>Apakah kulit anda pucat dan berkeringat dingin?</td>
 
     <td>  <div class="form-check">
 
@@ -362,7 +362,7 @@
 
     <td>15</td>
 
-    <td>Apakah kulit anda pucat dan berkeringat dingin?</td>
+    <td>Apakah dada anda terasa nyeri dan berdebar-debar?</td>
 
     <td>  <div class="form-check">
 
@@ -398,7 +398,7 @@
 
     <td>17</td>
 
-    <td>Apakah merasakan pusing atau sakit kepala berat?</td>
+    <td>Apakah mengalami demam tinggi selama lebih dari 7 hari?</td>
 
     <td>  <div class="form-check">
 
@@ -409,24 +409,6 @@
     <td>  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ketujuhbelas" value="0" checked=""></td>
-
-  </tr>
-
-  <tr>
-
-    <td>18</td>
-
-    <td>Apakah mengalami demam tinggi selama lebih dari 7 hari?</td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kedelapanbelas" value="1"></div>
-
-      </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kedelapanbelas" value="0" checked=""></td>
 
   </tr>
 
@@ -445,13 +427,13 @@
 
       <tr>
 
-        <td>19</td>
+        <td>18</td>
 
         <td>Berapakah Tekanan Darah Anda?</td>
 
         <td colspan="2">  <div class="form-check">
 
-             <input type="text" class="form-control" id="kesembilanbelas" required="" name="kesembilanbelas" value="0"></div>
+             <input type="number" class="form-control" id="kedelapanbelas" required="" name="kedelapanbelas" value=""></div>
 
         </td>
 
@@ -471,12 +453,12 @@
 
       <tr>
 
-        <td>20</td>
+        <td>19</td>
 
         <td>Berapakah Denyut Nadi Anda?</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="text" class="form-control" id="keduapuluh" required="" name="keduapuluh" value="0"></div>
+             <input type="number" class="form-control" id="kesembilanbelas" required="" name="kesembilanbelas" value=""></div>
 
         </td>
 
@@ -493,6 +475,26 @@
       <td></td>
 
     </tr>
+
+      <tr>
+
+        <td>20</td>
+
+        <td>Apakah suhu anda diantara 37-38 C?</td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduapuluh" value="1"></div>
+
+        </td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduapuluh" value="0" checked="">
+        </td>
+
+      </tr>
+
 
       <tr>
 
@@ -513,6 +515,7 @@
 
       </tr>
 
+
     <tr>
 
       <td><b>D</b></td>
@@ -529,13 +532,36 @@
 
         <td>22</td>
 
+        <td>Apakah saturasi oksigen anda diantara 90-95?</td>
 
-        <td>Berapakah Saturasi Anda?</td>
+        <td>  <div class="form-check">
 
-        <td colspan="2">  <div class="form-check">
+          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="1"></div>
 
-             <input type="text" class="form-control" id="keduadua" required="" name="keduadua" value="0"></div>
+        </td>
 
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="0" checked="">
+        </td>
+
+      </tr>
+
+            <tr>
+
+        <td>23</td>
+
+        <td>Apakah saturasi oksigen anda dibawah 90?</td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduatiga" value="1"></div>
+
+        </td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduatiga" value="0" checked="">
         </td>
 
       </tr>
@@ -571,6 +597,10 @@
        <input type="text" hidden name="idpenduduk" value="<?php echo $datap->id?>">
       <input type="text" hidden name="linkpenduduk" value="<?php echo $datap->link?>">
       <input type="text" hidden name="namapenduduk" value="<?php echo $datap->nama?>">
+      <input type="text" hidden name="usia" value="<?php echo $datap->usia?>">
+      <input type="text" hidden name="mulai_isolasi" value="<?php echo $datap->mulai_isolasi?>">
+      <input type="text" hidden name="status_dlm_keluarga" value="<?php echo $datap->status_dlm_keluarga?>">
+      <input type="text" hidden name="status" value="<?php echo $datap->status?>">
       <input type="text" hidden name="nikpenduduk" value="<?php echo $datap->nik?>">
       <input type="text" hidden name="jeniskelaminpenduduk" value="<?php echo $datap->jeniskelamin?>">
       <input type="text" hidden name="nomorhppenduduk" value="<?php echo $datap->nomorhp?>">

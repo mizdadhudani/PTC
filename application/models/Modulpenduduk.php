@@ -89,8 +89,8 @@ class Modulpenduduk extends CI_Model{
         $this->status = $post["status"];
         $this->tempat_isolasi = $post["tempat_isolasi"];
         $this->penduduk = $post["penduduk"];
-        $this->harisatu=$post['harisatu'];
-        $this->haridua=$post['haridua'];
+        $this->harisatu='';
+        $this->haridua='';
         $this->db->where('id=',$this->id = $post["id"]);
         $this->db->update("tb_penduduk",$this);
     }
@@ -268,7 +268,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
-        $this->db->where("score >=6");
+        $this->db->where("score =3");
         //$this->db->where("ksebelas =1 ");
         //$this->db->where("ksebelas =1 OR ktigabelas =1 OR kempatbelas =1");
         //$this->db->where("ktigabelas =1");
@@ -284,7 +284,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
-        $this->db->where("score=5");
+        $this->db->where("score=2");
         //$this->db->where("kempatbelas =0 OR ktigabelas =0");
         //$this->db->where("ksepuluh =1");
         //$this->db->order_by("score", "DESC");
@@ -298,7 +298,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
-        $this->db->where("score =4");
+        $this->db->where("score =1");
         //$this->db->order_by("score", "DESC");
        $this->db->group_by('tb_penduduk.nik');
         $query = $this->db->get();
@@ -310,7 +310,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
-        $this->db->where("score =3");
+        $this->db->where("score =0");
         //$this->db->order_by("score", "DESC");
         $this->db->group_by('tb_penduduk.nik');
         $query = $this->db->get();
