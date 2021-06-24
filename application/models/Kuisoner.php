@@ -729,7 +729,7 @@ else if (
 
         $this->keduadua=$post['keduadua'];
 
-        $this->keduasatu=$post['keduatiga'];
+        $this->keduatiga=$post['keduatiga'];
 
         // $this->keduadua=$post['keduaempat'];
 
