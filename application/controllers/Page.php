@@ -223,8 +223,8 @@ if ($cek->alamat=='' || $cek->alamat==null || $cek->alamat==' ' || $cek->pendudu
 
 public function laporanharian($nik=null) {
 		$nik=$this->input->post('nik');
-		$ksepuluh=$this->input->post('ksepuluh');
-		$ksebelas=$this->input->post('ksebelas');
+		// $ksepuluh=$this->input->post('ksepuluh');
+		// $ksebelas=$this->input->post('ksebelas');
 		$id=$this->input->post('id');
 		$cek = $this->kuisoner->penduduktanggal($nik);
 		$tanggal=$cek;
@@ -240,13 +240,13 @@ public function laporanharian($nik=null) {
 			//update tanggal
 			//$tambah=$this->kuisoner->tambah($nik);
 			
-		}
-		if($ksepuluh>0 || $ksebelas>0){
-			redirect("page/laporanlanjutan/".$nik);
-			echo $ksepuluh, $ksebelas;
-		} else {
+		 }
+		// if($ksepuluh>0 || $ksebelas>0){
+		// 	redirect("page/laporanlanjutan/".$nik);
+		// 	echo $ksepuluh, $ksebelas;
+		// } else {
 			echo 'data tidak ada';redirect("page/hasillaporan/".$nik);
-		}
+		// }
 		//redirect("page/hasillaporan/".$nik);
 	}
 public function submitlaporanlanjutan($nik=null){

@@ -81,9 +81,13 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
+        $this->usia = $post["usia"];
+        $this->mulai_isolasi = $post["mulai_isolasi"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
+        $this->status = $post["status"];
         $this->penduduk = $post["penduduk"];
-        $this->harisatu=$post['harisatu'];
-        $this->haridua=$post['haridua'];
+        $this->harisatu='';
+        $this->haridua='';
         $this->db->where('id=',$this->id = $post["id"]);
         $this->db->update("tb_penduduk",$this);
     }
