@@ -70,7 +70,7 @@ class Modulpenduduk extends CI_Model{
         //$this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik');
         $this->db->where('tb_penduduk.nik', $nik);
         $query = $this->db->update('tb_penduduk', array('status' => 'sehat'));
-        return TRUE;
+
     }
 
     function updatedataalamatnik() {

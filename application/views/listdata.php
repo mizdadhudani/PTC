@@ -145,7 +145,7 @@
 
                           <button  class="btn btn-primary" onclick="location.href='<?php echo base_url("page/isidata"),'/',$datatku['nik']?>'" >Isi Laporan Harian</button>
 
-                          <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['nomorhp']?>'" >Sudah Sehat</button>
+                          <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['link']?>'" >Sudah Sehat</button>
 
                           <?php }?>
 

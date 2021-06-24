@@ -389,9 +389,10 @@ public function footer() {
 	
 		$this->load->view('part/content', $dataku);
 }
-function sehat($nomorhp=null){
+public function sehat($nomorhp=null){
 	$datap=$this->modulpenduduk->getdataid($nomorhp);
 	$nik=$datap->nik;
+	$link=$datap->link;
 	$dataq=$this->kuisoner->getdataidk($nik);
 	$status = 'sehat';
 	$ubahstatus = $this->modulpenduduk->ubahsehat($nik);
@@ -403,7 +404,7 @@ function sehat($nomorhp=null){
 			'status'=>$this->modulpenduduk->getstatus($nomorhp)  
 			);
 	
-		$this->load->view('part/content', $dataku);
+		// redirect('page/listdata/'.$link);
 }
 public function submitalamatbaru($nomorhp=null) {
 			$nik=$this->input->post('nik');
