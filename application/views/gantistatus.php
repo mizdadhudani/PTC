@@ -85,31 +85,37 @@
         <input type="text" hidden class="form-control" id="Nama" placeholder="Masukkan Nama"  name="idk" value="<?php echo $datak->id?>">
         <input type="text" hidden class="form-control" id="Nama" placeholder="Masukkan Nama"  name="harisatu" value="<?php echo $data->harisatu?>">
         <input type="text"  hidden class="form-control" id="Nama" placeholder="Masukkan Nama"  name="haridua" value="<?php echo $data->haridua?>">
-  </div>
+        <input type="number" minlength=16 hidden class="form-control" id="Nama" placeholder="Masukkan NIK"  name="nik" value="<?php echo $data->nik?>">
+         <input type="text" class="form-control" hidden id="Nama" placeholder="Masukkan Nama" name="nama" value="<?php echo $data->nama?>">
+         <input type="number" class="form-control" hidden id="Nama" placeholder="Masukkan Usia" name="usia" value="<?php echo $data->usia?>">
+         <input class="form-check-input" type="text" hidden name="status_dlm_keluarga" id="status_dlm_keluarga" value="<?php echo $data->status_dlm_keluarga?>">
+         <input class="form-check-input" type="text" hidden name="jeniskelamin" id="JenisKelamin" value="<?php echo $data->jeniskelamin?>">
+        <input type="text" class="form-control" hidden id="alamat" placeholder="Masukkan Usia" name="alamat" value="<?php echo $data->alamat?>">
+        <input type="text" class="form-control" hidden id="penduduk" placeholder="Masukkan Usia" name="penduduk" value="<?php echo $data->penduduk?>">
+        <input type="number" class="form-control" hidden id="nomorhp" placeholder="Masukkan Usia" name="nomorhp" value="<?php echo $data->nomorhp?>">
+  </div><br>
+  <h3>Data diri</h3>
 
-  <div class="form-group">
+  <dl class="row">
+    <dt class="col-sm-5">Nama</dt>
+    <dd class="col-sm-5">: <?php echo $data->nama?></dd>
 
-    <label for="Nama">NIK</label>
+    <dt class="col-sm-5">Usia</dt>
+    <dd class="col-sm-5">: <?php echo $data->usia?> Tahun</dd>
 
-    <input type="number" minlength=16 readonly="" class="form-control" id="Nama" placeholder="Masukkan NIK" required="" name="nik" value="<?php echo $data->nik?>">
+    <dt class="col-sm-5">Status dalam Keluarga</dt>
+    <dd class="col-sm-5">: <?php echo $data->status_dlm_keluarga?></dd>
 
-  </div>
+    <dt class="col-sm-5">Jenis Kelamin</dt>
+    <dd class="col-sm-5">: <?php echo $data->jeniskelamin?></dd>
 
-  <div class="form-group">
+    <dt class="col-sm-5">RT</dt>
+    <dd class="col-sm-5">: <?php echo $data->alamat?></dd>
 
-    <label for="Nama">Nama</label>
+    <dt class="col-sm-5">Alamat</dt>
+    <dd class="col-sm-5">: <?php echo $data->penduduk?></dd>
 
-    <input type="text" class="form-control" id="Nama" placeholder="Masukkan Nama" required="" name="nama" value="<?php echo $data->nama?>">
-
-  </div>
-
-  <div class="form-group">
-
-    <label for="Nama">Usia</label>
-
-    <input type="number" class="form-control" id="Nama" placeholder="Masukkan Usia" required="" name="usia" value="<?php echo $data->usia?>">
-
-  </div>
+  </dl>
 
   <div class="form-group">
 
@@ -117,184 +123,6 @@
 
     <input type="date" class="form-control" id="Nama" required="" name="mulai_isolasi" value="<?php echo $data->mulai_isolasi?>">
   </div>
-
-  <div class="form-group">
-
-    <label for="JenisKelamin">Status dalam Keluarga</label>
-
-    <div class="form-check">
-
-  <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Kepala Keluarga" required="" <?php if($data->status_dlm_keluarga == 'Kepala Keluarga') echo 'checked';?>>
-
-  <label class="form-check-label" for="exampleRadios1">
-
-    Kepala Keluarga
-
-  </label>
-
-</div>
-
-<div class="form-check">
-
-  <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Anggota Keluarga" required="" <?php if($data->status_dlm_keluarga == 'Anggota Keluarga') echo 'checked';?>>
-
-  <label class="form-check-label" for="exampleRadios2">
-
-    Anggota Keluarga
-
-  </label>
-
-</div>
-
-</div>
-
-    <input type="number" hidden class="form-control" id="NomorHP" placeholder="Masukkan nomor HP" required="" name="nomorhp" value="<?php echo $data->nomorhp?>" disable>
-
-
-
-  <div class="form-group">
-
-    <label for="JenisKelamin">Jenis Kelamin</label>
-
-    <div class="form-check">
-
-  <input class="form-check-input" type="radio" name="jeniskelamin" id="JenisKelamin" value="Laki-Laki" required="" 
-  <?php if($data->jeniskelamin == 'Laki-Laki') echo 'checked';?>>
-
-  <label class="form-check-label" for="exampleRadios1" >
-
-    Laki-laki
-
-  </label>
-
-</div>
-
-<div class="form-check">
-
-  <input class="form-check-input" type="radio" name="jeniskelamin" id="JenisKelamin" value="Perempuan"required="" 
-  <?php if($data->jeniskelamin == 'Perempuan') echo 'checked';?> >
-
-  <label class="form-check-label" for="exampleRadios2" >
-
-    Perempuan
-
-  </label>
-
-</div>
-
-  </div>
-
-  <div class="form-group">
-    <label for="Alamat">Pilih RT</label><br>
-        <select id="Alamat" class="form-control" name="alamat" class="select" >
-          <option name="alamat" value="RT 01" <?php if($data->alamat == 'RT 01') echo 'selected';?>>RT 01</option>
-          <option name="alamat" value="RT 02" <?php if($data->alamat == 'RT 02') echo 'selected';?>>RT 02</option>
-          <option name="alamat" value="RT 03" <?php if($data->alamat == 'RT 03') echo 'selected';?>>RT 03</option>
-          <option name="alamat" value="RT 04" <?php if($data->alamat == 'RT 04') echo 'selected';?>>RT 04</option>
-          <option name="alamat" value="RT 05" <?php if($data->alamat == 'RT 05') echo 'selected';?>>RT 05</option>
-          <option name="alamat" value="RT 06" <?php if($data->alamat == 'RT 06') echo 'selected';?>>RT 06</option>
-          <option name="alamat" value="RT 07" <?php if($data->alamat == 'RT 07') echo 'selected';?>>RT 07</option>
-          <option name="alamat" value="RT 08" <?php if($data->alamat == 'RT 08') echo 'selected';?>>RT 08</option>
-          <option name="alamat" value="RT 09" <?php if($data->alamat == 'RT 09') echo 'selected';?>>RT 09</option>
-          <option name="alamat" value="RT 10" <?php if($data->alamat == 'RT 10') echo 'selected';?>>RT 10</option>
-          <option name="alamat" value="RT 11" <?php if($data->alamat == 'RT 11') echo 'selected';?>>RT 11</option>
-          <option name="alamat" value="RT 12" <?php if($data->alamat == 'RT 12') echo 'selected';?>>RT 12</option>
-        </select>
-  </div>
-
-    <div class="form-group">
-      <label for="Alamat">Alamat Domisili</label>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Krapyak Wetan" required="" <?php if($data->penduduk == 'Dukuh Krapyak Wetan') echo 'checked';?>>
-              <label class="form-check-label">
-                Dukuh Krapyak Wetan
-              </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Krapyak Kulon" required="" <?php if($data->penduduk == 'Dukuh Krapyak Kulon') echo 'checked';?>>
-            <label class="form-check-label">
-             Dukuh Krapyak Kulon
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Dongkelan" required="" <?php if($data->penduduk == 'Dukuh Dongkelan') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Dongkelan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Glugo" required="" <?php if($data->penduduk == 'Dukuh Glugo') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Glugo
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Kweni" required="" <?php if($data->penduduk == 'Dukuh Kweni') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Kweni
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Pelemsewu" required="" <?php if($data->penduduk == 'Dukuh Pelemsewu') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Pelemsewu
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Sawit" required="" <?php if($data->penduduk == 'Dukuh Sawit') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Sawit
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Pandes" required="" <?php if($data->penduduk == 'Dukuh Pandes') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Pandes
-            </label>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Glondong" required="" <?php if($data->penduduk == 'Dukuh Glondong') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Glondong
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Jaranan" required="" <?php if($data->penduduk == 'Dukuh Jaranan') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Jaranan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Geneng" required="" <?php if($data->penduduk == 'Dukuh Geneng') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Geneng
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Ngireng-ngireng" required="" <?php if($data->penduduk == 'Dukuh Ngireng-ngireng') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Ngireng-ngireng
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Cabeyan" required="" <?php if($data->penduduk == 'Dukuh Cabeyan') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Cabeyan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Garon" required="" <?php if($data->penduduk == 'Dukuh Garon') echo 'checked';?>>
-            <label class="form-check-label">
-              Dukuh Garon
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="form-group">
       <label for="status">Status</label><br>
           <select id="status" class="form-control" name="status" class="select" >
