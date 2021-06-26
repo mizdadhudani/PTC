@@ -82,7 +82,7 @@
 
       <th scope="col">Pertanyaan</th>
 
-      <th scope="col">Ya</th>
+      <th scope="col-4">Ya</th>
 
       <th scope="col">Tidak</th>
 
@@ -412,6 +412,20 @@
 
   </tr>
 
+  <tr>
+
+        <td>18</td>
+
+        <td>Gejala Lainnya?</td>
+
+        <td colspan="2">  <div class="form-check">
+
+             <textarea type="text" class="form-control" id="keduaempat" name="keduaempat" value=""></textarea> 
+
+        </td>
+
+      </tr>
+
 
     <tr>
 
@@ -427,13 +441,20 @@
 
       <tr>
 
-        <td>18</td>
+        <td>19</td>
 
         <td>Berapakah Tekanan Darah Anda?</td>
 
-        <td colspan="2">  <div class="form-check">
+        <td >  <div class="form-check">
 
-             <input type="number" class="form-control" id="kedelapanbelas" required="" name="kedelapanbelas" value=""></div>
+             <input type="number" class="form-control" id="kedelapanbelas" name="kedelapanbelas" value="">
+             <!-- <input type="number" class="form-control" id="kedelapanbelas" required="" name="kedelapanbelas" value=""></div> -->
+
+
+        </td>
+        <td >  <div class="form-check">
+
+             <input type="number" class="form-control" id="kedelapanbelas"  name="kedelapanbelas" value=""></div>
 
         </td>
 
@@ -453,12 +474,12 @@
 
       <tr>
 
-        <td>19</td>
+        <td>20</td>
 
         <td>Berapakah Denyut Nadi Anda?</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="number" class="form-control" id="kesembilanbelas" required="" name="kesembilanbelas" value=""></div>
+             <input type="number" class="form-control" id="kesembilanbelas" name="kesembilanbelas" value=""></div>
 
         </td>
 
@@ -478,9 +499,9 @@
 
       <tr>
 
-        <td>20</td>
+        <td>21</td>
 
-        <td>Apakah suhu anda diantara 37-38 C?</td>
+        <td>Apakah suhu anda diantara 37,5 - 38 C?</td>
 
         <td>  <div class="form-check">
 
@@ -498,7 +519,7 @@
 
       <tr>
 
-        <td>21</td>
+        <td>22</td>
 
         <td>Apakah suhu anda diatas 38 C?</td>
 
@@ -530,7 +551,7 @@
 
       <tr>
 
-        <td>22</td>
+        <td>23</td>
 
         <td>Apakah saturasi oksigen anda diantara 90-95?</td>
 
@@ -549,7 +570,7 @@
 
             <tr>
 
-        <td>23</td>
+        <td>24</td>
 
         <td>Apakah saturasi oksigen anda dibawah 90?</td>
 

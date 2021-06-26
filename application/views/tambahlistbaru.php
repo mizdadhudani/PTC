@@ -315,34 +315,20 @@
 
 
    <div class="form-group">
-
-    <label for="JenisKelamin">Jenis Kelamin</label>
-
-    <div class="form-check">
-
-  <input class="form-check-input" type="radio" name="jeniskelamin" id="JenisKelamin" value="Laki-Laki" required="">
-
-  <label class="form-check-label" for="exampleRadios1">
-
-    Laki-laki
-
-  </label>
-
-</div>
-
-<div class="form-check">
-
-  <input class="form-check-input" type="radio" name="jeniskelamin" id="JenisKelamin" value="Perempuan"required="">
-
-  <label class="form-check-label" for="exampleRadios2">
-
-    Perempuan
-
-  </label>
-
-</div>
-
+      <label for="status">Jenis Kelamin</label><br>
+          <select id="jeniskelamin" class="form-control" name="jeniskelamin" class="select" onchange="return showHamil() ;">
+            <option name="tempat_isolasi" value="Laki-laki">Laki-laki</option>
+            <option name="tempat_isolasi" value="Perempuan">Perempuan</option>
+          </select>
   </div>
+
+  <div id="nlHamil" style="visibility: hidden;" class="form-group">
+      <label for="status">Apakah Hamil?</label><br>
+          <select id="hamil" class="form-control" name="hamil" class="select" >
+            <option name="hamil" value="0">Tidak</option>
+            <option name="hamil" value="hamil">Hamil</option>
+          </select>
+    </div>
 
 
 
@@ -520,6 +506,20 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+     function showHamil() {
+      var selectBox =document.getElementById('jeniskelamin');
+      var userInput =selectBox.options[selectBox.selectedIndex].value;
+      if (userInput == 'Perempuan') {
+        document.getElementById('nlHamil').style.visibility ='visible';
+      } else {
+        document.getElementById('nlHamil').style.visibility = 'hidden';
+      }
+      return false;
+     }
+
+   </script>
 
 </body>
 
