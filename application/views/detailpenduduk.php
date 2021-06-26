@@ -70,7 +70,7 @@
 
                         <th>
 
-                          Kependudukan
+                          Domisili
 
                         </th>
 
