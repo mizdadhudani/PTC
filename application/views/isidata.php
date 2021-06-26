@@ -82,7 +82,7 @@
 
       <th scope="col">Pertanyaan</th>
 
-      <th scope="col-4">Ya</th>
+      <th scope="col-4" style="text-align-last: right;">Ya</th>
 
       <th scope="col">Tidak</th>
 
@@ -112,7 +112,7 @@
 
     <td>Apakah anda sedang menderita batuk-batuk?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksatu" value="1"></div>
 
@@ -130,7 +130,7 @@
 
     <td>Apakah nafsu makan anda berkurang?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kdua" value="1"></div>
 
@@ -148,7 +148,7 @@
 
     <td>Apakah anda sedang menderita sakit atau nyeri kepala?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ktiga" value="1"></div>
 
@@ -166,7 +166,7 @@
 
     <td>Apakah anda sedang menderita sakit tenggorokan?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kempat" value="1"></div>
 
@@ -184,7 +184,7 @@
 
     <td>Apakah badan anda sekarang terasa lemas dan lesu?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="klima" value="1"></div>
 
@@ -202,7 +202,7 @@
 
     <td>Apakah mulut anda terasa kering?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kenam" value="1"></div>
 
@@ -220,7 +220,7 @@
 
     <td>Apakah anda sedang mengalami gejala seperti meriang?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ktujuh" value="1"></div>
 
@@ -238,7 +238,7 @@
 
     <td>Apakah anda sedang menderita nyeri di seluruh bagian tubuh?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kdelapan" value="1"></div>
 
@@ -256,7 +256,7 @@
 
     <td>Apakah anda sedang menderita diare?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksembilan" value="1"></div>
 
@@ -274,7 +274,7 @@
 
     <td>Apakah anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="1"></div>
 
@@ -292,7 +292,7 @@
 
     <td>Apakah anda mengalami mual/muntah?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="1"></div>
 
@@ -310,7 +310,7 @@
 
     <td>Apakah anda tidak bisa mencium bau atau merasakan makanan?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="1"></div>
 
@@ -328,7 +328,7 @@
 
     <td>Apakah kulit anda pucat dan berkeringat dingin?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ktigabelas" value="1"></div>
 
@@ -346,7 +346,7 @@
 
     <td>Apakah bibir, kulit dan wajah anda tampak kebiruan?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kempatbelas" value="1"></div>
 
@@ -364,7 +364,7 @@
 
     <td>Apakah dada anda terasa nyeri dan berdebar-debar?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kelimabelas" value="1"></div>
 
@@ -382,7 +382,7 @@
 
     <td>Apakah pernah merasa linglung secara tiba-tiba?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keenambelas" value="1"></div>
 
@@ -400,7 +400,7 @@
 
     <td>Apakah mengalami demam tinggi selama lebih dari 7 hari?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ketujuhbelas" value="1"></div>
 
@@ -503,7 +503,7 @@
 
         <td>Apakah suhu anda diantara 37,5 - 38 C?</td>
 
-        <td>  <div class="form-check">
+        <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keduapuluh" value="1"></div>
 
@@ -523,7 +523,7 @@
 
         <td>Apakah suhu anda diatas 38 C?</td>
 
-        <td>  <div class="form-check">
+        <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keduasatu" value="1"></div>
 
@@ -555,7 +555,7 @@
 
         <td>Apakah saturasi oksigen anda diantara 90-95?</td>
 
-        <td>  <div class="form-check">
+        <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keduadua" value="1"></div>
 
@@ -574,7 +574,7 @@
 
         <td>Apakah saturasi oksigen anda dibawah 90?</td>
 
-        <td>  <div class="form-check">
+        <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keduatiga" value="1"></div>
 
