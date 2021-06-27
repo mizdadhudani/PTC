@@ -454,7 +454,7 @@
         </td>
         <td >  <div class="form-check">
 
-             <input type="number" class="form-control" id="kedelapanbelas"  name="kedelapanbelas" value=""></div>
+             <input type="number" class="form-control" id="kedualima"  name="kedualima" value=""></div>
 
         </td>
 
@@ -501,7 +501,26 @@
 
         <td>21</td>
 
-        <td>Apakah suhu anda diantara 37,5 - 38 C?</td>
+        <td>Apakah suhu anda kurang dari 37 C?</td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduaenam" value="1"></div>
+
+        </td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduaenam" value="0" checked="">
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>22</td>
+
+        <td>Apakah suhu anda diantara 37 - 38 C?</td>
 
         <td>  <div class="form-check">
 
@@ -519,7 +538,7 @@
 
       <tr>
 
-        <td>22</td>
+        <td>23</td>
 
         <td>Apakah suhu anda diatas 38 C?</td>
 
@@ -549,26 +568,7 @@
 
     </tr>
 
-      <tr>
-
-        <td>23</td>
-
-        <td>Apakah saturasi oksigen anda diantara 90-95?</td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="1"></div>
-
-        </td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="0" checked="">
-        </td>
-
-      </tr>
-
-            <tr>
+     <tr>
 
         <td>24</td>
 
@@ -586,6 +586,48 @@
         </td>
 
       </tr>
+
+      <tr>
+
+        <td>25</td>
+
+        <td>Apakah saturasi oksigen anda diantara 90-95?</td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="1"></div>
+
+        </td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="0" checked="">
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>26</td>
+
+        <td>Apakah saturasi oksigen anda lebih dari 95?</td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduatujuh" value="1"></div>
+
+        </td>
+
+        <td>  <div class="form-check">
+
+          <input class="form-check-input" type="radio" id="oke" name="keduatujuh" value="0" checked="">
+        </td>
+
+      </tr>
+
+      
+
+     
 
     <tr>
 

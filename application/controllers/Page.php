@@ -12,7 +12,7 @@ class Page extends CI_Controller {
 
 		$this->load->model('modulpenduduk');
 		$this->load->model('kuisoner');
-
+		$this->load->model('dinamik_alamat_model');
 		$this->load->helper('url');
 
 	}
@@ -135,6 +135,8 @@ public function submitlistbaru($nomorhp=null) {
 		 
 	}
 public function databaru($nomorhp=null){
+		// $data ['kecamatan'] = $this->dinamik_alamat_model->fetch_kecamatan();
+
 		$dataku = array(	'title' => 'Welcome to MyBlog' ,
 
 					  	'isi'=>'databaru',
@@ -146,9 +148,9 @@ public function databaru($nomorhp=null){
 					  	// 'logo'=>$this->inti->logo(),
 
 					  'data'=>$this->modulpenduduk->getdataid($nomorhp),
-					  'datak'=>$this->kuisoner->getdataidn($nomorhp)
+					  'datak'=>$this->kuisoner->getdataidn($nomorhp),
+					  // 'kecamatan'=>$this->dinamik_alamat_model->fetch_kecamatan()
 					  );
-
 		
 		$this->load->view('part/content', $dataku);
 }
@@ -446,5 +448,28 @@ public function submitalamatbaru($nomorhp=null) {
 	// echo $link=$this->input->post('nik');
 		 
 	}
+
+		// function dinamik_alamat()
+	 // {
+	 //  $data['kecamatan'] = $this->dinamik_alamat_model->fetch_kecamatan();
+	 //  $this->load->view('databaru', $data);
+	 // }
+
+	// public function fetch_desa()
+	//  {
+	//   if($this->input->post('id_kecamatan'))
+	//   {
+	//    echo $this->dinamik_alamat_model->fetch_desa($this->input->post('id_kecamatan'));
+	//   }
+	//  }
+
+	//  public function fetch_dukuh()
+	//  {
+	//   if($this->input->post('id_desa'))
+	//   {
+	//    echo $this->dinamik_alamat_model->fetch_dukuh($this->input->post('id_desa'));
+	//   }
+	//  }
+
 } 
 

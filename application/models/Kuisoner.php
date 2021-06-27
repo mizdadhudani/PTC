@@ -56,7 +56,13 @@ class Kuisoner extends CI_Model{
 
     public $keduatiga;
 
-    // public $keduaempat;
+    public $keduaempat;
+
+    public $kedualima;
+
+    public $keduaenam;
+
+    public $keduatujuh;
 
     public $score;
 
@@ -147,7 +153,13 @@ class Kuisoner extends CI_Model{
 
         $this->keduatiga=$post['keduatiga'];
 
-        // $this->keduaempat=$post['keduaempat'];
+        $this->keduaempat=$post['keduaempat'];
+
+        $this->kedualima=$post['kedualima'];
+
+        $this->keduaenam=$post['keduaenam'];
+
+        $this->keduatujuh=$post['keduatujuh'];
 
         $this->score=$post['score'];
 
@@ -239,7 +251,13 @@ class Kuisoner extends CI_Model{
 
         $this->keduatiga= '0';
 
-        // $this->keduaempat= '0';
+        $this->keduaempat= '';
+
+        $this->kedualima= '0';
+
+        $this->keduaenam= '0';
+
+        $this->keduatujuh= '0';
 
         $this->tanggal = date("Y-m-d");
 
@@ -307,7 +325,13 @@ class Kuisoner extends CI_Model{
 
         $this->keduatiga= '0';
 
-        // $this->keduaempat= '0';
+        $this->keduaempat= '';
+
+        $this->kedualima= '0';
+
+        $this->keduaenam= '0';
+
+        $this->keduatujuh= '0';
 
         $this->tanggal = date("Y-m-d");
 
@@ -387,7 +411,13 @@ class Kuisoner extends CI_Model{
 
         $this->keduatiga= '0';
 
-        // $this->keduaempat= '0';
+        $this->keduaempat= '';
+
+        $this->kedualima= '0';
+
+        $this->keduaenam= '0';
+
+        $this->keduatujuh= '0';
 
         $this->tanggal = date("Y-m-d");
 
@@ -455,7 +485,13 @@ class Kuisoner extends CI_Model{
 
         $this->keduatiga=$post['keduatiga'];
 
-        // $this->keduaempat=$post['keduaempat'];
+        $this->keduaempat=$post['keduaempat'];
+
+        $this->kedualima=$post['kedualima'];
+
+        $this->keduaenam=$post['keduaenam'];
+
+        $this->keduatujuh=$post['keduatujuh'];
 
         $this->score=$post['score'];
 
@@ -524,7 +560,13 @@ class Kuisoner extends CI_Model{
 
         $this->keduatiga=$post['keduatiga'];
 
-        // $this->keduaempat=$post['keduaempat'];
+        $this->keduaempat=$post['keduaempat'];
+
+        $this->kedualima=$post['kedualima'];
+
+        $this->keduaenam=$post['keduaenam'];
+
+        $this->keduatujuh=$post['keduatujuh'];
 
         $this->tanggal = $post["tanggal"];
 
@@ -731,7 +773,13 @@ else if (
 
         $this->keduatiga=$post['keduatiga'];
 
-        // $this->keduadua=$post['keduaempat'];
+        $this->keduaempat=$post['keduaempat'];
+
+        $this->kedualima=$post['kedualima'];
+
+        $this->keduaenam=$post['keduaenam'];
+
+        $this->keduatujuh=$post['keduatujuh'];
 
         $this->time = date("h:i");
 
@@ -874,7 +922,7 @@ else if (
     }
     else if (
         
-        ($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $sembilanbelas==0 && $duapuluh==0 && $duasatu==0 && $duadua==0) ||
+        ($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $sembilanbelas==0) ||
         ($gejalarendah>0)
     )
 

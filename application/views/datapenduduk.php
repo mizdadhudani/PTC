@@ -48,7 +48,7 @@
                         normal
                       <?php } ?>
                         </td>
-                      <td><?php echo $datatku['kedelapanbelas'] ?></td>
+                      <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>
@@ -106,7 +106,7 @@
                         normal
                       <?php } ?>
                         </td>
-                      <td><?php echo $datatku['kedelapanbelas'] ?></td>
+                      <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>
@@ -167,7 +167,7 @@
                         normal
                       <?php } ?>
                         </td>
-                      <td><?php echo $datatku['kedelapanbelas'] ?></td>
+                      <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>
@@ -228,7 +228,7 @@
                         normal
                       <?php } ?>
                         </td>
-                      <td><?php echo $datatku['kedelapanbelas'] ?></td>
+                      <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>

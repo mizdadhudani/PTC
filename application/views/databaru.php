@@ -30,6 +30,7 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
       <!-- CSS Files -->
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/main.css')?>" rel="stylesheet">
@@ -169,7 +170,62 @@
             <option name="hamil" value="0">Tidak</option>
             <option name="hamil" value="hamil">Hamil</option>
           </select>
-    </div>
+  </div>
+  <!-- <div class="form-group">
+   <select name="kecamatan" id="kecamatan" class="form-control input-lg">
+    <option value="">Pilih Kecamatan</option>
+    <?php
+    foreach($kecamatan as $row)
+    {
+     echo '<option value="'.$row->id_kecamatan.'">'.$row->nama_kecamatan.'</option>';
+    }
+    ?>
+   </select>
+  </div>
+  <br />
+
+  <div class="form-group">
+   <select name="desa" id="desa" class="form-control input-lg">
+    <option value="">Pilih Desa</option>
+   </select>
+  </div>
+
+
+
+  <br />
+  <div class="form-group">
+   <select name="dukuh" id="dukuh" class="form-control input-lg">
+    <option value="">Pilih Dukuh</option>
+   </select>
+  </div> -->
+
+  <!-- <div class="form-group">
+    <label for="status">Desa</label><br>
+        <select id="desa" class="form-control" name="desa" class="select" onchange="return showDesa() ;">
+          <option name="desa" value="Panggungharjo">Panggungharjo</option>
+          <option name="desa" value="Timbulharjo">Timbulharjo</option>
+        </select>
+  </div> -->
+
+  <div class="form-group">
+    <label for="penduduk">Alamat Domisili</label><br>
+        <select id="penduduk" class="form-control" name="penduduk" class="select">
+          <option name="penduduk" value="Dukuh Krapyak Wetan">Dukuh Krapyak Wetan</option>
+          <option name="penduduk" value="Dukuh Krapyak Kulon">Dukuh Krapyak Kulon</option>
+          <option name="penduduk" value="Dukuh Dongkelan">Dukuh Dongkelan</option>
+          <option name="penduduk" value="Dukuh Glugo">Dukuh Glugo</option>
+          <option name="penduduk" value="Dukuh Kweni">Dukuh Kweni</option>
+          <option name="penduduk" value="Dukuh Pelemsewu">Dukuh Pelemsewu</option>
+          <option name="penduduk" value="Dukuh Sawit">Dukuh Sawit</option>
+          <option name="penduduk" value="Dukuh Pandes">Dukuh Pandes</option>
+          <option name="penduduk" value="Dukuh Glondong">Dukuh Glondong</option>
+          <option name="penduduk" value="Dukuh Jaranan">Dukuh Jaranan</option>
+          <option name="penduduk" value="Dukuh Geneng">Dukuh Geneng</option>
+          <option name="penduduk" value="Dukuh Ngireng-ngireng">Dukuh Ngireng-ngireng</option>
+          <option name="penduduk" value="Dukuh Cabeyan">Dukuh Cabeyan</option>
+          <option name="penduduk" value="Dukuh Geneng">Dukuh Garon</option>
+        </select>
+  </div>
 
   <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
@@ -188,113 +244,21 @@
           <option name="alamat" value="RT 12">RT 12</option>
         </select>
   </div>
-    <div class="form-group">
-      <label for="Alamat">Alamat Domisili</label>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Krapyak Wetan" required="">
-              <label class="form-check-label">
-                Dukuh Krapyak Wetan
-              </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Krapyak Kulon" required="">
-            <label class="form-check-label">
-             Dukuh Krapyak Kulon
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Dongkelan" required="">
-            <label class="form-check-label">
-              Dukuh Dongkelan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Glugo" required="">
-            <label class="form-check-label">
-              Dukuh Glugo
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Kweni" required="">
-            <label class="form-check-label">
-              Dukuh Kweni
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Pelemsewu" required="">
-            <label class="form-check-label">
-              Dukuh Pelemsewu
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Sawit" required="">
-            <label class="form-check-label">
-              Dukuh Sawit
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Pandes" required="">
-            <label class="form-check-label">
-              Dukuh Pandes
-            </label>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Glondong" required="">
-            <label class="form-check-label">
-              Dukuh Glondong
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Jaranan" required="">
-            <label class="form-check-label">
-              Dukuh Jaranan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Geneng" required="">
-            <label class="form-check-label">
-              Dukuh Geneng
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Ngireng-ngireng" required="">
-            <label class="form-check-label">
-              Dukuh Ngireng-ngireng
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Cabeyan" required="">
-            <label class="form-check-label">
-              Dukuh Cabeyan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Garon" required="">
-            <label class="form-check-label">
-              Dukuh Garon
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="status">Status</label><br>
-          <select id="status" class="form-control" name="status" class="select" >
-            <option name="status" value="KE">Kontak Erat</option>
-            <option name="status" value="positif">Positif</option>
-          </select>
-    </div>
-    <div class="form-group">
-      <label for="status">Tempat Isolasi</label><br>
-          <select id="status" class="form-control" name="tempat_isolasi" class="select" >
-            <option name="tempat_isolasi" value="Rumah">Rumah</option>
-            <option name="tempat_isolasi" value="Shelter">Shelter</option>
-          </select>
-    </div>
+  
+  <div class="form-group">
+    <label for="status">Status</label><br>
+        <select id="status" class="form-control" name="status" class="select" >
+          <option name="status" value="KE">Kontak Erat</option>
+          <option name="status" value="positif">Positif</option>
+        </select>
+  </div>
+  <div class="form-group">
+    <label for="status">Tempat Isolasi</label><br>
+        <select id="status" class="form-control" name="tempat_isolasi" class="select" >
+          <option name="tempat_isolasi" value="Rumah">Rumah</option>
+          <option name="tempat_isolasi" value="Shelter">Shelter</option>
+        </select>
+  </div>
 </div>
 
 
@@ -347,6 +311,54 @@
      }
 
    </script>
+
+   <script>
+$(document).ready(function(){
+ $('#kecamatan').change(function(){
+  var id_kecamatan = $('#kecamatan').val();
+  if(id_kecamatan != '')
+  {
+   $.ajax({
+    url:"<?php echo base_url('dinamik_alamat/fetch_desa'); ?>",
+    method:"POST",
+    data:{id_kecamatan:id_kecamatan},
+    success:function(data)
+    {
+     $('#desa').html(data);
+     $('#dukuh').html('<option value="">Select City</option>');
+    }
+   });
+  }
+  else
+  {
+   $('#desa').html('<option value="">Select State</option>');
+   $('#dukuh').html('<option value="">Select City</option>');
+  }
+ });
+
+ $('#desa').change(function(){
+  var id_desa = $('#desa').val();
+  if(id_desa != '')
+  {
+   $.ajax({
+    url:"<?php echo base_url(); ?>dinamik_alamat/fetch_dukuh",
+    method:"POST",
+    data:{id_desa:id_desa},
+    success:function(data)
+    {
+     $('#dukuh').html(data);
+    }
+   });
+  }
+  else
+  {
+   $('#dukuh').html('<option value="">Select City</option>');
+  }
+ });
+ 
+});
+
+</script>
 
 
 </body>
