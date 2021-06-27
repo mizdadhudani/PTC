@@ -12,7 +12,6 @@ class Page extends CI_Controller {
 
 		$this->load->model('modulpenduduk');
 		$this->load->model('kuisoner');
-		$this->load->model('dinamik_alamat_model');
 		$this->load->helper('url');
 
 	}
