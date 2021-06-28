@@ -13,7 +13,8 @@ class Modulpenduduk extends CI_Model{
     public $status_dlm_keluarga;
     public $jeniskelamin;
     public $hamil;
-    // public $desa;
+    public $desa;
+    public $kecamatan;
     public $status;
     public $tempat_isolasi;
     public $link;
@@ -39,7 +40,8 @@ class Modulpenduduk extends CI_Model{
     $this->nomorhp =$nomorhp;
     $this->penduduk = 'Panggungharjo';
     $this->alamat = '';
-    // $this->desa = '';
+    $this->desa = '';
+    $this->kecamatan = '';
     $this->usia = '';
     $this->hamil = '';
     $this->mulai_isolasi = '';
@@ -52,7 +54,7 @@ class Modulpenduduk extends CI_Model{
     $this->db->insert($this->table,$this);
     }
     function getdataid($nomorhp){
-     return $this->db->get_where("tb_penduduk", ["nomorhp" => $nomorhp])->row();
+     return $this->db->get_where("tb_penduduk",["nomorhp" => $nomorhp])->row();
 
     }
     function ubahdatadiri($nik){
@@ -87,7 +89,8 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
-        // $this->desa = $post["desa"];
+        $this->desa = $post["desa"];
+        $this->kecamatan = $post["kecamatan"];
         $this->usia = $post["usia"];
         $this->hamil = $post["hamil"];
         $this->mulai_isolasi = $post["mulai_isolasi"];
@@ -153,7 +156,8 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
-        // $this->desa = $post["desa"];
+        $this->desa = $post["desa"];
+        $this->kecamatan = $post["kecamatan"];
         $this->usia = $post["usia"];
         $this->hamil = $post["hamil"];
         $this->mulai_isolasi = $post["mulai_isolasi"];
@@ -173,7 +177,8 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
-        // $this->desa = $post["desa"];
+        $this->desa = $post["desa"];
+        $this->kecamatan = $post["kecamatan"];
         $this->usia = $post["usia"];
         $this->hamil = $post["hamil"];
         $this->mulai_isolasi = $post["mulai_isolasi"];
@@ -194,14 +199,15 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelaminpenduduk"];
         $this->nomorhp = $post["nomorhppenduduk"];
         $this->alamat = $post["alamatpenduduk"];
-        // $this->desa = $post["desa"];
-        $this->usia = $post["usia"];
-        $this->hamil = $post["hamil"];
-        $this->mulai_isolasi = $post["mulai_isolasi"];
-        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
+        $this->desa = $post["desapenduduk"];
+        $this->kecamatan = $post["kecamatanpenduduk"];
+        $this->usia = $post["usiapenduduk"];
+        $this->hamil = $post["hamilpenduduk"];
+        $this->mulai_isolasi = $post["mulai_isolasipenduduk"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluargapenduduk"];
         $this->penduduk = $post["pendudukpenduduk"];
-        $this->status = $post["status"];
-        $this->tempat_isolasi = $post["tempat_isolasi"];
+        $this->status = $post["statuspenduduk"];
+        $this->tempat_isolasi = $post["tempat_isolasipenduduk"];
         if ($post['harisatu']==14){
                 $this->harisatu=$post['harisatu']+1;
         } else {
@@ -223,13 +229,15 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelaminpenduduk"];
         $this->nomorhp = $post["nomorhppenduduk"];
         $this->alamat = $post["alamatpenduduk"];
-        $this->usia = $post["usia"];
-        $this->hamil = $post["hamil"];
-        $this->mulai_isolasi = $post["mulai_isolasi"];
-        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
+        $this->desa = $post["desapenduduk"];
+        $this->kecamatan = $post["kecamatanpenduduk"];
+        $this->usia = $post["usiapenduduk"];
+        $this->hamil = $post["hamilpenduduk"];
+        $this->mulai_isolasi = $post["mulai_isolasipenduduk"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluargapenduduk"];
         $this->penduduk = $post["pendudukpenduduk"];
-        $this->status = $post["status"];
-        $this->tempat_isolasi = $post["tempat_isolasi"];
+        $this->status = $post["statuspenduduk"];
+        $this->tempat_isolasi = $post["tempat_isolasipenduduk"];
         $this->harisatu=$post['harisatu'];
         $this->haridua=$post['haridua'];
         $this->db->where('id=',$this->id = $post["idpenduduk"]);
@@ -243,7 +251,8 @@ class Modulpenduduk extends CI_Model{
         $this->jeniskelamin = $post["jeniskelamin"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat = $post["alamat"];
-        // $this->desa = $post["desa"];
+        $this->desa = $post["desa"];
+        $this->kecamatan = $post["kecamatan"];
         $this->usia = $post["usia"];
         $this->hamil = $post["hamil"];
         $this->mulai_isolasi = $post["mulai_isolasi"];

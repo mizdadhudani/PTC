@@ -12,6 +12,8 @@ class Page extends CI_Controller {
 
 		$this->load->model('modulpenduduk');
 		$this->load->model('kuisoner');
+		$this->load->model('dinamik_alamat_model');
+
 		$this->load->helper('url');
 
 	}
@@ -148,7 +150,7 @@ public function databaru($nomorhp=null){
 
 					  'data'=>$this->modulpenduduk->getdataid($nomorhp),
 					  'datak'=>$this->kuisoner->getdataidn($nomorhp),
-					  // 'kecamatan'=>$this->dinamik_alamat_model->fetch_kecamatan()
+					  'kecamatan'=>$this->dinamik_alamat_model->fetch_kecamatan()
 					  );
 		
 		$this->load->view('part/content', $dataku);
@@ -188,7 +190,8 @@ public function gantidata($nik=null){
 					  	// 'logo'=>$this->inti->logo(),
 
 					  'data'=>$datap,
-					  'datak'=>$dataq
+					  'datak'=>$dataq,
+					  'kecamatan'=>$this->dinamik_alamat_model->fetch_kecamatan()
 					  );
 
 		
@@ -341,7 +344,7 @@ public function tambahlistbaru($nomorhp=null) {
 					  	// 'logo'=>$this->inti->logo(),
 
 					  'data'=>$this->modulpenduduk->getdataid($nomorhp),
-
+					  'kecamatan'=>$this->dinamik_alamat_model->fetch_kecamatan()
 					  
 
 
@@ -454,21 +457,21 @@ public function submitalamatbaru($nomorhp=null) {
 	 //  $this->load->view('databaru', $data);
 	 // }
 
-	// public function fetch_desa()
-	//  {
-	//   if($this->input->post('id_kecamatan'))
-	//   {
-	//    echo $this->dinamik_alamat_model->fetch_desa($this->input->post('id_kecamatan'));
-	//   }
-	//  }
+	public function fetch_desa()
+	 {
+	  if($this->input->post('id_kecamatan'))
+	  {
+	   echo $this->dinamik_alamat_model->fetch_desa($this->input->post('id_kecamatan'));
+	  }
+	 }
 
-	//  public function fetch_dukuh()
-	//  {
-	//   if($this->input->post('id_desa'))
-	//   {
-	//    echo $this->dinamik_alamat_model->fetch_dukuh($this->input->post('id_desa'));
-	//   }
-	//  }
+	 public function fetch_dukuh()
+	 {
+	  if($this->input->post('id_desa'))
+	  {
+	   echo $this->dinamik_alamat_model->fetch_dukuh($this->input->post('id_desa'));
+	  }
+	 }
 
 } 
 

@@ -12,7 +12,7 @@
 
 
 
-    <title>Data Diri-Panggung Tanggap Covid-19</title>
+    <title>Data Diri - Bantul Tangguh</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,8 @@
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
 
 
       <!-- CSS Files -->
@@ -171,7 +172,8 @@
             <option name="hamil" value="hamil">Hamil</option>
           </select>
   </div>
-  <!-- <div class="form-group">
+  <div class="form-group">
+      <label for="kecamatan">Kecamatan</label><br>
    <select name="kecamatan" id="kecamatan" class="form-control input-lg">
     <option value="">Pilih Kecamatan</option>
     <?php
@@ -182,22 +184,22 @@
     ?>
    </select>
   </div>
-  <br />
+
 
   <div class="form-group">
+    <label for="desa">Desa</label><br>
    <select name="desa" id="desa" class="form-control input-lg">
     <option value="">Pilih Desa</option>
    </select>
   </div>
 
 
-
-  <br />
   <div class="form-group">
-   <select name="dukuh" id="dukuh" class="form-control input-lg">
+    <label for="dukuh">Dukuh</label><br>
+   <select name="penduduk" id="dukuh" class="form-control input-lg">
     <option value="">Pilih Dukuh</option>
    </select>
-  </div> -->
+  </div>
 
   <!-- <div class="form-group">
     <label for="status">Desa</label><br>
@@ -206,26 +208,6 @@
           <option name="desa" value="Timbulharjo">Timbulharjo</option>
         </select>
   </div> -->
-
-  <div class="form-group">
-    <label for="penduduk">Alamat Domisili</label><br>
-        <select id="penduduk" class="form-control" name="penduduk" class="select">
-          <option name="penduduk" value="Dukuh Krapyak Wetan">Dukuh Krapyak Wetan</option>
-          <option name="penduduk" value="Dukuh Krapyak Kulon">Dukuh Krapyak Kulon</option>
-          <option name="penduduk" value="Dukuh Dongkelan">Dukuh Dongkelan</option>
-          <option name="penduduk" value="Dukuh Glugo">Dukuh Glugo</option>
-          <option name="penduduk" value="Dukuh Kweni">Dukuh Kweni</option>
-          <option name="penduduk" value="Dukuh Pelemsewu">Dukuh Pelemsewu</option>
-          <option name="penduduk" value="Dukuh Sawit">Dukuh Sawit</option>
-          <option name="penduduk" value="Dukuh Pandes">Dukuh Pandes</option>
-          <option name="penduduk" value="Dukuh Glondong">Dukuh Glondong</option>
-          <option name="penduduk" value="Dukuh Jaranan">Dukuh Jaranan</option>
-          <option name="penduduk" value="Dukuh Geneng">Dukuh Geneng</option>
-          <option name="penduduk" value="Dukuh Ngireng-ngireng">Dukuh Ngireng-ngireng</option>
-          <option name="penduduk" value="Dukuh Cabeyan">Dukuh Cabeyan</option>
-          <option name="penduduk" value="Dukuh Geneng">Dukuh Garon</option>
-        </select>
-  </div>
 
   <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
@@ -292,7 +274,7 @@
 
     <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
 
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
@@ -319,20 +301,20 @@ $(document).ready(function(){
   if(id_kecamatan != '')
   {
    $.ajax({
-    url:"<?php echo base_url('dinamik_alamat/fetch_desa'); ?>",
+    url:"<?php echo base_url('page/fetch_desa'); ?>",
     method:"POST",
     data:{id_kecamatan:id_kecamatan},
     success:function(data)
     {
      $('#desa').html(data);
-     $('#dukuh').html('<option value="">Select City</option>');
+     $('#dukuh').html('<option value="">Pilih Padukuhan</option>');
     }
    });
   }
   else
   {
-   $('#desa').html('<option value="">Select State</option>');
-   $('#dukuh').html('<option value="">Select City</option>');
+   $('#desa').html('<option value="">Pilih Desa</option>');
+   $('#dukuh').html('<option value="">Pilih Padukuhan</option>');
   }
  });
 
@@ -341,7 +323,7 @@ $(document).ready(function(){
   if(id_desa != '')
   {
    $.ajax({
-    url:"<?php echo base_url(); ?>dinamik_alamat/fetch_dukuh",
+    url:"<?php echo base_url(); ?>page/fetch_dukuh",
     method:"POST",
     data:{id_desa:id_desa},
     success:function(data)
@@ -352,7 +334,7 @@ $(document).ready(function(){
   }
   else
   {
-   $('#dukuh').html('<option value="">Select City</option>');
+   $('#dukuh').html('<option value="">Pilih Padukuhan</option>');
   }
  });
  

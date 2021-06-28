@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
-    <title>Form Kesehatan-Panggung Tanggap Covid-19</title>
+    <title>Form Kesehatan - Bantul Tangguh</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

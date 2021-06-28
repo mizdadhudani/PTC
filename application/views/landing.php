@@ -12,7 +12,7 @@
 
 
 
-    <title>Login-Panggung Tanggap Covid-19</title>
+    <title>Login - Bantul Tangguh</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -137,7 +137,11 @@
         </div>
 
       </div>
-
+      <nav class="navbar navbar-expand-lg navbar-dark" >
+          <a class="navbar-brand mx-auto" href="https://wa.me/+6281225712580/?text=Hallo%20Bantul%20Tangguh" target="_blank">
+       <img src="<?php echo base_url('assets/images/hotlineptc.png')?>"  width="350" height="50" class="img-fluid" style="padding: 1em 1em;">
+      </a>
+   </nav>
     </header>
 
 

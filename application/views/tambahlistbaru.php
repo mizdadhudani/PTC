@@ -12,7 +12,7 @@
 
 
 
-    <title>Data Diri-Panggung Tanggap Covid-19</title>
+    <title>Data Diri - Bantul Tangguh</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -182,14 +182,180 @@
                  <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $data->alamat?>">
 
               </div>
-
+                <?php if ($data->penduduk==1) {?>
               <div class="form-group">
-
-              <label for="staticEmail">Kependudukan</label>
-
-                 <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $data->penduduk?>">
-
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Krapyak Wetan <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
               </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==2) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Krapyak Kulon <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==3) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Dongkelan <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==4) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Glugo <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==5) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Kweni <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==6) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Pelemsewu <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==7) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Sawit <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==8) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Pandes <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==9) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Glondong <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==10) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Jaranan <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==11) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Geneng <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==12) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Ngireng-ngireng <?php echo $data->alamat ?>, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==13) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Cabeyan, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==14) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Garon, Panggungharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==15) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Dadapan <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==16) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Tembi <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==17) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Gatak <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==18) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Balong <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==19) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Gabusan <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==20) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Dagan <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==21) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Sewon <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==22) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Mriyan <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==23) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Kowen I <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==24) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Kowen II <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
+
+                <?php if ($data->penduduk==25) {?>
+              <div class="form-group">
+                <label for="staticEmail">Kependudukan</label>
+                <input type="text" readonly class="form-control" id="staticEmail" value="Dukuh Dobalan <?php echo $data->alamat ?>, Timbulharjo, Sewon.">
+              </div>
+                <?php } ?>
 
       </form>
 
@@ -330,7 +496,34 @@
           </select>
     </div>
 
+    <div class="form-group">
+      <label for="kecamatan">Kecamatan</label><br>
+   <select name="kecamatan" id="kecamatan" class="form-control input-lg">
+    <option value="">Pilih Kecamatan</option>
+    <?php
+    foreach($kecamatan as $row)
+    {
+     echo '<option value="'.$row->id_kecamatan.'">'.$row->nama_kecamatan.'</option>';
+    }
+    ?>
+   </select>
+  </div>
 
+
+  <div class="form-group">
+    <label for="desa">Desa</label><br>
+   <select name="desa" id="desa" class="form-control input-lg">
+    <option value="">Pilih Desa</option>
+   </select>
+  </div>
+
+
+  <div class="form-group">
+    <label for="dukuh">Dukuh</label><br>
+   <select name="penduduk" id="dukuh" class="form-control input-lg">
+    <option value="">Pilih Dukuh</option>
+   </select>
+  </div>
 
 <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
@@ -350,107 +543,7 @@
         </select>
   </div>
   
-    <div class="form-group">
-      <label for="Alamat">Alamat Domisili</label>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Krapyak Wetan" required="">
-              <label class="form-check-label">
-                Dukuh Krapyak Wetan
-              </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Krapyak Kulon" required="">
-            <label class="form-check-label">
-             Dukuh Krapyak Kulon
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Dongkelan" required="">
-            <label class="form-check-label">
-              Dukuh Dongkelan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Glugo" required="">
-            <label class="form-check-label">
-              Dukuh Glugo
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Kweni" required="">
-            <label class="form-check-label">
-              Dukuh Kweni
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Pelemsewu" required="">
-            <label class="form-check-label">
-              Dukuh Pelemsewu
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Sawit" required="">
-            <label class="form-check-label">
-              Dukuh Sawit
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Pandes" required="">
-            <label class="form-check-label">
-              Dukuh Pandes
-            </label>
-          </div>
-        </div>
-
-
-        <div class="col-lg-6">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Glondong" required="">
-            <label class="form-check-label">
-              Dukuh Glondong
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Jaranan" required="">
-            <label class="form-check-label">
-              Dukuh Jaranan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Geneng" required="">
-            <label class="form-check-label">
-              Dukuh Geneng
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Ngireng-ngireng" required="">
-            <label class="form-check-label">
-              Dukuh Ngireng-ngireng
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Cabeyan" required="">
-            <label class="form-check-label">
-              Dukuh Cabeyan
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Dukuh Garon" required="">
-            <label class="form-check-label">
-              Dukuh Garon
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="penduduk"  value="Luar Panggungharjo" required="">
-            <label class="form-check-label">
-              Luar Panggungharjo
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
+   
  <input class="form-check-input" hidden type="text" name="score" id="Kependudukan" value="">
 
  <div class="form-group">
@@ -501,7 +594,7 @@
 
     <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
 
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
@@ -520,6 +613,54 @@
      }
 
    </script>
+
+   <script>
+$(document).ready(function(){
+ $('#kecamatan').change(function(){
+  var id_kecamatan = $('#kecamatan').val();
+  if(id_kecamatan != '')
+  {
+   $.ajax({
+    url:"<?php echo base_url('page/fetch_desa'); ?>",
+    method:"POST",
+    data:{id_kecamatan:id_kecamatan},
+    success:function(data)
+    {
+     $('#desa').html(data);
+     $('#dukuh').html('<option value="">Pilih Padukuhan</option>');
+    }
+   });
+  }
+  else
+  {
+   $('#desa').html('<option value="">Pilih Desa</option>');
+   $('#dukuh').html('<option value="">Pilih Padukuhan</option>');
+  }
+ });
+
+ $('#desa').change(function(){
+  var id_desa = $('#desa').val();
+  if(id_desa != '')
+  {
+   $.ajax({
+    url:"<?php echo base_url(); ?>page/fetch_dukuh",
+    method:"POST",
+    data:{id_desa:id_desa},
+    success:function(data)
+    {
+     $('#dukuh').html(data);
+    }
+   });
+  }
+  else
+  {
+   $('#dukuh').html('<option value="">Pilih Padukuhan</option>');
+  }
+ });
+ 
+});
+
+</script>
 
 </body>
 

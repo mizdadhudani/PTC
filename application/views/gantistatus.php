@@ -12,7 +12,7 @@
 
 
 
-    <title>Data Diri-Panggung Tanggap Covid-19</title>
+    <title>Data Diri - Bantul Tangguh</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -48,7 +48,105 @@
 
                           <td >
 
-                            <?php echo $datapenduduk->penduduk?>
+                            <?php if ($datapenduduk->penduduk==1) {?>
+                              Dukuh Krapyak Wetan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==2) {?>
+                              Dukuh Krapyak Wetan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==3) {?>
+                              Dukuh Dongkelan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==4) {?>
+                              Dukuh Glugo <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==5) {?>
+                              Dukuh Kweni <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==6) {?>
+                              Dukuh Pelemsewu <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==7) {?>
+                              Dukuh Sawit <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==8) {?>
+                              Dukuh Pandes <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==9) {?>
+                              Dukuh Glondong <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==10) {?>
+                              Dukuh Jaranan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==11) {?>
+                              Dukuh Geneng <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==12) {?>
+                              Dukuh Ngireng-ngireng <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==13) {?>
+                              Dukuh Cabeyan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==14) {?>
+                              Dukuh Garon <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==15) {?>
+                              Dukuh Dadapan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==16) {?>
+                              Dukuh Tembi <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==17) {?>
+                              Dukuh Gatak <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==18) {?>
+                              Dukuh Balong <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==19) {?>
+                              Dukuh Gabusan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==20) {?>
+                              Dukuh Dagan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==21) {?>
+                              Dukuh Sewon <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==22) {?>
+                              Dukuh Mriyan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==23) {?>
+                              Dukuh Kowen I <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==24) {?>
+                              Dukuh Kowen II <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
+
+                            <?php if ($datapenduduk->penduduk==25) {?>
+                              Dukuh Dobalan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
+                            <?php } ?>
 
                           </td>
 

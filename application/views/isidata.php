@@ -12,7 +12,7 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
-    <title>Form Kesehatan-Panggung Tanggap Covid-19</title>
+    <title>Form Kesehatan - Bantul Tangguh</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -82,7 +82,7 @@
 
       <th scope="col">Pertanyaan</th>
 
-      <th scope="col-4">Ya</th>
+      <th scope="col-4" style="text-align-last: right;">Ya</th>
 
       <th scope="col">Tidak</th>
 
@@ -112,7 +112,7 @@
 
     <td>Apakah anda sedang menderita batuk-batuk?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksatu" value="1"></div>
 
@@ -130,7 +130,7 @@
 
     <td>Apakah nafsu makan anda berkurang?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kdua" value="1"></div>
 
@@ -148,7 +148,7 @@
 
     <td>Apakah anda sedang menderita sakit atau nyeri kepala?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ktiga" value="1"></div>
 
@@ -166,7 +166,7 @@
 
     <td>Apakah anda sedang menderita sakit tenggorokan?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kempat" value="1"></div>
 
@@ -184,7 +184,7 @@
 
     <td>Apakah badan anda sekarang terasa lemas dan lesu?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="klima" value="1"></div>
 
@@ -202,7 +202,7 @@
 
     <td>Apakah mulut anda terasa kering?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kenam" value="1"></div>
 
@@ -220,7 +220,7 @@
 
     <td>Apakah anda sedang mengalami gejala seperti meriang?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ktujuh" value="1"></div>
 
@@ -238,7 +238,7 @@
 
     <td>Apakah anda sedang menderita nyeri di seluruh bagian tubuh?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kdelapan" value="1"></div>
 
@@ -256,7 +256,7 @@
 
     <td>Apakah anda sedang menderita diare?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksembilan" value="1"></div>
 
@@ -274,7 +274,7 @@
 
     <td>Apakah anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksepuluh" value="1"></div>
 
@@ -292,7 +292,7 @@
 
     <td>Apakah anda mengalami mual/muntah?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ksebelas" value="1"></div>
 
@@ -310,7 +310,7 @@
 
     <td>Apakah anda tidak bisa mencium bau atau merasakan makanan?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="1"></div>
 
@@ -328,7 +328,7 @@
 
     <td>Apakah kulit anda pucat dan berkeringat dingin?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ktigabelas" value="1"></div>
 
@@ -346,7 +346,7 @@
 
     <td>Apakah bibir, kulit dan wajah anda tampak kebiruan?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kempatbelas" value="1"></div>
 
@@ -364,7 +364,7 @@
 
     <td>Apakah dada anda terasa nyeri dan berdebar-debar?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="kelimabelas" value="1"></div>
 
@@ -382,7 +382,7 @@
 
     <td>Apakah pernah merasa linglung secara tiba-tiba?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keenambelas" value="1"></div>
 
@@ -400,7 +400,7 @@
 
     <td>Apakah mengalami demam tinggi selama lebih dari 7 hari?</td>
 
-    <td>  <div class="form-check">
+    <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="ketujuhbelas" value="1"></div>
 
@@ -501,64 +501,20 @@
 
         <td>21</td>
 
-        <td>Apakah suhu anda kurang dari 37 C?</td>
+        <td>Berapakah Suhu Tubuh Anda?</td>
+        <td colspan="2">  <div class="form-check">
 
-        <td>  <div class="form-check">
+             <input type="number" class="form-control" id="keduapuluh" name="keduapuluh" value="36"></div>
 
-          <input class="form-check-input" type="radio" id="oke" name="keduaenam" value="1"></div>
-
-        </td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduaenam" value="0" checked="">
         </td>
 
       </tr>
 
-      <tr>
-
-        <td>22</td>
-
-        <td>Apakah suhu anda diantara 37 - 38 C?</td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduapuluh" value="1"></div>
-
-        </td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduapuluh" value="0" checked="">
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>23</td>
-
-        <td>Apakah suhu anda diatas 38 C?</td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduasatu" value="1"></div>
-
-        </td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduasatu" value="0" checked="">
-        </td>
-
-      </tr>
 
 
     <tr>
 
-      <td><b>D</b></td>
+      <td><b>E</b></td>
 
       <td><b>Saturasi</b></td>
 
@@ -570,66 +526,17 @@
 
      <tr>
 
-        <td>24</td>
+        <td>22</td>
 
-        <td>Apakah saturasi oksigen anda dibawah 90?</td>
+        <td>Berapakah Saturasi Oksigen  Anda?</td>
+        <td colspan="2">  <div class="form-check">
 
-        <td>  <div class="form-check">
+             <input type="number" class="form-control" id="keduasatu" name="keduasatu" value="100"></div>
 
-          <input class="form-check-input" type="radio" id="oke" name="keduatiga" value="1"></div>
-
-        </td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduatiga" value="0" checked="">
         </td>
 
       </tr>
-
-      <tr>
-
-        <td>25</td>
-
-        <td>Apakah saturasi oksigen anda diantara 90-95?</td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="1"></div>
-
-        </td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduadua" value="0" checked="">
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>26</td>
-
-        <td>Apakah saturasi oksigen anda lebih dari 95?</td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduatujuh" value="1"></div>
-
-        </td>
-
-        <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keduatujuh" value="0" checked="">
-        </td>
-
-      </tr>
-
-      
-
-     
-
-    <tr>
+    
 
 
 
@@ -660,15 +567,20 @@
        <input type="text" hidden name="idpenduduk" value="<?php echo $datap->id?>">
       <input type="text" hidden name="linkpenduduk" value="<?php echo $datap->link?>">
       <input type="text" hidden name="namapenduduk" value="<?php echo $datap->nama?>">
-      <input type="text" hidden name="usia" value="<?php echo $datap->usia?>">
-      <input type="text" hidden name="mulai_isolasi" value="<?php echo $datap->mulai_isolasi?>">
-      <input type="text" hidden name="status_dlm_keluarga" value="<?php echo $datap->status_dlm_keluarga?>">
-      <input type="text" hidden name="status" value="<?php echo $datap->status?>">
+      <input type="text" hidden name="mulai_isolasipenduduk" value="<?php echo $datap->mulai_isolasi?>">
+      <input type="text" hidden name="statuspenduduk" value="<?php echo $datap->status?>">
       <input type="text" hidden name="nikpenduduk" value="<?php echo $datap->nik?>">
       <input type="text" hidden name="jeniskelaminpenduduk" value="<?php echo $datap->jeniskelamin?>">
       <input type="text" hidden name="nomorhppenduduk" value="<?php echo $datap->nomorhp?>">
       <input type="text" hidden name="alamatpenduduk" value="<?php echo $datap->alamat?>">
       <input type="text" hidden name="pendudukpenduduk" value="<?php echo $datap->penduduk?>">
+      <input type="text" hidden name="desapenduduk" value="<?php echo $datap->desa?>">
+      <input type="text" hidden name="kecamatanpenduduk" value="<?php echo $datap->kecamatan?>">
+      <input type="text" hidden name="usiapenduduk" value="<?php echo $datap->usia?>">
+      <input type="text" hidden name="hamilpenduduk" value="<?php echo $datap->hamil?>">
+      <input type="text" hidden name="status_dlm_keluargapenduduk" value="<?php echo $datap->status_dlm_keluarga?>">
+      <input type="text" hidden name="tempat_isolasipenduduk" value="<?php echo $datap->tempat_isolasi?>">
+      
  <button type="submit" class="btn btn-primary" style="margin-right: 5%">Kirim</button>
 
 </div>

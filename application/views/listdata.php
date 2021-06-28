@@ -1,3 +1,4 @@
+    <title>Data Diri - Bantul Tangguh</title>
     <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.ico')?>">
 
     <!-- Menyisipkan Bootstrap -->
@@ -136,6 +137,7 @@
 
                       <td>
 
+                       <button  class="btn btn-warning" onclick="location.href='<?php echo base_url("page/gantidata"),'/',$datatku['nik']?>'" >Edit Data</button>
                        
                         <?php if ($datatku['status'] == 'sehat')  {?>
 
