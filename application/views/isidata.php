@@ -503,7 +503,7 @@
 
         <td>Apakah suhu anda kurang dari 37 C?</td>
 
-        <td>  <div class="form-check">
+        <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keduaenam" value="1"></div>
 
@@ -558,7 +558,7 @@
 
     <tr>
 
-      <td><b>D</b></td>
+      <td><b>E</b></td>
 
       <td><b>Saturasi</b></td>
 
@@ -574,7 +574,7 @@
 
         <td>Apakah saturasi oksigen anda dibawah 90?</td>
 
-        <td>  <div class="form-check">
+        <td style="text-align: right;">  <div class="form-check">
 
           <input class="form-check-input" type="radio" id="oke" name="keduatiga" value="1"></div>
 
