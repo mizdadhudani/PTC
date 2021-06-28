@@ -52,17 +52,17 @@ class Kuisoner extends CI_Model{
 
     public $keduasatu;
 
-    public $keduadua;
+    // public $keduadua;
 
-    public $keduatiga;
+    // public $keduatiga;
 
     public $keduaempat;
 
     public $kedualima;
 
-    public $keduaenam;
+    // public $keduaenam;
 
-    public $keduatujuh;
+    // public $keduatujuh;
 
     public $score;
 
@@ -149,17 +149,17 @@ class Kuisoner extends CI_Model{
 
         $this->keduasatu=$post['keduasatu'];
 
-        $this->keduadua=$post['keduadua'];
+        // $this->keduadua=$post['keduadua'];
 
-        $this->keduatiga=$post['keduatiga'];
+        // $this->keduatiga=$post['keduatiga'];
 
         $this->keduaempat=$post['keduaempat'];
 
         $this->kedualima=$post['kedualima'];
 
-        $this->keduaenam=$post['keduaenam'];
+        // $this->keduaenam=$post['keduaenam'];
 
-        $this->keduatujuh=$post['keduatujuh'];
+        // $this->keduatujuh=$post['keduatujuh'];
 
         $this->score=$post['score'];
 
@@ -243,21 +243,21 @@ class Kuisoner extends CI_Model{
 
         $this->kesembilanbelas = '';
 
-        $this->keduapuluh = '0';
+        $this->keduapuluh = '';
 
-        $this->keduasatu = '0';
+        $this->keduasatu = '';
 
-        $this->keduadua = '0';
+        // $this->keduadua = '0';
 
-        $this->keduatiga= '0';
+        // $this->keduatiga= '0';
 
         $this->keduaempat= '';
 
         $this->kedualima= '0';
 
-        $this->keduaenam= '0';
+        // $this->keduaenam= '0';
 
-        $this->keduatujuh= '0';
+        // $this->keduatujuh= '0';
 
         $this->tanggal = date("Y-m-d");
 
@@ -317,21 +317,21 @@ class Kuisoner extends CI_Model{
 
         $this->kesembilanbelas = '';
 
-        $this->keduapuluh = '0';
+        $this->keduapuluh = '';
 
-        $this->keduasatu = '0';
+        $this->keduasatu = '';
 
-        $this->keduadua = '0';
+        // $this->keduadua = '0';
 
-        $this->keduatiga= '0';
+        // $this->keduatiga= '0';
 
         $this->keduaempat= '';
 
         $this->kedualima= '0';
 
-        $this->keduaenam= '0';
+        // $this->keduaenam= '0';
 
-        $this->keduatujuh= '0';
+        // $this->keduatujuh= '0';
 
         $this->tanggal = date("Y-m-d");
 
@@ -403,21 +403,21 @@ class Kuisoner extends CI_Model{
 
         $this->kesembilanbelas = '';
 
-        $this->keduapuluh = '0';
+        $this->keduapuluh = '';
 
-        $this->keduasatu = '0';
+        $this->keduasatu = '';
 
-        $this->keduadua = '0';
+        // $this->keduadua = '0';
 
-        $this->keduatiga= '0';
+        // $this->keduatiga= '0';
 
         $this->keduaempat= '';
 
         $this->kedualima= '0';
 
-        $this->keduaenam= '0';
+        // $this->keduaenam= '0';
 
-        $this->keduatujuh= '0';
+        // $this->keduatujuh= '0';
 
         $this->tanggal = date("Y-m-d");
 
@@ -481,17 +481,17 @@ class Kuisoner extends CI_Model{
 
         $this->keduasatu=$post['keduasatu'];
 
-        $this->keduadua=$post['keduadua'];
+        // $this->keduadua=$post['keduadua'];
 
-        $this->keduatiga=$post['keduatiga'];
+        // $this->keduatiga=$post['keduatiga'];
 
         $this->keduaempat=$post['keduaempat'];
 
         $this->kedualima=$post['kedualima'];
 
-        $this->keduaenam=$post['keduaenam'];
+        // $this->keduaenam=$post['keduaenam'];
 
-        $this->keduatujuh=$post['keduatujuh'];
+        // $this->keduatujuh=$post['keduatujuh'];
 
         $this->score=$post['score'];
 
@@ -556,17 +556,17 @@ class Kuisoner extends CI_Model{
 
         $this->keduasatu=$post['keduasatu'];
 
-        $this->keduadua=$post['keduadua'];
+        // $this->keduadua=$post['keduadua'];
 
-        $this->keduatiga=$post['keduatiga'];
+        // $this->keduatiga=$post['keduatiga'];
 
         $this->keduaempat=$post['keduaempat'];
 
         $this->kedualima=$post['kedualima'];
 
-        $this->keduaenam=$post['keduaenam'];
+        // $this->keduaenam=$post['keduaenam'];
 
-        $this->keduatujuh=$post['keduatujuh'];
+        // $this->keduatujuh=$post['keduatujuh'];
 
         $this->tanggal = $post["tanggal"];
 
@@ -574,26 +574,28 @@ class Kuisoner extends CI_Model{
 
         //1-6
 
-$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->keduapuluh;
+$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->kenam+$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->kempatbelas+$this->ketujuhbelas;
 // $gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
 
         //7-12
 
-$gejalasedang=$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksepuluh+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->keduasatu+$this->keduadua;
+$gejalasedang=$this->klima+$this->ksepuluh+$this->kelimabelas;
 // $gejalatinggi=$this->ktujuh+$this->kdelapan;
 
         //13-18
 
-$gejalatinggi=$this->kempatbelas+$this->kelimabelas+$this->keenambelas+$this->ketujuhbelas+$this->keduatiga;
+$gejalatinggi=$this->keenambelas;
 
         //19
 
-$sembilanbelas=$this->kesembilanbelas;
-// $sepuluh=$this->ksepuluh;
+// $sembilanbelas=$this->kesembilanbelas;
+// // $sepuluh=$this->ksepuluh;
 
-        //11
-$delapanbelas=$this->kedelapanbelas;
+//         //11
+// $delapanbelas=$this->kedelapanbelas;
 // $sebelas=$this->ksebelas;
+
+$saturasi=$this->keduasatu;
 
 
 // if (
@@ -679,7 +681,7 @@ $delapanbelas=$this->kedelapanbelas;
 // }
 
  if ( 
-        ($gejalatinggi>0) ||
+        ($gejalatinggi>0) || ($saturasi<=90)||
         ($gejalatinggi>0 && $gejalarendah>0) ||
         ($gejalatinggi>0 && $gejalarendah>0 && $gejalasedang>0) ||
         ($gejalatinggi>0 && $gejalasedang>0)
@@ -692,7 +694,7 @@ $delapanbelas=$this->kedelapanbelas;
     }
 else if (
 
-        ($gejalasedang>0) ||
+        ($gejalasedang>0) || ($saturasi>90 && $saturasi<=95)||
         ($gejalarendah>0 && $gejalasedang>0) 
 
     )
@@ -704,7 +706,7 @@ else if (
     }
 else if (
 
-    ($gejalarendah>0)
+    ($gejalarendah>0) || ($saturasi>90 && $saturasi<=95)
 
     )
 
@@ -712,6 +714,8 @@ else if (
 
     $this->score = '1';  
 
+    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95 && $gejalarendah==0)) {
+        $this->score = '0';
     }
 
 
@@ -769,39 +773,37 @@ else if (
 
         $this->keduasatu=$post['keduasatu'];
 
-        $this->keduadua=$post['keduadua'];
+        // $this->keduadua=$post['keduadua'];
 
-        $this->keduatiga=$post['keduatiga'];
+        // $this->keduatiga=$post['keduatiga'];
 
         $this->keduaempat=$post['keduaempat'];
 
         $this->kedualima=$post['kedualima'];
 
-        $this->keduaenam=$post['keduaenam'];
+        // $this->keduaenam=$post['keduaenam'];
 
-        $this->keduatujuh=$post['keduatujuh'];
+        // $this->keduatujuh=$post['keduatujuh'];
 
         $this->time = date("h:i");
 
-$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->keduapuluh;
+$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->kenam+$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->kempatbelas+$this->ketujuhbelas;
 // $gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
 
         //7-12
 
-$gejalasedang=$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksepuluh+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->keduasatu+$this->keduadua;
+$gejalasedang=$this->klima+$this->ksepuluh+$this->kelimabelas;
 // $gejalatinggi=$this->ktujuh+$this->kdelapan;
 
         //13-18
 
-$gejalatinggi=$this->kempatbelas+$this->kelimabelas+$this->keenambelas+$this->ketujuhbelas+$this->keduatiga;
+$gejalatinggi=$this->keenambelas;
 
+$saturasi=$this->keduasatu;
         //19
 
-$sembilanbelas=$this->kesembilanbelas;
-// $sepuluh=$this->ksepuluh;
-
         //11
-$delapanbelas=$this->kedelapanbelas;
+
 
 
 
@@ -897,7 +899,7 @@ $delapanbelas=$this->kedelapanbelas;
 // }
 //10
 if ( 
-        ($gejalatinggi>0) ||
+        ($gejalatinggi>0) || ($saturasi<=90)||
         ($gejalatinggi>0 && $gejalarendah>0) ||
         ($gejalatinggi>0 && $gejalarendah>0 && $gejalasedang>0) ||
         ($gejalatinggi>0 && $gejalasedang>0)
@@ -910,7 +912,7 @@ if (
     }
 else if (
 
-        ($gejalasedang>0) ||
+        ($gejalasedang>0) || ($saturasi>90 && $saturasi<=95 && $gejalarendah>0)||
         ($gejalarendah>0 && $gejalasedang>0) 
 
     )
@@ -922,14 +924,15 @@ else if (
     }
     else if (
         
-        ($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $sembilanbelas==0) ||
-        ($gejalarendah>0)
+        ($saturasi>90 && $saturasi<=95) || ($gejalarendah>0)
     )
 
     { 
 
     $this->score = '1';  
 
+    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95 && $gejalarendah==0)) {
+        $this->score = '0';
     }
         $this->db->where('tanggal=',$this->tanggal = $post["tanggal"]);
 

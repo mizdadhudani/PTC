@@ -61,6 +61,7 @@
 
                       <div class="col-lg-8">
 
+
                       </div>
 
                       <div class="col-lg-3">
@@ -135,7 +136,7 @@
                       <td><?php echo $datatku['nama'] ?></td>
 
                       <td>
-
+                        <button  class="btn btn-warning" onclick="location.href='<?php echo base_url("page/gantidata"),'/',$datatku['nik']?>'" >Edit Data</button>
                        
                         <?php if ($datatku['status'] == 'sehat')  {?>
 
