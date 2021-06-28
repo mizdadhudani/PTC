@@ -328,7 +328,7 @@
 
                   </tbody>
                 </table>
-                <form action="<?php echo base_url("admin/gantiscore"),'/',$datapenduduk->nik?>" method="post" enctype="multipart/form-data">
+<!--                 <form action="<?php echo base_url("admin/gantiscore"),'/',$datapenduduk->nik?>" method="post" enctype="multipart/form-data">
                   <input type="text" name="id" value="<?php echo $cekdata->id ?>">
                   <input type="nik" name="nik" value="<?php echo $cekdata->nik ?>">
                   <input type="nik" name="link" value="<?php echo $cekdata->link ?>">
@@ -352,7 +352,7 @@
                   Ganti Score
                   <input type="text" name="score">
                   <button type="submit" >Ganti</button>
-                </form>
+                </form> -->
               </div>
             </div>
           </div>
