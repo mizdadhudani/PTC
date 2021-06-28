@@ -40,14 +40,7 @@
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
                       <td><?php echo $datatku['tempat_isolasi'] ?></td>
-                      <td><?php if ($datatku['keduadua'] == 1) { ?>
-                        90-95
-                      <?php } else if ($datatku['keduatiga'] == 1) { ?>
-                        <90
-                      <?php } else { ?>
-                        normal
-                      <?php } ?>
-                        </td>
+                      <td><?php echo $datatku['keduasatu'] ?></td>
                       <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
@@ -98,14 +91,7 @@
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
                       <td><?php echo $datatku['tempat_isolasi'] ?></td>
-                      <td><?php if ($datatku['keduadua'] == 1) { ?>
-                        90-95
-                      <?php } else if ($datatku['keduatiga'] == 1) { ?>
-                        <90
-                      <?php } else { ?>
-                        normal
-                      <?php } ?>
-                        </td>
+                      <td><?php echo $datatku['keduasatu'] ?></td>
                       <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
@@ -159,14 +145,7 @@
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
                       <td><?php echo $datatku['tempat_isolasi'] ?></td>
-                      <td><?php if ($datatku['keduadua'] == 1) { ?>
-                        90-95
-                      <?php } else if($datatku['keduatiga'] == 1) { ?>
-                        <90
-                      <?php } else { ?>
-                        normal
-                      <?php } ?>
-                        </td>
+                      <td><?php echo $datatku['keduasatu'] ?></td>
                       <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
@@ -220,14 +199,7 @@
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
                       <td><?php echo $datatku['tempat_isolasi'] ?></td>
-                      <td><?php if ($datatku['keduadua'] == 1) { ?>
-                        90-95
-                      <?php } else if ($datatku['keduatiga'] == 1) { ?>
-                        <90
-                      <?php } else { ?>
-                        normal
-                      <?php } ?>
-                        </td>
+                      <td><?php echo $datatku['keduasatu'] ?></td>
                       <td><?php echo $datatku['kedelapanbelas'], '/', $datatku['kedualima'] ?></td>
                       <td><?php echo $datatku['kesembilanbelas'] ?></td>
                       <td>
