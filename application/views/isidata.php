@@ -2,7 +2,7 @@
 
 <html>
 
-
+<?php var_dump($datas) ?>
 
 <head>
 
@@ -554,14 +554,14 @@
 
 <div id="submit1">
 
-  <input type="text" name="nik" placeholder="nik" hidden="" value="<?php echo $datas->nik?>">
-   <input type="text" name="score" placeholder="score" hidden="" value="<?php echo $datas->score?>">
+  <input type="text" name="nik"  hidden value="<?php echo $datas->nik?>">
+   <input type="text" name="score"  hidden value="<?php echo $datas->score?>">
 
-  <input type="number" name="id" placeholder="id"  hidden="" value="<?php echo $datas->id?>">
+  <input type="number" name="id"   hidden value="<?php echo $datas->id?>">
 
-    <input type="number" name="link" placeholder="id"  hidden="" value="<?php echo $datas->link?>">
+    <input type="number" name="link"   hidden value="<?php echo $datas->link?>">
 
-  <input type="text" name="tanggal"  hidden="" value="<?php echo date("Y-m-d") ?>">
+  <input type="text" name="tanggal"  hidden value="<?php echo date("Y-m-d") ?>">
 
   <input type="text" name="time"  hidden="" value="<?php echo date("h:i");?>">
        <input type="text" hidden name="idpenduduk" value="<?php echo $datap->id?>">

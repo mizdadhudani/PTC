@@ -210,8 +210,8 @@ public function isidata($nik){
 					  	// 'logo'=>$this->inti->logo(),
 
 					  //'data'=>$this->modulpenduduk->penduduk($nik),
-					  'dataku'=>$this->kuisoner->penduduk($nik),
-					  'datas'=>$this->kuisoner->penduduktanggal($nik),
+					  // 'dataku'=>$this->kuisoner->penduduk($nik),
+					  'datas'=>$this->kuisoner->penduduk($nik),
 					  'datap'=>$this->modulpenduduk->datadetailhari($nik)
 					  //'dataku'=>$this->kuisoner->getdataid($id),
 

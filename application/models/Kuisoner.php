@@ -536,7 +536,7 @@ class Kuisoner extends CI_Model{
         $this->ksebelas = $post["ksebelas"];
 
         $this->kduabelas = $post["kduabelas"];
-        //$this->score=$post['score'];
+        $this->score=$post['score'];
 
         $this->ktigabelas = $post['ktigabelas'];
 
@@ -717,7 +717,6 @@ else if (
     } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95 && $gejalarendah==0)) {
         $this->score = '0';
     }
-
 
         $this->db->insert($this->table,$this);
 
