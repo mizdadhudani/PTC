@@ -25,7 +25,7 @@
 
 
 
-          <div class="row">
+          <div>
 
 
 
@@ -45,7 +45,7 @@
 
 
 
-               Hallo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a>, Anda dalam kondisi <a class="font-weight-bold">TIDAK BERGEJALA!</a> Tetap jaga kondisi tubuh anda, konsumsi makanan yang bergizi dan berimbang, istirahatlah yang cukup, <a class="font-weight-bold">TETAP TINGGAL DIRUMAH</a> kecuali untuk keperluan penting dan mendesak. Jangan lupa esok hari untuk kembali mengisi data monitoring kesehatan harian ini.
+               Halo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a>, Anda termasuk <a class="font-weight-bold">TIDAK BERGEJALA!</a> Tetap semangat untuk menjalankan protokol kesehatan, istirahatlah yang cukup, konsumsi makanan bergizi, tambahkan madu dan vitamin jika perlu. Laporkan kondisi anda secara rutin 2x sehari. Agar kami mengetahui kondisi anda. <a class="font-weight-bold">SALAM TANGGUH</a>
 
               </div>
 
@@ -63,14 +63,14 @@
 
 
 
-             <div class="col-lg-9 col-md-9 col-sm-6">
+             <div class="col-lg-12 col-md-9 col-sm-6">
 
 
 
               <div class="alert alert-danger" role="alert">
 
                
-               Halo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a> Anda dalam kondisi <a class="font-weight-bold">GEJALA BERAT</a>, lakukan pengecekan suhu badan secara berkala, tetap tenang dan fokus untuk <a class="font-weight-bold">ISTIRAHAT</a>, Minumlah air putih yang banyak, makan makanan yang bergizi, <a class="font-weight-bold">TETAP TINGGAL DIRUMAH DAN LAKUKAN ISOLASI MANDIRI.</a>
+               Halo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a> Anda termasuk <a class="font-weight-bold">BERGEJALA BERAT!</a>. Tetap tenang dan <a class="font-weight-bold">SEGERA HUBUNGI PETUGAS.</a>
 
               </div>
 
@@ -108,7 +108,7 @@
 
               <div class="alert alert-warning" role="alert">
 
-               Halo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a> Anda dalam kondisi <a class="font-weight-bold">BERGEJALA SEDANG</a> Tetaplah tinggal di dalam rumah, lakukan <a class="font-weight-bold">KARANTINA MANDIRI</a>. Istirahatlah dengan cukup, makan makanan yang bergizi dan seimbang, minumlah air putih yang banyak dan selalu tetap <a class="font-weight-bold">WASPADA!.</a> Terus laporkan kesehatan harian anda agar kami bisa membantu
+               Halo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a> Anda termasuk <a class="font-weight-bold">BERGEJALA SEDANG.</a>Tetap tenang dan <a class="font-weight-bold">SEGERA HUBUNGI PETUGAS.</a>
 
               </div>
 
@@ -123,7 +123,7 @@
               <div class="alert alert-success" role="alert">
 
 
-                Halo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a> Anda dalam kondisi <a class="font-weight-bold">BERGEJALA RINGAN!</a> untuk mengurangi gejala, minum air putih yang banyak, makan makanan yang bergizi, tetap <a class="font-weight-bold">WASPADA</a> dan jangan lupa <a class="font-weight-bold">BAHAGIA!</a>
+                Halo <a class="font-weight-bold"><?php echo $datapenduduk->nama?></a> Anda termasuk <a class="font-weight-bold">BERGEJALA RINGAN!.</a> TETAPLAH TENANG. Perbanyaklah istirahat, konsumsi makanan bergizi, tambahkan vitamin dan madu, perbanyaklah minum air putih. <a class="font-weight-bold">SEGERA HUBUNGI PETUGAS</a> jika tiba-tiba merasakan <a class="font-weight-bold">SESAK NAFAS dan LEMAS.</a>
 
               </div>
 

@@ -126,6 +126,7 @@
 
   <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Kepala Keluarga" required="" <?php echo($data->status_dlm_keluarga=="Kepala Keluarga" ? 'checked' : '' ) ?>>
 
+
   <label class="form-check-label" for="exampleRadios1">
 
     Kepala Keluarga
@@ -137,6 +138,7 @@
 <div class="form-check">
 
   <input class="form-check-input" type="radio" name="status_dlm_keluarga" id="status_dlm_keluarga" value="Anggota Keluarga" required="" <?php echo($data->status_dlm_keluarga=="Anggota Keluarga" ? 'checked' : '' ) ?>>
+
 
   <label class="form-check-label" for="exampleRadios2">
 
@@ -158,9 +160,15 @@
   <div class="form-group">
       <label for="status">Jenis Kelamin</label><br>
           <select required id="jeniskelamin" class="form-control" name="jeniskelamin" class="select" onchange="return showHamil() ;">
+
             <!-- <option  value="">Pilih salah satu...</option> -->
             <option name="jeniskelamin" value="Laki-laki" <?php echo($data->jeniskelamin == "Laki-laki" ? 'selected' : '' ) ?>>Laki-laki</option>
             <option name="jeniskelamin" value="Perempuan"  <?php echo($data->jeniskelamin == "Perempuan" ? 'selected' : '' ) ?>>Perempuan</option>
+
+<!--             <option selected value="">Pilih salah satu...</option>
+            <option name="jeniskelamin" value="Laki-laki">Laki-laki</option>
+            <option name="jeniskelamin" value="Perempuan">Perempuan</option>
+ -->
           </select>
   </div>
 
@@ -172,10 +180,9 @@
             <option name="hamil" value="hamil">Hamil</option>
           </select>
   </div>
-  
   <div class="form-group">
       <label for="kecamatan">Kecamatan</label><br>
-   <select name="kecamatan" id="kecamatan" class="form-control input-lg">
+   <select required name="kecamatan" id="kecamatan" class="form-control input-lg">
     <option value="">Pilih Kecamatan</option>
     <?php
     foreach($kecamatan as $row)
@@ -189,35 +196,66 @@
 
   <div class="form-group">
     <label for="desa">Desa</label><br>
-   <select name="desa" id="desa" class="form-control input-lg">
+   <select required="" name="desa" id="desa" class="form-control input-lg">
     <option value="">Pilih Desa</option>
    </select>
   </div>
 
 
   <div class="form-group">
-    <label for="dukuh">Dukuh</label><br>
-   <select name="penduduk" id="dukuh" class="form-control input-lg">
-    <option value="">Pilih Dukuh</option>
+    <label for="dukuh">Padukuhan</label><br>
+   <select required="" name="penduduk" id="dukuh" class="form-control input-lg">
+    <option value="">Pilih Padukuhan</option>
    </select>
   </div>
+
+  <!-- <div class="form-group">
+    <label for="status">Desa</label><br>
+        <select id="desa" class="form-control" name="desa" class="select" onchange="return showDesa() ;">
+          <option name="desa" value="Panggungharjo">Panggungharjo</option>
+          <option name="desa" value="Timbulharjo">Timbulharjo</option>
+        </select>
+  </div> -->
+
+<!--   <div class="form-group">
+<<<<<<< HEAD
+=======
+    <label for="penduduk">Alamat Domisili</label><br>
+        <select required id="penduduk" class="form-control" name="penduduk" class="select">
+          <option selected value="">Pilih salah satu...</option>
+          <option name="penduduk" value="Dukuh Krapyak Wetan">Dukuh Krapyak Wetan</option>
+          <option name="penduduk" value="Dukuh Krapyak Kulon">Dukuh Krapyak Kulon</option>
+          <option name="penduduk" value="Dukuh Dongkelan">Dukuh Dongkelan</option>
+          <option name="penduduk" value="Dukuh Glugo">Dukuh Glugo</option>
+          <option name="penduduk" value="Dukuh Kweni">Dukuh Kweni</option>
+          <option name="penduduk" value="Dukuh Pelemsewu">Dukuh Pelemsewu</option>
+          <option name="penduduk" value="Dukuh Sawit">Dukuh Sawit</option>
+          <option name="penduduk" value="Dukuh Pandes">Dukuh Pandes</option>
+          <option name="penduduk" value="Dukuh Glondong">Dukuh Glondong</option>
+          <option name="penduduk" value="Dukuh Jaranan">Dukuh Jaranan</option>
+          <option name="penduduk" value="Dukuh Geneng">Dukuh Geneng</option>
+          <option name="penduduk" value="Dukuh Ngireng-ngireng">Dukuh Ngireng-ngireng</option>
+          <option name="penduduk" value="Dukuh Cabeyan">Dukuh Cabeyan</option>
+          <option name="penduduk" value="Dukuh Geneng">Dukuh Garon</option>
+        </select>
+  </div> -->
 
   <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
         <select required id="Alamat" class="form-control" name="alamat" class="select">
           <option selected value="">Pilih salah satu...</option>
-          <option name="alamat" value="RT 01" <?php echo($data->alamat == "RT 01" ? 'selected' : '' ) ?>>RT 01</option>
-          <option name="alamat" value="RT 02" <?php echo($data->alamat == "RT 02" ? 'selected' : '' ) ?>>RT 02</option>
-          <option name="alamat" value="RT 03" <?php echo($data->alamat == "RT 03" ? 'selected' : '' ) ?>>RT 03</option>
-          <option name="alamat" value="RT 04" <?php echo($data->alamat == "RT 04" ? 'selected' : '' ) ?>>RT 04</option>
-          <option name="alamat" value="RT 05" <?php echo($data->alamat == "RT 05" ? 'selected' : '' ) ?>>RT 05</option>
-          <option name="alamat" value="RT 06" <?php echo($data->alamat == "RT 06" ? 'selected' : '' ) ?>>RT 06</option>
-          <option name="alamat" value="RT 07" <?php echo($data->alamat == "RT 07" ? 'selected' : '' ) ?>>RT 07</option>
-          <option name="alamat" value="RT 08" <?php echo($data->alamat == "RT 08" ? 'selected' : '' ) ?>>RT 08</option>
-          <option name="alamat" value="RT 09" <?php echo($data->alamat == "RT 09" ? 'selected' : '' ) ?>>RT 09</option>
-          <option name="alamat" value="RT 10" <?php echo($data->alamat == "RT 10" ? 'selected' : '' ) ?>>RT 10</option>
-          <option name="alamat" value="RT 11" <?php echo($data->alamat == "RT 11" ? 'selected' : '' ) ?>>RT 11</option>
-          <option name="alamat" value="RT 12" <?php echo($data->alamat == "RT 12" ? 'selected' : '' ) ?>>RT 12</option>
+          <option name="alamat" value="RT 01">RT 01</option>
+          <option name="alamat" value="RT 02">RT 02</option>
+          <option name="alamat" value="RT 03">RT 03</option>
+          <option name="alamat" value="RT 04">RT 04</option>
+          <option name="alamat" value="RT 05">RT 05</option>
+          <option name="alamat" value="RT 06">RT 06</option>
+          <option name="alamat" value="RT 07">RT 07</option>
+          <option name="alamat" value="RT 08">RT 08</option>
+          <option name="alamat" value="RT 09">RT 09</option>
+          <option name="alamat" value="RT 10">RT 10</option>
+          <option name="alamat" value="RT 11">RT 11</option>
+          <option name="alamat" value="RT 12">RT 12</option>
         </select>
   </div>
   
@@ -225,16 +263,16 @@
     <label for="status">Status</label><br>
         <select required id="status" class="form-control" name="status" class="select" >
           <option selected value="">Pilih salah satu...</option>
-          <option name="status" value="KE" <?php echo($data->status == "KE" ? 'selected' : '' ) ?>>Kontak Erat</option>
-          <option name="status" value="positif" <?php echo($data->status == "positif" ? 'selected' : '' ) ?>>Positif</option>
+          <option name="status" value="KE">Kontak Erat</option>
+          <option name="status" value="positif">Positif</option>
         </select>
   </div>
   <div class="form-group">
     <label for="status">Tempat Isolasi</label><br>
         <select required id="status" class="form-control" name="tempat_isolasi" class="select" >
           <option selected value="">Pilih salah satu...</option>
-          <option name="tempat_isolasi" value="Rumah" <?php echo($data->tempat_isolasi == "Rumah" ? 'selected' : '' ) ?>>Rumah</option>
-          <option name="tempat_isolasi" value="Shelter" <?php echo($data->tempat_isolasi == "Shelter" ? 'selected' : '' ) ?>>Shelter</option>
+          <option name="tempat_isolasi" value="Rumah">Rumah</option>
+          <option name="tempat_isolasi" value="Shelter">Shelter</option>
         </select>
   </div>
 </div>
@@ -290,6 +328,7 @@
      }
 
    </script>
+
 
    <script>
 $(document).ready(function(){

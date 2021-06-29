@@ -482,7 +482,8 @@
 
    <div class="form-group">
       <label for="status">Jenis Kelamin</label><br>
-          <select id="jeniskelamin" class="form-control" name="jeniskelamin" class="select" onchange="return showHamil() ;">
+          <select required id="jeniskelamin" class="form-control" name="jeniskelamin" class="select" onchange="return showHamil() ;">
+            <option selected value="">Pilih salah satu...</option>
             <option name="tempat_isolasi" value="Laki-laki">Laki-laki</option>
             <option name="tempat_isolasi" value="Perempuan">Perempuan</option>
           </select>
@@ -491,6 +492,7 @@
   <div id="nlHamil" style="visibility: hidden;" class="form-group">
       <label for="status">Apakah Hamil?</label><br>
           <select id="hamil" class="form-control" name="hamil" class="select" >
+            <option selected value="">Pilih salah satu...</option>
             <option name="hamil" value="0">Tidak</option>
             <option name="hamil" value="hamil">Hamil</option>
           </select>
@@ -521,13 +523,35 @@
   <div class="form-group">
     <label for="dukuh">Dukuh</label><br>
    <select name="penduduk" id="dukuh" class="form-control input-lg">
-    <option value="">Pilih Dukuh</option>
+    <option value="">Pilih Padukuhan</option>
    </select>
   </div>
 
-<div class="form-group">
+<!--   <div class="form-group">
+    <label for="penduduk">Alamat Domisili</label><br>
+        <select required id="penduduk" class="form-control" name="penduduk" class="select">
+          <option selected value="">Pilih salah satu...</option>
+          <option name="penduduk" value="Dukuh Krapyak Wetan">Dukuh Krapyak Wetan</option>
+          <option name="penduduk" value="Dukuh Krapyak Kulon">Dukuh Krapyak Kulon</option>
+          <option name="penduduk" value="Dukuh Dongkelan">Dukuh Dongkelan</option>
+          <option name="penduduk" value="Dukuh Glugo">Dukuh Glugo</option>
+          <option name="penduduk" value="Dukuh Kweni">Dukuh Kweni</option>
+          <option name="penduduk" value="Dukuh Pelemsewu">Dukuh Pelemsewu</option>
+          <option name="penduduk" value="Dukuh Sawit">Dukuh Sawit</option>
+          <option name="penduduk" value="Dukuh Pandes">Dukuh Pandes</option>
+          <option name="penduduk" value="Dukuh Glondong">Dukuh Glondong</option>
+          <option name="penduduk" value="Dukuh Jaranan">Dukuh Jaranan</option>
+          <option name="penduduk" value="Dukuh Geneng">Dukuh Geneng</option>
+          <option name="penduduk" value="Dukuh Ngireng-ngireng">Dukuh Ngireng-ngireng</option>
+          <option name="penduduk" value="Dukuh Cabeyan">Dukuh Cabeyan</option>
+          <option name="penduduk" value="Dukuh Geneng">Dukuh Garon</option>
+        </select>
+  </div>
+ -->
+  <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>
-        <select id="Alamat" class="form-control" name="alamat" class="select">
+        <select required id="Alamat" class="form-control" name="alamat" class="select">
+          <option selected value="">Pilih salah satu...</option>
           <option name="alamat" value="RT 01">RT 01</option>
           <option name="alamat" value="RT 02">RT 02</option>
           <option name="alamat" value="RT 03">RT 03</option>
@@ -543,25 +567,23 @@
         </select>
   </div>
   
-   
- <input class="form-check-input" hidden type="text" name="score" id="Kependudukan" value="">
-
- <div class="form-group">
-      <label for="status">Status</label><br>
-          <select id="status" class="form-control" name="status" class="select" >
-            <option name="status" value="KE">Kontak Erat</option>
-            <option name="status" value="positif">Positif</option>
-          </select>
-    </div>
-
   <div class="form-group">
-      <label for="status">Tempat Isolasi</label><br>
-          <select id="status" class="form-control" name="tempat_isolasi" class="select" >
-            <option name="tempat_isolasi" value="Rumah">Rumah</option>
-            <option name="tempat_isolasi" value="Shelter">Shelter</option>
-          </select>
-    </div>
-
+    <label for="status">Status</label><br>
+        <select required id="status" class="form-control" name="status" class="select" >
+          <option selected value="">Pilih salah satu...</option>
+          <option name="status" value="KE">Kontak Erat</option>
+          <option name="status" value="positif">Positif</option>
+        </select>
+  </div>
+  <div class="form-group">
+    <label for="status">Tempat Isolasi</label><br>
+        <select required id="status" class="form-control" name="tempat_isolasi" class="select" >
+          <option selected value="">Pilih salah satu...</option>
+          <option name="tempat_isolasi" value="Rumah">Rumah</option>
+          <option name="tempat_isolasi" value="Shelter">Shelter</option>
+        </select>
+  </div>
+</div>
 
 
   <button type="submit" class="btn btn-primary" style="margin-bottom: 5%;">Kirim</button>

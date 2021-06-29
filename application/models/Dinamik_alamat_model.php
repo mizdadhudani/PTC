@@ -28,7 +28,7 @@ class Dinamik_alamat_model extends CI_Model {
 	  $this->db->where('id_desa', $id_desa);
 	  $this->db->order_by('nama_dukuh', 'ASC');
 	  $query = $this->db->get('dukuh');
-	  $output = '<option value="">Pilih Dukuh</option>';
+	  $output = '<option value="">Pilih Padukuhan</option>';
 	  foreach($query->result() as $row)
 	  {
 	   $output .= '<option value="'.$row->id_dukuh.'">'.$row->nama_dukuh.'</option>';
