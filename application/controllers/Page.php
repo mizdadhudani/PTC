@@ -216,7 +216,7 @@ public function isidata($nik){
 					  //'dataku'=>$this->kuisoner->getdataid($id),
 
 					  );
-if ($cek->alamat=='' || $cek->alamat==null || $cek->alamat==' ' || $cek->penduduk=='Panggungharjo'){
+if ($cek->penduduk=='' || $cek->alamat=='' || $cek->usia=='' || $cek->mulai_isolasi==''|| $cek->status_dlm_keluarga==''|| $cek->jeniskelamin==''|| $cek->desa==''|| $cek->kecamatan==''|| $cek->status==''|| $cek->tempat_isolasi==''){
 	redirect("page/gantidata/".$nik);
 }else {
 		
