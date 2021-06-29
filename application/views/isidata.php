@@ -2,7 +2,7 @@
 
 <html>
 
-<?php var_dump($datas) ?>
+<!-- <?php var_dump($datas) ?> -->
 
 <head>
 
