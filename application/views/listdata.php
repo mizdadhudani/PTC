@@ -65,12 +65,12 @@
 
                       </div>
 
-                      <div class="col-lg-3">
+                      <div class="col-lg-3"><br><br>
 
-                     <button type="submit" class="btn btn-warning" onclick="location.href='<?php echo base_url('page/tambahlistbaru'),'/',$datalist->link?>'" style="
+                     <!-- <button type="submit" class="btn btn-warning" onclick="location.href='<?php echo base_url('page/tambahlistbaru'),'/',$datalist->link?>'" style="
     float: right;
     margin-right: 7%;
-"><i class="fas fa-user-plus"></i> Tambah Data </button>
+"><i class="fas fa-user-plus"></i> Tambah Data </button> -->
 
                      </div>
 
@@ -136,7 +136,7 @@
 
                       <td><?php echo $datatku['nama'] ?></td>
 
-                      <td>
+                      <td style="text-align:right">
 
                        <button  class="btn btn-warning" onclick="location.href='<?php echo base_url("page/gantidata"),'/',$datatku['nik']?>'" >Edit Data</button>
                        
@@ -146,7 +146,8 @@
 
                         <?php }else {?>
 
-                          <button  class="btn btn-primary" onclick="location.href='<?php echo base_url("page/isidata"),'/',$datatku['nik']?>'" >Isi Laporan Harian</button>
+                          <button  class="btn btn-primary" onclick="location.href='<?php echo base_url("page/isidata"),'/',$datatku['nik']?>'" >Isi Laporan Diri Sendiri</button>
+                          <button  class="btn btn-primary" onclick="location.href='<?php echo base_url('page/tambahlistbaru'),'/',$datalist->link?>'" >Isi Laporan Orang Lain</button>
 
                           <!-- <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['link']?>'" >Sudah Sehat</button> -->
                           <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['nik'] ?>'" >Sudah Sehat</button>

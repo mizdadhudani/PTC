@@ -292,6 +292,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        // $this->db->join ('kecamatan','tb_qusoner.id = kecamatan.id_kecamatan'); 
         $this->db->where("score =3");
         //$this->db->where("ksebelas =1 ");
         //$this->db->where("ksebelas =1 OR ktigabelas =1 OR kempatbelas =1");

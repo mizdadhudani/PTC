@@ -681,7 +681,7 @@ $saturasi=$this->keduasatu;
 // }
 
  if ( 
-        ($gejalatinggi>0) || ($saturasi<=90)||
+        ($gejalatinggi>0) || ($saturasi<=92)||
         ($gejalatinggi>0 && $gejalarendah>0) ||
         ($gejalatinggi>0 && $gejalarendah>0 && $gejalasedang>0) ||
         ($gejalatinggi>0 && $gejalasedang>0)
@@ -694,8 +694,8 @@ $saturasi=$this->keduasatu;
     }
 else if (
 
-        ($gejalasedang>0) || ($saturasi>90 && $saturasi<=95)||
-        ($gejalarendah>0 && $gejalasedang>0) 
+        ($gejalasedang>0) || ($saturasi>=93 && $saturasi<95)||
+        ($gejalarendah>0 && $gejalasedang>0 && $gejalatinggi>0 ) 
 
     )
 
@@ -706,7 +706,7 @@ else if (
     }
 else if (
 
-    ($gejalarendah>0) || ($saturasi>90 && $saturasi<=95)
+    ($gejalarendah>=1 && $gejalasedang>=1 && $gejalatinggi>=1 && $saturasi>=95)
 
     )
 
@@ -714,7 +714,7 @@ else if (
 
     $this->score = '1';  
 
-    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95 && $gejalarendah==0)) {
+    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95)) {
         $this->score = '0';
     }
 
