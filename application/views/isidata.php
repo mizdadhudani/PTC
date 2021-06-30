@@ -552,16 +552,18 @@
 
 </div>
 
+<?php if (!empty($datas)) {?>
+
 <div id="submit1">
 
-  <input type="text" name="nik"  hidden value="<?php echo $datas->nik?>">
-   <input type="text" name="score"  hidden value="<?php echo $datas->score?>">
+  <input type="text" name="nik" placeholder="nik" hidden="" value="<?php echo $datas->nik?>">
+   <input type="text" name="score" placeholder="score" hidden="" value="<?php echo $datas->score?>">
 
-  <input type="number" name="id"   hidden value="<?php echo $datas->id?>">
+  <input type="number" name="id" placeholder="id"  hidden="" value="<?php echo $datas->id?>">
 
-    <input type="number" name="link"   hidden value="<?php echo $datas->link?>">
+    <input type="number" name="link" placeholder="id"  hidden="" value="<?php echo $datas->link?>">
 
-  <input type="text" name="tanggal"  hidden value="<?php echo date("Y-m-d") ?>">
+  <input type="text" name="tanggal"  hidden="" value="<?php echo date("Y-m-d") ?>">
 
   <input type="text" name="time"  hidden="" value="<?php echo date("h:i");?>">
        <input type="text" hidden name="idpenduduk" value="<?php echo $datap->id?>">
@@ -585,12 +587,58 @@
 
 </div>
 
+
+
          <!-- Remind Passowrd -->
 
         </div>
 
       </div>
 
+<?php } else {?>
+
+<div id="submit1">
+
+  <input type="text" name="nik" placeholder="nik" hidden="" value="<?php echo $dataku->nik?>">
+   <input type="text" name="score" placeholder="score" hidden="" value="<?php echo $dataku->score?>">
+
+  <input type="number" name="id" placeholder="id"  hidden="" value="<?php echo $dataku->id?>">
+
+    <input type="number" name="link" placeholder="id"  hidden="" value="<?php echo $dataku->link?>">
+
+  <input type="text" name="tanggal"  hidden="" value="<?php echo date("Y-m-d") ?>">
+
+  <input type="text" name="time"  hidden="" value="<?php echo date("h:i");?>">
+       <input type="text" hidden name="idpenduduk" value="<?php echo $datap->id?>">
+      <input type="text" hidden name="linkpenduduk" value="<?php echo $datap->link?>">
+      <input type="text" hidden name="namapenduduk" value="<?php echo $datap->nama?>">
+      <input type="text" hidden name="mulai_isolasipenduduk" value="<?php echo $datap->mulai_isolasi?>">
+      <input type="text" hidden name="statuspenduduk" value="<?php echo $datap->status?>">
+      <input type="text" hidden name="nikpenduduk" value="<?php echo $datap->nik?>">
+      <input type="text" hidden name="jeniskelaminpenduduk" value="<?php echo $datap->jeniskelamin?>">
+      <input type="text" hidden name="nomorhppenduduk" value="<?php echo $datap->nomorhp?>">
+      <input type="text" hidden name="alamatpenduduk" value="<?php echo $datap->alamat?>">
+      <input type="text" hidden name="pendudukpenduduk" value="<?php echo $datap->penduduk?>">
+      <input type="text" hidden name="desapenduduk" value="<?php echo $datap->desa?>">
+      <input type="text" hidden name="kecamatanpenduduk" value="<?php echo $datap->kecamatan?>">
+      <input type="text" hidden name="usiapenduduk" value="<?php echo $datap->usia?>">
+      <input type="text" hidden name="hamilpenduduk" value="<?php echo $datap->hamil?>">
+      <input type="text" hidden name="status_dlm_keluargapenduduk" value="<?php echo $datap->status_dlm_keluarga?>">
+      <input type="text" hidden name="tempat_isolasipenduduk" value="<?php echo $datap->tempat_isolasi?>">
+      
+ <button type="submit" class="btn btn-primary" style="margin-right: 5%">Kirim</button>
+
+</div>
+
+
+
+         <!-- Remind Passowrd -->
+
+        </div>
+
+      </div>
+
+      <?php }?>
 
     </form>
 

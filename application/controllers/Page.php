@@ -211,7 +211,8 @@ public function isidata($nik){
 
 					  //'data'=>$this->modulpenduduk->penduduk($nik),
 					  // 'dataku'=>$this->kuisoner->penduduk($nik),
-					  'datas'=>$this->kuisoner->penduduk($nik),
+					  'dataku'=>$this->kuisoner->penduduk($nik),
+					  'datas'=>$this->kuisoner->penduduktanggal($nik),
 					  'datap'=>$this->modulpenduduk->datadetailhari($nik)
 					  //'dataku'=>$this->kuisoner->getdataid($id),
 
