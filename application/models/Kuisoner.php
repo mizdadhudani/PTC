@@ -574,17 +574,17 @@ class Kuisoner extends CI_Model{
 
         //1-6
 
-$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->kenam+$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->kempatbelas+$this->ketujuhbelas;
+$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->ketujuhbelas;
 // $gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
 
         //7-12
 
-$gejalasedang=$this->klima+$this->ksepuluh+$this->kelimabelas;
+$gejalasedang=$this->ksepuluh;
 // $gejalatinggi=$this->ktujuh+$this->kdelapan;
 
         //13-18
 
-$gejalatinggi=$this->keenambelas;
+$gejalatinggi=$this->keenambelas+$this->kempatbelas+$this->kelimabelas;
 
         //19
 
@@ -681,10 +681,8 @@ $saturasi=$this->keduasatu;
 // }
 
  if ( 
-        ($gejalatinggi>0) || ($saturasi<=92)||
-        ($gejalatinggi>0 && $gejalarendah>0) ||
-        ($gejalatinggi>0 && $gejalarendah>0 && $gejalasedang>0) ||
-        ($gejalatinggi>0 && $gejalasedang>0)
+        ($gejalatinggi>0 && $gejalasedang>0) || ($saturasi<=92 && $saturasi>=1)||
+        ($gejalatinggi>0 && $gejalasedang>0 && $gejalarendah>0) || ($gejalatinggi>0 && $gejalasedang>0 && $saturasi==0) || ($gejalatinggi>0 && $gejalasedang>0 && $gejalarendah>0 && $saturasi==0)
     )
 
     {
@@ -695,7 +693,8 @@ $saturasi=$this->keduasatu;
 else if (
 
         ($gejalasedang>0) || ($saturasi>=93 && $saturasi<95)||
-        ($gejalarendah>0 && $gejalasedang>0 && $gejalatinggi>0 ) 
+        ($gejalarendah>0 && $gejalasedang>0 ) || ($gejalasedang>0 && $saturasi==0) ||
+        ($gejalarendah>0 && $gejalasedang>0 && $saturasi==0) 
 
     )
 
@@ -706,7 +705,7 @@ else if (
     }
 else if (
 
-    ($gejalarendah>=1 && $gejalasedang>=1 && $gejalatinggi>=1 && $saturasi>=95)
+    ($gejalarendah>0 && $saturasi>=95) || ($gejalarendah>0 && $saturasi==0 )
 
     )
 
@@ -714,7 +713,8 @@ else if (
 
     $this->score = '1';  
 
-    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95)) {
+    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95) || ($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi==0))
+     {
         $this->score = '0';
     }
 
@@ -786,32 +786,34 @@ else if (
 
         $this->time = date("h:i");
 
-$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->kenam+$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->kempatbelas+$this->ketujuhbelas;
+$gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ktujuh+$this->kdelapan+$this->ksembilan+$this->ksebelas+$this->kduabelas+$this->ktigabelas+$this->ketujuhbelas;
 // $gejalarendah=$this->ksatu+$this->kdua+$this->ktiga+$this->kempat+$this->klima+$this->kenam+$this->ksembilan;
 
         //7-12
 
-$gejalasedang=$this->klima+$this->ksepuluh+$this->kelimabelas;
+$gejalasedang=$this->ksepuluh;
 // $gejalatinggi=$this->ktujuh+$this->kdelapan;
 
         //13-18
 
-$gejalatinggi=$this->keenambelas;
+$gejalatinggi=$this->keenambelas+$this->kempatbelas+$this->kelimabelas;
 
-$saturasi=$this->keduasatu;
         //19
 
-        //11
+// $sembilanbelas=$this->kesembilanbelas;
+// // $sepuluh=$this->ksepuluh;
+
+//         //11
+// $delapanbelas=$this->kedelapanbelas;
+// $sebelas=$this->ksebelas;
+
+$saturasi=$this->keduasatu;
 
 
-
-
-//  if (
-//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) ||
+// if (
 // //gejala rendah + 10 tidak ada karena ODP 1
-    
+//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) ||
 // //gejala rendah + 10 + 11 tidak ada karena ODP 1
-    
 //     //gejala rendah   +     10        +   11        +     12
 //     ( $gejalarendah>0 && $sepuluh==1 && $sebelas==1 && $duabelas==1) || //ada
 //     //gejala rendah    +    10        +     12
@@ -821,12 +823,8 @@ $saturasi=$this->keduasatu;
     
 //     //gejala rendah +    11         +       12
 //     ($gejalarendah>0 && $sebelas==1 && $duabelas==1) ||
-//     //gejala rendah   +  gejala tinggi   +    10 
-//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 ) ||
-//     //gejala rendah   +  gejala tinggi   +    11 
-//     ($gejalarendah>0 && $gejalatinggi>0 && $sebelas==1 ) ||
-//     //gejala rendah   +  gejala tinggi   +    10        + 12
-//     ($gejalarendah>0 && $gejalatinggi>0 && $sepuluh==1 && $sebelas==1) ||
+    
+// //gejala rendah + 12 tidak ada karena Resiko
     
 //     //gejala tinggi  +    10
 //     ($gejalatinggi>0 && $sepuluh==1) || //ada
@@ -840,7 +838,8 @@ $saturasi=$this->keduasatu;
 //     ($gejalatinggi>0 && $sebelas==1) || //ada 
 //     //gejala tinggi  +      11      +       12
 //     ($gejalatinggi>0 && $sebelas==1 && $duabelas==1) || //ada
-
+//     //gejala tinggi  +      12
+//     ($gejalatinggi>0 && $duabelas==1) ||
     
 
 // //10+11 tidak ada karena ODP1
@@ -850,7 +849,7 @@ $saturasi=$this->keduasatu;
 //     //10+12
 //     ($sepuluh==1 && $duabelas==1) || //ada
 //     //11+12
-//     ($sebelas==1 && $duabelas==1)  //ada
+//     ($sebelas==1 && $duabelas==1) //ada
 
 // //12 tidak ada karena Sehat beresiko
 
@@ -861,11 +860,9 @@ $saturasi=$this->keduasatu;
 // }
 
 // else if (
-// //gejala rendah+10 
+
 // ($gejalarendah>0 && $sepuluh==1) ||
-// //gejala rendah+11 
 // ($gejalarendah>0 && $sebelas==1 ) ||
-// //gejala rendah+10+11 
 // ($gejalarendah>0 && $sepuluh==1 && $sebelas==1) 
 
 // ){
@@ -881,9 +878,7 @@ $saturasi=$this->keduasatu;
 
 
 // else if (
-//     //10+11
 // ($sepuluh==1 && $sebelas==1) ||
-// //11
 // ($sebelas==1) 
 
 
@@ -896,12 +891,10 @@ $saturasi=$this->keduasatu;
 // $this->score = '4';  
 
 // }
-//10
-if ( 
-        ($gejalatinggi>0) || ($saturasi<=90)||
-        ($gejalatinggi>0 && $gejalarendah>0) ||
-        ($gejalatinggi>0 && $gejalarendah>0 && $gejalasedang>0) ||
-        ($gejalatinggi>0 && $gejalasedang>0)
+
+ if ( 
+        ($gejalatinggi>0 && $gejalasedang>0) || ($saturasi<=92) && $saturasi>=1||
+        ($gejalatinggi>0 && $gejalasedang>0 && $gejalarendah>0) || ($gejalatinggi>0 && $gejalasedang>0 && $saturasi==0) || ($gejalatinggi>0 && $gejalasedang>0 && $gejalarendah>0 && $saturasi==0)
     )
 
     {
@@ -911,8 +904,9 @@ if (
     }
 else if (
 
-        ($gejalasedang>0) || ($saturasi>90 && $saturasi<=95 && $gejalarendah>0)||
-        ($gejalarendah>0 && $gejalasedang>0) 
+        ($gejalasedang>0) || ($saturasi>=93 && $saturasi<95)||
+        ($gejalarendah>0 && $gejalasedang>0 ) || ($gejalasedang>0 && $saturasi==0) ||
+        ($gejalarendah>0 && $gejalasedang>0 && $saturasi==0) 
 
     )
 
@@ -921,16 +915,17 @@ else if (
     $this->score = '2'; 
 
     }
-    else if (
-        
-        ($saturasi>90 && $saturasi<=95) || ($gejalarendah>0)
+else if (
+
+    ($gejalarendah>0 && $saturasi>=95) || ($gejalarendah>0 && $saturasi==0 )
+
     )
 
     { 
 
     $this->score = '1';  
 
-    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95 && $gejalarendah==0)) {
+    } elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95) || ($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi==0)) {
         $this->score = '0';
     }
         $this->db->where('tanggal=',$this->tanggal = $post["tanggal"]);
