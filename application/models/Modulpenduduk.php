@@ -291,6 +291,7 @@ class Modulpenduduk extends CI_Model{
         // $this->db->distinct();
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
+        $this->db->where('status !=', 'sehat');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
         // $this->db->join ('kecamatan','tb_qusoner.id = kecamatan.id_kecamatan'); 
         $this->db->where("score =3");
@@ -308,6 +309,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->distinct();
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
+        $this->db->where('status !=', 'sehat');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
         $this->db->where("score=2");
         //$this->db->where("kempatbelas =0 OR ktigabelas =0");
@@ -322,6 +324,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->distinct();
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
+        $this->db->where('status !=', 'sehat');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
         $this->db->where("score =1");
         //$this->db->order_by("score", "DESC");
@@ -334,6 +337,7 @@ class Modulpenduduk extends CI_Model{
         $this->db->distinct();
         $this->db->select ('*');
         $this->db->from ('tb_penduduk ');
+        $this->db->where('status !=', 'sehat');
         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
         $this->db->where("score =0");
         //$this->db->order_by("score", "DESC");

@@ -301,8 +301,7 @@
                     <tr>
                       <td><?php echo $no=13;  ?></td>
                       <td>Berapakah Tekanan Darah Anda?</td>
-                      <td><?php echo $cekdata->ktigabelas ?></td>
-                      <td><?php echo $cekdata->kempatbelas?></td>
+                      <td><?php echo $cekdata->ktigabelas?><?php echo "/"?><?php echo $cekdata->kempatbelas?></td>
                     </tr>
                       <?php } ?>
 
