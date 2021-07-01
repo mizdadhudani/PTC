@@ -190,7 +190,7 @@
                      <?php if ($cekdata->ksatu==1) {?>
                     <tr>
                       <td><?php echo $no=1; ?></td>
-                      <td>Apakah anda sedang menderita batuk-batuk?</td>
+                      <td>Apakah Anda merasa demam??</td>
                       <td><?php echo $cekdata->ksatu == 1 ? "Ya" : "Tidak" ?></td>
 
                   <!-- 2 -->
@@ -200,7 +200,7 @@
                      <?php if ($cekdata->kdua==1) {?>
                     <tr>
                       <td><?php echo $no=2; ?></td>
-                      <td>Apakah nafsu makan anda berkurang?</td>
+                      <td>Apakah Anda mengalami sakit kepala/pusing?</td>
                       <td><?php echo $cekdata->kdua == 1 ? "Ya" : "Tidak" ?></td>
 
                     </tr>
@@ -210,7 +210,7 @@
                      <?php if ($cekdata->ktiga==1) {?>
                     <tr>
                       <td><?php echo $no=3;  ?></td>
-                       <td>Apakah anda sedang menderita sakit atau nyeri kepala?</td>
+                       <td>Apakah Anda batuk, pilek, dan nyeri tenggorokan?</td>
                        <td><?php echo $cekdata->ktiga == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -219,7 +219,7 @@
                      <?php if ($cekdata->kempat==1) {?>
                     <tr>
                       <td><?php echo $no=4;  ?></td>                      
-                      <td>Apakah anda sedang menderita sakit tenggorokan?</td>
+                      <td>Apakah Anda tidak bisa mencium bau atau merasakan makanan?</td>
                       <td><?php echo $cekdata->kempat == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -228,7 +228,7 @@
                      <?php if ($cekdata->klima==1) {?>
                     <tr>
                       <td><?php echo $no=5;  ?></td>
-                      <td>Apakah badan anda sekarang terasa lemas dan lesu?</td>
+                      <td>Apakah Anda merasa nyeri tulang atau kelelahan?</td>
                       <td><?php echo $cekdata->klima == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -237,7 +237,7 @@
                      <?php if ($cekdata->kenam==1) {?>
                     <tr>
                       <td><?php echo $no=6;  ?></td>
-                      <td>Apakah mulut anda terasa kering?</td>
+                      <td>Apakah nafsu makan Anda berkurang atau hilang?</td>
                       <td><?php echo $cekdata->kenam == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                      <?php } ?>
@@ -246,7 +246,7 @@
                      <?php if ($cekdata->ktujuh==1) {?>
                     <tr>
                       <td><?php echo $no=7;  ?></td>
-                      <td>Apakah anda sedang mengalami gejala seperti meriang?</td>
+                      <td>Apakah Anda mual, muntah, dan nyeri perut?</td>
                       <td><?php echo $cekdata->ktujuh == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -255,7 +255,7 @@
                      <?php if ($cekdata->kdelapan==1) {?>
                     <tr>
                       <td><?php echo $no=8; ?></td>
-                      <td>Apakah anda sedang menderita nyeri di seluruh bagian tubuh?</td>
+                      <td>Apakah Anda diare?</td>
                       <td><?php echo $cekdata->kdelapan == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -264,7 +264,7 @@
                      <?php if ($cekdata->ksembilan==1) {?>
                     <tr>
                       <td><?php echo $no=9; ?></td>
-                      <td>Apakah anda sedang menderita diare?</td>
+                      <td>Apakah kulit dan mata Anda kemerahan?</td>
                       <td><?php echo $cekdata->ksembilan == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -273,7 +273,7 @@
                      <?php if ($cekdata->ksepuluh==1) {?>
                     <tr>
                       <td><?php echo $no=10;  ?></td>
-                      <td>Apakah anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
+                      <td>Apakah terdapat perubahan warna pada jari-jari kaki Anda?</td>
                       <td><?php echo $cekdata->ksepuluh == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -282,7 +282,7 @@
                      <?php if ($cekdata->ksebelas==1) {?>
                     <tr>
                       <td><?php echo $no=11;  ?></td>
-                      <td>Apakah anda mengalami mual/muntah?</td>
+                      <td>Apakah Anda merasa sesak nafas dan nyeri dada?</td>
                       <td><?php echo $cekdata->ksebelas == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
@@ -291,58 +291,59 @@
                      <?php if ($cekdata->kduabelas==1) {?>
                     <tr>
                       <td><?php echo $no=12;  ?></td>
-                      <td>Apakah anda tidak bisa mencium bau atau merasakan makanan?</td>
+                      <td>Apakah Anda pernah kehilangan kesadaran (linglung) secara tiba-tiba?</td>
                       <td><?php echo $cekdata->kduabelas == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
 
 
-                     <?php if ($cekdata->ktigabelas==1) {?>
+                     <?php if ($cekdata->ktigabelas !=0) {?>
                     <tr>
                       <td><?php echo $no=13;  ?></td>
-                      <td>Apakah kulit anda pucat dan berkeringat dingin?</td>
-                      <td><?php echo $cekdata->ktigabelas ==1 ? "Ya" : "Tidak" ?></td>
+                      <td>Berapakah Tekanan Darah Anda?</td>
+                      <td><?php echo $cekdata->ktigabelas ?></td>
+                      <td><?php echo $cekdata->kempatbelas?></td>
                     </tr>
                       <?php } ?>
 
 
-                      <?php if ($cekdata->kempatbelas==1) {?>
+                      <?php if ($cekdata->kempatbelas !=0 ) {?>
                     <tr>
                       <td><?php echo $no=14;  ?></td>
-                      <td>Apakah bibir, kulit dan wajah anda tampak kebiruan?</td>
-                      <td><?php echo $cekdata->kempatbelas == 1 ? "Ya" : "Tidak" ?></td>
+                      <td>Berapakah Denyut Nadi Anda?</td>
+                      <td><?php echo $cekdata->kelimabelas?></td>
                     </tr>
                       <?php } ?>
 
 
-                      <?php if ($cekdata->kelimabelas==1) {?>
+                      <?php if ($cekdata->keenambelas!=0) {?>
                     <tr>
                       <td><?php echo $no=15;  ?></td>
-                      <td>Apakah dada anda terasa nyeri dan berdebar-debar?</td>
-                      <td><?php echo $cekdata->kelimabelas == 1 ? "Ya" : "Tidak" ?></td>
+                      <td>Berapakah Suhu Tubuh Anda?</td>
+                      <td><?php echo $cekdata->keenambelas?></td>
                     </tr>
                       <?php } ?>
 
 
-                      <?php if ($cekdata->keenambelas==1) {?>
+                      <?php if ($cekdata->ketujuhbelas!=0) {?>
                     <tr>
                       <td><?php echo $no=16;  ?></td>
-                      <td>Apakah pernah merasa linglung secara tiba-tiba?</td>
-                      <td><?php echo $cekdata->keenambelas == 1 ? "Ya" : "Tidak" ?></td>
+                      <td>Berapakah Saturasi Oksigen  Anda?</td>
+                      <td><?php echo $cekdata->ketujuhbelas?></td>
                     </tr>
                       <?php } ?>
 
 
-                      <?php if ($cekdata->ketujuhbelas==1) {?>
+<!--                       <?php if ($cekdata->kedelapanbelas!=0) {?>
                     <tr>
                       <td><?php echo $no=17;  ?></td>
-                      <td>Apakah mengalami demam tinggi selama lebih dari 7 hari?</td>
-                      <td><?php echo $cekdata->ketujuhbelas == 1 ? "Ya" : "Tidak" ?></td>
+                      <td>Berapakah Saturasi Oksigen  Anda?</td>
+                      <td><?php echo $cekdata->kedelapanbelas?></td>
                     </tr>
-                      <?php } ?>
+                      <?php } ?> -->
 
 
-                      <?php if ($cekdata->keduaempat) {?>
+<!--                       <?php if ($cekdata->keduaempat) {?>
                     <tr>
                       <td><?php echo $no=18;  ?></td>
                       <td>Gejala Lainnya?</td>
@@ -420,7 +421,7 @@
                       <td><?php echo $cekdata->keduatujuh == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
                       <?php } ?>
-
+ -->
 
 
 

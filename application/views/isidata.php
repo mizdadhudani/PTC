@@ -110,7 +110,7 @@
 
     <td>1</td>
 
-    <td>Apakah Anda sedang menderita batuk-batuk?</td>
+    <td>Apakah Anda merasa demam?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -128,7 +128,7 @@
 
     <td>2</td>
 
-    <td>Apakah nafsu makan Anda berkurang?</td>
+    <td>Apakah Anda mengalami sakit kepala/pusing?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -146,7 +146,7 @@
 
     <td>3</td>
 
-    <td>Apakah Anda sedang menderita sakit atau nyeri kepala?</td>
+    <td>Apakah Anda batuk, pilek, dan nyeri tenggorokan?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -164,7 +164,7 @@
 
     <td>4</td>
 
-    <td>Apakah Anda sedang menderita sakit tenggorokan?</td>
+    <td>Apakah Anda tidak bisa mencium bau atau merasakan makanan?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -182,7 +182,7 @@
 
     <td>5</td>
 
-    <td>Apakah badan Anda sekarang terasa lemas dan lesu?</td>
+    <td>Apakah Anda merasa nyeri tulang atau kelelahan?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -200,7 +200,7 @@
 
     <td>6</td>
 
-    <td>Apakah mulut Anda terasa kering?</td>
+    <td>Apakah nafsu makan Anda berkurang atau hilang?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -218,7 +218,7 @@
 
     <td>7</td>
 
-    <td>Apakah Anda sedang mengalami gejala seperti meriang?</td>
+    <td>Apakah Anda mual, muntah, dan nyeri perut?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -236,7 +236,7 @@
 
     <td>8</td>
 
-    <td>Apakah Anda sedang menderita nyeri di seluruh bagian tubuh?</td>
+    <td>Apakah Anda diare?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -254,7 +254,7 @@
 
     <td>9</td>
 
-    <td>Apakah Anda sedang menderita diare?</td>
+    <td>Apakah kulit dan mata Anda kemerahan?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -272,7 +272,7 @@
 
     <td>10</td>
 
-    <td>Apakah Anda sedang mengalami kesulitan dalam bernafas atau sesak nafas?</td>
+    <td>Apakah terdapat perubahan warna pada jari-jari kaki Anda?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -290,7 +290,7 @@
 
     <td>11</td>
 
-    <td>Apakah Anda mengalami mual/muntah?</td>
+    <td>Apakah Anda merasa sesak nafas dan nyeri dada?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -308,7 +308,7 @@
 
     <td>12</td>
 
-    <td>Apakah Anda tidak bisa mencium bau atau merasakan makanan?</td>
+    <td>Apakah Anda pernah kehilangan kesadaran (linglung) secara tiba-tiba?</td>
 
     <td style="text-align: right;">  <div class="form-check">
 
@@ -321,110 +321,6 @@
           <input class="form-check-input" type="radio" id="oke" name="kduabelas" value="0" checked=""></td>
 
   </tr>
-
-  <tr>
-
-    <td>13</td>
-
-    <td>Apakah kulit Anda pucat dan berkeringat dingin?</td>
-
-    <td style="text-align: right;">  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ktigabelas" value="1"></div>
-
-      </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ktigabelas" value="0" checked=""></td>
-
-  </tr>
-
-  <tr>
-
-    <td>14</td>
-
-    <td>Apakah bibir, kulit dan wajah Anda tampak kebiruan?</td>
-
-    <td style="text-align: right;">  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kempatbelas" value="1"></div>
-
-      </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kempatbelas" value="0" checked=""></td>
-
-  </tr>
-
-  <tr>
-
-    <td>15</td>
-
-    <td>Apakah dada Anda terasa nyeri dan berdebar-debar?</td>
-
-    <td style="text-align: right;">  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kelimabelas" value="1"></div>
-
-      </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="kelimabelas" value="0" checked=""></td>
-
-  </tr>
-
-  <tr>
-
-    <td>16</td>
-
-    <td>Apakah pernah merasa linglung secara tiba-tiba?</td>
-
-    <td style="text-align: right;">  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keenambelas" value="1"></div>
-
-      </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="keenambelas" value="0" checked=""></td>
-
-  </tr>
-
-  <tr>
-
-    <td>17</td>
-
-    <td>Apakah mengalami demam tinggi selama lebih dari 7 hari?</td>
-
-    <td style="text-align: right;">  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ketujuhbelas" value="1"></div>
-
-      </td>
-
-    <td>  <div class="form-check">
-
-          <input class="form-check-input" type="radio" id="oke" name="ketujuhbelas" value="0" checked=""></td>
-
-  </tr>
-
-  <tr>
-
-        <td>18</td>
-
-        <td>Gejala Lainnya?</td>
-
-        <td colspan="2">  <div class="form-check">
-
-             <textarea type="text" class="form-control" id="keduaempat" name="keduaempat" value=""></textarea> 
-
-        </td>
-
-      </tr>
 
 
     <tr>
@@ -441,19 +337,19 @@
 
       <tr>
 
-        <td>19</td>
+        <td>13</td>
 
         <td>Berapakah Tekanan Darah Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
         <td >  <div class="form-check">
 
-             <input type="number" class="form-control" id="kedelapanbelas" name="kedelapanbelas" value="">
+             <input type="number" class="form-control" id="ktigabelas" name="ktigabelas" value="0">
              <!-- <input type="number" class="form-control" id="kedelapanbelas" required="" name="kedelapanbelas" value=""></div> -->
 
 
         </td>
         <td >  <div class="form-check">
 
-             <input type="number" class="form-control" id="kedualima"  name="kedualima" value=""></div>
+             <input type="number" class="form-control" id="kempatbelas"  name="kempatbelas" value="0"></div>
 
         </td>
 
@@ -473,12 +369,12 @@
 
       <tr>
 
-        <td>20</td>
+        <td>14</td>
 
         <td>Berapakah Denyut Nadi Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="number" class="form-control" id="kesembilanbelas" name="kesembilanbelas" value=""></div>
+             <input type="number" class="form-control" id="kelimabelas" name="kelimabelas" value="0"></div>
 
         </td>
 
@@ -498,12 +394,12 @@
 
       <tr>
 
-        <td>21</td>
+        <td>15</td>
 
         <td>Berapakah Suhu Tubuh Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="number" class="form-control" id="keduapuluh" name="keduapuluh" value="36"></div>
+             <input type="number" class="form-control" id="keenambelas" name="keenambelas" value="0"></div>
 
         </td>
 
@@ -525,12 +421,12 @@
 
      <tr>
 
-        <td>22</td>
+        <td>16</td>
 
-        <td>Berapakah Saturasi Oksigen  Anda?</td>
+        <td>Berapakah Saturasi Oksigen  Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="number" class="form-control" id="keduasatu" name="keduasatu" value="100"></div>
+             <input type="number" class="form-control" id="ketujuhbelas" name="ketujuhbelas" value="0"></div>
 
         </td>
 
