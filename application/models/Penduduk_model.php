@@ -16,6 +16,13 @@ class Penduduk_model extends CI_Model {
 		$query = $this->db->get();
 		return $query->result();
 	}
+	public function list_user($nomorhp){
+		$this->db->select('*');
+		$this->db->from('tb_penduduk');
+		$this->db->where('link', $nomorhp);
+		$query = $this->db->get();
+		return $query->result();
+	}
 	public function detail($nomorhp)
 	{
 		$this->db->select('*');
@@ -29,14 +36,7 @@ class Penduduk_model extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('tb_penduduk');
 		$this->db->where('nik', $nik);
-		$query = $this->db->get();
-		return $query->row();
-	}
-	public function detail_nik($nik)
-	{
-		$this->db->select('*');
-		$this->db->from('tb_penduduk');
-		$this->db->where('nik', $nik);
+		$this->db->where('link', $this->session->userdata('nomorhp'));
 		$query = $this->db->get();
 		return $query->row();
 	}
@@ -77,5 +77,6 @@ class Penduduk_model extends CI_Model {
 		$this->db->where('nik', $data['nik']);
 		$this->db->delete('tb_penduduk', $data);
 	}
+	
 }
 

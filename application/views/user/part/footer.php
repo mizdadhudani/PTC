@@ -53,11 +53,9 @@
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <script src="<?php echo base_url('assets/js/plugins/nouislider.min.js')?>"></script>
   <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js')?>"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.15.2/minified.js" integrity="sha512-pnNckolH82BSm5lSdHshBd3pmuBHv75mGJK5QOfqaGwigqq1ZKunlw0Eq/gt7EeP29v63UPPyW5s83/F/cHaDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Library for adding dinamically elements -->
   <script src="<?php echo base_url('assets/js/plugins/arrive.min.js')?>"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE')?>"></script>
   <!-- Chartist JS -->
   <script src="<?php echo base_url('assets/js/plugins/chartist.min.js')?>"></script>
   <!--  Notifications Plugin    -->

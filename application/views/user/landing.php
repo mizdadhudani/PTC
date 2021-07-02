@@ -12,7 +12,7 @@
 
 
 
-    <title>Login - Bantul Tangguh</title>
+    <title><?php echo $title?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -95,12 +95,12 @@
 
        <!-- Login Form -->
 
-        <form name="myForm" onsubmit="return validateForm()" action="<?php echo base_url('page/submitdata')?>"  method="post" enctype="multipart/form-data">
+        <form name="myForm" action="<?php echo base_url('data')?>"  method="post" enctype="multipart/form-data">
 
          <div class="form-group">
           <?php echo validation_errors(); ?>
          <label for="login"><a class="font-weight-bold"><p class="text-danger">MASUKKAN NOMOR HP ANDA</p></a></label>
-<center>
+        <center>
          <input type="number" minlength="11" id="login" required="" minlength="11" autofocus class="form-control" name="nomorhp"placeholder="(08XXXXXXXXXX) minimal 10 digit"onkeypress="return isNumber(event)" style="width: 80%;">
          </center>
 
@@ -145,10 +145,7 @@
     </header>
 
 
-
-
-
-    <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
+ <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
 
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
@@ -171,3 +168,6 @@
 
 
 </html>
+
+
+   

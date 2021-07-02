@@ -54,6 +54,16 @@ class Simple_login
 		} 
 	}
 
+	public function cek_login_user()
+	{
+		// memeriksa apakah session sudah atau belum
+		if($this->CI->session->userdata('nomorhp') == "" ) {
+			
+			
+			redirect(base_url(), 'refresh');
+		} 
+	}
+
 	//fungsi logout
 	public function logout()
 	{
@@ -66,6 +76,14 @@ class Simple_login
 
 		$this->CI->session->set_flashdata('sukses', 'anda berhasil logout');	
 		redirect(base_url('login'), 'refresh');
+	}
+	public function logout_user()
+	{
+		
+		// membuang semua session yang telah diset pada saat login
+			$this->CI->session->unset_userdata('nomorhp');
+	
+		redirect(base_url(), 'refresh');
 	}
 
 	
