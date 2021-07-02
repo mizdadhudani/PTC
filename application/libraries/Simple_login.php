@@ -47,16 +47,11 @@ class Simple_login
 	public function cek_login()
 	{
 		// memeriksa apakah session sudah atau belum
-		if($this->CI->session->userdata('username') == "" ) {
-			$this->CI->session->set_flashdata('warning', 'Anda belum login');
+		if($this->CI->session->userdata('id_user') == "" ) {
+			
 			
 			redirect(base_url('login'), 'refresh');
 		} 
-		// else if($this->CI->session->userdata('akses_level') != "Admin" ) {
-
-		// 	$this->CI->session->set_flashdata('warning', 'Anda Bukan Admin');	
-		// 	redirect(base_url('login'), 'refresh');
-		// }
 	}
 
 	//fungsi logout
