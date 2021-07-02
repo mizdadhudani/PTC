@@ -10,6 +10,29 @@ class Kuisoner_model extends CI_Model {
     }
 
     // listing all user
+    public function list_admin($kondisi){
+        $this->db->select('tb_penduduk.nama,tb_penduduk.nomorhp,tb_penduduk.tempat_isolasi,tb_penduduk.kecamatan,tb_penduduk.kota,tb_penduduk.kelurahan,tb_penduduk.provinsi,tb_penduduk.nik,tb_qusoner.tanggal',);
+         $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
+        $this->db->from('tb_penduduk');
+       ;
+        if ($kondisi=='sehat') {
+            $this->db->where('tb_qusoner.score', 0);
+        }
+        else if ($kondisi=='ringan'){
+            $this->db->where('tb_qusoner.score', 1);
+        }
+        else if ($kondisi=='sedang'){
+            $this->db->where('tb_qusoner.score', 2);
+        }
+        else if ($kondisi=='berat'){
+            $this->db->where('tb_qusoner.score', 3);
+        }
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        $this->db->limit(12);
+        $this->db->order_by('tb_qusoner.tanggal', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
     public function list(){
         $this->db->select('*');
         $this->db->from('tb_qusoner');
@@ -38,6 +61,8 @@ class Kuisoner_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('tb_qusoner');
         $this->db->where('nik', $nik);
+        $this->db->order_by('tanggal','DESC');
+        $this->db->limit(1);
         $query = $this->db->get();
         return $query->row();
     }
@@ -67,7 +92,7 @@ class Kuisoner_model extends CI_Model {
     }
     public function edit_hari($data)
     {
-        $this->db->where('id', $data['id']);
+        $this->db->where('nik', $data['nik']);
         $this->db->order_by('tanggal','DESC');
         $this->db->limit(1);
         $this->db->update('tb_qusoner',$data);
@@ -87,6 +112,15 @@ class Kuisoner_model extends CI_Model {
         $this->db->order_by('tb_qusoner.tanggal DESC');
         $query = $this->db->get();
         return $query->result_array();
+    }
+    public function jumlah(){
+        $this->db->select ('* ');
+        $this->db->from ('tb_penduduk');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
+        $this->db->where('status', 'belum');
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        $query = $this->db->get();
+        return $query->num_rows();
     }
 }
 

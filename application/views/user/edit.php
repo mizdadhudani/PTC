@@ -109,7 +109,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
   </div>
   <div class="form-group">
       <label for="kecamatan">Provinsi</label><br>
-   <select required id="provinsi" name="provinsi" class="form-control input-lg">
+   <select required id="provinsi" name="provinsi" class="form-control input-lg" hidden>
       <option selected>Pilih Provinsi</option>
     <?php foreach ($wilayah as $provinsi) {                                                                 ?>
     <option value="<?php echo $provinsi->id ?>" <?php if ($provinsi->id=='34'){echo "selected";}?>><?php echo $provinsi->name ?></option>
@@ -119,62 +119,22 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 <div class="form-group">
       <label for="kecamatan">Kota</label><br>
    <select required id="kota" name="kota" class="form-control input-lg">
-      <option selected>Pilih Provinsi</option>
+      <option selected>Pilih Kota</option>
   </select>
   </div>
   <div class="form-group">
       <label for="kecamatan">Kecamatan</label><br>
    <select required id="kecamatan" name="kecamatan" class="form-control input-lg">
-      <option selected>Pilih Provinsi</option>
+      <option selected>Pilih Kecamatan</option>
   </select>
   </div>
+<div class="form-group">
+      <label for="kecamatan">Kelurahan</label><br>
+   <select required id="kelurahan" name="kelurahan" class="form-control input-lg">
+      <option selected>Pilih kelurahan</option>
+  </select>
 
 
-<!--   <div class="form-group">
-    <label for="desa">Desa</label><br>
-   <select required="" name="desa" id="desa" class="form-control input-lg">
-    <option value="">Pilih Desa</option>
-   </select>
-  </div>
-
-
-  <div class="form-group">
-    <label for="dukuh">Padukuhan</label><br>
-   <select required="" name="penduduk" id="dukuh" class="form-control input-lg">
-    <option value="">Pilih Padukuhan</option>
-   </select>
-  </div> -->
-
-  <!-- <div class="form-group">
-    <label for="status">Desa</label><br>
-        <select id="desa" class="form-control" name="desa" class="select" onchange="return showDesa() ;">
-          <option name="desa" value="Panggungharjo">Panggungharjo</option>
-          <option name="desa" value="Timbulharjo">Timbulharjo</option>
-        </select>
-  </div> -->
-
-<!--   <div class="form-group">
-<<<<<<< HEAD
-=======
-    <label for="penduduk">Alamat Domisili</label><br>
-        <select required id="penduduk" class="form-control" name="penduduk" class="select">
-          <option selected value="">Pilih salah satu...</option>
-          <option name="penduduk" value="Dukuh Krapyak Wetan">Dukuh Krapyak Wetan</option>
-          <option name="penduduk" value="Dukuh Krapyak Kulon">Dukuh Krapyak Kulon</option>
-          <option name="penduduk" value="Dukuh Dongkelan">Dukuh Dongkelan</option>
-          <option name="penduduk" value="Dukuh Glugo">Dukuh Glugo</option>
-          <option name="penduduk" value="Dukuh Kweni">Dukuh Kweni</option>
-          <option name="penduduk" value="Dukuh Pelemsewu">Dukuh Pelemsewu</option>
-          <option name="penduduk" value="Dukuh Sawit">Dukuh Sawit</option>
-          <option name="penduduk" value="Dukuh Pandes">Dukuh Pandes</option>
-          <option name="penduduk" value="Dukuh Glondong">Dukuh Glondong</option>
-          <option name="penduduk" value="Dukuh Jaranan">Dukuh Jaranan</option>
-          <option name="penduduk" value="Dukuh Geneng">Dukuh Geneng</option>
-          <option name="penduduk" value="Dukuh Ngireng-ngireng">Dukuh Ngireng-ngireng</option>
-          <option name="penduduk" value="Dukuh Cabeyan">Dukuh Cabeyan</option>
-          <option name="penduduk" value="Dukuh Geneng">Dukuh Garon</option>
-        </select>
-  </div> -->
 
   <div class="form-group">
     <label for="Alamat">Pilih RT</label><br>

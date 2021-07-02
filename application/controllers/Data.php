@@ -100,7 +100,7 @@ class Data extends CI_Controller {
 				}
 				$valid->set_rules('kota', 'Kota', 'required',
 			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('provinsi', 'Provinsi', 'required',
+				$valid->set_rules('kelurahan', 'Kelurahan', 'required',
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('kecamatan', 'kecamatan', 'required',
 			  		array('required' => '%s harus diisi'));
@@ -174,12 +174,13 @@ class Data extends CI_Controller {
 				        	}
 
 				        }
+				      
+				   
+				      } //end for
 				      $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
 				      $kota=$this->wilayah_model->kabupaten_detail($i->post('kota'));
 				      $kelurahan=$this->wilayah_model->kelurahan_detail($i->post('kelurahan'));
 				      $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
-				   
-				      } //end for
 				      $data= array(
 				      				'id'						=>$penduduk->id,
 				      				'nik'						=>$i->post('nik'),
@@ -190,11 +191,12 @@ class Data extends CI_Controller {
 				      				'jeniskelamin'				=>$i->post('jeniskelamin'),
 				      				'hamil'						=>$i->post('hamil'),
 				      				'status'					=>$i->post('status'),
-				      				'alamat'						=>$i->post('alamat'),
+				      				'alamat'					=>$i->post('alamat'),
 				      				'tempat_isolasi'			=>$i->post('tempat_isolasi'),
-				      				'provinsi'					=>$provinsi,
-				      				'kota'						=>$kota,
-				      				'kecamatan'					=>$kecamatan,
+				      				'provinsi'					=>$provinsi->name,
+				      				'kelurahan'					=>$kelurahan->name,
+				      				'kota'						=>$kota->name,
+				      				'kecamatan'					=>$kecamatan->name,
 				      				'gambar_ktp'				=>$data_ktp,
 				      				'gambar_surat'				=>$data_surat
 				      				
@@ -254,7 +256,7 @@ class Data extends CI_Controller {
 			}
 			$valid->set_rules('kota', 'Kota', 'required',
 		  		array('required' => '%s harus diisi'));
-			$valid->set_rules('provinsi', 'Provinsi', 'required',
+			$valid->set_rules('kelurahan', 'Kelurahan', 'required',
 		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('kecamatan', 'kecamatan', 'required',
 		  		array('required' => '%s harus diisi'));
@@ -328,12 +330,13 @@ class Data extends CI_Controller {
 			        	}
 
 			        }
-			         $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
-				      $kota=$this->wilayah_model->kabupaten_detail($i->post('kota'));
-				      $kelurahan=$this->wilayah_model->kelurahan_detail($i->post('kelurahan'));
-				      $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
+			         
 			   
 			      } //end for
+			      $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
+				  $kota=$this->wilayah_model->kabupaten_detail($i->post('kota'));
+				  $kelurahan=$this->wilayah_model->kelurahan_detail($i->post('kelurahan'));
+				  $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
 			      $data= array(
 			      				
 			      				'nomorhp'					=>$i->post('nomorhp'),
@@ -348,9 +351,10 @@ class Data extends CI_Controller {
 			      				'status'					=>$i->post('status'),
 			      				'alamat'					=>$i->post('alamat'),
 				      			'tempat_isolasi'			=>$i->post('tempat_isolasi'),
-			      				'provinsi'					=>$provinsi,
-				      			'kota'						=>$kota,
-				      			'kecamatan'					=>$kecamatan,
+				      			'provinsi'					=>$provinsi->name,
+			      				'kelurahan'					=>$kelurahan->name,
+				      			'kota'						=>$kota->name,
+				      			'kecamatan'					=>$kecamatan->name,
 			      				'gambar_ktp'				=>$data_ktp,
 			      				'gambar_surat'				=>$data_surat
 			      				
@@ -406,8 +410,7 @@ class Data extends CI_Controller {
 	     				{
 	        			$score = '0';
 	    				}
-	    				$kuisoner=$this->kuisoner_model->detail_user($nik);
-					
+	    				$kuisoner=$this->kuisoner_model->tanggal($nik);
 				      $data= array(
 
 				      				'nik'						=>$nik,
@@ -434,37 +437,28 @@ class Data extends CI_Controller {
 				      				'score'						=>$score,
 				      				'data'						=>'terupdate'
 				      				
+				      				
 
 				      );
-				      
+				     
 				      if(!empty($kuisoner->tanggal==date("Y-m-d")))
 				      {
 
-				      	$this->kuisoner_model->edit($data);
+				      	$this->kuisoner_model->edit_hari($data);
 
-				      	
+									      	
 				      }
 				      else{
 				      	
-				      	$lama=array(
-				      				'id'		=>$kuisoner->id,
+				      	 $lama=array(
+				      				'nik'		=>$nik,
 				      				'data'		=>''
 				      	);
 				      	$this->kuisoner_model->edit_hari($lama);
 				      	$this->kuisoner_model->tambah($data);
+				      	
 				      }
-				      if ($score==0) {
-				      	$status='sehat';
-				      }
-				      else{
-				      	$status=$cek->status;
-				      }
-				   	  $data=array(
-				   				'nik'=>$nik,
-				   				'status'	=>$status
-				   		);
-				   	 $this->penduduk_model->edit_nik($data);
-				     redirect(base_url('data/hasil'));
+				      redirect(base_url('data/hasil'));
 				 }
 
 				$data = array(	
@@ -488,7 +482,7 @@ class Data extends CI_Controller {
 
 			if(!empty($nik) and !empty($cek))
 			{
-				$kuisoner=$this->kuisoner_model->detail_user($nik);
+				$kuisoner=$this->kuisoner_model->tanggal($nik);
 				$score=$this->kuisoner_model->score($nik);
 				$data = array(	
 

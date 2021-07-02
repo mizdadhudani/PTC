@@ -4,7 +4,7 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-          <p class="mb-4">Data Semua Penduduk <?php echo count($datasemua);?></a>.</p>
+          <p class="mb-4">Data Semua Penduduk <?php echo $semua;?></a>.</p>
 
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -20,6 +20,7 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -30,120 +31,22 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                         <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-              <?php foreach ($datao as $datatku) { ?>
+              <?php foreach ($berat as $berat) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $datatku['nama'] ?></td>
-                      <td><?php echo $datatku['nomorhp']?></td>
-                      <td><?php echo $datatku['tempat_isolasi'] ?></td>
+                      <td><?php echo $berat->nama ?></td>
+                      <td><?php echo $berat->nomorhp?></td>
+                      <td><?php echo $berat->tempat_isolasi ?></td>
+                      <td><?php echo $berat->kelurahan.', '.$berat->kecamatan.', '.$berat->kota.', '.$berat->provinsi?></td>
+                      <td><?php echo date("F j Y", strtotime($berat->tanggal));?></td>
                       <td>
-                        <?php if ($datatku['penduduk']==1) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==2) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==3) {?>
-                              Dukuh Dongkelan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==4) {?>
-                              Dukuh Glugo <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==5) {?>
-                              Dukuh Kweni <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==6) {?>
-                              Dukuh Pelemsewu <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==7) {?>
-                              Dukuh Sawit <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==8) {?>
-                              Dukuh Pandes <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==9) {?>
-                              Dukuh Glondong <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==10) {?>
-                              Dukuh Jaranan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==11) {?>
-                              Dukuh Geneng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==12) {?>
-                              Dukuh Ngireng-ngireng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==13) {?>
-                              Dukuh Cabeyan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==14) {?>
-                              Dukuh Garon <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==15) {?>
-                              Dukuh Dadapan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==16) {?>
-                              Dukuh Tembi <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==17) {?>
-                              Dukuh Gatak <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==18) {?>
-                              Dukuh Balong <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==19) {?>
-                              Dukuh Gabusan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==20) {?>
-                              Dukuh Dagan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==21) {?>
-                              Dukuh Sewon <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==22) {?>
-                              Dukuh Mriyan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==23) {?>
-                              Dukuh Kowen I <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==24) {?>
-                              Dukuh Kowen II <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==25) {?>
-                              Dukuh Dobalan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-                      </td>
-                      <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$berat->nik?>">Detail</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -170,6 +73,7 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -180,120 +84,22 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-              <?php foreach ($dataj as $datatku) { ?>
-                   <tr>
+              <?php foreach ($sedang as $sedang) { ?>
+                    <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $datatku['nama'] ?></td>
-                      <td><?php echo $datatku['nomorhp']?></td>
-                      <td><?php echo $datatku['tempat_isolasi'] ?></td>
+                      <td><?php echo $sedang->nama ?></td>
+                      <td><?php echo $sedang->nomorhp?></td>
+                      <td><?php echo $sedang->tempat_isolasi ?></td>
+                      <td><?php echo $sedang->kelurahan.', '.$sedang->kecamatan.', '.$sedang->kota.', '.$sedang->provinsi?></td>
+                      <td><?php echo date("F j Y", strtotime($sedang->tanggal));?></td>
                       <td>
-                        <?php if ($datatku['penduduk']==1) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==2) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==3) {?>
-                              Dukuh Dongkelan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==4) {?>
-                              Dukuh Glugo <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==5) {?>
-                              Dukuh Kweni <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==6) {?>
-                              Dukuh Pelemsewu <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==7) {?>
-                              Dukuh Sawit <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==8) {?>
-                              Dukuh Pandes <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==9) {?>
-                              Dukuh Glondong <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==10) {?>
-                              Dukuh Jaranan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==11) {?>
-                              Dukuh Geneng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==12) {?>
-                              Dukuh Ngireng-ngireng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==13) {?>
-                              Dukuh Cabeyan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==14) {?>
-                              Dukuh Garon <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==15) {?>
-                              Dukuh Dadapan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==16) {?>
-                              Dukuh Tembi <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==17) {?>
-                              Dukuh Gatak <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==18) {?>
-                              Dukuh Balong <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==19) {?>
-                              Dukuh Gabusan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==20) {?>
-                              Dukuh Dagan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==21) {?>
-                              Dukuh Sewon <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==22) {?>
-                              Dukuh Mriyan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==23) {?>
-                              Dukuh Kowen I <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==24) {?>
-                              Dukuh Kowen II <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==25) {?>
-                              Dukuh Dobalan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-                      </td>
-                      <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$sedang->nik?>">Detail</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -323,6 +129,7 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -333,120 +140,22 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-              <?php foreach ($datat as $datatku) { ?>
+              <?php foreach ($ringan as $ringan) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $datatku['nama'] ?></td>
-                      <td><?php echo $datatku['nomorhp']?></td>
-                      <td><?php echo $datatku['tempat_isolasi'] ?></td>
+                      <td><?php echo $ringan->nama ?></td>
+                      <td><?php echo $ringan->nomorhp?></td>
+                      <td><?php echo $ringan->tempat_isolasi ?></td>
+                      <td><?php echo $ringan->kelurahan.', '.$ringan->kecamatan.', '.$ringan->kota.', '.$ringan->provinsi?></td>
+                      <td><?php echo date("F j Y", strtotime($ringan->tanggal));?></td>
                       <td>
-                        <?php if ($datatku['penduduk']==1) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==2) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==3) {?>
-                              Dukuh Dongkelan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==4) {?>
-                              Dukuh Glugo <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==5) {?>
-                              Dukuh Kweni <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==6) {?>
-                              Dukuh Pelemsewu <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==7) {?>
-                              Dukuh Sawit <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==8) {?>
-                              Dukuh Pandes <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==9) {?>
-                              Dukuh Glondong <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==10) {?>
-                              Dukuh Jaranan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==11) {?>
-                              Dukuh Geneng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==12) {?>
-                              Dukuh Ngireng-ngireng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==13) {?>
-                              Dukuh Cabeyan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==14) {?>
-                              Dukuh Garon <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==15) {?>
-                              Dukuh Dadapan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==16) {?>
-                              Dukuh Tembi <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==17) {?>
-                              Dukuh Gatak <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==18) {?>
-                              Dukuh Balong <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==19) {?>
-                              Dukuh Gabusan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==20) {?>
-                              Dukuh Dagan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==21) {?>
-                              Dukuh Sewon <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==22) {?>
-                              Dukuh Mriyan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==23) {?>
-                              Dukuh Kowen I <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==24) {?>
-                              Dukuh Kowen II <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==25) {?>
-                              Dukuh Dobalan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-                      </td>
-                      <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$ringan->nik?>">Detail</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -476,6 +185,7 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -486,120 +196,22 @@
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
                         <th>DOMISILI</th>
+                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-              <?php foreach ($datar as $datatku) { ?>
+             <?php foreach ($sehat as $sehat) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $datatku['nama'] ?></td>
-                      <td><?php echo $datatku['nomorhp']?></td>
-                      <td><?php echo $datatku['tempat_isolasi'] ?></td>
+                      <td><?php echo $sehat->nama ?></td>
+                      <td><?php echo $sehat->nomorhp?></td>
+                      <td><?php echo $sehat->tempat_isolasi ?></td>
+                      <td><?php echo $sehat->kelurahan.', '.$sehat->kecamatan.', '.$sehat->kota.', '.$sehat->provinsi?></td>
+                      <td><?php echo date("F j Y", strtotime($sehat->tanggal));?></td>
                       <td>
-                        <?php if ($datatku['penduduk']==1) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==2) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==3) {?>
-                              Dukuh Dongkelan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==4) {?>
-                              Dukuh Glugo <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==5) {?>
-                              Dukuh Kweni <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==6) {?>
-                              Dukuh Pelemsewu <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==7) {?>
-                              Dukuh Sawit <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==8) {?>
-                              Dukuh Pandes <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==9) {?>
-                              Dukuh Glondong <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==10) {?>
-                              Dukuh Jaranan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==11) {?>
-                              Dukuh Geneng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==12) {?>
-                              Dukuh Ngireng-ngireng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==13) {?>
-                              Dukuh Cabeyan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==14) {?>
-                              Dukuh Garon <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==15) {?>
-                              Dukuh Dadapan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==16) {?>
-                              Dukuh Tembi <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==17) {?>
-                              Dukuh Gatak <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==18) {?>
-                              Dukuh Balong <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==19) {?>
-                              Dukuh Gabusan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==20) {?>
-                              Dukuh Dagan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==21) {?>
-                              Dukuh Sewon <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==22) {?>
-                              Dukuh Mriyan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==23) {?>
-                              Dukuh Kowen I <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==24) {?>
-                              Dukuh Kowen II <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==25) {?>
-                              Dukuh Dobalan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-                      </td>
-                      <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku['nik']?>">Detail</a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$sehat->nik?>">Detail</a>
                       </td>
                     </tr>
               <?php }?> 

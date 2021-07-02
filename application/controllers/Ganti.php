@@ -27,9 +27,7 @@ class Ganti extends CI_Controller {
 			$valid=$this->form_validation;
 			$i=$this->input;
 			$penduduk=$this->penduduk_model->detail_nik($nik);
-							$valid->set_rules('nik','NIK', 'required|is_unique[penduduk.nik]', 
-				array(	'required' => '%s harus diisi',
-						'is_unique'	=> '%s sudah terdaftar'));
+			
 				$valid->set_rules('nama', 'Nama ', 'required',
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('usia', 'Usia', 'required',
@@ -44,7 +42,7 @@ class Ganti extends CI_Controller {
 				}
 				$valid->set_rules('kota', 'Kota', 'required',
 			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('provinsi', 'Provinsi', 'required',
+				$valid->set_rules('kelurahan', 'Kelurahan', 'required',
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('kecamatan', 'kecamatan', 'required',
 			  		array('required' => '%s harus diisi'));
@@ -120,15 +118,29 @@ class Ganti extends CI_Controller {
 				        	}
 
 				        }
-				         $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
+				      
+				   
+				      } //end for
+				      $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
 				      $kota=$this->wilayah_model->kabupaten_detail($i->post('kota'));
 				      $kelurahan=$this->wilayah_model->kelurahan_detail($i->post('kelurahan'));
 				      $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
-				   
-				      } //end for
+				      if ($nik!=$i->post('nik')) {
+				      		$cek=$this->penduduk_model->detail_nik($i->post('nik'));
+				      		if (empty($cek)) {
+				      			$nik_baru=$i->post('nik_baru');
+				      		}
+				      		else{
+
+				      			redirect(base_url('ganti/data/').$nik);
+				      		}
+				      }
+				      else{
+				      	$nik_baru=$nik;
+				      }
 				      $data= array(
 				      				'id'						=>$penduduk->id,
-				      				'nik'						=>$i->post('nik'),
+				      				'nik'						=>$nik_baru,
 				      				'nama'						=>$i->post('nama'),
 				      				'usia'						=>$i->post('usia'),
 				      				'mulai_isolasi'				=>$i->post('mulai_isolasi'),
@@ -138,9 +150,10 @@ class Ganti extends CI_Controller {
 				      				'status'					=>$i->post('status'),
 				      				'alamat'					=>$i->post('alamat'),
 				      				'tempat_isolasi'			=>$i->post('tempat_isolasi'),
-				      				'provinsi'					=>$provinsi,
-				      				'kota'						=>$kota,
-				      				'kecamatan'					=>$kecamatan,
+				      				'provinsi'					=>$provinsi->name,
+				      				'kelurahan'					=>$kelurahan->name,
+				      				'kota'						=>$kota->name,
+				      				'kecamatan'					=>$kecamatan->name,
 				      				'gambar_ktp'				=>$data_ktp,
 				      				'gambar_surat'				=>$data_surat
 				      				
