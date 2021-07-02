@@ -23,7 +23,7 @@
   </head>
 
   <body class="bg-dark">
-<form action="<?php echo base_url('login/login')?>"  method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url('login')?>"  method="post" enctype="multipart/form-data">
   <div class="container">
       <div class="card card-login mx-auto mt-5">
         <div class="card-header">Login</div>

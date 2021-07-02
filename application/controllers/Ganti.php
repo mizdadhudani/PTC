@@ -120,7 +120,10 @@ class Ganti extends CI_Controller {
 				        	}
 
 				        }
-				        
+				         $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
+				      $kota=$this->wilayah_model->kabupaten_detail($i->post('kota'));
+				      $kelurahan=$this->wilayah_model->kelurahan_detail($i->post('kelurahan'));
+				      $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
 				   
 				      } //end for
 				      $data= array(
@@ -133,11 +136,11 @@ class Ganti extends CI_Controller {
 				      				'jeniskelamin'				=>$i->post('jeniskelamin'),
 				      				'hamil'						=>$i->post('hamil'),
 				      				'status'					=>$i->post('status'),
-				      				'alamat'						=>$i->post('alamat'),
+				      				'alamat'					=>$i->post('alamat'),
 				      				'tempat_isolasi'			=>$i->post('tempat_isolasi'),
-				      				'provinsi'					=>$i->post('provinsi'),
-				      				'kota'						=>$i->post('kota'),
-				      				'kecamatan'					=>$i->post('kecamatan'),
+				      				'provinsi'					=>$provinsi,
+				      				'kota'						=>$kota,
+				      				'kecamatan'					=>$kecamatan,
 				      				'gambar_ktp'				=>$data_ktp,
 				      				'gambar_surat'				=>$data_surat
 				      				

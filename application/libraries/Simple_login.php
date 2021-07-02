@@ -47,7 +47,7 @@ class Simple_login
 	public function cek_login()
 	{
 		// memeriksa apakah session sudah atau belum
-		if($this->CI->session->userdata('id_user') == "" ) {
+		if($this->CI->session->userdata('id_user') == "" and $this->CI->session->userdata('id_user')!='admin') {
 			
 			
 			redirect(base_url('login'), 'refresh');

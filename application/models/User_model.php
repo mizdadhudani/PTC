@@ -30,7 +30,7 @@ class User_model extends CI_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('tb_user');
-		$this->db->where(array( 'no_tlpn' => $username,
+		$this->db->where(array( 'username' => $username,
 								'password' => SHA1($password)));
 		$this->db->order_by('id_user', 'desc');
 		$query = $this->db->get();
