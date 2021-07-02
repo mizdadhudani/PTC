@@ -27,11 +27,11 @@ class Simple_login
 			$this->CI->session->set_userdata('username', $username);
 			$this->CI->session->set_userdata('akses_level', $akses_level);
 			if ($check->level=='admin'){
-				redirect(base_url('admin/dashboard'),'refresh');
+				redirect(base_url('admin'),'refresh');
 			}
 			else
 			{
-				redirect(base_url('home'),'refresh');
+				redirect(base_url(),'refresh');
 			}
 			// redirect ke halaman admin
 		}
