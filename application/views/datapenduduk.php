@@ -8,7 +8,7 @@
 
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Data Penduduk Bergejala berat</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Data Paparan Bergejala berat</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -158,7 +158,7 @@
           <!-- Data OTG -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Data Penduduk Bergejala Sedang</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Data Paparan Bergejala Sedang</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -311,7 +311,7 @@
           <!-- Data OTG -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Data Penduduk Bergejala Ringan</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Data Paparan Bergejala Ringan</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -464,7 +464,7 @@
           <!-- Data KEER -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Data Penduduk Tidak Bergejala</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Data Paparan Tidak Bergejala</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">

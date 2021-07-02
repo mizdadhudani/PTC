@@ -66,11 +66,11 @@
 
        <div id="tabel">
 
-<div class="table-responsive-sm">
+<div class="table-responsive">
 
 <div class="container">
 
-    <div class="container">
+    <div class="container" style="overflow-x: auto;">
 
   <table class="table table-hover">
 
@@ -340,14 +340,13 @@
         <td>13</td>
 
         <td>Berapakah Tekanan Darah Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
-        <td >  <div class="form-check">
+        <td colspan="2">  <div class="form-check">
 
              <input type="number" class="form-control" id="ktigabelas" name="ktigabelas" value="0">
              <!-- <input type="number" class="form-control" id="kedelapanbelas" required="" name="kedelapanbelas" value=""></div> -->
 
 
-        </td>
-        <td >  <div class="form-check">
+          <div class="form-check">
 
              <input type="number" class="form-control" id="kempatbelas"  name="kempatbelas" value="0"></div>
 

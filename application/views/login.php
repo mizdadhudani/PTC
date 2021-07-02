@@ -33,7 +33,7 @@
               <div class="form-label-group">
                 
                 <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
-                <label for="inputEmail">Email address</label>
+                <label for="inputEmail">User id</label>
               </div>
             </div>
             <div class="form-group">
