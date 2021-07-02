@@ -138,7 +138,6 @@
 
                       <td style="text-align:right">
 
-                       <button  class="btn btn-warning" onclick="location.href='<?php echo base_url("page/gantidata"),'/',$datatku['nik']?>'" >Edit Data</button>
                        
                         <?php if ($datatku['status'] == 'sehat')  {?>
 
@@ -153,6 +152,8 @@
                           <button  class="btn btn-success" onclick="location.href='<?php echo base_url("page/sehat"),'/',$datatku['nik'] ?>'" >Sudah Sehat</button>
 
                           <?php }?>
+
+                          <button  class="btn btn-warning" onclick="location.href='<?php echo base_url("page/gantidata"),'/',$datatku['nik']?>'" >Edit Data</button>
 
 
 
