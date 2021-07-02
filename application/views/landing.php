@@ -88,7 +88,7 @@
                       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #8B0000">
        <a class="font-weight-bold mx-auto text-warning" style="font-size: 20px">MITIGASI DAMPAK KLINIS</a>
                 <a class="navbar-brand mx-auto" href="#">
-       <img src="<?php echo base_url('assets/images/Logo-PTC.png')?>"  width="150" height="50" class="img-fluid">
+       <!-- <img src="<?php echo base_url('assets/images/Logo-PTC.png')?>"  width="150" height="50" class="img-fluid"> -->
       </a>
    </nav>
   <br>
