@@ -339,7 +339,7 @@
 
         <td>13</td>
 
-        <td>Berapakah Tekanan Darah Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
+        <td>Berapakah Tekanan Darah Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
         <td >  <div class="form-check">
 
              <input type="number" class="form-control" id="ktigabelas" name="ktigabelas" value="0">
@@ -371,7 +371,7 @@
 
         <td>14</td>
 
-        <td>Berapakah Denyut Nadi Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
+        <td>Berapakah Denyut Nadi Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
         <td colspan="2">  <div class="form-check">
 
              <input type="number" class="form-control" id="kelimabelas" name="kelimabelas" value="0"max="200"></div>
@@ -396,7 +396,7 @@
 
         <td>15</td>
 
-        <td>Berapakah Suhu Tubuh Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
+        <td>Berapakah Suhu Tubuh Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
         <td colspan="2">  <div class="form-check">
 
              <input type="number" class="form-control" id="keenambelas" name="keenambelas"  pattern="[0-9]+([\.,][0-9]+)?" step="0.1" value="00.0" max="100"></div>
@@ -423,7 +423,7 @@
 
         <td>16</td>
 
-        <td>Berapakah Saturasi Oksigen  Anda?<br> *jika tidak menggunakan alat, maka diisi 0</td>
+        <td>Berapakah Saturasi Oksigen  Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
         <td colspan="2">  <div class="form-check">
 
              <input type="number" class="form-control" id="ketujuhbelas" name="ketujuhbelas" value="0" max="100"></div>

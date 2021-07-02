@@ -17,6 +17,8 @@ class Modulpenduduk extends CI_Model{
     public $kecamatan;
     public $status;
     public $tempat_isolasi;
+    public $gambar_ktp;
+    public $gambar_surat;
     public $link;
     // public $harisatu;
     // public $haridua;
@@ -50,6 +52,8 @@ class Modulpenduduk extends CI_Model{
     // $this->haridua = '';
     $this->status = '';
     $this->tempat_isolasi = '';
+    $this->gambar_ktp = '';
+    $this->gambar_surat = '';
     $this->jeniskelamin = 'Laki-Laki';
     $this->db->insert($this->table,$this);
     }
@@ -98,6 +102,8 @@ class Modulpenduduk extends CI_Model{
         $this->status = $post["status"];
         $this->tempat_isolasi = $post["tempat_isolasi"];
         $this->penduduk = $post["penduduk"];
+        $this->gambar_surat = $this->_uploadImageSurat();
+        $this->gambar_ktp = $this->_uploadImage();
         // $this->harisatu='';
         // $this->haridua='';
         $this->db->where('id=',$this->id = $post["id"]);
@@ -165,6 +171,8 @@ class Modulpenduduk extends CI_Model{
         $this->status = $post["status"];
         $this->tempat_isolasi = $post["tempat_isolasi"];
         $this->penduduk = $post["penduduk"];
+        $this->gambar_surat = $this->_uploadImageSurat();
+        $this->gambar_ktp = $this->_uploadImage();
         // $this->harisatu='';
         // $this->haridua='';
        $this->db->insert($this->table,$this);
@@ -186,6 +194,8 @@ class Modulpenduduk extends CI_Model{
         $this->penduduk = $post["penduduk"];
         $this->status = $post["status"];
         $this->tempat_isolasi = $post["tempat_isolasi"];
+        $this->gambar_surat = $this->_uploadImageSurat();
+        $this->gambar_ktp = $this->_uploadImage();
         // $this->harisatu=$post['harisatu'];
         // $this->haridua=$post['haridua'];
         $this->db->where('id=',$this->id = $post["id"]);
@@ -208,6 +218,8 @@ class Modulpenduduk extends CI_Model{
         $this->penduduk = $post["pendudukpenduduk"];
         $this->status = $post["statuspenduduk"];
         $this->tempat_isolasi = $post["tempat_isolasipenduduk"];
+        $this->gambar_surat = $this->_uploadImageSurat();
+        $this->gambar_ktp = $this->_uploadImage();
         // if ($post['harisatu']==14){
         //         $this->harisatu=$post['harisatu']+1;
         // } else {
@@ -238,6 +250,8 @@ class Modulpenduduk extends CI_Model{
         $this->penduduk = $post["pendudukpenduduk"];
         $this->status = $post["statuspenduduk"];
         $this->tempat_isolasi = $post["tempat_isolasipenduduk"];
+        $this->gambar_surat = $this->_uploadImageSurat();
+        $this->gambar_ktp = $this->_uploadImage();
         // $this->harisatu=$post['harisatu'];
         // $this->haridua=$post['haridua'];
         $this->db->where('id=',$this->id = $post["idpenduduk"]);
@@ -260,6 +274,8 @@ class Modulpenduduk extends CI_Model{
         $this->penduduk = $post["penduduk"];
         $this->status = $post["status"];
         $this->tempat_isolasi = $post["tempat_isolasi"];
+        $this->gambar_surat = $this->_uploadImageSurat();
+        $this->gambar_ktp = $this->_uploadImage();
         // $this->harisatu=$post['harisatu'];
         // $this->haridua=$post['haridua'];
         $this->db->where('id=',$this->id = $post["id"]);
@@ -768,5 +784,43 @@ public function dataaplikasi() {
         return $query->result_array();
 
     }
+
+    private function _uploadImage()
+            {
+                $config['upload_path']          = './assets/surat/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                $config['file_name']            = $this->link;
+                $config['overwrite']            = true;
+                $config['max_size']             = 3024; // 1MB
+                // $config['max_width']            = 1024;
+                // $config['max_height']           = 768;
+
+                $this->load->library('upload', $config);
+
+                if ($this->upload->do_upload('gambar_ktp')) {
+                    return $this->upload->data("file_name");
+                }
+                
+                return "default.jpg";
+            }
+
+    private function _uploadImageSurat()
+            {
+                $config['upload_path']          = './assets/surat/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
+                // $config['file_name']            = $this->link;
+                $config['overwrite']            = true;
+                $config['max_size']             = 3024; // 1MB
+                // $config['max_width']            = 1024;
+                // $config['max_height']           = 768;
+
+                $this->load->library('upload', $config);
+
+                if ($this->upload->do_upload('gambar_surat')) {
+                    return $this->upload->data("file_name");
+                }
+                
+                return "default.jpg";
+            }
 
 }

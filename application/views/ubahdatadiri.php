@@ -265,6 +265,7 @@
           <option selected value="">Pilih salah satu...</option>
           <option name="status" value="KE">Kontak Erat</option>
           <option name="status" value="positif">Positif</option>
+          <option name="status" value="Suspect">Suspect</option>
         </select>
   </div>
   <div class="form-group">
@@ -276,6 +277,27 @@
         </select>
   </div>
 </div>
+    <div class="form-group">
+
+      <label for="Nama">Upload KTP</label>
+      <!-- <?php if($data->gambar_ktp != null) { ?>
+        <img src="<?php echo base_url('assets/surat/'.$data->gambar_ktp) ?>" width="100" alt="" name="gambar">
+      <?php } ?> -->
+      <input type="file" class="form-control" name="gambar_ktp" value="<?php echo $data->gambar_ktp?>" required="">
+
+    </div>
+
+    <div class="form-group">
+
+      <label for="Nama">Upload Surat Test Swab</label>
+      <!-- <?php if($data->gambar_surat != null) { ?>
+        <img src="<?php echo base_url('assets/surat/'.$data->gambar_surat) ?>" width="100" alt="" name="gambar">
+      <?php } ?> -->
+
+      <input type="file" class="form-control" name="gambar_surat" value="<?php echo $data->gambar_surat?>" required="">
+
+    </div>
+
 
 
   <button type="submit" class="btn btn-primary">Kirim</button>

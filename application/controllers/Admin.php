@@ -542,13 +542,67 @@ public function aplikasilist() {
         }
     }
 }
-public function deletedemo($nomorkk=null){
-		if($this->session->userdata('masuk') != 'true'){
+    public function deletedemo($nomorkk=null){
+    		if($this->session->userdata('masuk') != 'true'){
+                redirect('login/index');
+            } else {
+    			$deletekuisoner=$this->modulpenduduk->deletedemo($nomorkk);
+    			redirect(base_url('admin/aplikasilist'));
+    	}	
+    }
+
+    public function penduduk(){
+        if($this->session->userdata('masuk') != 'true'){
             redirect('login/index');
         } else {
-			$deletekuisoner=$this->modulpenduduk->deletedemo($nomorkk);
-			redirect(base_url('admin/aplikasilist'));
-	}	
+            $dataku = array(    'title' => 'Welcome to MyBlog' ,
+
+                        'isi'=>'penduduk',
+
+                        //'postku'=> $this->tampilan->postku(),
+
+                        // 'rows'=> $this->rows->sliderku(),
+
+                        // 'logo'=>$this->inti->logo(),
+
+                      'datasemua'=>$this->modulpenduduk->datalengkapscore(),
+                      );
+            // if($this->input->post('nik') != NULL ){
+            //      $user=$this->input->post('nik');
+            //      $cek=$this->modulpenduduk->cekdata($nik);
+            //      redirect(base_url('admin/detailpenduduk/').$user);
+
+            // }
+        
+        $this->load->view('part/admin/include', $dataku);
+    }
+}
+
+    public function isianpenduduk($nik=null){
+        if($this->session->userdata('masuk') != 'true'){
+            redirect('login/index');
+        } else {
+            $dataku = array(    'title' => 'Welcome to MyBlog' ,
+
+                        'isi'=>'isianpenduduk',
+
+                        //'postku'=> $this->tampilan->postku(),
+
+                        // 'rows'=> $this->rows->sliderku(),
+
+                        // 'logo'=>$this->inti->logo(),
+
+                      'datapenduduk'=>$this->modulpenduduk->datadetailpenduduk($nik),
+                      );
+            // if($this->input->post('nik') != NULL ){
+            //      $user=$this->input->post('nik');
+            //      $cek=$this->modulpenduduk->cekdata($nik);
+            //      redirect(base_url('admin/detailpenduduk/').$user);
+
+            // }
+        
+        $this->load->view('part/admin/include', $dataku);
+    }
 }
 
 }
