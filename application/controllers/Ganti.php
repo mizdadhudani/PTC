@@ -185,7 +185,7 @@ class Ganti extends CI_Controller {
 		}
 	}
 
-		public function status($nik=null){
+	public function status($nik=null){
 		
 		$cek=$this->penduduk_model->detail_nik($nik);
 		if(!empty($nik) and !empty($cek))
@@ -196,27 +196,7 @@ class Ganti extends CI_Controller {
 			$i=$this->input;
 			$penduduk=$this->penduduk_model->detail_nik($nik);
 			
-				$valid->set_rules('nama', 'Nama ', 'required',
-			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('usia', 'Usia', 'required',
-			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('mulai_isolasi', 'Mulai Isolasi', 'required',
-			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('status_dlm_keluarga', 'Status dalam Keluarga', 'required',
-			  		array('required' => '%s harus diisi'));
-				if(!empty($i->post('jeniskelamin')=='Perempuan')){
-				$valid->set_rules('hamil', 'Apakah Hamil', 'required',
-			  		array('required' => '%s harus diisi'));
-				}
-				$valid->set_rules('kota', 'Kota', 'required',
-			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('kelurahan', 'Kelurahan', 'required',
-			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('pedukuhan', 'pedukuhan', 'required',
-			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('kecamatan', 'kecamatan', 'required',
-			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('alamat', 'RT', 'required',
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('tempat_isolasi', 'Tempat Isolasi', 'required',
 			  		array('required' => '%s harus diisi'));
@@ -291,11 +271,6 @@ class Ganti extends CI_Controller {
 				      
 				   
 				      } //end for
-				      $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
-				      $kota=$this->wilayah_model->kabupaten_detail($i->post('kota'));
-				      $kelurahan=$this->wilayah_model->kelurahan_detail($i->post('kelurahan'));
-				      $pedukuhan=$this->wilayah_model->pedukuhan_detail($i->post('pedukuhan'));
-				      $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
 				      if ($nik!=$i->post('nik')) {
 				      		$cek=$this->penduduk_model->detail_nik($i->post('nik'));
 				      		if (empty($cek)) {
@@ -321,11 +296,11 @@ class Ganti extends CI_Controller {
 				      				'status'					=>$i->post('status'),
 				      				'alamat'					=>$i->post('alamat'),
 				      				'tempat_isolasi'			=>$i->post('tempat_isolasi'),
-				      				'provinsi'					=>$provinsi->name,
-				      				'kelurahan'					=>$kelurahan->name,
-				      				'pedukuhan'					=>$pedukuhan->name,
-				      				'kota'						=>$kota->name,
-				      				'kecamatan'					=>$kecamatan->name,
+				      				'provinsi'					=>$i->post('provinsi'),
+				      				'kelurahan'					=>$i->post('kelurahan'),
+				      				'pedukuhan'					=>$i->post('pedukuhan'),
+				      				'kota'						=>$i->post('kota'),
+				      				'kecamatan'					=>$i->post('kecamatan'),
 				      				'gambar_ktp'				=>$data_ktp,
 				      				'gambar_surat'				=>$data_surat
 				      				
@@ -340,6 +315,34 @@ class Ganti extends CI_Controller {
 							  	'isi'			=>'user/status',
 							  	'title'			=>'Login - Bantul Tangguh',
 							  	'wilayah'		=>$wilayah,
+							  	'penduduk'		=>$penduduk,	
+
+							  );
+
+				
+
+			$this->load->view('user/part_kuis/include', $data);
+		}
+		else{
+			redirect(base_url('data/list'));
+		}
+	}
+
+
+	public function sehat($nik=null){
+		
+		$cek=$this->penduduk_model->detail_nik($nik);
+		if(!empty($nik) and !empty($cek))
+		{
+			$nomorhp=$this->session->userdata('nomorhp');
+			$i=$this->input;
+			$penduduk=$this->penduduk_model->detail_nik($nik);
+			$this->penduduk_model->sehat($nik);
+			
+			$data = array(	
+
+							  	'isi'			=>'user/sehat',
+							  	'title'			=>'Login - Bantul Tangguh',
 							  	'penduduk'		=>$penduduk,	
 
 							  );

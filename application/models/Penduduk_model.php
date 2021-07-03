@@ -61,6 +61,13 @@ class Penduduk_model extends CI_Model {
 		$this->db->where('id', $data['id']);
 		$this->db->update('tb_penduduk',$data);
 	}
+	public function sehat($nik)
+	{	
+		$this->db->select('*');
+		$this->db->from('tb_penduduk');
+		$this->db->where('nik', $nik);
+        $query = $this->db->update('tb_penduduk', array('status' => 'sehat'));
+	}
 	public function edit_nik($data)
 	{
 		$this->db->where('nik', $data['nik']);

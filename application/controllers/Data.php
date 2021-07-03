@@ -338,7 +338,7 @@ class Data extends CI_Controller {
 				      $pedukuhan=$this->wilayah_model->pedukuhan_detail($i->post('pedukuhan'));
 				      $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
 				      $data= array(
-				      				'id'						=>$penduduk->id,
+				      				'link'						=>$penduduk->link,
 				      				'nik'						=>$i->post('nik'),
 				      				'nama'						=>$i->post('nama'),
 				      				'usia'						=>$i->post('usia'),
@@ -377,13 +377,15 @@ class Data extends CI_Controller {
 			$this->simple_login->cek_login_user(); 
 			$cek=$this->penduduk_model->detail_nik($nik);
 			if(!empty($nik) and !empty($cek))
-			{
+			{	
 				$valid=$this->form_validation;
 				$i=$this->input;
 				$nomorhp=$this->session->userdata('nomorhp');
 				$valid->set_rules('ksatu','Kuisoner Harus di Isi', 'required', 
 						array(	'required' => '%s harus diisi',
 								));
+				if ($cek->penduduk=='' || $cek->alamat=='' || $cek->usia=='' || $cek->mulai_isolasi==''|| $cek->status_dlm_keluarga==''|| $cek->jeniskelamin==''|| $cek->kelurahan==''|| $cek->kecamatan==''|| $cek->status==''|| $cek->tempat_isolasi==''|| $cek->pedukuhan=='') 
+					{redirect(("ganti/data/").$nik);}
 				
 				if($valid->run())
 		  		{
@@ -457,7 +459,7 @@ class Data extends CI_Controller {
 				      	$this->kuisoner_model->tambah($data);
 				      	
 				      }
-				      redirect(base_url('data/hasil'));
+				      redirect(base_url('data/hasil/'.$nik));
 				 }
 
 				$data = array(	
@@ -485,12 +487,12 @@ class Data extends CI_Controller {
 				$score=$this->kuisoner_model->score($nik);
 				$data = array(	
 
-							  	'isi'=>'user/hasil',
-							  	'title'=>'Hasil Laporan Harian',
+							  	'isi'       =>'user/hasil',
+							  	'title'     =>'Hasil Laporan Harian',
 							  	'penduduk'	=>$cek,
 							  	'kuisoner'	=>$kuisoner,
 							  	'score'		=>$score,
-							  	'tanggal'		=>$score,
+							  	'tanggal'	=>$score,
 
 							  );
 
@@ -499,7 +501,7 @@ class Data extends CI_Controller {
 				$this->load->view('user/part/include', $data);
 			}
 			else{
-				redirect(base_url('data/list'));
+				// redirect(base_url('data/list'));
 			}
 		}
 		public function logout(){

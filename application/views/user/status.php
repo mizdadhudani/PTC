@@ -6,7 +6,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
        <!-- Login Form -->
 
-<form action="<?php echo base_url('ganti/data/').$penduduk->nik?>"  method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url('ganti/status/').$penduduk->nik?>"  method="post" enctype="multipart/form-data">
 
     <div class="container">
 

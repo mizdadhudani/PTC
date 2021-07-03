@@ -139,7 +139,7 @@
 
                        <button  class="btn btn-warning" onclick="location.href='<?php echo base_url("ganti/data/").$list->nik?>'" >Edit Data</button>
                        
-                        <?php if ($list->status != 'sehat')  {?>
+                        <?php if ($list->status == 'sehat')  {?>
 
                         <button  class="btn btn-danger" onclick="location.href='<?php echo base_url("ganti/status/").$list->nik?>'" >ubah status</button>
 
@@ -148,7 +148,7 @@
                           <button  class="btn btn-primary" onclick="location.href='<?php echo base_url("data/kuisoner/").$list->nik?>'" >Isi Laporan Harian</button>
                           
 
-                          <div  class="btn btn-success"  >Sudah Sehat</div>
+                         <button  class="btn btn-success" onclick="location.href='<?php echo base_url("ganti/sehat/").$list->nik?>'" >sudah sehat</button>
 
                           <?php }?>
 

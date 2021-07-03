@@ -76,27 +76,6 @@
 
             </div>
 
-<!--         <?php } if ($kuisoner->score==4){ ?>
-
-             <div class="col-lg-9 col-md-9 col-sm-6">
-
-              <div class="alert alert-dark" role="alert">
-
-                Halo <a class="font-weight-bold"><?php echo $penduduk->nama?></a> Anda dalam kondisi <a class="font-weight-bold">BAGUS!</a> Tetaplah tinggal di dalam rumah, lakukan <a class="font-weight-bold">KARANTINA MANDIRI</a>, makan makanan yang bergizi dan seimbang, minumlah air putih yang banyak dan selalu tetap <a class="font-weight-bold">WASPADA! HUBUNGI NOMOR  0821-3719-7770</a> jika timbul gejala panas > 370 C atau gejala sesak nafas ringan
-
-
-               
-
-
-
-
-              </div>
-
-
-
-            </div> -->
-
-
 
         <?php } if ($kuisoner->score==2)
 
@@ -130,22 +109,7 @@
             </div>
 
 
-<!--         <?php } if ($kuisoner->score==6)
 
-
-
-{?>
-
-            <div class="col-lg-9 col-md-9 col-sm-6">
-
-              <div class="alert alert-danger" role="alert">
-
-                Halo <a class="font-weight-bold"><?php echo $penduduk->nama?></a> Anda dalam kondisi yang <a class="font-weight-bold">KURANG BAGUS</a>, lakukan pengecekan suhu badan secara berkala, tetap tenang dan fokus untuk <a class="font-weight-bold">ISTIRAHAT</a>, Minumlah air putih yang banyak, makan makanan yang bergizi, jika diperlukan konsumsi vitamin C dan E serta Madu, <a class="font-weight-bold">TETAP TINGGAL DIRUMAH DAN LAKUKAN ISOLASI MANDIRI</a> dan selalu tetap <a class="font-weight-bold">WASPADA</a>, Jangan Panik. <a class="font-weight-bold">HUBUNGI PETUGAS KAMI DI NOMOR 0838-9231-2479</a> jika suhu tubuh > 380 C atau gejala sesak nafas ringan
-
-              </div>
-            </div>
-
- -->
         <?php }?>
 
 
@@ -191,37 +155,13 @@
 
 
   $(document).ready(function(){
-
-
-
     var date_input=$('input[name="date"]'); //our date input has the name "date"
-
-
-
     var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-
-
-
     date_input.datepicker({
-
-
-
       format: 'yyyy-mm-dd',
-
-
-
       container: container,
-
-
-
       todayHighlight: true,
-
-
-
       autoclose: true,
-
-
-
     })
 
 
