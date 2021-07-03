@@ -141,7 +141,7 @@
                        
                         <?php if ($list->status != 'sehat')  {?>
 
-                        <button  class="btn btn-danger" onclick="location.href='<?php echo base_url("data/kuisoner/").$list->nik?>'" >Isi Laporan</button>  
+                        <button  class="btn btn-danger" onclick="location.href='<?php echo base_url("ganti/status/").$list->nik?>'" >ubah status</button>
 
                         <?php }else {?>
 

@@ -134,6 +134,12 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
       <option selected>Pilih kelurahan</option>
   </select>
 
+    <div class="form-group">
+      <label for="kecamatan">Pedukuhan</label><br>
+   <select required id="pedukuhan" name="pedukuhan" class="form-control input-lg">
+      <option selected>Pilih Pedukuhan</option>
+  </select>
+
 
 
   <div class="form-group">

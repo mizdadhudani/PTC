@@ -255,6 +255,8 @@ class Data extends CI_Controller {
 		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('kelurahan', 'Kelurahan', 'required',
 		  		array('required' => '%s harus diisi'));
+			$valid->set_rules('pedukuhan', 'pedukuhan', 'required',
+		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('kecamatan', 'kecamatan', 'required',
 		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('alamat', 'RT', 'required',
@@ -333,6 +335,7 @@ class Data extends CI_Controller {
 				      $kecamatan=$this->wilayah_model->kecamatan_detail($i->post('kecamatan'));
 				      $kota=$this->wilayah_model->kabupaten_detail($i->post('kota'));
 				      $kelurahan=$this->wilayah_model->kelurahan_detail($i->post('kelurahan'));
+				      $pedukuhan=$this->wilayah_model->pedukuhan_detail($i->post('pedukuhan'));
 				      $provinsi=$this->wilayah_model->provinsi_detail($i->post('provinsi'));
 				      $data= array(
 				      				'id'						=>$penduduk->id,
@@ -348,6 +351,7 @@ class Data extends CI_Controller {
 				      				'tempat_isolasi'			=>$i->post('tempat_isolasi'),
 				      				'provinsi'					=>$provinsi->name,
 				      				'kelurahan'					=>$kelurahan->name,
+				      				'pedukuhan'					=>$pedukuhan->name,
 				      				'kota'						=>$kota->name,
 				      				'kecamatan'					=>$kecamatan->name,
 				      				'gambar_ktp'				=>$data_ktp,

@@ -105,7 +105,7 @@ class Wilayah extends CI_Controller {
 
 		if($id_district == ''){
 
-		     echo "string";;
+		     exit;
 
 		}else{
 
