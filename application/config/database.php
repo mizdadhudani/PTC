@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'covid',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
+	'dbprefix' => 'tb_',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,

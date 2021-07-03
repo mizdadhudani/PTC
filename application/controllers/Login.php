@@ -1,57 +1,47 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Login extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct()
 
-		function __construct(){
+	{
 		parent::__construct();
-		$this->load->library('session');		
-		$this->load->model('loginm');
-		$this->load->helper('url');
-		$this->load->helper('form');
-
-		
 
 	}
-public function index() {
-	$this->load->view('login');
-}
-public function login($id=null) {
-	$user=$this->input->post('username');
-	$pass=$this->input->post('password');
+ 	public function index()
+  	{
 
-	$login = $this->loginm->login($user,$pass);
+    if ($this->session->userdata('id_user') == "") {
+  	//validasi
+  	$this->form_validation->set_rules('username', 'username', 'required',
+  		array('required' => '%s harus diisi'));
 
-	if (!empty($login)) {
-		$data=$login;
-		$this->session->set_userdata('masuk','true');
-		redirect(base_url('admin'));
-	} else {
+  	$this->form_validation->set_rules('password', 'Password', 'required',
+  		array('required' => '%s harus diisi'));
 
-		echo "username salah";
-	}
-}
-public function getdata($id=null){
-	$oke=$this->loginm->getdata($id);
-}
-public function logout() {
-$this->session->sess_destroy();
-        $url=base_url('');
-        redirect($url);
-}
+  	if($this->form_validation->run())
+  	{
+  		$username = $this->input->post('username', TRUE);
+  		$password = $this->input->post('password', TRUE);
+  		// proses ke simple login
+  		$this->simple_login->login($username,$password);
+  	}
+
+  	//end validasi
+    $data = array('title' => 'Login Admin',);
+    $this->load->view('admin/login', $data, FALSE);
+    } 
+    else 
+    {
+      if ($this->session->userdata('akses_level') == "admin"){
+      redirect(base_url('admin'));
+      }
+      else
+      {
+       redirect(base_url());
+      }
+    }
+  }
+  
 }
