@@ -83,14 +83,14 @@ class Data extends CI_Controller {
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('usia', 'Usia', 'required',
 			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('mulai_isolasi', 'Mulai Isolasi', 'required',
-			  		array('required' => '%s harus diisi'));
+				// $valid->set_rules('mulai_isolasi', 'Mulai Isolasi', 'required',
+			 //  		array('required' => '%s harus diisi'));
 				$valid->set_rules('status_dlm_keluarga', 'Status dalam Keluarga', 'required',
 			  		array('required' => '%s harus diisi'));
-				if(!empty($i->post('jeniskelamin')=='Perempuan')){
-				$valid->set_rules('hamil', 'Apakah Hamil', 'required',
-			  		array('required' => '%s harus diisi'));
-				}
+				// if(!empty($i->post('jeniskelamin')=='Perempuan')){
+				// $valid->set_rules('hamil', 'Apakah Hamil', 'required',
+			 //  		array('required' => '%s harus diisi'));
+				// }
 				$valid->set_rules('kota', 'Kota', 'required',
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('kelurahan', 'Kelurahan', 'required',
@@ -99,7 +99,7 @@ class Data extends CI_Controller {
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('pedukuhan', 'pedukuhan', 'required',
 			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('alamat', 'RT', 'required',
+				$valid->set_rules('alamat_ktp', 'RT', 'required',
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('tempat_isolasi', 'Tempat Isolasi', 'required',
 			  		array('required' => '%s harus diisi'));
@@ -182,25 +182,28 @@ class Data extends CI_Controller {
 				      				'nik'						=>$i->post('nik'),
 				      				'nama'						=>$i->post('nama'),
 				      				'usia'						=>$i->post('usia'),
-				      				'mulai_isolasi'				=>$i->post('mulai_isolasi'),
+				      				'tgl_lahir'					=>$i->post('tgl_lahir'),
+				      				// 'mulai_isolasi'				=>$i->post('mulai_isolasi'),
 				      				'status_dlm_keluarga'		=>$i->post('status_dlm_keluarga'),
 				      				'jeniskelamin'				=>$i->post('jeniskelamin'),
-				      				'hamil'						=>$i->post('hamil'),
+				      				// 'hamil'						=>$i->post('hamil'),
 				      				'status'					=>$i->post('status'),
-				      				'alamat'					=>$i->post('alamat'),
+				      				'alamat_ktp'				=>$i->post('alamat_ktp'),
+				      				'RT'						=>$i->post('RT'),
+				      				'pekerjaan'					=>$i->post('pekerjaan'),
+				      				'nama_kepala_kk'			=>$i->post('nama_kepala_kk'),
 				      				'tempat_isolasi'			=>$i->post('tempat_isolasi'),
 				      				'provinsi'					=>$provinsi->name,
 				      				'kelurahan'					=>$kelurahan->name,
 				      				'pedukuhan'					=>$pedukuhan->name,
 				      				'kota'						=>$kota->name,
 				      				'kecamatan'					=>$kecamatan->name,
-				      				'gambar_ktp'				=>$data_ktp,
-				      				'gambar_surat'				=>$data_surat
+				      				'gambar_ktp'				=>$data_ktp
 				      				
 
 				      );
 				      $this->penduduk_model->edit($data);
-				      redirect(base_url('data/list'));
+				      redirect(base_url('kesehatan'));
 
 			  	}
 
@@ -243,14 +246,10 @@ class Data extends CI_Controller {
 		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('usia', 'Usia', 'required',
 		  		array('required' => '%s harus diisi'));
-			$valid->set_rules('mulai_isolasi', 'Mulai Isolasi', 'required',
-		  		array('required' => '%s harus diisi'));
+			// $valid->set_rules('mulai_isolasi', 'Mulai Isolasi', 'required',
+		 //  		array('required' => '%s harus diisi'));
 			$valid->set_rules('status_dlm_keluarga', 'Status dalam Keluarga', 'required',
 		  		array('required' => '%s harus diisi'));
-			if(!empty($i->post('jeniskelamin')=='Perempuan')){
-			$valid->set_rules('hamil', 'Apakah Hamil', 'required',
-		  		array('required' => '%s harus diisi'));
-			}
 			$valid->set_rules('kota', 'Kota', 'required',
 		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('kelurahan', 'Kelurahan', 'required',
@@ -259,7 +258,7 @@ class Data extends CI_Controller {
 		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('kecamatan', 'kecamatan', 'required',
 		  		array('required' => '%s harus diisi'));
-			$valid->set_rules('alamat', 'RT', 'required',
+			$valid->set_rules('alamat_ktp', 'RT', 'required',
 		  		array('required' => '%s harus diisi'));
 			$valid->set_rules('tempat_isolasi', 'Tempat Isolasi', 'required',
 		  		array('required' => '%s harus diisi'));
@@ -342,12 +341,16 @@ class Data extends CI_Controller {
 				      				'nik'						=>$i->post('nik'),
 				      				'nama'						=>$i->post('nama'),
 				      				'usia'						=>$i->post('usia'),
-				      				'mulai_isolasi'				=>$i->post('mulai_isolasi'),
+				      				'tgl_lahir'					=>$i->post('tgl_lahir'),
+				      				// 'mulai_isolasi'				=>$i->post('mulai_isolasi'),
 				      				'status_dlm_keluarga'		=>$i->post('status_dlm_keluarga'),
 				      				'jeniskelamin'				=>$i->post('jeniskelamin'),
-				      				'hamil'						=>$i->post('hamil'),
+				      				// 'hamil'						=>$i->post('hamil'),
 				      				'status'					=>$i->post('status'),
-				      				'alamat'					=>$i->post('alamat'),
+				      				'alamat_ktp'				=>$i->post('alamat_ktp'),
+				      				'RT'						=>$i->post('RT'),
+				      				'pekerjaan'					=>$i->post('pekerjaan'),
+				      				'nama_kepala_kk'			=>$i->post('nama_kepala_kk'),
 				      				'tempat_isolasi'			=>$i->post('tempat_isolasi'),
 				      				'provinsi'					=>$provinsi->name,
 				      				'kelurahan'					=>$kelurahan->name,
