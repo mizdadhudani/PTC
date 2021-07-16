@@ -13,6 +13,7 @@ class Data extends CI_Controller {
 		$this->load->model('penduduk_model');
 		$this->load->model('kuisoner_model');
 		$this->load->model('wilayah_model');
+		$this->load->model('kesehatan_model');
 
 		$this->load->helper('url');
 
@@ -412,7 +413,7 @@ class Data extends CI_Controller {
 	    				} 
 	    				elseif (($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi>=95) || ($gejalarendah==0 && $gejalatinggi==0 && $gejalasedang==0 && $saturasi==0))
 	     				{
-	        			$score = '0';
+	         			$score = '0';
 	    				}
 	    				$kuisoner=$this->kuisoner_model->tanggal($nik);
 				      $data= array(

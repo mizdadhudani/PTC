@@ -20,15 +20,12 @@ class Kesehatan extends CI_Controller {
 		public function index($nik=null) {
 			$this->simple_login->cek_login_user();
 			$nomorhp=$this->session->userdata('nomorhp');
+			$cek=$this->penduduk_model->detail($nomorhp);
+			$nik=$this->input->post('nik');				
+			if($cek->nik==$nik)
+			{
 				$valid=$this->form_validation;
 				$i=$this->input;
-				$penduduk=$this->kesehatan_model->detail($nomorhp);
-				$nik=$this->kesehatan_model->detail_nik($nik);
-				$valid->set_rules('nik','Tanggal Gejala', 'required', 
-				array(	'required' => '%s harus diisi'));
-				
-			  	if($valid->run())
-			  	{
 				      $data= array(
 				      				'nik'						=>$nik,
 				      				'link'						=>$nomorhp,
@@ -49,20 +46,21 @@ class Kesehatan extends CI_Controller {
 				      				'kondisi'					=>$i->post('kondisi'),
 				      );
 				      $this->kesehatan_model->tambah($data);
-				      redirect(base_url('kesehatan'));
+				      redirect(base_url('pemeriksaan'));
 
 			  	}
 
 				$data = array(	
 								'title' 	=> 'Data Diri - Bantul Tangguh' ,
-							  	'isi'		=>'user/riwayat_kesehatan',
-							  	'penduduk'	=>$penduduk,
-							  	'nik'		=>$nik
+							  	'isi'		=>'user/v_riwayat_kesehatan',
+							  	'cek'		=> $cek,
 							  );
 				
 				$this->load->view('user/part_kuis/include', $data);
 			
 			
 		}
+
+		
 
 }

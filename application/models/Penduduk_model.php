@@ -84,6 +84,15 @@ class Penduduk_model extends CI_Model {
 		$this->db->where('nik', $data['nik']);
 		$this->db->delete('tb_penduduk', $data);
 	}
+
+	function datadetailpenduduk($nik){
+        $this->db->select ('* ');
+        $this->db->from ('tb_penduduk');
+        $this->db->join ('tb_kesehatan','tb_penduduk.nik = tb_kesehatan.nik') ;
+        $this->db->where('tb_penduduk.nik', $nik);
+        $query = $this->db->get();
+        return $query->row();
+    }
 	
 }
 

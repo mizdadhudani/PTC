@@ -4,7 +4,7 @@
 if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>'; }
 ?> 
 <form action="<?php echo base_url('kesehatan')?>"  method="post" enctype="multipart/form-data">
-
+<!-- <?php var_dump($cek) ?> -->
     <div class="container">
 
         <div class="container">
@@ -87,7 +87,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
           <input class="form-check-input" type="radio" name="alergi_obat" value="1">
           <label class="form-check-label" for="exampleRadios1"></label>
           <label for="Nama">Jika "YA", Tuliskan Jenis Obatnya dibawah ini :</label>
-          <input type="text" class="form-control"  placeholder="Jenis Obat" name="sakit_lain">
+          <input type="text" class="form-control"  placeholder="Jenis Obat" name="nama_obat">
         </div>
     </div>
 
@@ -106,7 +106,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
           </label>
         </div>
     </div>
-
+    <input type="text" name="nik" hidden="" placeholder="nik" value="<?php echo $cek->nik?>">
 
   <button type="submit" class="btn btn-primary">Kirim</button>
 

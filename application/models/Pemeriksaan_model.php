@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kesehatan_model extends CI_Model {
+class Pemeriksaan_model extends CI_Model {
 
 	public function __construct()
 	{
@@ -12,7 +12,7 @@ class Kesehatan_model extends CI_Model {
 	// tambah
 	public function tambah($data)
 	{
-		$this->db->insert('tb_kesehatan', $data);
+		$this->db->insert('tb_status', $data);
 	}
 	
 	
