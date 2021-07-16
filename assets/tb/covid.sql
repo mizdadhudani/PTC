@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Jul 2021 pada 19.18
+-- Waktu pembuatan: 16 Jul 2021 pada 10.44
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.6
 
@@ -7509,7 +7509,9 @@ CREATE TABLE `tb_puskesmas` (
   `link` int(100) NOT NULL,
   `nik` int(100) NOT NULL,
   `tindak_lanjut` text NOT NULL,
-  `penindak` varchar(100) NOT NULL
+  `penindak` varchar(100) NOT NULL,
+  `tgl_tl` date DEFAULT NULL,
+  `tgl_sehat` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
