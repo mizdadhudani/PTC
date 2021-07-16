@@ -83,11 +83,16 @@ class Wilayah extends CI_Controller {
 
 		     foreach ($getcity as $data) {
 
-		     	echo '<option value="'.$data->id.'">'.$data->name.'</option>';
+		     	$output .='<option value="'.$data->id.'"';
+		     	if($data->id=='3402140'){
+		     		$output .= ' selected >';
+		     }  else {
+		     	$output .='>';
+		     } $output .= $data->name.'</option>';
+		 }
+		     echo $output;
 
-		     }  
-
-		     exit;    
+		      exit;  
 
 		}
 
@@ -110,9 +115,8 @@ class Wilayah extends CI_Controller {
 		}else{
 
 		     $getcity = $this->wilayah_model->kelurahan($id_district);
-
+		     echo '<option value="" selected>Pilih kelurahan</option>';
 		     foreach ($getcity as $data) {
-
 		     	echo '<option value="'.$data->id.'">'.$data->name.'</option>';
 
 		     }  

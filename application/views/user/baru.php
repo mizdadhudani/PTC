@@ -101,7 +101,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
   <div class="form-group">
       <label for="kecamatan">Provinsi</label><br>
-   <select required id="provinsi" name="provinsi" class="form-control input-lg" hidden>
+   <select required id="provinsi" name="provinsi" class="form-control input-lg">
       <option selected>Pilih Provinsi</option>
     <?php foreach ($wilayah as $provinsi) {                                                                 ?>
     <option value="<?php echo $provinsi->id ?>" <?php if ($provinsi->id=='34'){echo "selected";}?>><?php echo $provinsi->name ?></option>
