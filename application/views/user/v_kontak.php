@@ -27,6 +27,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         </div>
     </div>
 
+    <div id="rp">
     <div class="form-group">
       <label for="Nama">Negara/kota</label>
       <input type="text" class="form-control"  name="tempat_rp">
@@ -40,6 +41,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <div class="form-group">
       <label for="Nama">Tanggal Tiba</label>
       <input type="date" class="form-control"  name="tiba_rp">
+    </div>
     </div>
 
    <div class="form-group">
@@ -75,6 +77,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         </div>
     </div>
 
+    <div id="ke">
     <div class="form-group">
       <label for="Nama">Tuliskan nama orang kasus konfirmasi Covid-19</label>
       <input type="text" class="form-control"  name="nama_ke">
@@ -89,8 +92,9 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
       <label for="Nama">Bentuk kontak dengan terduga/positif Covid-19 (misal : pergi bersama, ngobrol, tinggal serumah, makan bersama dll) mohon dijelaskan secara rinci.</label>
       <textarea type="text" class="form-control"  name="bentuk_ke"></textarea>
     </div>
+    </div>
 
-    <h2>Daftar Kontak Erat</h2>
+    <h2 style="margin-left: 0px;">Daftar Kontak Erat</h2>
     <p>Mohon Diisi sering kontak dengan siapa saja dengan Selengkap-lengkapnya demi terjaganya kesehatan anda dan orang di sekitar Anda. Keseharian tinggal serumah/ sering bertemu/bersalaman dengan siapa saja?</p>
 
     <div class="form-group">
@@ -117,8 +121,9 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
       <label for="Nama">Orang 5</label>
       <textarea type="text" class="form-control"  placeholder="Nama, Tanggal lahir, Jenis kelamin, Hubungan dalam keluarga, Alamat, Nomor HP, Pekerjaan, Aktivitas yang dilakukan" name="ke5"></textarea>
     </div>
+  
 
-    <h2>Kegiatan melibatkan banyak orang</h2>
+    <h2 style="margin-left: 0px;">Kegiatan melibatkan banyak orang</h2>
     <div class="form-group">
       <label for="JenisKelamin">Dalam 1 bulan terakhir, apakah mengunjungi tempat keramaian / pusat perbelanjaan/acara yang melibatkan banyak orang?</label>
         <div class="form-check">
@@ -135,12 +140,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         </div>
     </div>
 
+    <div id="kunjungan">
     <div class="form-group">
       <label for="Nama">Nama daerah/tempat yang dikunjungi</label>
       <input type="text" class="form-control"  name="tempat_kunjungan">
     </div>
 
-    <h3>Tanggal Kunjungan</h3>
+    <h5>Tanggal Kunjungan</h5>
      <div class="form-group">
       <label for="Nama">Mulai Kunjungan</label>
       <input type="date" class="form-control"  name="mulai_kunjungan">
@@ -150,14 +156,16 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
       <label for="Nama">Selesai Kunjungan</label>
       <input type="date" class="form-control"  name="selesai_kunjungan">
     </div>
+  
 
     <div class="form-group">
       <label for="Nama">Kegiatan atau acara yang dihadiri</label>
       <input type="text" class="form-control"  name="kegiatan_dihadiri">
     </div>
+    </div>
 
 
-    <h2>Aktivitas Selama 1 bulan terakhir</h2>
+    <h2 style="margin-left: 0px;">Aktivitas Selama 1 bulan terakhir</h2>
     <div class="form-group">
       <label for="Nama">Mohon ceritakan aktivitas sehari-hari Anda sebelum sakit (tanggal, tempat, info) *</label>
       <textarea type="text" class="form-control"  name="aktivitas"></textarea>
@@ -199,19 +207,36 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
   
 
    <script>
-     function showHamil() {
-      var selectBox =document.getElementById('status_dlm_keluarga');
-      var userInput =selectBox.options[selectBox.selectedIndex].value;
-      if (userInput == 'Anggota Keluarga') {
-        document.getElementById('nlHamil').style.visibility ='visible';
-      } else {
-        document.getElementById('nlHamil').style.visibility = 'hidden';
-      }
-      return false;
-     }
-
+    $(document).ready(function() {
+      $("#rp").hide();
+      $("#ke").hide();
+      $("#kunjungan").hide();
+      $("input[name='riwayat_perjalanan']").click(function(){
+        console.log($(this).val())
+        if ($(this).val() == "1"){
+          $("#rp").show();
+        }else{
+          $("#rp").hide();
+        }
+      });
+      $("input[name='ke_suspect']").click(function(){
+        console.log($(this).val())
+        if ($(this).val() == "1"){
+          $("#ke").show();
+        }else{
+          $("#ke").hide();
+        }
+      });
+      $("input[name='keramaian']").click(function(){
+        console.log($(this).val())
+        if ($(this).val() == "1"){
+          $("#kunjungan").show();
+        }else{
+          $("#kunjungan").hide();
+        }
+      });
+    });
    </script>
-<script src="<?php echo base_url('assets/js/wilayah.js')?>"></script>
 
 
 </body>

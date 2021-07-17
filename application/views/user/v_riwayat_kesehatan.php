@@ -7,13 +7,12 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 <!-- <?php var_dump($cek) ?> -->
     <div class="container">
 
-        <div class="container">
-  </div>
+<p style="font-weight: bold;">Form Riwayat Penyakit Penyerta</p>
 
-    <div class="form-group">
+<!--     <div class="form-group">
       <label for="Nama">Tanggal Pertama Kali Gejala</label>
       <input type="date" class="form-control"  required="" name="tgl_gejala">
-    </div>
+    </div> -->
 
     <div class="form-group">
       <label for="JenisKelamin">Apakah Anda memiliki Riwayat Penyakit/kondisi sebagai berikut?</label>
@@ -92,15 +91,15 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     </div>
 
      <div class="form-group">
-      <label for="JenisKelamin">Apakah pernah berkunjung ke fasilitas pelayanan?</label>
+      <label for="JenisKelamin">Apakah pernah berkunjung ke fasilitas pelayanan kesehatan dalam 1 bulan terakhir?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="kondisi" value="1">
+          <input class="form-check-input" type="radio" name="terakhir_berobat" value="1">
           <label class="form-check-label" for="exampleRadios1">
             Ya
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="kondisi" value="0">
+          <input class="form-check-input" type="radio" name="terakhir_berobat" value="0">
           <label class="form-check-label" for="exampleRadios1">
             Tidak
           </label>

@@ -104,8 +104,8 @@ class Data extends CI_Controller {
 			  		array('required' => '%s harus diisi'));
 				$valid->set_rules('tempat_isolasi', 'Tempat Isolasi', 'required',
 			  		array('required' => '%s harus diisi'));
-				$valid->set_rules('status', 'Status', 'required',
-			  		array('required' => '%s harus diisi'));
+				// $valid->set_rules('status', 'Status', 'required',
+			 //  		array('required' => '%s harus diisi'));
 
 			  	if($valid->run())
 			  	{
@@ -188,7 +188,7 @@ class Data extends CI_Controller {
 				      				'status_dlm_keluarga'		=>$i->post('status_dlm_keluarga'),
 				      				'jeniskelamin'				=>$i->post('jeniskelamin'),
 				      				// 'hamil'						=>$i->post('hamil'),
-				      				'status'					=>$i->post('status'),
+				      				// 'status'					=>$i->post('status'),
 				      				'alamat_ktp'				=>$i->post('alamat_ktp'),
 				      				'RT'						=>$i->post('RT'),
 				      				'pekerjaan'					=>$i->post('pekerjaan'),
@@ -388,8 +388,8 @@ class Data extends CI_Controller {
 				$valid->set_rules('ksatu','Kuisoner Harus di Isi', 'required', 
 						array(	'required' => '%s harus diisi',
 								));
-				if ($cek->penduduk=='' || $cek->alamat=='' || $cek->usia=='' || $cek->mulai_isolasi==''|| $cek->status_dlm_keluarga==''|| $cek->jeniskelamin==''|| $cek->kelurahan==''|| $cek->kecamatan==''|| $cek->status==''|| $cek->tempat_isolasi==''|| $cek->pedukuhan=='') 
-					{redirect(("ganti/data/").$nik);}
+				// if ($cek->penduduk=='' || $cek->alamat=='' || $cek->usia=='' || $cek->mulai_isolasi==''|| $cek->status_dlm_keluarga==''|| $cek->jeniskelamin==''|| $cek->kelurahan==''|| $cek->kecamatan==''|| $cek->status==''|| $cek->tempat_isolasi==''|| $cek->pedukuhan=='') 
+				// 	{redirect(("ganti/data/").$nik);}
 				
 				if($valid->run())
 		  		{

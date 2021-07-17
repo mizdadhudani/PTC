@@ -29,7 +29,7 @@ class Kesehatan extends CI_Controller {
 				      $data= array(
 				      				'nik'						=>$nik,
 				      				'link'						=>$nomorhp,
-				      				'tgl_gejala'				=>$i->post('tgl_gejala'),
+				      				// 'tgl_gejala'				=>$i->post('tgl_gejala'),
 				      				'hamil'						=>$i->post('hamil'),
 				      				'diabetes'					=>$i->post('diabetes'),
 				      				'jantung'					=>$i->post('jantung'),

@@ -10,7 +10,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         <div class="container">
     </div>
 
-<h2>Rapid Test Swab Antigen</h2>
+<p style="font-weight: bold;">Informasi Test</p>
      <div class="form-group">
       <label for="JenisKelamin">Pemeriksaan Rapid Test Swab Antigen?</label>
         <div class="form-check">
@@ -27,6 +27,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         </div>
     </div>
 
+    <div id="tes_ag">
     <div class="form-group">
       <label for="Nama">Tanggal Pemeriksaan Rapid Test Swab Antigen</label>
       <input type="date" class="form-control"  name="tgl_ag">
@@ -63,8 +64,8 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
       <label for="Nama">Upload Surat Rapid Test Swab Antigen</label>
       <input type="file" class="form-control" name="surat_ag" value="">
     </div>
+    </div>
 
-    <h2>Test Swab PCR</h2>
     <div class="form-group">
       <label for="JenisKelamin">Pemeriksaan Swab PCR</label>
         <div class="form-check">
@@ -81,6 +82,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         </div>
     </div>
 
+    <div id="tes_pcr">
     <div class="form-group">
       <label for="Nama">Tanggal Pemeriksaan Swab PCR</label>
       <input type="date" class="form-control"  name="tgl_pcr">
@@ -111,8 +113,8 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
       <label for="Nama">Upload Surat Swab PCR</label>
       <input type="file" class="form-control" name="surat_pcr" value="">
     </div>
+   </div>
 
-    <h2>Test Lainnya</h2>
     <div class="form-group">
       <label for="JenisKelamin">Pemeriksaan Penunjang lainnya yang dilakukan</label>
         <div class="form-check">
@@ -130,6 +132,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         </div>
     </div>
 
+    <div id="tes_lain">
     <div class="form-group">
       <label for="Nama">Tanggal Pemeriksaan Test lain</label>
       <input type="date" class="form-control"  name="tgl_lain">
@@ -160,7 +163,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
       <label for="Nama">Upload Surat Test lainnya</label>
       <input type="file" class="form-control" name="surat_lain" value="">
     </div>
-
+  </div>
 
     <input type="text" name="nik" hidden="" placeholder="nik" value="<?php echo $cek->nik?>">
 
@@ -195,21 +198,38 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
 
   
-
+<!-- JQuery Tes Antigen -->
    <script>
-     function showHamil() {
-      var selectBox =document.getElementById('status_dlm_keluarga');
-      var userInput =selectBox.options[selectBox.selectedIndex].value;
-      if (userInput == 'Anggota Keluarga') {
-        document.getElementById('nlHamil').style.visibility ='visible';
-      } else {
-        document.getElementById('nlHamil').style.visibility = 'hidden';
-      }
-      return false;
-     }
-
+    $(document).ready(function() {
+      $("#tes_ag").hide();
+      $("#tes_pcr").hide();
+      $("#tes_lain").hide();
+      $("input[name='tes_ag']").click(function(){
+        console.log($(this).val())
+        if ($(this).val() == "1"){
+          $("#tes_ag").show();
+        }else{
+          $("#tes_ag").hide();
+        }
+      });
+      $("input[name='tes_pcr']").click(function(){
+        console.log($(this).val())
+        if ($(this).val() == "1"){
+          $("#tes_pcr").show();
+        }else{
+          $("#tes_pcr").hide();
+        }
+      });
+      $("input[name='tes_lain']").click(function(){
+        console.log($(this).val())
+        if ($(this).val() != "0"){
+          $("#tes_lain").show();
+        }else{
+          $("#tes_lain").hide();
+        }
+      });
+    });
    </script>
-<script src="<?php echo base_url('assets/js/wilayah.js')?>"></script>
 
 
 </body>

@@ -7,8 +7,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
     <div class="container">
 
-        <div class="container">
-  </div>
+<h5>Form Data Diri</h5>
 
   <div class="form-group">
 
@@ -101,7 +100,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
   <div class="form-group">
       <label for="kecamatan">Provinsi</label><br>
-   <select required id="provinsi" name="provinsi" class="form-control input-lg" hidden>
+   <select required id="provinsi" name="provinsi" class="form-control input-lg">
       <option selected>Pilih Provinsi</option>
     <?php foreach ($wilayah as $provinsi) {                                                                 ?>
     <option value="<?php echo $provinsi->id ?>" <?php if ($provinsi->id=='34'){echo "selected";}?>><?php echo $provinsi->name ?></option>
@@ -133,33 +132,22 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
   </select>
   </div>
   <div class="form-group">
-    <label for="Alamat">Pilih RT</label><br>
-        <select required id="Alamat" class="form-control" name="RT" class="select">
-          <option selected value="">Pilih salah satu...</option>
-          <option name="RT" value="RT 01">RT 01</option>
-          <option name="RT" value="RT 02">RT 02</option>
-          <option name="RT" value="RT 03">RT 03</option>
-          <option name="RT" value="RT 04">RT 04</option>
-          <option name="RT" value="RT 05">RT 05</option>
-          <option name="RT" value="RT 06">RT 06</option>
-          <option name="RT" value="RT 07">RT 07</option>
-          <option name="RT" value="RT 08">RT 08</option>
-          <option name="RT" value="RT 09">RT 09</option>
-          <option name="RT" value="RT 10">RT 10</option>
-          <option name="RT" value="RT 11">RT 11</option>
-          <option name="RT" value="RT 12">RT 12</option>
-        </select>
+
+    <label for="Nama">RT</label>
+
+    <input type="number" class="form-control"  placeholder="Masukkan RT" required="" name="RT" value="<?php echo $penduduk->RT?>">
+
   </div>
 
   <div class="form-group">
 
-    <label for="Nama">Alamat KTP</label>
+    <label for="Nama">Alamat berdasarkan KTP</label>
 
-    <textarea type="text" class="form-control"  placeholder="Masukkan Nama" required="" name="alamat_ktp" value="<?php echo $penduduk->nama?>"></textarea>
+    <textarea type="text" class="form-control"  placeholder="Masukkan Alamat berdasarkan KTP" required="" name="alamat_ktp" value="<?php echo $penduduk->alamat_ktp?>"></textarea>
 
   </div>
   
-  <div class="form-group">
+<!--   <div class="form-group">
     <label for="status">Status</label><br>
         <select required  class="form-control" name="status" class="select" >
           <option selected value="">Pilih salah satu...</option>
@@ -167,7 +155,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
           <option name="status" value="positif">Positif</option>
           <option name="status" value="Suspect">Suspect</option>
         </select>
-  </div>
+  </div> -->
   <div class="form-group">
     <label for="status">Tempat Isolasi</label><br>
         <select required  class="form-control" name="tempat_isolasi" class="select" >
