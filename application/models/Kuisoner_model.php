@@ -11,7 +11,7 @@ class Kuisoner_model extends CI_Model {
 
     // listing all user
     public function list_admin($kondisi){
-        $this->db->select('tb_penduduk.nama,tb_penduduk.nomorhp,tb_penduduk.tempat_isolasi,tb_penduduk.kecamatan,tb_penduduk.kota,tb_penduduk.kelurahan,tb_penduduk.provinsi,tb_penduduk.nik,tb_qusoner.tanggal',);
+        $this->db->select('tb_penduduk.nama,tb_penduduk.nomorhp,tb_penduduk.tempat_isolasi,tb_penduduk.RT,tb_penduduk.kecamatan,tb_penduduk.kota,tb_penduduk.pedukuhan,tb_penduduk.kelurahan,tb_penduduk.provinsi,tb_penduduk.alamat_ktp,tb_penduduk.nik,tb_qusoner.tanggal',);
          $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
         $this->db->from('tb_penduduk');
        ;
@@ -82,6 +82,7 @@ class Kuisoner_model extends CI_Model {
     public function tambah($data)
     {
         $this->db->insert('tb_qusoner', $data);
+        $this->db->insert('tb_qusonerperjam', $data);
     }
 
     // Edit

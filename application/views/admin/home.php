@@ -3,8 +3,9 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-          <p class="mb-4">Data Semua Penduduk <?php echo $semua;?></a>.</p>
+          <h1 class="h3 mb-2 text-gray-800"></h1>
+           <button type="submit" class="btn btn-success" onclick="location.href='<?php echo base_url('admin/printdata')?>'"><i class="fas fa-print"></i> Print Data</button><br><br>
+
 
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -19,8 +20,8 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -30,23 +31,31 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                         <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-              <?php foreach ($berat as $berat) { ?>
+              <?php foreach ($berat as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $berat->nama ?></td>
-                      <td><?php echo $berat->nomorhp?></td>
-                      <td><?php echo $berat->tempat_isolasi ?></td>
-                      <td><?php echo $berat->kelurahan.', '.$berat->kecamatan.', '.$berat->kota.', '.$berat->provinsi?></td>
-                      <td><?php echo date("F j Y", strtotime($berat->tanggal));?></td>
+                      <td><?php echo $datatku->nama ?></td>
+                      <td><?php echo $datatku->nomorhp ?></td>
+                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
                       <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$berat->nik?>">Detail</a>
+                        <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
+                      </td>
+                      <td>
+                          <?php $hp = '+62'.substr(trim($datatku->nomorhp), 1); ?>
+                            <a class="btn btn-success" href="https://api.whatsapp.com/send?phone='<?php echo $hp ?>'&text=Salam tangguh...%0a%0aSalam semangat sehat, bagaimana kondisinya hari ini Saudara/i <?php echo $datatku->nama ?> ? Semoga semakin bugar dan tetap jaga stamina dengan konsumsi makanan/minuman untuk menambah energi.%0a%0aApabila dalam kondisi darurat, hubungi kami di nomor Hotline dan terus update kondisi harian di BantulTangguh.com%0a%0a*pastisembuh%0a*pastisehat
+                          " class="float" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                          </a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -55,10 +64,6 @@
               </div>
             </div>
           </div>
-      <div id="content">
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <!-- Data OTG -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Data Paparan Bergejala Sedang</h6>
@@ -72,8 +77,8 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -83,23 +88,32 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-              <?php foreach ($sedang as $sedang) { ?>
-                    <tr>
+              <?php foreach ($sedang as $datatku) { ?>
+                   <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $sedang->nama ?></td>
-                      <td><?php echo $sedang->nomorhp?></td>
-                      <td><?php echo $sedang->tempat_isolasi ?></td>
-                      <td><?php echo $sedang->kelurahan.', '.$sedang->kecamatan.', '.$sedang->kota.', '.$sedang->provinsi?></td>
-                      <td><?php echo date("F j Y", strtotime($sedang->tanggal));?></td>
+                      <td><?php echo $datatku->nama ?></td>
+                      <td><?php echo $datatku->nomorhp?></td>
+                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
                       <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$sedang->nik?>">Detail</a>
+                       <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
+                            
+                      </td>
+                      <td>
+                          <?php $hp = '+62'.substr(trim($datatku->nomorhp), 1); ?>
+                            <a class="btn btn-success" href="https://api.whatsapp.com/send?phone='<?php echo $hp ?>'&text=Salam tangguh...%0a%0aSalam semangat sehat, bagaimana kondisinya hari ini Saudara/i <?php echo $datatku->nama ?> ? Semoga semakin bugar dan tetap jaga stamina dengan konsumsi makanan/minuman untuk menambah energi.%0a%0aApabila dalam kondisi darurat, hubungi kami di nomor Hotline dan terus update kondisi harian di BantulTangguh.com%0a%0a*pastisembuh%0a*pastisehat
+                          " class="float" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                          </a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik?>">Detail</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -107,14 +121,8 @@
                 </table>
               </div>
             </div>
-          </div>
-        </div>
         <!-- /.container-fluid -->
       </div>
-      <div id="content">
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <!-- Data OTG -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Data Paparan Bergejala Ringan</h6>
@@ -128,8 +136,8 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -139,23 +147,31 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-              <?php foreach ($ringan as $ringan) { ?>
+              <?php foreach ($ringan as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $ringan->nama ?></td>
-                      <td><?php echo $ringan->nomorhp?></td>
-                      <td><?php echo $ringan->tempat_isolasi ?></td>
-                      <td><?php echo $ringan->kelurahan.', '.$ringan->kecamatan.', '.$ringan->kota.', '.$ringan->provinsi?></td>
-                      <td><?php echo date("F j Y", strtotime($ringan->tanggal));?></td>
+                      <td><?php echo $datatku->nama ?></td>
+                      <td><?php echo $datatku->nomorhp?></td>
+                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
                       <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$ringan->nik?>">Detail</a>
+                       <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
+                      </td>
+                      <td>
+                          <?php $hp = '+62'.substr(trim($datatku->nomorhp), 1); ?>
+                            <a class="btn btn-success" href="https://api.whatsapp.com/send?phone='<?php echo $hp ?>'&text=Salam tangguh...%0a%0aSalam semangat sehat, bagaimana kondisinya hari ini Saudara/i <?php echo $datatku->nama ?> ? Semoga semakin bugar dan tetap jaga stamina dengan konsumsi makanan/minuman untuk menambah energi.%0a%0aApabila dalam kondisi darurat, hubungi kami di nomor Hotline dan terus update kondisi harian di BantulTangguh.com%0a%0a*pastisembuh%0a*pastisehat
+                          " class="float" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                          </a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik?>">Detail</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -163,14 +179,9 @@
                 </table>
               </div>
             </div>
-          </div>
-        </div>
         <!-- /.container-fluid -->
       </div>
-      <div id="content">
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <!-- Data KEER -->
+
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Data Paparan Tidak Bergejala</h6>
@@ -184,8 +195,8 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </thead>
@@ -195,31 +206,39 @@
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
                         <th>LOKASI ISOLASI</th>
+                        <th>TERAKHIR LAPORAN</th>
                         <th>DOMISILI</th>
-                        <th>Tanggal Update</th>
                         <th></th>
                         </tr>
                   </tfoot>
                   <tbody>
                 <?php $no=1;?>
-             <?php foreach ($sehat as $sehat) { ?>
+              <?php foreach ($sehat as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td><?php echo $sehat->nama ?></td>
-                      <td><?php echo $sehat->nomorhp?></td>
-                      <td><?php echo $sehat->tempat_isolasi ?></td>
-                      <td><?php echo $sehat->kelurahan.', '.$sehat->kecamatan.', '.$sehat->kota.', '.$sehat->provinsi?></td>
-                      <td><?php echo date("F j Y", strtotime($sehat->tanggal));?></td>
+                      <td><?php echo $datatku->nama ?></td>
+                      <td><?php echo $datatku->nomorhp?></td>
+                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
                       <td>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk/").$sehat->nik?>">Detail</a>
+                        <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
+                            
+                      </td>
+                      <td>
+                          <?php $hp = '+62'.substr(trim($datatku->nomorhp), 1); ?>
+                            <a class="btn btn-success" href="https://api.whatsapp.com/send?phone='<?php echo $hp ?>'&text=Salam tangguh...%0a%0aSalam semangat sehat, bagaimana kondisinya hari ini Saudara/i <?php echo $datatku->nama ?> ? Semoga semakin bugar dan tetap jaga stamina dengan konsumsi makanan/minuman untuk menambah energi.%0a%0aApabila dalam kondisi darurat, hubungi kami di nomor Hotline dan terus update kondisi harian di BantulTangguh.com%0a%0a*pastisembuh%0a*pastisehat
+                          " class="float" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                          </a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik?>">Detail</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
                   </tbody>
                 </table>
               </div>
-            </div>
-          </div>
+
 
 
         </div>

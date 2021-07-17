@@ -88,10 +88,34 @@ class Penduduk_model extends CI_Model {
 	function datadetailpenduduk($nik){
         $this->db->select ('* ');
         $this->db->from ('tb_penduduk');
-        $this->db->join ('tb_kesehatan','tb_penduduk.nik = tb_kesehatan.nik') ;
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
         $this->db->where('tb_penduduk.nik', $nik);
         $query = $this->db->get();
         return $query->row();
+    }
+
+    function datadetailpendudukscore($nik){
+        $this->db->select ('* ');
+        $this->db->from ('tb_penduduk');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
+        $this->db->where('tb_penduduk.nik', $nik );
+        $this->db->limit(14);
+        $this->db->order_by('tb_qusoner.id DESC');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    function cekdata($nik){
+        $post = $this->input->post();
+        $tanggal=$post['tanggal'];
+        $this->db->select ('* ');
+        $this->db->from ('tb_penduduk');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
+        $this->db->where('tb_penduduk.nik', $nik);
+        $this->db->where('tb_qusoner.tanggal',$tanggal);
+        $query = $this->db->get();
+        return $query->row();
+    
     }
 	
 }

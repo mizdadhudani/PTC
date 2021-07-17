@@ -2,7 +2,14 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-                   <table class="table">
+            <form target="_blank" action="<?php echo base_url("admin/printdetail"),'/',$cekdata->nik?>" method="post" enctype="multipart/form-data">
+                <input type="text" name="tanggal" hidden="" value="<?php echo $cekdata->tanggal?>">
+                <br>
+                <a class="btn btn-danger" href="<?php echo base_url("admin/detailpenduduk"),'/',$datapenduduk->nik ?>"><i class="fas fa-arrow-left"></i> Kembali</a>
+            
+            <button type="submit" class="btn btn-primary" ><i class="fas fa-print"></i> Print Data</button></form>
+            <br>
+                     <table class="table">
 
                       <thead class=" text-primary">
 
@@ -47,106 +54,7 @@
                           </td>
 
                           <td >
-
-                            <?php if ($datapenduduk->penduduk==1) {?>
-                              Dukuh Krapyak Wetan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==2) {?>
-                              Dukuh Krapyak Wetan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==3) {?>
-                              Dukuh Dongkelan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==4) {?>
-                              Dukuh Glugo <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==5) {?>
-                              Dukuh Kweni <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==6) {?>
-                              Dukuh Pelemsewu <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==7) {?>
-                              Dukuh Sawit <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==8) {?>
-                              Dukuh Pandes <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==9) {?>
-                              Dukuh Glondong <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==10) {?>
-                              Dukuh Jaranan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==11) {?>
-                              Dukuh Geneng <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==12) {?>
-                              Dukuh Ngireng-ngireng <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==13) {?>
-                              Dukuh Cabeyan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==14) {?>
-                              Dukuh Garon <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==15) {?>
-                              Dukuh Dadapan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==16) {?>
-                              Dukuh Tembi <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==17) {?>
-                              Dukuh Gatak <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==18) {?>
-                              Dukuh Balong <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==19) {?>
-                              Dukuh Gabusan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==20) {?>
-                              Dukuh Dagan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==21) {?>
-                              Dukuh Sewon <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==22) {?>
-                              Dukuh Mriyan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==23) {?>
-                              Dukuh Kowen I <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==24) {?>
-                              Dukuh Kowen II <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==25) {?>
-                              Dukuh Dobalan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
+                            <?php echo $datapenduduk->pedukuhan ?>, RT <?php echo $datapenduduk->RT ?>, <?php echo $datapenduduk->kelurahan ?>, <?php echo $datapenduduk->kecamatan ?>.
 
                           </td>
 
@@ -157,20 +65,8 @@
                       </tbody>
 
                     </table>
-
-                     Alamat : <?php echo$datapenduduk->alamat?>
-<br>
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-          <p class="mb-4">Data Semua Penduduk</a>.</p>
-          <!-- Data ODP -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Data Penduduk ODP</h6>
-            </div>
-            <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" width="100%" cellspacing="0">
                   <thead>
                         <tr>
                        <th>No</th>
@@ -187,152 +83,101 @@
                   </tfoot>
                   <tbody>
                   <!-- 1 -->
-                     <?php if ($cekdata->ksatu==1) {?>
+                     
                     <tr>
                       <td><?php echo $no=1; ?></td>
-                      <td>Apakah Anda merasa demam??</td>
+                      <td>Apakah Anda merasa demam?</td>
                       <td><?php echo $cekdata->ksatu == 1 ? "Ya" : "Tidak" ?></td>
 
                   <!-- 2 -->
                     </tr>
-                      <?php } ?>
-
-                     <?php if ($cekdata->kdua==1) {?>
+                     
                     <tr>
                       <td><?php echo $no=2; ?></td>
                       <td>Apakah Anda mengalami sakit kepala/pusing?</td>
                       <td><?php echo $cekdata->kdua == 1 ? "Ya" : "Tidak" ?></td>
 
                     </tr>
-                      <?php } ?>
+                     
 
                   <!-- 3 -->
-                     <?php if ($cekdata->ktiga==1) {?>
+                     
                     <tr>
                       <td><?php echo $no=3;  ?></td>
                        <td>Apakah Anda batuk, pilek, dan nyeri tenggorokan?</td>
                        <td><?php echo $cekdata->ktiga == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
+                     
 
 
-                     <?php if ($cekdata->kempat==1) {?>
+                     
                     <tr>
                       <td><?php echo $no=4;  ?></td>                      
                       <td>Apakah Anda tidak bisa mencium bau atau merasakan makanan?</td>
                       <td><?php echo $cekdata->kempat == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->klima==1) {?>
+                     
                     <tr>
                       <td><?php echo $no=5;  ?></td>
                       <td>Apakah Anda merasa nyeri tulang atau kelelahan?</td>
                       <td><?php echo $cekdata->klima == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->kenam==1) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=6;  ?></td>
                       <td>Apakah nafsu makan Anda berkurang atau hilang?</td>
                       <td><?php echo $cekdata->kenam == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                     <?php } ?>
-
-
-                     <?php if ($cekdata->ktujuh==1) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=7;  ?></td>
                       <td>Apakah Anda mual, muntah, dan nyeri perut?</td>
                       <td><?php echo $cekdata->ktujuh == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->kdelapan==1) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=8; ?></td>
                       <td>Apakah Anda diare?</td>
                       <td><?php echo $cekdata->kdelapan == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->ksembilan==1) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=9; ?></td>
                       <td>Apakah kulit dan mata Anda kemerahan?</td>
                       <td><?php echo $cekdata->ksembilan == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->ksepuluh==1) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=10;  ?></td>
                       <td>Apakah terdapat perubahan warna pada jari-jari kaki Anda?</td>
                       <td><?php echo $cekdata->ksepuluh == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->ksebelas==1) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=11;  ?></td>
                       <td>Apakah Anda merasa sesak nafas dan nyeri dada?</td>
                       <td><?php echo $cekdata->ksebelas == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->kduabelas==1) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=12;  ?></td>
                       <td>Apakah Anda pernah kehilangan kesadaran (linglung) secara tiba-tiba?</td>
                       <td><?php echo $cekdata->kduabelas == 1 ? "Ya" : "Tidak" ?></td>
                     </tr>
-                      <?php } ?>
-
-
-                     <?php if ($cekdata->ktigabelas !=0) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=13;  ?></td>
                       <td>Berapakah Tekanan Darah Anda?</td>
                       <td><?php echo $cekdata->ktigabelas?><?php echo "/"?><?php echo $cekdata->kempatbelas?></td>
                     </tr>
-                      <?php } ?>
-
-
-                      <?php if ($cekdata->kempatbelas !=0 ) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=14;  ?></td>
                       <td>Berapakah Denyut Nadi Anda?</td>
-                      <td><?php echo $cekdata->kelimabelas?></td>
+                      <td><?php echo $cekdata->klimabelas?></td>
                     </tr>
-                      <?php } ?>
-
-
-                      <?php if ($cekdata->keenambelas!=0) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=15;  ?></td>
                       <td>Berapakah Suhu Tubuh Anda?</td>
-                      <td><?php echo $cekdata->keenambelas?></td>
+                      <td><?php echo $cekdata->kenambelas?></td>
                     </tr>
-                      <?php } ?>
-
-
-                      <?php if ($cekdata->ketujuhbelas!=0) {?>
-                    <tr>
+                     <tr>
                       <td><?php echo $no=16;  ?></td>
                       <td>Berapakah Saturasi Oksigen  Anda?</td>
-                      <td><?php echo $cekdata->ketujuhbelas?></td>
+                      <td><?php echo $cekdata->ktujuhbelas?></td>
                     </tr>
-                      <?php } ?>
-
-
+                     
 <!--                       <?php if ($cekdata->kedelapanbelas!=0) {?>
                     <tr>
                       <td><?php echo $no=17;  ?></td>
@@ -452,8 +297,6 @@
                   <button type="submit" >Ganti</button>
                 </form> -->
               </div>
-            </div>
-          </div>
         </div>
         <!-- /.container-fluid -->
 

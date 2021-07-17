@@ -15,7 +15,6 @@ class Kesehatan_model extends CI_Model {
 		$this->db->insert('tb_kesehatan', $data);
 	}
 	
-	
 
 
 }
