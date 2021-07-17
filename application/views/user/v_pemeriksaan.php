@@ -14,13 +14,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
      <div class="form-group">
       <label for="JenisKelamin">Pemeriksaan Rapid Test Swab Antigen?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tes_ag" value="1">
+          <input required class="form-check-input" type="radio" name="tes_ag" value="1">
           <label class="form-check-label" for="exampleRadios1">
             Ya
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tes_ag" value="0">
+          <input required  class="form-check-input" type="radio" name="tes_ag" value="0">
           <label class="form-check-label" for="exampleRadios1">
             Tidak
           </label>
@@ -30,24 +30,24 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <div id="tes_ag">
     <div class="form-group">
       <label for="Nama">Tanggal Pemeriksaan Rapid Test Swab Antigen</label>
-      <input type="date" class="form-control"  name="tgl_ag">
+      <input  type="date" class="form-control"  name="tgl_ag">
     </div>
 
     <div class="form-group">
       <label for="Nama">Tempat Pemeriksaan Rapid Test Swab Antigen</label>
-      <textarea type="text" class="form-control" name="tmpt_ag"></textarea>
+      <textarea   type="text" class="form-control" name="tmpt_ag"></textarea>
     </div>
 
     <div class="form-group">
       <label for="JenisKelamin">Pemeriksaan Rapid Test Swab Antigen?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="hasil_ag" value="Positif">
+          <input   class="form-check-input" type="radio" name="hasil_ag" value="Positif">
           <label class="form-check-label" for="exampleRadios1">
             Positif
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="hasil_ag" value="Negatif">
+          <input  class="form-check-input" type="radio" name="hasil_ag" value="Negatif">
           <label class="form-check-label" for="exampleRadios1">
             Negatif
           </label>
@@ -56,12 +56,12 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
           <label class="form-check-label" for="exampleRadios1">
             Lainnya
           </label>       
-          <input type="text" class="form-control"  placeholder="Lainnya" name="hasil_ag">
+          <input  type="text" class="form-control"  placeholder="Lainnya" name="hasil_ag">
         </div>
     </div>
 
     <div class="form-group">
-      <label for="Nama">Upload Surat Rapid Test Swab Antigen</label>
+      <label  for="Nama">Upload Surat Rapid Test Swab Antigen</label>
       <input type="file" class="form-control" name="surat_ag" value="">
     </div>
     </div>
@@ -69,13 +69,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <div class="form-group">
       <label for="JenisKelamin">Pemeriksaan Swab PCR</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tes_pcr" value="1">
+          <input required class="form-check-input" type="radio" name="tes_pcr" value="1">
           <label class="form-check-label" for="exampleRadios1">
             Ya
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tes_pcr" value="0">
+          <input required class="form-check-input" type="radio" name="tes_pcr" value="0">
           <label class="form-check-label" for="exampleRadios1">
             Tidak
           </label>
@@ -118,7 +118,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <div class="form-group">
       <label for="JenisKelamin">Pemeriksaan Penunjang lainnya yang dilakukan</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="tes_lain">
+          <input required  class="form-check-input" type="radio" name="tes_lain">
           <label class="form-check-label" for="exampleRadios1">
             Ada
           </label>
@@ -126,7 +126,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="tes_lain" value="0">
-          <label class="form-check-label" for="exampleRadios1">
+          <label required  class="form-check-label" for="exampleRadios1">
             Tidak Ada
           </label>
         </div>
