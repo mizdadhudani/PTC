@@ -369,6 +369,7 @@ class Data extends CI_Controller {
 		public function kuisoner($nik=null){
 			$this->simple_login->cek_login_user(); 
 			$cek=$this->penduduk_model->detail_nik($nik);
+			$kesehatan=$this->kesehatan_model->detail($nik);
 			if(!empty($nik) and !empty($cek))
 			{	
 				$valid=$this->form_validation;
@@ -405,6 +406,11 @@ class Data extends CI_Controller {
 	         			$score = '0';
 	    				}
 	    				$kuisoner=$this->kuisoner_model->tanggal($nik);
+	    				$tanggal_gejala = array(
+	    							'nik' => $nik,
+	    							'tgl_gejala' =>$i->post('tgl_gejala')
+	    				);
+	    				$this->kesehatan_model->update($tanggal_gejala);
 				      $data= array(
 
 				      				'nik'						=>$nik,
@@ -459,7 +465,8 @@ class Data extends CI_Controller {
 
 							  	'isi'=>'user/kuisoner',
 							  	'title'=>'Login - Bantul Tangguh',
-							  	'nik'	=>$nik
+							  	'nik'	=>$nik,
+							  	'kesehatan' => $kesehatan
 
 							  );
 

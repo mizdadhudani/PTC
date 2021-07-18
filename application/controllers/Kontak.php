@@ -53,7 +53,7 @@ class Kontak extends CI_Controller {
 				      				'aktivitas'					=>$i->post('aktivitas'),
 				      );
 				      $this->kontak_model->tambah($data);
-				      redirect(base_url('data/list'));
+				      redirect(base_url('data/kuisoner/').$nik);
 
 			  	}
 
