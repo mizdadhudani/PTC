@@ -14,7 +14,7 @@ class Kuisoner_model extends CI_Model {
         $this->db->select('tb_penduduk.nama,tb_penduduk.nomorhp,tb_penduduk.tempat_isolasi,tb_penduduk.RT,tb_penduduk.kecamatan,tb_penduduk.kota,tb_penduduk.pedukuhan,tb_penduduk.kelurahan,tb_penduduk.provinsi,tb_penduduk.alamat_ktp,tb_penduduk.nik,tb_qusoner.tanggal',);
          $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
         $this->db->from('tb_penduduk');
-       ;
+       
         if ($kondisi=='sehat') {
             $this->db->where('tb_qusoner.score', 0);
         }
@@ -124,8 +124,5 @@ class Kuisoner_model extends CI_Model {
         return $query->num_rows();
     }
 
-    public function list_sewon1(){
-        
-    }
 }
 

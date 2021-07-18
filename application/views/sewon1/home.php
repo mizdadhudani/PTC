@@ -4,7 +4,7 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800"></h1>
-           <button type="submit" class="btn btn-success" onclick="location.href='<?php echo base_url('admin/printdata')?>'"><i class="fas fa-print"></i> Print Data</button><br><br>
+           <button type="submit" class="btn btn-success" onclick="location.href='<?php echo base_url('sewon1/printdata')?>'"><i class="fas fa-print"></i> Print Data</button><br><br>
 
 
           <div class="card shadow mb-4">
@@ -19,23 +19,13 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
+                        <th>TGL PENDAFTARAN</th>
                         <th>TERAKHIR LAPORAN</th>
+                        <th>STATUS</th>
                         <th>DOMISILI</th>
                         <th></th>
                         </tr>
                   </thead>
-                  <tfoot>
-                        <tr>
-                        <th>NO</th>
-                        <th>NAMA</th>
-                        <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
-                        <th>TERAKHIR LAPORAN</th>
-                        <th>DOMISILI</th>
-                        <th></th>
-                        </tr>
-                  </tfoot>
                   <tbody>
                 <?php $no=1;?>
               <?php foreach ($berat as $datatku) { ?>
@@ -43,8 +33,15 @@
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku->nama ?></td>
                       <td><?php echo $datatku->nomorhp ?></td>
-                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->created_at)) ?></td>
                       <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
+                      <td>
+                        <?php if ($datatku->tindak_lanjut==null) {?>
+                              Belum ter-TL
+                            <?php } else {?>
+                              Lihat TL
+                            <?php } ?>
+                        </td>
                       <td>
                         <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
                       </td>
@@ -76,35 +73,31 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
+                        <th>TGL PENDAFTARAN</th>
                         <th>TERAKHIR LAPORAN</th>
+                        <th>STATUS</th>
                         <th>DOMISILI</th>
                         <th></th>
                         </tr>
                   </thead>
-                  <tfoot>
-                        <tr>
-                        <th>NO</th>
-                        <th>NAMA</th>
-                        <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
-                        <th>TERAKHIR LAPORAN</th>
-                        <th>DOMISILI</th>
-                        <th></th>
-                        </tr>
-                  </tfoot>
                   <tbody>
                 <?php $no=1;?>
               <?php foreach ($sedang as $datatku) { ?>
-                   <tr>
+                    <tr>
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku->nama ?></td>
-                      <td><?php echo $datatku->nomorhp?></td>
-                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo $datatku->nomorhp ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->created_at)) ?></td>
                       <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
                       <td>
-                       <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
-                            
+                        <?php if ($datatku->tindak_lanjut==null) {?>
+                              Belum ter-TL
+                            <?php } else {?>
+                              Lihat TL
+                            <?php } ?>
+                        </td>
+                      <td>
+                        <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
                       </td>
                       <td>
                           <?php $hp = '+62'.substr(trim($datatku->nomorhp), 1); ?>
@@ -112,7 +105,7 @@
                           " class="float" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                           </a>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik?>">Detail</a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
                           <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
                       </td>
                     </tr>
@@ -135,34 +128,31 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
+                        <th>TGL PENDAFTARAN</th>
                         <th>TERAKHIR LAPORAN</th>
+                        <th>STATUS</th>
                         <th>DOMISILI</th>
                         <th></th>
                         </tr>
                   </thead>
-                  <tfoot>
-                        <tr>
-                        <th>NO</th>
-                        <th>NAMA</th>
-                        <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
-                        <th>TERAKHIR LAPORAN</th>
-                        <th>DOMISILI</th>
-                        <th></th>
-                        </tr>
-                  </tfoot>
                   <tbody>
                 <?php $no=1;?>
               <?php foreach ($ringan as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku->nama ?></td>
-                      <td><?php echo $datatku->nomorhp?></td>
-                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo $datatku->nomorhp ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->created_at)) ?></td>
                       <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
                       <td>
-                       <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
+                        <?php if ($datatku->tindak_lanjut==null) {?>
+                              Belum ter-TL
+                            <?php } else {?>
+                              Lihat TL
+                            <?php } ?>
+                        </td>
+                      <td>
+                        <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
                       </td>
                       <td>
                           <?php $hp = '+62'.substr(trim($datatku->nomorhp), 1); ?>
@@ -170,7 +160,7 @@
                           " class="float" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                           </a>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik?>">Detail</a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
                           <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
                       </td>
                     </tr>
@@ -194,35 +184,31 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
+                        <th>TGL PENDAFTARAN</th>
                         <th>TERAKHIR LAPORAN</th>
+                        <th>STATUS</th>
                         <th>DOMISILI</th>
                         <th></th>
                         </tr>
                   </thead>
-                  <tfoot>
-                        <tr>
-                        <th>NO</th>
-                        <th>NAMA</th>
-                        <th>NOMOR HP</th>
-                        <th>LOKASI ISOLASI</th>
-                        <th>TERAKHIR LAPORAN</th>
-                        <th>DOMISILI</th>
-                        <th></th>
-                        </tr>
-                  </tfoot>
                   <tbody>
                 <?php $no=1;?>
               <?php foreach ($sehat as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
                       <td><?php echo $datatku->nama ?></td>
-                      <td><?php echo $datatku->nomorhp?></td>
-                      <td><?php echo $datatku->tempat_isolasi ?></td>
+                      <td><?php echo $datatku->nomorhp ?></td>
+                      <td><?php echo date("d-m-Y", strtotime($datatku->created_at)) ?></td>
                       <td><?php echo date("d-m-Y", strtotime($datatku->tanggal)) ?></td>
                       <td>
+                        <?php if ($datatku->tindak_lanjut==null) {?>
+                              Belum ter-TL
+                            <?php } else {?>
+                              Lihat TL
+                            <?php } ?>
+                        </td>
+                      <td>
                         <?php echo $datatku->pedukuhan ?>, RT <?php echo $datatku->RT ?>, <?php echo $datatku->kelurahan ?>, <?php echo $datatku->kecamatan ?>.
-                            
                       </td>
                       <td>
                           <?php $hp = '+62'.substr(trim($datatku->nomorhp), 1); ?>
@@ -230,7 +216,7 @@
                           " class="float" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                           </a>
-                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik?>">Detail</a>
+                          <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
                           <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
                       </td>
                     </tr>

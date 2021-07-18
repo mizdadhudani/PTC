@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jul 2021 pada 10.24
+-- Waktu pembuatan: 18 Jul 2021 pada 14.05
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.6
 
@@ -7376,7 +7376,9 @@ INSERT INTO `tb_kesehatan` (`id`, `link`, `nik`, `tgl_gejala`, `hamil`, `diabete
 (6, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', NULL),
 (7, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', '2021-07-09'),
 (8, '087712345678', '0877123456780987', '2021-07-12', NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', '2021-07-09'),
-(9, '085612340987', '0856123409877654', '2021-07-05', 1, 1, 1, 1, 1, 1, 1, 1, 1, 'ada', 1, 'cmcmcm', 1, 'meninggal', '2021-07-15');
+(9, '085612340987', '0856123409877654', '2021-07-05', 1, 1, 1, 1, 1, 1, 1, 1, 1, 'ada', 1, 'cmcmcm', 1, 'meninggal', '2021-07-15'),
+(10, '087788888888', '0877888888888888', '2021-07-13', 1, 1, 1, 1, 1, 1, 1, 1, 1, 'ini', 1, 'ini', 1, 'meninggal', '2021-07-14'),
+(11, '081211111111', '0812111111111111', '0000-00-00', 1, 1, 1, 1, 1, 1, 1, 1, 1, 'ada', 1, 'ada', 1, 'meninggal', '2021-05-06');
 
 -- --------------------------------------------------------
 
@@ -7435,7 +7437,9 @@ INSERT INTO `tb_kontak` (`id`, `link`, `nik`, `riwayat_perjalanan`, `tempat_rp`,
 (17, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'jashdg\r\n'),
 (18, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'asjkhd'),
 (19, '085612340987', '0856123409877654', 1, 'madinah', '2021-07-09', '2021-07-18', 1, 'meong', 1, 'yeye', '2021-07-18', NULL, 'si a', 'si b', 'si c', 'si d', 'si singa', 1, 'nns', '2021-07-17', '2021-07-18', 'ada', 'ya'),
-(20, '085612340987', '0856123409877654', 1, 'madinah', '2021-07-09', '2021-07-18', 1, 'meong', 1, 'yeye', '2021-07-18', 'anu', 'si a', 'si b', 'si c', 'si d', 'si singa', 1, 'nns', '2021-07-17', '2021-07-18', 'ada', 'ya');
+(20, '085612340987', '0856123409877654', 1, 'madinah', '2021-07-09', '2021-07-18', 1, 'meong', 1, 'yeye', '2021-07-18', 'anu', 'si a', 'si b', 'si c', 'si d', 'si singa', 1, 'nns', '2021-07-17', '2021-07-18', 'ada', 'ya'),
+(21, '087788888888', '0877888888888888', 1, 'kgu', '2021-07-07', '2021-07-09', 1, 'ini', 1, 'ini', '2021-07-13', 'ini', '1', '2', '3', '4', '5', 1, 'ini', '2021-07-04', '2021-07-14', 'ini', 'ini'),
+(22, '081211111111', '0812111111111111', 1, 'ini', '2021-07-16', '2021-07-16', 1, 'ada', 1, 'ada', '2021-07-06', 'ada', 'a', 'b', 'C', 'D', 'e', 1, 'ada', '2021-07-06', '2021-07-15', 'ada', 'ada');
 
 -- --------------------------------------------------------
 
@@ -7461,8 +7465,8 @@ CREATE TABLE `tb_penduduk` (
   `nama_kepala_kk` varchar(100) NOT NULL,
   `alamat_ktp` varchar(1000) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `provinsi` int(10) DEFAULT NULL,
-  `kota` int(10) DEFAULT NULL,
+  `provinsi` varchar(100) DEFAULT NULL,
+  `kota` varchar(100) DEFAULT NULL,
   `gambar_ktp` text DEFAULT 'Tidak ada data',
   `status` varchar(100) DEFAULT NULL,
   `tempat_isolasi` varchar(100) DEFAULT NULL
@@ -7473,29 +7477,31 @@ CREATE TABLE `tb_penduduk` (
 --
 
 INSERT INTO `tb_penduduk` (`id`, `link`, `nik`, `nama`, `nomorhp`, `tgl_lahir`, `jeniskelamin`, `RT`, `kecamatan`, `kelurahan`, `pedukuhan`, `usia`, `pekerjaan`, `status_dlm_keluarga`, `nama_kepala_kk`, `alamat_ktp`, `created_at`, `provinsi`, `kota`, `gambar_ktp`, `status`, `tempat_isolasi`) VALUES
-(9, '08123456789', '1234561234561234', 'Coba nih', '08123456789', NULL, 'Laki-Laki', 'RT 6', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Jaranan', '56', '', 'Kepala Keluarga', '', '19', '2021-07-03 15:59:50', 0, 0, NULL, NULL, NULL),
-(10, '085655502472', '1234432112344321', 'Dani', '085655502472', NULL, 'Laki-Laki', 'RT 7', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Krapyak Wetan', '25', '', 'Kepala Keluarga', '', '17', '2021-07-09 05:26:37', 0, 0, NULL, NULL, NULL),
-(12, '089661702136', '456789', 'Adam Hanafi Syafrudin', '089661702136', NULL, 'Laki-Laki', '', '3402140', '', '', '12', '', 'Kepala Keluarga', '', '', '2021-07-02 12:25:15', 34, 3402, 'Tidak ada data', NULL, NULL),
-(13, '089661702136', '7687976871214', 'arul', '987897879', NULL, 'Laki-Laki', 'RT 3', '3402050', '', '', '12', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', 34, 3402, 'adam.jpg', NULL, NULL),
+(9, '08123456789', '1234561234561234', 'Coba nih', '08123456789', NULL, 'Laki-Laki', 'RT 6', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Jaranan', '56', '', 'Kepala Keluarga', '', '19', '2021-07-03 15:59:50', '0', '0', NULL, NULL, NULL),
+(10, '085655502472', '1234432112344321', 'Dani', '085655502472', NULL, 'Laki-Laki', 'RT 7', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Krapyak Wetan', '25', '', 'Kepala Keluarga', '', '17', '2021-07-09 05:26:37', '0', '0', NULL, NULL, NULL),
+(12, '089661702136', '456789', 'Adam Hanafi Syafrudin', '089661702136', NULL, 'Laki-Laki', '', '3402140', '', '', '12', '', 'Kepala Keluarga', '', '', '2021-07-02 12:25:15', '34', '3402', 'Tidak ada data', NULL, NULL),
+(13, '089661702136', '7687976871214', 'arul', '987897879', NULL, 'Laki-Laki', 'RT 3', '3402050', '', '', '12', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', '34', '3402', 'adam.jpg', NULL, NULL),
 (14, '1234561111', '', '', '1234561111', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-03 15:13:37', NULL, NULL, 'Tidak ada data', NULL, NULL),
-(15, '11111111190', '123456788765422', 'Ahmad', '11111111190', NULL, 'Laki-Laki', 'RT 09', 'SEWON', 'PANGGUNGHARJO', '', '21', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', 0, 0, '', NULL, NULL),
-(16, '0912873465', '0987678901234554', 'Ini', '0912873465', NULL, 'Laki-Laki', 'RT 4', 'BAMBANG LIPURO', 'MULYODADI', '', '27', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', 0, 0, '', NULL, NULL),
-(17, '0912873400', '0912873465092746', 'Dann', '0912873400', NULL, 'Laki-Laki', 'RT 05', 'SEWON', 'PENDOWOHARJO', '', '62', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', 0, 0, 'WhatsApp_Image_2021-05-19_at_13_38_45.jpeg', NULL, NULL),
-(18, '08565550277', '1111222233334444', 'Hore', '08565550277', NULL, 'Laki-Laki', 'RT 8', 'SEWON', 'BANGUNHARJO', 'Dukuh Saman', '26', '', 'Kepala Keluarga', '', '', '2021-07-03 15:44:57', 0, 0, NULL, NULL, NULL),
+(15, '11111111190', '123456788765422', 'Ahmad', '11111111190', NULL, 'Laki-Laki', 'RT 09', 'SEWON', 'PANGGUNGHARJO', '', '21', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', '0', '0', '', NULL, NULL),
+(16, '0912873465', '0987678901234554', 'Ini', '0912873465', NULL, 'Laki-Laki', 'RT 4', 'BAMBANG LIPURO', 'MULYODADI', '', '27', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', '0', '0', '', NULL, NULL),
+(17, '0912873400', '0912873465092746', 'Dann', '0912873400', NULL, 'Laki-Laki', 'RT 05', 'SEWON', 'PENDOWOHARJO', '', '62', '', 'Kepala Keluarga', '', '', '2021-07-03 15:13:37', '0', '0', 'WhatsApp_Image_2021-05-19_at_13_38_45.jpeg', NULL, NULL),
+(18, '08565550277', '1111222233334444', 'Hore', '08565550277', NULL, 'Laki-Laki', 'RT 8', 'SEWON', 'BANGUNHARJO', 'Dukuh Saman', '26', '', 'Kepala Keluarga', '', '', '2021-07-03 15:44:57', '0', '0', NULL, NULL, NULL),
 (19, '887766554433', '', '', '887766554433', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-03 15:13:37', NULL, NULL, 'Tidak ada data', NULL, NULL),
-(20, '', '111111222222333', 'Aye', '', NULL, 'Laki-Laki', 'RT 04', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Cabeyan', '11', '', 'Kepala Keluarga', '', '', '2021-07-03 15:41:50', 0, 0, NULL, NULL, NULL),
-(21, '', '88888888888888', 'aye', '', NULL, 'Laki-Laki', 'RT 08', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Ngireng-ngireng', '23', '', 'Kepala Keluarga', '', '', '2021-07-03 15:41:50', 0, 0, NULL, NULL, NULL),
-(22, '08565550277', '8888888888888', 'ore', '', NULL, 'Laki-Laki', 'RT 07', 'SEWON', 'PENDOWOHARJO', 'Dukuh Bandung', '21', '', 'Kepala Keluarga', '', '', '2021-07-03 15:44:59', 0, 0, NULL, NULL, NULL),
+(20, '', '111111222222333', 'Aye', '', NULL, 'Laki-Laki', 'RT 04', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Cabeyan', '11', '', 'Kepala Keluarga', '', '', '2021-07-03 15:41:50', '0', '0', NULL, NULL, NULL),
+(21, '', '88888888888888', 'aye', '', NULL, 'Laki-Laki', 'RT 08', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Ngireng-ngireng', '23', '', 'Kepala Keluarga', '', '', '2021-07-03 15:41:50', '0', '0', NULL, NULL, NULL),
+(22, '08565550277', '8888888888888', 'ore', '', NULL, 'Laki-Laki', 'RT 07', 'SEWON', 'PENDOWOHARJO', 'Dukuh Bandung', '21', '', 'Kepala Keluarga', '', '', '2021-07-03 15:44:59', '0', '0', NULL, NULL, NULL),
 (23, '085655503333', '', '', '085655503333', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-06 12:13:20', NULL, NULL, 'Tidak ada data', NULL, NULL),
 (24, '13366778899002', '', '', '13366778899002', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-10 04:51:13', NULL, NULL, 'Tidak ada data', NULL, NULL),
 (25, '08111111111', '', '', '08111111111', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-16 08:46:00', NULL, NULL, 'Tidak ada data', NULL, NULL),
-(26, '085655502497', '0856555024971234', 'cobya', '085655502497', '1996-05-17', 'Laki-Laki', '3', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Pandes', '25', 'Wiraswasta', 'Kepala Keluarga', '', 'sama', '2021-07-17 06:49:06', 0, 0, 'Welcome_Scan.jpg', NULL, 'Rumah'),
+(26, '085655502497', '0856555024971234', 'cobya', '085655502497', '1996-05-17', 'Laki-Laki', '3', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Pandes', '25', 'Wiraswasta', 'Kepala Keluarga', '', 'sama', '2021-07-17 06:49:06', '0', '0', 'Welcome_Scan.jpg', NULL, 'Rumah'),
 (27, '085655512597', '', '', '085655512597', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-17 06:52:36', NULL, NULL, 'Tidak ada data', NULL, NULL),
-(28, '085655502477', '08565550249793728', 'cobb', '085655502477', '1996-05-16', 'Laki-Laki', '2', 'SEWON', 'BANGUNHARJO', 'Dukuh Bakung', '25', 'Dirumah', 'Kepala Keluarga', '', 'ass', '2021-07-17 09:36:40', 0, 0, NULL, NULL, 'Rumah'),
-(29, '087712345678', '0877123456780987', 'haha', '087712345678', '1996-05-17', 'Laki-Laki', '8', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Kweni', '25', 'Dirumah', 'Kepala Keluarga', '', 'sss', '2021-07-18 03:54:49', 0, 0, 'Welcome_Scan1.jpg', NULL, 'Rumah'),
-(30, '085612340987', '0856123409877654', 'yeye', '085612340987', '2021-07-16', 'Laki-Laki', '7', 'SEWON', 'BANGUNHARJO', 'Dukuh Bakung', '24', 'Dirumah', 'Kepala Keluarga', '', 'sisisisi', '2021-07-18 07:30:09', 0, 0, 'Picture1.png', NULL, 'Rumah'),
-(31, '080987667890', '746573849284728940', 'hgfysgd', '080987667890', '6173-03-17', 'Laki-Laki', '2', 'SEWON', 'TIMBULHARJO', 'Dukuh Balong', '29', 'PNS/ASN', 'Kepala Keluarga', '', 'AJHD', '2021-07-18 08:01:47', 0, 0, NULL, NULL, 'Rumah'),
-(32, '080987667891', '57463859375648375832', 'ggg', '080987667891', '2398-07-04', 'Laki-Laki', '9', 'ARONGAN LAMBALEK', 'PEULANTEU LB', 'Luar Sewon', '23', 'Wiraswasta', 'Kepala Keluarga', '', 'iyi', '2021-07-18 08:14:44', 0, 0, NULL, NULL, 'Rumah');
+(28, '085655502477', '08565550249793728', 'cobb', '085655502477', '1996-05-16', 'Laki-Laki', '2', 'SEWON', 'BANGUNHARJO', 'Dukuh Bakung', '25', 'Dirumah', 'Kepala Keluarga', '', 'ass', '2021-07-17 09:36:40', '0', '0', NULL, NULL, 'Rumah'),
+(29, '087712345678', '0877123456780987', 'haha', '087712345678', '1996-05-17', 'Laki-Laki', '8', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Kweni', '25', 'Dirumah', 'Kepala Keluarga', '', 'sss', '2021-07-18 03:54:49', '0', '0', 'Welcome_Scan1.jpg', NULL, 'Rumah'),
+(30, '085612340987', '0856123409877654', 'yeye', '085612340987', '2021-07-16', 'Laki-Laki', '7', 'SEWON', 'BANGUNHARJO', 'Dukuh Bakung', '24', 'Dirumah', 'Kepala Keluarga', '', 'sisisisi', '2021-07-18 07:30:09', '0', '0', 'Picture1.png', NULL, 'Rumah'),
+(31, '080987667890', '746573849284728940', 'hgfysgd', '080987667890', '6173-03-17', 'Laki-Laki', '2', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Balong', '29', 'PNS/ASN', 'Kepala Keluarga', '', 'AJHD', '2021-07-18 10:34:58', '0', '0', NULL, NULL, 'Rumah'),
+(32, '080987667891', '57463859375648375832', 'ggg', '080987667891', '2398-07-04', 'Laki-Laki', '9', 'ARONGAN LAMBALEK', 'PEULANTEU LB', 'Luar Sewon', '23', 'Wiraswasta', 'Kepala Keluarga', '', 'iyi', '2021-07-18 08:14:44', '0', '0', NULL, NULL, 'Rumah'),
+(33, '087788888888', '0877888888888888', 'sewon 1', '087788888888', '2002-06-15', 'Laki-Laki', '18', 'SEWON', 'PENDOWOHARJO', 'Dukuh Ngimbang', '17', 'Karyawan', 'Kepala Keluarga', '', 'yyyyyyyyyyy', '2021-07-18 11:34:33', '0', '0', 'KTP.jpeg', NULL, 'Rumah'),
+(34, '081211111111', '0812111111111111', 'sewon', '081211111111', '2000-09-16', 'Laki-Laki', '12', 'SEWON', 'PENDOWOHARJO', 'Dukuh Bandung', '25', 'Wiraswasta', 'Kepala Keluarga', '', 'asdas', '2021-07-18 11:59:24', 'DI YOGYAKARTA', 'KABUPATEN BANTUL', 'KTP_(1).jpeg', NULL, 'Rumah');
 
 -- --------------------------------------------------------
 
@@ -7556,13 +7562,21 @@ INSERT INTO `tb_provinces` (`id`, `name`) VALUES
 
 CREATE TABLE `tb_puskesmas` (
   `id` int(100) NOT NULL,
-  `link` int(100) NOT NULL,
-  `nik` int(100) NOT NULL,
-  `tindak_lanjut` text NOT NULL,
-  `penindak` varchar(100) NOT NULL,
+  `link` varchar(1000) NOT NULL,
+  `nik` varchar(1000) NOT NULL,
+  `tindak_lanjut` text DEFAULT NULL,
+  `obat` text DEFAULT NULL,
+  `penindak` varchar(100) DEFAULT NULL,
   `tgl_tl` date DEFAULT NULL,
-  `tgl_sehat` date NOT NULL
+  `tgl_sehat` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_puskesmas`
+--
+
+INSERT INTO `tb_puskesmas` (`id`, `link`, `nik`, `tindak_lanjut`, `obat`, `penindak`, `tgl_tl`, `tgl_sehat`) VALUES
+(1, '081211111111', '0812111111111111', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -7628,7 +7642,9 @@ INSERT INTO `tb_qusoner` (`id`, `link`, `nik`, `ksatu`, `kdua`, `ktiga`, `kempat
 (54, '085655502472', '1234432112344321', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 95, '2021-07-05', '05:46:00', 0, ''),
 (55, '085655502472', '1234432112344321', 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 80, '2021-07-07', '09:16:00', 3, 'terupdate'),
 (56, '087712345678', '0877123456780987', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-07-18', '01:44:00', 0, 'terupdate'),
-(57, '085612340987', '0856123409877654', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-07-18', '02:39:00', 0, 'terupdate');
+(57, '085612340987', '0856123409877654', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-07-18', '02:39:00', 0, 'terupdate'),
+(58, '087788888888', '0877888888888888', 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, '2021-07-18', '06:37:00', 3, 'terupdate'),
+(59, '081211111111', '0812111111111111', 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, '2021-07-18', '07:01:00', 2, 'terupdate');
 
 -- --------------------------------------------------------
 
@@ -8170,11 +8186,11 @@ INSERT INTO `tb_regencies` (`id`, `province_id`, `name`) VALUES
 
 CREATE TABLE `tb_shelter` (
   `id` int(100) NOT NULL,
-  `link` int(100) NOT NULL,
-  `nik` int(100) NOT NULL,
-  `tgl_masuk` date NOT NULL,
-  `tgl_keluar` date NOT NULL,
-  `ruang` varchar(100) NOT NULL
+  `link` varchar(1000) NOT NULL,
+  `nik` varchar(1000) NOT NULL,
+  `tgl_masuk` date DEFAULT NULL,
+  `tgl_keluar` date DEFAULT NULL,
+  `ruang` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -8222,7 +8238,9 @@ INSERT INTO `tb_status` (`id`, `link`, `nik`, `tes_ag`, `tgl_ag`, `tmpt_ag`, `ha
 (11, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image2.jpg', NULL),
 (12, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image3.jpg', NULL),
 (13, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image4.jpg', NULL),
-(14, '085612340987', '0856123409877654', 1, '2021-07-14', 'asdasd', 'adasdas', 1, '2021-07-05', 'asjhdaj', 'Negatif Covid-19', 'imunisasi', '2021-07-17', 'rumah', 'Negatif Covid-19', 'WhatsApp_Image_2021-04-17_at_23_15_45.jpeg', 'WhatsApp_Image_2021-04-17_at_23_15_451.jpeg', 'WhatsApp_Image_2021-04-17_at_23_15_452.jpeg');
+(14, '085612340987', '0856123409877654', 1, '2021-07-14', 'asdasd', 'adasdas', 1, '2021-07-05', 'asjhdaj', 'Negatif Covid-19', 'imunisasi', '2021-07-17', 'rumah', 'Negatif Covid-19', 'WhatsApp_Image_2021-04-17_at_23_15_45.jpeg', 'WhatsApp_Image_2021-04-17_at_23_15_451.jpeg', 'WhatsApp_Image_2021-04-17_at_23_15_452.jpeg'),
+(15, '087788888888', '0877888888888888', 1, '2021-07-11', 'yuyuyu', 'hehe', 1, '2021-07-14', 'ashdjash', 'Negatif Covid-19', 'ini', '2021-07-18', 'ini', 'Negatif Covid-19', 'Hasil_Lab.jpeg', 'Hasil_Lab1.jpeg', 'Hasil_Lab2.jpeg'),
+(16, '081211111111', '0812111111111111', 1, '2021-07-06', 'sdfsdf', '', 1, '2021-07-07', 'ada', 'Negatif Covid-19', 'ada', '2021-07-15', 'ada', 'Negatif Covid-19', '1626438160181.png', '16264381601811.png', '16264381601812.png');
 
 -- --------------------------------------------------------
 
@@ -8242,7 +8260,8 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_user`, `username`, `password`, `level`) VALUES
-(2, 'admin', 'cf3994a23c9c95ca36ebfa2e55f32ef2f6763cb4', 'admin');
+(2, 'admin', 'cf3994a23c9c95ca36ebfa2e55f32ef2f6763cb4', 'admin'),
+(3, 'sewon1', 'de87ac23acc00de700abc0ff6acf7ee009a4de17', 'sewon1');
 
 -- --------------------------------------------------------
 
@@ -88957,31 +88976,31 @@ ALTER TABLE `tb_dukuh`
 -- AUTO_INCREMENT untuk tabel `tb_kesehatan`
 --
 ALTER TABLE `tb_kesehatan`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kontak`
 --
 ALTER TABLE `tb_kontak`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_penduduk`
 --
 ALTER TABLE `tb_penduduk`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_puskesmas`
 --
 ALTER TABLE `tb_puskesmas`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_qusoner`
 --
 ALTER TABLE `tb_qusoner`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_shelter`
@@ -88993,13 +89012,13 @@ ALTER TABLE `tb_shelter`
 -- AUTO_INCREMENT untuk tabel `tb_status`
 --
 ALTER TABLE `tb_status`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -10,7 +10,7 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin') ?>">
-        <div class="sidebar-brand-text mx-3">Admin PTC-19 <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin PUSKESMAS SEWON 1 </div>
       </a>
 
       <!-- Divider -->
@@ -18,12 +18,12 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('admin')?>">
+        <a class="nav-link" href="<?php echo base_url('sewon1')?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('admin/penduduk')?>">
+        <a class="nav-link" href="<?php echo base_url('sewon1/penduduk')?>">
           <i class="fas fa-fw fa-user-alt"></i>
           <span>Data Penduduk</span></a>
       </li>

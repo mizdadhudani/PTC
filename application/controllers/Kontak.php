@@ -13,6 +13,7 @@ class Kontak extends CI_Controller {
 		$this->load->model('penduduk_model');
 		$this->load->model('pemeriksaan_model');
 		$this->load->model('kontak_model');
+		$this->load->model('puskesmas_model');
 
 		$this->load->helper('url');
 
@@ -27,6 +28,11 @@ class Kontak extends CI_Controller {
 			{
 				$valid=$this->form_validation;
 				$i=$this->input;
+				$puskesmas = array(
+									'nik'						=> $nik,
+									'link'						=> $nomorhp
+				);
+  				$this->puskesmas_model->tambah($puskesmas);
 				      $data= array(
 				      				'nik'						=>$nik,
 				      				'link'						=>$nomorhp,
@@ -50,7 +56,7 @@ class Kontak extends CI_Controller {
 				      				'mulai_kunjungan'			=>$i->post('mulai_kunjungan'),
 				      				'selesai_kunjungan'			=>$i->post('selesai_kunjungan'),
 				      				'kegiatan_dihadiri'			=>$i->post('kegiatan_dihadiri'),
-				      				'aktivitas'					=>$i->post('aktivitas'),
+				      				'aktivitas'					=>$i->post('aktivitas')
 				      );
 				      $this->kontak_model->tambah($data);
 				      redirect(base_url('data/kuisoner/').$nik);
