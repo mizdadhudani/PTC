@@ -323,7 +323,7 @@
   </tr>
   <tr>
     <td colspan="2">Kapan tanggal Pertama Kali Anda bergejala?<br>*abaikan jika sudah pernah mengisi</td>
-    <td colspan="2">  <input type="date" class="form-control"  value="<?php echo $kesehatan->tgl_gejala?>" required="" name="tgl_gejala">
+    <td colspan="2">  <input type="date" class="form-control"  value="<?php echo $kesehatan->tgl_gejala?>" name="tgl_gejala">
     </td> 
 
 

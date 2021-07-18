@@ -137,7 +137,8 @@ class Wilayah extends CI_Controller {
 
 		     exit;
 
-		}else{
+		} elseif (($id_villages == 3402140004) || ($id_villages == 3402140002) ||($id_villages == 3402140003) ||($id_villages == 3402140001)) 
+		{
 
 		     $getcity = $this->wilayah_model->pedukuhan($id_villages);
 
@@ -148,6 +149,12 @@ class Wilayah extends CI_Controller {
 		     }  
 
 		     exit;    
+		} 
+
+		else{
+			echo '<option value="59" selected>Luar Sewon</option>';
+
+			exit;
 
 		}
 

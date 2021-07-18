@@ -136,17 +136,17 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
     <div id="tes_lain">
     <div class="form-group">
-      <label for="Nama">Tanggal Pemeriksaan Test lain</label>
+      <label for="Nama">Tanggal Pemeriksaan Test</label>
       <input type="date" class="form-control"  name="tgl_lain">
     </div>
 
     <div class="form-group">
-      <label for="Nama">Tempat Pemeriksaan Test lain</label>
+      <label for="Nama">Tempat Pemeriksaan Test</label>
       <textarea type="text" class="form-control" name="tmpt_lain"></textarea>
     </div>
 
     <div class="form-group">
-      <label for="JenisKelamin">Hasil Pemeriksaan Test lain</label>
+      <label for="JenisKelamin">Hasil Pemeriksaan Test</label>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="hasil_lain" value="Positif Covid-19">
           <label class="form-check-label" for="exampleRadios1">
@@ -162,7 +162,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     </div>
 
     <div class="form-group">
-      <label for="Nama">Upload Surat Test lainnya</label>
+      <label for="Nama">Upload Surat Test</label>
       <input type="file" class="form-control" name="gambar[]" value="">
     </div>
   </div>

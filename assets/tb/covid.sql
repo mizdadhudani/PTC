@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jul 2021 pada 08.02
+-- Waktu pembuatan: 18 Jul 2021 pada 10.24
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.6
 
@@ -7332,7 +7332,8 @@ INSERT INTO `tb_dukuh` (`id`, `villages_id`, `name`) VALUES
 (55, '3402140003', 'Dukuh Gatak'),
 (56, '3402140003', 'Dukuh Widoro'),
 (57, '3402140003', 'Dukuh Jurug'),
-(58, '3402140003', 'Dukuh Demangan');
+(58, '3402140003', 'Dukuh Demangan'),
+(59, '', 'Luar Sewon');
 
 -- --------------------------------------------------------
 
@@ -7370,11 +7371,12 @@ INSERT INTO `tb_kesehatan` (`id`, `link`, `nik`, `tgl_gejala`, `hamil`, `diabete
 (1, '085655502497', '0856555024971234', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
 (2, '085655502477', '08565550249793728', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
 (3, '085655502477', '08565550249793728', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
-(4, '087712345678', '0877123456780987', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
+(4, '087712345678', '0877123456780987', '2021-07-12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
 (5, '087712345678', '0877123456780987', NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, 1, 1, 'pilek', 1, 'contrexin', 1, NULL, NULL),
 (6, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', NULL),
 (7, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', '2021-07-09'),
-(8, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', '2021-07-09');
+(8, '087712345678', '0877123456780987', '2021-07-12', NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', '2021-07-09'),
+(9, '085612340987', '0856123409877654', '2021-07-05', 1, 1, 1, 1, 1, 1, 1, 1, 1, 'ada', 1, 'cmcmcm', 1, 'meninggal', '2021-07-15');
 
 -- --------------------------------------------------------
 
@@ -7426,7 +7428,14 @@ INSERT INTO `tb_kontak` (`id`, `link`, `nik`, `riwayat_perjalanan`, `tempat_rp`,
 (10, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'jkhkjh'),
 (11, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak'),
 (12, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak'),
-(13, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak');
+(13, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak'),
+(14, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak'),
+(15, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'yuyu'),
+(16, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'yuyu'),
+(17, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'jashdg\r\n'),
+(18, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'asjkhd'),
+(19, '085612340987', '0856123409877654', 1, 'madinah', '2021-07-09', '2021-07-18', 1, 'meong', 1, 'yeye', '2021-07-18', NULL, 'si a', 'si b', 'si c', 'si d', 'si singa', 1, 'nns', '2021-07-17', '2021-07-18', 'ada', 'ya'),
+(20, '085612340987', '0856123409877654', 1, 'madinah', '2021-07-09', '2021-07-18', 1, 'meong', 1, 'yeye', '2021-07-18', 'anu', 'si a', 'si b', 'si c', 'si d', 'si singa', 1, 'nns', '2021-07-17', '2021-07-18', 'ada', 'ya');
 
 -- --------------------------------------------------------
 
@@ -7483,7 +7492,10 @@ INSERT INTO `tb_penduduk` (`id`, `link`, `nik`, `nama`, `nomorhp`, `tgl_lahir`, 
 (26, '085655502497', '0856555024971234', 'cobya', '085655502497', '1996-05-17', 'Laki-Laki', '3', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Pandes', '25', 'Wiraswasta', 'Kepala Keluarga', '', 'sama', '2021-07-17 06:49:06', 0, 0, 'Welcome_Scan.jpg', NULL, 'Rumah'),
 (27, '085655512597', '', '', '085655512597', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-17 06:52:36', NULL, NULL, 'Tidak ada data', NULL, NULL),
 (28, '085655502477', '08565550249793728', 'cobb', '085655502477', '1996-05-16', 'Laki-Laki', '2', 'SEWON', 'BANGUNHARJO', 'Dukuh Bakung', '25', 'Dirumah', 'Kepala Keluarga', '', 'ass', '2021-07-17 09:36:40', 0, 0, NULL, NULL, 'Rumah'),
-(29, '087712345678', '0877123456780987', 'haha', '087712345678', '1996-05-17', 'Laki-Laki', '8', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Kweni', '25', 'Dirumah', 'Kepala Keluarga', '', 'sss', '2021-07-18 03:54:49', 0, 0, 'Welcome_Scan1.jpg', NULL, 'Rumah');
+(29, '087712345678', '0877123456780987', 'haha', '087712345678', '1996-05-17', 'Laki-Laki', '8', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Kweni', '25', 'Dirumah', 'Kepala Keluarga', '', 'sss', '2021-07-18 03:54:49', 0, 0, 'Welcome_Scan1.jpg', NULL, 'Rumah'),
+(30, '085612340987', '0856123409877654', 'yeye', '085612340987', '2021-07-16', 'Laki-Laki', '7', 'SEWON', 'BANGUNHARJO', 'Dukuh Bakung', '24', 'Dirumah', 'Kepala Keluarga', '', 'sisisisi', '2021-07-18 07:30:09', 0, 0, 'Picture1.png', NULL, 'Rumah'),
+(31, '080987667890', '746573849284728940', 'hgfysgd', '080987667890', '6173-03-17', 'Laki-Laki', '2', 'SEWON', 'TIMBULHARJO', 'Dukuh Balong', '29', 'PNS/ASN', 'Kepala Keluarga', '', 'AJHD', '2021-07-18 08:01:47', 0, 0, NULL, NULL, 'Rumah'),
+(32, '080987667891', '57463859375648375832', 'ggg', '080987667891', '2398-07-04', 'Laki-Laki', '9', 'ARONGAN LAMBALEK', 'PEULANTEU LB', 'Luar Sewon', '23', 'Wiraswasta', 'Kepala Keluarga', '', 'iyi', '2021-07-18 08:14:44', 0, 0, NULL, NULL, 'Rumah');
 
 -- --------------------------------------------------------
 
@@ -7614,7 +7626,9 @@ INSERT INTO `tb_qusoner` (`id`, `link`, `nik`, `ksatu`, `kdua`, `ktiga`, `kempat
 (52, '08123456789', '1234561234561234', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 89, '2021-07-04', '12:16:00', 0, 'terupdate'),
 (53, '085655502472', '1234432112344321', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, '2021-07-04', '10:48:00', 3, ''),
 (54, '085655502472', '1234432112344321', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 95, '2021-07-05', '05:46:00', 0, ''),
-(55, '085655502472', '1234432112344321', 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 80, '2021-07-07', '09:16:00', 3, 'terupdate');
+(55, '085655502472', '1234432112344321', 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 80, '2021-07-07', '09:16:00', 3, 'terupdate'),
+(56, '087712345678', '0877123456780987', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-07-18', '01:44:00', 0, 'terupdate'),
+(57, '085612340987', '0856123409877654', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '2021-07-18', '02:39:00', 0, 'terupdate');
 
 -- --------------------------------------------------------
 
@@ -8207,7 +8221,8 @@ INSERT INTO `tb_status` (`id`, `link`, `nik`, `tes_ag`, `tgl_ag`, `tmpt_ag`, `ha
 (10, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image1.jpg', NULL),
 (11, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image2.jpg', NULL),
 (12, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image3.jpg', NULL),
-(13, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image4.jpg', NULL);
+(13, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image4.jpg', NULL),
+(14, '085612340987', '0856123409877654', 1, '2021-07-14', 'asdasd', 'adasdas', 1, '2021-07-05', 'asjhdaj', 'Negatif Covid-19', 'imunisasi', '2021-07-17', 'rumah', 'Negatif Covid-19', 'WhatsApp_Image_2021-04-17_at_23_15_45.jpeg', 'WhatsApp_Image_2021-04-17_at_23_15_451.jpeg', 'WhatsApp_Image_2021-04-17_at_23_15_452.jpeg');
 
 -- --------------------------------------------------------
 
@@ -88936,25 +88951,25 @@ ALTER TABLE `tb_villages`
 -- AUTO_INCREMENT untuk tabel `tb_dukuh`
 --
 ALTER TABLE `tb_dukuh`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kesehatan`
 --
 ALTER TABLE `tb_kesehatan`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kontak`
 --
 ALTER TABLE `tb_kontak`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_penduduk`
 --
 ALTER TABLE `tb_penduduk`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_puskesmas`
@@ -88966,7 +88981,7 @@ ALTER TABLE `tb_puskesmas`
 -- AUTO_INCREMENT untuk tabel `tb_qusoner`
 --
 ALTER TABLE `tb_qusoner`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_shelter`
@@ -88978,7 +88993,7 @@ ALTER TABLE `tb_shelter`
 -- AUTO_INCREMENT untuk tabel `tb_status`
 --
 ALTER TABLE `tb_status`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`

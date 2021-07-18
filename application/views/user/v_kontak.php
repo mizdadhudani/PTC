@@ -90,7 +90,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
     <div class="form-group">
       <label for="Nama">Bentuk kontak dengan terduga/positif Covid-19 (misal : pergi bersama, ngobrol, tinggal serumah, makan bersama dll) mohon dijelaskan secara rinci.</label>
-      <textarea type="text" class="form-control"  name="bentuk_ke"></textarea>
+      <textarea type="text" class="form-control"  name="bentuk_kontak"></textarea>
     </div>
     </div>
 

@@ -82,7 +82,7 @@ class Kuisoner_model extends CI_Model {
     public function tambah($data)
     {
         $this->db->insert('tb_qusoner', $data);
-        $this->db->insert('tb_qusonerperjam', $data);
+        // $this->db->insert('tb_qusonerperjam', $data);
     }
 
     // Edit
