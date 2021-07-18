@@ -37,6 +37,15 @@ class Login extends CI_Controller {
       if ($this->session->userdata('akses_level') == "admin"){
       redirect(base_url('admin'));
       }
+      elseif ($this->session->userdata('akses_level') == "sewon1") {
+      redirect(base_url('sewon1'));
+      }
+      elseif ($this->session->userdata('akses_level') == "sewon2") {
+        // code...
+      }
+      elseif ($this->session->userdata('akses_level') == "shelter") {
+        // code...
+      }
       else
       {
        redirect(base_url());

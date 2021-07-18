@@ -29,6 +29,15 @@ class Simple_login
 			if ($check->level=='admin'){
 				redirect(base_url('admin'),'refresh');
 			}
+			elseif ($check->level=='sewon1') {
+				redirect(base_url('sewon1'),'refresh');
+			}
+			elseif ($check->level=='sewon2') {
+				// code...
+			}
+			elseif ($check->level=='shelter') {
+				// code...
+			}
 			else
 			{
 				redirect(base_url(),'refresh');
@@ -39,7 +48,7 @@ class Simple_login
 		{
 			//kalau tidak ada, maka suruh login lagi
 
-			$this->CI->session->set_flashdata('warning', 'No Handphone atau Password salah');	
+			$this->CI->session->set_flashdata('warning', 'User atau Password salah');	
 			redirect(base_url('login'), 'refresh');
 		}
 	}

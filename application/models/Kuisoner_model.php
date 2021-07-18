@@ -123,5 +123,9 @@ class Kuisoner_model extends CI_Model {
         $query = $this->db->get();
         return $query->num_rows();
     }
+
+    public function list_sewon1(){
+        
+    }
 }
 
