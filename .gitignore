@@ -42,3 +42,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 #upload
 /assets/surat
 /assets/upload
+
+#db
+/application/config/database.php

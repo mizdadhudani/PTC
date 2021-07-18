@@ -14,13 +14,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <div class="form-group">
       <label for="JenisKelamin">Dalam 1 bulan terakhir, apakah memiliki riwayat perjalanan?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="riwayat_perjalanan" value="1">
+          <input required class="form-check-input" type="radio" name="riwayat_perjalanan" value="1">
           <label class="form-check-label" for="exampleRadios1">
             Ya
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="riwayat_perjalanan" value="0">
+          <input required class="form-check-input" type="radio" name="riwayat_perjalanan" value="0">
           <label class="form-check-label" for="exampleRadios1">
             Tidak
           </label>
@@ -47,14 +47,14 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
    <div class="form-group">
       <label for="JenisKelamin">Apakah Anda memiliki hewan peliharaan?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="hewan" value="1">
+          <input required class="form-check-input" type="radio" name="hewan" value="1">
           <label class="form-check-label" for="exampleRadios1">
             Ya
           </label>
           <input type="text" class="form-control"  placeholder="Sebutkan" name="nama_hewan">
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="hewan" value="0">
+          <input required class="form-check-input" type="radio" name="hewan" value="0">
           <label class="form-check-label" for="exampleRadios1">
             Tidak
           </label>
@@ -64,13 +64,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <div class="form-group">
       <label for="JenisKelamin">Dalam 1 bulan terakhir, apakah memiliki kontak erat dengan kasus suspect (terduga) Covid-19?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="ke_suspect" value="1">
+          <input required class="form-check-input" type="radio" name="ke_suspect" value="1">
           <label class="form-check-label" for="exampleRadios1">
             Ya
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="ke_suspect" value="0">
+          <input required class="form-check-input" type="radio" name="ke_suspect" value="0">
           <label class="form-check-label" for="exampleRadios1">
             Tidak
           </label>
@@ -95,7 +95,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     </div>
 
     <h2 style="margin-left: 0px;">Daftar Kontak Erat</h2>
-    <p>Mohon Diisi sering kontak dengan siapa saja dengan Selengkap-lengkapnya demi terjaganya kesehatan anda dan orang di sekitar Anda. Keseharian tinggal serumah/ sering bertemu/bersalaman dengan siapa saja?</p>
+    <p>Mohon Diisi sering kontak dengan siapa saja dengan Selengkap-lengkapnya demi terjaganya kesehatan anda dan orang di sekitar Anda. Keseharian tinggal serumah/ sering bertemu/bersalaman dengan siapa saja?<br>*Apabila tidak ada, biarkan kosong</p>
 
     <div class="form-group">
       <label for="Nama">Orang 1</label>
@@ -127,13 +127,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <div class="form-group">
       <label for="JenisKelamin">Dalam 1 bulan terakhir, apakah mengunjungi tempat keramaian / pusat perbelanjaan/acara yang melibatkan banyak orang?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="keramaian" value="1">
+          <input required class="form-check-input" type="radio" name="keramaian" value="1">
           <label class="form-check-label" for="exampleRadios1">
             Ya
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="keramaian" value="0">
+          <input required class="form-check-input" type="radio" name="keramaian" value="0">
           <label class="form-check-label" for="exampleRadios1">
             Tidak
           </label>
@@ -168,7 +168,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
     <h2 style="margin-left: 0px;">Aktivitas Selama 1 bulan terakhir</h2>
     <div class="form-group">
       <label for="Nama">Mohon ceritakan aktivitas sehari-hari Anda sebelum sakit (tanggal, tempat, info) *</label>
-      <textarea type="text" class="form-control"  name="aktivitas"></textarea>
+      <textarea required type="text" class="form-control"  name="aktivitas"></textarea>
     </div>
 
 

@@ -105,6 +105,26 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
           </label>
         </div>
     </div>
+        <div class="form-group">
+      <label for="JenisKelamin">Status/kondisi kesehatan terakhir?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="kondisi" value="sembuh">
+          <label class="form-check-label" for="exampleRadios1">
+            Sembuh
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="kondisi" value="masih sakit">
+          <label class="form-check-label" for="exampleRadios1">
+            Masih Sakit
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="kondisi" value="meninggal">
+          <label class="form-check-label" for="exampleRadios1">Meninggal dunia (isikan tanggal meninggal dunia dibawah ini)</label>
+          <input type="date" class="form-control" name="tanggal_md">
+        </div>
+    </div>
     <input type="text" name="nik" hidden="" placeholder="nik" value="<?php echo $cek->nik?>">
 
   <button type="submit" class="btn btn-primary">Kirim</button>

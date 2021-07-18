@@ -44,6 +44,7 @@ class Kesehatan extends CI_Controller {
 				      				'nama_obat'					=>$i->post('nama_obat'),
 				      				'terakhir_berobat'			=>$i->post('terakhir_berobat'),
 				      				'kondisi'					=>$i->post('kondisi'),
+				      				'tanggal_md'					=>$i->post('tanggal_md'),
 				      );
 				      $this->kesehatan_model->tambah($data);
 				      redirect(base_url('pemeriksaan'));

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jul 2021 pada 10.44
+-- Waktu pembuatan: 18 Jul 2021 pada 08.02
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.6
 
@@ -7345,22 +7345,36 @@ CREATE TABLE `tb_kesehatan` (
   `link` varchar(100) NOT NULL,
   `nik` varchar(100) NOT NULL,
   `tgl_gejala` date DEFAULT NULL,
-  `hamil` int(11) NOT NULL DEFAULT 0,
-  `diabetes` int(1) NOT NULL DEFAULT 0,
-  `jantung` int(1) NOT NULL DEFAULT 0,
-  `hipertensi` int(1) NOT NULL DEFAULT 0,
-  `kanker` int(1) NOT NULL DEFAULT 0,
-  `imunologi` int(1) NOT NULL DEFAULT 0,
-  `ginjal` int(1) NOT NULL DEFAULT 0,
-  `hati` int(1) NOT NULL DEFAULT 0,
-  `paru` int(1) NOT NULL DEFAULT 0,
-  `sakit_lain` text NOT NULL DEFAULT 'tidak ada',
+  `hamil` int(11) DEFAULT NULL,
+  `diabetes` int(1) DEFAULT NULL,
+  `jantung` int(1) DEFAULT NULL,
+  `hipertensi` int(1) DEFAULT NULL,
+  `kanker` int(1) DEFAULT NULL,
+  `imunologi` int(1) DEFAULT NULL,
+  `ginjal` int(1) DEFAULT NULL,
+  `hati` int(1) DEFAULT NULL,
+  `paru` int(1) DEFAULT NULL,
+  `sakit_lain` text NOT NULL DEFAULT '\'tidak ada\'',
   `alergi_obat` int(1) NOT NULL DEFAULT 0,
   `nama_obat` varchar(100) NOT NULL DEFAULT 'tidak ada',
   `terakhir_berobat` int(11) NOT NULL DEFAULT 0,
-  `kondisi` varchar(100) NOT NULL,
+  `kondisi` varchar(100) DEFAULT NULL,
   `tanggal_md` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_kesehatan`
+--
+
+INSERT INTO `tb_kesehatan` (`id`, `link`, `nik`, `tgl_gejala`, `hamil`, `diabetes`, `jantung`, `hipertensi`, `kanker`, `imunologi`, `ginjal`, `hati`, `paru`, `sakit_lain`, `alergi_obat`, `nama_obat`, `terakhir_berobat`, `kondisi`, `tanggal_md`) VALUES
+(1, '085655502497', '0856555024971234', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
+(2, '085655502477', '08565550249793728', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
+(3, '085655502477', '08565550249793728', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
+(4, '087712345678', '0877123456780987', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, '', 0, NULL, NULL),
+(5, '087712345678', '0877123456780987', NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, 1, 1, 'pilek', 1, 'contrexin', 1, NULL, NULL),
+(6, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', NULL),
+(7, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', '2021-07-09'),
+(8, '087712345678', '0877123456780987', NULL, NULL, 1, NULL, 1, NULL, NULL, 1, 1, 1, 'kasdsd', 1, 'bodrex', 1, 'meninggal', '2021-07-09');
 
 -- --------------------------------------------------------
 
@@ -7370,30 +7384,49 @@ CREATE TABLE `tb_kesehatan` (
 
 CREATE TABLE `tb_kontak` (
   `id` int(100) NOT NULL,
-  `link` int(100) NOT NULL,
-  `nik` int(100) NOT NULL,
+  `link` varchar(100) NOT NULL,
+  `nik` varchar(100) NOT NULL,
   `riwayat_perjalanan` int(1) NOT NULL DEFAULT 0,
-  `tempat_rp` varchar(100) NOT NULL DEFAULT 'tidak ada',
+  `tempat_rp` varchar(100) DEFAULT NULL,
   `tgl_rp` date DEFAULT NULL,
   `tiba_rp` date DEFAULT NULL,
   `hewan` int(1) NOT NULL DEFAULT 0,
-  `nama_hewan` varchar(100) NOT NULL DEFAULT 'tidak ada',
+  `nama_hewan` varchar(100) DEFAULT NULL,
   `ke_suspect` int(1) NOT NULL DEFAULT 0,
-  `nama_ke` varchar(100) NOT NULL DEFAULT 'tidak ada',
+  `nama_ke` varchar(100) DEFAULT NULL,
   `tgl_ke` date DEFAULT NULL,
-  `bentuk_kontak` text NOT NULL DEFAULT 'tidak ada',
-  `ke1` text NOT NULL DEFAULT 'tidak ada',
-  `ke2` text NOT NULL DEFAULT 'tidak ada',
-  `ke3` text NOT NULL DEFAULT 'tidak ada',
-  `ke4` text NOT NULL DEFAULT 'tidak ada',
-  `ke5` text NOT NULL DEFAULT 'tidak ada',
+  `bentuk_kontak` text DEFAULT NULL,
+  `ke1` text DEFAULT NULL,
+  `ke2` text DEFAULT NULL,
+  `ke3` text DEFAULT NULL,
+  `ke4` text DEFAULT NULL,
+  `ke5` text DEFAULT NULL,
   `keramaian` int(1) NOT NULL DEFAULT 0,
-  `tempat_kunjungan` varchar(100) NOT NULL DEFAULT 'tidak ada',
+  `tempat_kunjungan` varchar(100) DEFAULT NULL,
   `mulai_kunjungan` date DEFAULT NULL,
   `selesai_kunjungan` date DEFAULT NULL,
-  `kegiatan_dihadiri` varchar(100) NOT NULL DEFAULT 'tidak ada',
+  `kegiatan_dihadiri` varchar(100) DEFAULT NULL,
   `aktivitas` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_kontak`
+--
+
+INSERT INTO `tb_kontak` (`id`, `link`, `nik`, `riwayat_perjalanan`, `tempat_rp`, `tgl_rp`, `tiba_rp`, `hewan`, `nama_hewan`, `ke_suspect`, `nama_ke`, `tgl_ke`, `bentuk_kontak`, `ke1`, `ke2`, `ke3`, `ke4`, `ke5`, `keramaian`, `tempat_kunjungan`, `mulai_kunjungan`, `selesai_kunjungan`, `kegiatan_dihadiri`, `aktivitas`) VALUES
+(1, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'maen'),
+(2, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'tidak'),
+(3, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', ''),
+(4, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 1, 'asad', '2021-07-18', '2021-07-18', 'kkk', 'tidak'),
+(5, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 1, 'asw', 0, '', '0000-00-00', NULL, '', '', '', '', '', 1, 'asad', '2021-07-18', '2021-07-18', 'kkk', 'tidak'),
+(6, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 1, 'asw', 0, '', '0000-00-00', NULL, '', '', '', '', '', 1, 'kdkdk', '2021-07-18', '2021-07-18', 'kkk', 'tidak'),
+(7, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'ada'),
+(8, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'ada'),
+(9, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'ada'),
+(10, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, '', '', '', '', '', 0, '', '0000-00-00', '0000-00-00', '', 'jkhkjh'),
+(11, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak'),
+(12, '2147483647', '2147483647', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak'),
+(13, '087712345678', '0877123456780987', 0, '', '0000-00-00', '0000-00-00', 0, '', 0, '', '0000-00-00', NULL, 'yeyeyey', 'eyeyye', 'askfkasj', 'sjhadjah', 'jsadjashd', 0, '', '0000-00-00', '0000-00-00', '', 'sasak');
 
 -- --------------------------------------------------------
 
@@ -7445,7 +7478,12 @@ INSERT INTO `tb_penduduk` (`id`, `link`, `nik`, `nama`, `nomorhp`, `tgl_lahir`, 
 (21, '', '88888888888888', 'aye', '', NULL, 'Laki-Laki', 'RT 08', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Ngireng-ngireng', '23', '', 'Kepala Keluarga', '', '', '2021-07-03 15:41:50', 0, 0, NULL, NULL, NULL),
 (22, '08565550277', '8888888888888', 'ore', '', NULL, 'Laki-Laki', 'RT 07', 'SEWON', 'PENDOWOHARJO', 'Dukuh Bandung', '21', '', 'Kepala Keluarga', '', '', '2021-07-03 15:44:59', 0, 0, NULL, NULL, NULL),
 (23, '085655503333', '', '', '085655503333', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-06 12:13:20', NULL, NULL, 'Tidak ada data', NULL, NULL),
-(24, '13366778899002', '', '', '13366778899002', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-10 04:51:13', NULL, NULL, 'Tidak ada data', NULL, NULL);
+(24, '13366778899002', '', '', '13366778899002', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-10 04:51:13', NULL, NULL, 'Tidak ada data', NULL, NULL),
+(25, '08111111111', '', '', '08111111111', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-16 08:46:00', NULL, NULL, 'Tidak ada data', NULL, NULL),
+(26, '085655502497', '0856555024971234', 'cobya', '085655502497', '1996-05-17', 'Laki-Laki', '3', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Pandes', '25', 'Wiraswasta', 'Kepala Keluarga', '', 'sama', '2021-07-17 06:49:06', 0, 0, 'Welcome_Scan.jpg', NULL, 'Rumah'),
+(27, '085655512597', '', '', '085655512597', NULL, 'Laki-Laki', '', '', '', '', '', '', '', '', '', '2021-07-17 06:52:36', NULL, NULL, 'Tidak ada data', NULL, NULL),
+(28, '085655502477', '08565550249793728', 'cobb', '085655502477', '1996-05-16', 'Laki-Laki', '2', 'SEWON', 'BANGUNHARJO', 'Dukuh Bakung', '25', 'Dirumah', 'Kepala Keluarga', '', 'ass', '2021-07-17 09:36:40', 0, 0, NULL, NULL, 'Rumah'),
+(29, '087712345678', '0877123456780987', 'haha', '087712345678', '1996-05-17', 'Laki-Laki', '8', 'SEWON', 'PANGGUNGHARJO', 'Dukuh Kweni', '25', 'Dirumah', 'Kepala Keluarga', '', 'sss', '2021-07-18 03:54:49', 0, 0, 'Welcome_Scan1.jpg', NULL, 'Rumah');
 
 -- --------------------------------------------------------
 
@@ -8147,10 +8185,29 @@ CREATE TABLE `tb_status` (
   `tgl_lain` date DEFAULT NULL,
   `tmpt_lain` varchar(100) DEFAULT NULL,
   `hasil_lain` varchar(100) DEFAULT NULL,
-  `surat_ag` varchar(100) NOT NULL DEFAULT 'tidak ada',
-  `surat_pcr` varchar(100) NOT NULL DEFAULT 'tidak ada',
-  `surat_lain` varchar(100) NOT NULL DEFAULT 'tidak ada'
+  `surat_ag` varchar(100) DEFAULT NULL,
+  `surat_pcr` varchar(100) DEFAULT NULL,
+  `surat_lain` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_status`
+--
+
+INSERT INTO `tb_status` (`id`, `link`, `nik`, `tes_ag`, `tgl_ag`, `tmpt_ag`, `hasil_ag`, `tes_pcr`, `tgl_pcr`, `tmpt_pcr`, `hasil_pcr`, `tes_lain`, `tgl_lain`, `tmpt_lain`, `hasil_lain`, `surat_ag`, `surat_pcr`, `surat_lain`) VALUES
+(1, '085655502497', '0856555024971234', 0, '0000-00-00', '', '', 0, '0000-00-00', '', NULL, '0', '0000-00-00', '', NULL, NULL, NULL, NULL),
+(2, '085655502477', '08565550249793728', 0, '0000-00-00', '', '', 0, '0000-00-00', '', NULL, '0', '0000-00-00', '', NULL, NULL, NULL, NULL),
+(3, '085655502477', '08565550249793728', 0, '0000-00-00', '', '', 0, '0000-00-00', '', NULL, '0', '0000-00-00', '', NULL, NULL, NULL, NULL),
+(4, '085655502477', '08565550249793728', 0, '0000-00-00', '', '', 0, '0000-00-00', '', NULL, '0', '0000-00-00', '', NULL, NULL, NULL, NULL),
+(5, '085655502477', '08565550249793728', 0, '0000-00-00', '', '', 0, '0000-00-00', '', NULL, '0', '0000-00-00', '', NULL, NULL, NULL, NULL),
+(6, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 0, '0000-00-00', '', NULL, '0', '0000-00-00', '', NULL, NULL, NULL, NULL),
+(7, '087712345678', '0877123456780987', 1, '2021-07-18', 'dddd', '', 0, '0000-00-00', '', NULL, '0', '0000-00-00', '', NULL, NULL, NULL, NULL),
+(8, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'keasj', 'Positif Covid-19', '0', '0000-00-00', '', NULL, 'tidak ada', 'tidak ada', 'tidak ada'),
+(9, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image.jpg', NULL),
+(10, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image1.jpg', NULL),
+(11, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image2.jpg', NULL),
+(12, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image3.jpg', NULL),
+(13, '087712345678', '0877123456780987', 0, '0000-00-00', '', '', 1, '2021-07-18', 'sadsad', 'Negatif Covid-19', '0', '0000-00-00', '', NULL, NULL, 'Image4.jpg', NULL);
 
 -- --------------------------------------------------------
 
@@ -88885,19 +88942,19 @@ ALTER TABLE `tb_dukuh`
 -- AUTO_INCREMENT untuk tabel `tb_kesehatan`
 --
 ALTER TABLE `tb_kesehatan`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kontak`
 --
 ALTER TABLE `tb_kontak`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_penduduk`
 --
 ALTER TABLE `tb_penduduk`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_puskesmas`
@@ -88921,7 +88978,7 @@ ALTER TABLE `tb_shelter`
 -- AUTO_INCREMENT untuk tabel `tb_status`
 --
 ALTER TABLE `tb_status`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`

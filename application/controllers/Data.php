@@ -152,21 +152,10 @@ class Data extends CI_Controller {
 								// end create thumbnail
 					          
 					            $filename = $upload_gambarf['upload_data']['file_name'];
-					   			if ($x==0) {
-					   				$data_ktp=$filename;
-					   			}
-					   			else{
-					   				$data_surat=$filename;
-					   			}
-				            
+					   			$data_ktp=$filename;
 				        	}
 				        	else{
-				        		if ($x==0) {
-					   				$data_ktp='tidak ada ktp';
-					   			}
-					   			else{
-					   				$data_surat='tidak ada surat';
-					   			}
+				        		$data_ktp='tidak ada ktp';
 				        	}
 
 				        }

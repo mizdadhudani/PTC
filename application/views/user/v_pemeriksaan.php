@@ -10,9 +10,9 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
         <div class="container">
     </div>
 
-<p style="font-weight: bold;">Informasi Test</p>
+<h2 style="margin-left: 0px;">Informasi Test Swab Antigen</h2>
      <div class="form-group">
-      <label for="JenisKelamin">Pemeriksaan Rapid Test Swab Antigen?</label>
+      <label for="JenisKelamin">Apakah Anda melakukan pemeriksaan Rapid Test Swab Antigen?</label>
         <div class="form-check">
           <input required class="form-check-input" type="radio" name="tes_ag" value="1">
           <label class="form-check-label" for="exampleRadios1">
@@ -62,12 +62,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
     <div class="form-group">
       <label  for="Nama">Upload Surat Rapid Test Swab Antigen</label>
-      <input type="file" class="form-control" name="surat_ag" value="">
+      <input type="file" class="form-control" name="gambar[]" value="">
     </div>
     </div>
 
+<h2 style="margin-left: 0px;">Informasi Test Swab PCR</h2>
     <div class="form-group">
-      <label for="JenisKelamin">Pemeriksaan Swab PCR</label>
+      <label for="JenisKelamin">Apakah Anda melakukan pemeriksaan Swab PCR?</label>
         <div class="form-check">
           <input required class="form-check-input" type="radio" name="tes_pcr" value="1">
           <label class="form-check-label" for="exampleRadios1">
@@ -111,12 +112,13 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
     <div class="form-group">
       <label for="Nama">Upload Surat Swab PCR</label>
-      <input type="file" class="form-control" name="surat_pcr" value="">
+      <input type="file" class="form-control" name="gambar[]" value="">
     </div>
    </div>
 
+<h2 style="margin-left: 0px;">Informasi Test Lainnya</h2>
     <div class="form-group">
-      <label for="JenisKelamin">Pemeriksaan Penunjang lainnya yang dilakukan</label>
+      <label for="JenisKelamin">Apakah Anda melkukan pemeriksaan Penunjang lainnya?</label>
         <div class="form-check">
           <input required  class="form-check-input" type="radio" name="tes_lain">
           <label class="form-check-label" for="exampleRadios1">
@@ -161,7 +163,7 @@ if($this->session->flashdata('error')){ echo '<div class="alert alert-danger">'.
 
     <div class="form-group">
       <label for="Nama">Upload Surat Test lainnya</label>
-      <input type="file" class="form-control" name="surat_lain" value="">
+      <input type="file" class="form-control" name="gambar[]" value="">
     </div>
   </div>
 
