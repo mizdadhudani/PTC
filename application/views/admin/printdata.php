@@ -78,6 +78,40 @@ function fnExcelReport()
     return (sa);
 }
 </script>
+<style>
+table, td, th {  
+  border: 1px solid #000000;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+  align-items: center;
+}
+
+th, td {
+  padding: 3px;
+  font-family: helvetica;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+h3{
+  font-family: helvetica;
+}
+h4{
+  font-family: helvetica;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #e74a3b;
+    border-color: #e74a3b;
+    width: 9%;
+    height: 5%;
+
+</style>
 <table id="headerTable" class="display nowrap" style="width:100%">
 <tr>
 <td colspan="7"> DATA PENDUDUK ODP 2</td></tr>
@@ -87,19 +121,17 @@ function fnExcelReport()
 	<th>NAMA</th>
 	<th>NOHP</th>
 	<th>JENIS KELAMIN</th>
-	<th>KEPENDUDUKAN</th>
 	<th>ALAMAT</th>
 </tr>	
                 <?php $no=1;?>
               <?php foreach ($datao as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td>'<?php echo $datatku['nik'] ?>'</td>
+                      <td><?php echo $datatku['nik'] ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
-                      <td>'<?php echo $datatku['nomorhp'] ?>'</td>
+                      <td><?php echo $datatku['nomorhp'] ?></td>
                       <td><?php echo $datatku['jeniskelamin'] ?></td>
-                      <td><?php echo $datatku['penduduk'] ?></td>
-                      <td><?php echo $datatku['alamat'] ?></td>
+                      <td><?php echo $datatku['pedukuhan'] ?>, RT <?php echo $datatku['RT'] ?>, <?php echo $datatku['kelurahan'] ?>, <?php echo $datatku['kecamatan'] ?>.</td>
                     </tr>
               <?php }?> 
 <tr>
@@ -109,10 +141,8 @@ function fnExcelReport()
 	<td></td>
 	<td></td>
 	<td></td>
-	<td></td>
 </tr>
 <tr>
-	<td></td>
 	<td></td>
 	<td></td>
 	<td></td>
@@ -126,20 +156,18 @@ function fnExcelReport()
 	<th>NIK</th>
 	<th>NAMA</th>
 	<th>NOHP</th>
-	<th>JENIS KELAMIN</th>
-	<th>KEPENDUDUKAN</th>
+	<th>JENIS KELAMIN</th>	
 	<th>ALAMAT</th>
 </tr>	
                 <?php $no=1;?>
               <?php foreach ($dataj as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td>'<?php echo $datatku['nik'] ?>'</td>
+                      <td><?php echo $datatku['nik'] ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
-                      <td>'<?php echo $datatku['nomorhp'] ?>'</td>
+                      <td><?php echo $datatku['nomorhp'] ?></td>
                       <td><?php echo $datatku['jeniskelamin'] ?></td>
-                      <td><?php echo $datatku['penduduk'] ?></td>
-                      <td><?php echo $datatku['alamat'] ?></td>
+                      <td><?php echo $datatku['pedukuhan'] ?>, RT <?php echo $datatku['RT'] ?>, <?php echo $datatku['kelurahan'] ?>, <?php echo $datatku['kecamatan'] ?>.</td>
                     </tr>
               <?php }?> 
 <tr>
@@ -149,10 +177,8 @@ function fnExcelReport()
 	<td></td>
 	<td></td>
 	<td></td>
-	<td></td>
 </tr>
 <tr>
-	<td></td>
 	<td></td>
 	<td></td>
 	<td></td>
@@ -167,19 +193,18 @@ function fnExcelReport()
 	<th>NAMA</th>
 	<th>NOHP</th>
 	<th>JENIS KELAMIN</th>
-	<th>KEPENDUDUKAN</th>
+	
 	<th>ALAMAT</th>
 </tr>	
                 <?php $no=1;?>
               <?php foreach ($datat as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td>'<?php echo $datatku['nik'] ?>'</td>
+                      <td><?php echo $datatku['nik'] ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
-                      <td>'<?php echo $datatku['nomorhp'] ?>'</td>
+                      <td><?php echo $datatku['nomorhp'] ?></td>
                       <td><?php echo $datatku['jeniskelamin'] ?></td>
-                      <td><?php echo $datatku['penduduk'] ?></td>
-                      <td><?php echo $datatku['alamat'] ?></td>
+                      <td><?php echo $datatku['pedukuhan'] ?>, RT <?php echo $datatku['RT'] ?>, <?php echo $datatku['kelurahan'] ?>, <?php echo $datatku['kecamatan'] ?>.</td>
                     </tr>
               <?php }?>
 <tr>
@@ -189,10 +214,8 @@ function fnExcelReport()
 	<td></td>
 	<td></td>
 	<td></td>
-	<td></td>
 </tr>
 <tr>
-	<td></td>
 	<td></td>
 	<td></td>
 	<td></td>
@@ -206,20 +229,18 @@ function fnExcelReport()
 	<th>NIK</th>
 	<th>NAMA</th>
 	<th>NOHP</th>
-	<th>JENIS KELAMIN</th>
-	<th>KEPENDUDUKAN</th>
+	<th>JENIS KELAMIN</th>	
 	<th>ALAMAT</th>
 </tr>	
                 <?php $no=1;?>
               <?php foreach ($datar as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td>'<?php echo $datatku['nik'] ?>'</td>
+                      <td><?php echo $datatku['nik'] ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
-                      <td>'<?php echo $datatku['nomorhp'] ?>'</td>
+                      <td><?php echo $datatku['nomorhp'] ?></td>
                       <td><?php echo $datatku['jeniskelamin'] ?></td>
-                      <td><?php echo $datatku['penduduk'] ?></td>
-                      <td><?php echo $datatku['alamat'] ?></td>
+                      <td><?php echo $datatku['pedukuhan'] ?>, RT <?php echo $datatku['RT'] ?>, <?php echo $datatku['kelurahan'] ?>, <?php echo $datatku['kecamatan'] ?>.</td>
                     </tr>
               <?php }?>
 <tr><td colspan="7"> DATA PENDUDUK SEHAT BERESIKO </td></tr>
@@ -229,19 +250,17 @@ function fnExcelReport()
   <th>NAMA</th>
   <th>NOHP</th>
   <th>JENIS KELAMIN</th>
-  <th>KEPENDUDUKAN</th>
   <th>ALAMAT</th>
 </tr> 
                 <?php $no=1;?>
               <?php foreach ($datag as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td>'<?php echo $datatku['nik'] ?>'</td>
+                      <td><?php echo $datatku['nik'] ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
-                      <td>'<?php echo $datatku['nomorhp'] ?>'</td>
+                      <td><?php echo $datatku['nomorhp'] ?></td>
                       <td><?php echo $datatku['jeniskelamin'] ?></td>
-                      <td><?php echo $datatku['penduduk'] ?></td>
-                      <td><?php echo $datatku['alamat'] ?></td>
+                      <td><?php echo $datatku['pedukuhan'] ?>, RT <?php echo $datatku['RT'] ?>, <?php echo $datatku['kelurahan'] ?>, <?php echo $datatku['kecamatan'] ?>.</td>
                     </tr>
               <?php }?>
 <tr><td colspan="7"> DATA PENDUDUK SANGAT SEHAT </td></tr>
@@ -251,19 +270,18 @@ function fnExcelReport()
   <th>NAMA</th>
   <th>NOHP</th>
   <th>JENIS KELAMIN</th>
-  <th>KEPENDUDUKAN</th>
+  
   <th>ALAMAT</th>
 </tr> 
                 <?php $no=1;?>
               <?php foreach ($datas as $datatku) { ?>
                     <tr>
                       <td><?php echo $no++; ?></td>
-                      <td>'<?php echo $datatku['nik'] ?>'</td>
+                      <td><?php echo $datatku['nik'] ?></td>
                       <td><?php echo $datatku['nama'] ?></td>
-                      <td>'<?php echo $datatku['nomorhp'] ?>'</td>
+                      <td><?php echo $datatku['nomorhp'] ?></td>
                       <td><?php echo $datatku['jeniskelamin'] ?></td>
-                      <td><?php echo $datatku['penduduk'] ?></td>
-                      <td><?php echo $datatku['alamat'] ?></td>
+                      <td><?php echo $datatku['pedukuhan'] ?>, RT <?php echo $datatku['RT'] ?>, <?php echo $datatku['kelurahan'] ?>, <?php echo $datatku['kecamatan'] ?>.</td>
                     </tr>
               <?php }?>
 </table>

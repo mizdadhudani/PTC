@@ -124,5 +124,19 @@ class Kuisoner_model extends CI_Model {
         return $query->num_rows();
     }
 
+    function penduduktanggal($nik){
+
+        $tanggalsekarang=date("Y-m-d");
+
+        $this->db->where("nik = '$nik' ");
+
+        $this->db->where("tanggal = '$tanggalsekarang'");
+
+        $query=$this->db->get("tb_qusoner");
+
+        return $query->row();
+
+    }
+
 }
 

@@ -117,6 +117,160 @@ class Penduduk_model extends CI_Model {
         return $query->row();
     
     }
+
+    function datalengkapodp() {
+        $this->db->distinct();
+        // $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+        $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        // $this->db->join ('kecamatan','tb_qusoner.id = kecamatan.id_kecamatan'); 
+        $this->db->where("score =3");
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        //$this->db->where("ksebelas =1 ");
+        //$this->db->where("ksebelas =1 OR ktigabelas =1 OR kempatbelas =1");
+        //$this->db->where("ktigabelas =1");
+        //$this->db->where("kempatbelas =1");
+        //$this->db->order_by("score", "DESC");
+        $this->db->group_by('tb_penduduk.nik');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+    function datalengkapodpj() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+        $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        $this->db->where("score=2");
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        //$this->db->where("kempatbelas =0 OR ktigabelas =0");
+        //$this->db->where("ksepuluh =1");
+        //$this->db->order_by("score", "DESC");
+        $this->db->group_by('tb_penduduk.nik');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+    function datalengkapkert() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+            $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        $this->db->where("score =1");
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        //$this->db->order_by("score", "DESC");
+       $this->db->group_by('tb_penduduk.nik');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+    function datalengkapkerr() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+            $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+        $this->db->where('tb_penduduk.nama !=', null);
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        $this->db->where("score =0");
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        //$this->db->order_by("score", "DESC");
+        $this->db->group_by('tb_penduduk.nik');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+    function datalengkapgejala() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        $this->db->where("score =2");
+        //$this->db->order_by("score", "DESC");
+        $this->db->group_by('tb_penduduk.nik');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+    function datalengkapsehat() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        $this->db->where("score =1");
+        //$this->db->order_by("score", "DESC");
+        $this->db->group_by('tb_penduduk.nik');
+        $query = $this->db->get();
+        return $query->result_array();
+
+    }
+
+    function datalengkapscore() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik');
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        //$this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+        //$this->db->where("score >=1");
+        //$this->db->group_by('tb_qusoner.nik');
+        $this->db->group_by('tb_penduduk.nik');
+        $this->db->order_by("score", "DESC");
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    function ubahdatadiri($nik){
+     return $this->db->get_where("tb_penduduk", ["nik" => $nik])->row();
+
+    }
+
+     function getdataidnik($nomorhp){
+     return $this->db->get_where("tb_penduduk", ["nik" => $this->input->post('nik')])->row();
+
+    }
+
+    function updatedataalamatnik() {
+    	$post = $this->input->post();
+        $this->link = $post["link"];
+        $this->nama = $post["nama"];
+        $this->nik = $post["nik"];
+        $this->tgl_lahir = $post["tgl_lahir"];
+        $this->usia = $post["usia"];
+        $this->jeniskelamin = $post["jeniskelamin"];
+        $this->pekerjaan = $post["pekerjaan"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
+        $this->RT = $post["RT"];
+        $this->nomorhp = $post["nomorhp"];
+        $this->alamat_ktp = $post["alamat_ktp"];
+        $this->tempat_isolasi = $post["tempat_isolasi"];
+
+        $this->db->where('id=',$this->id = $post["id"]);
+        $this->db->update("tb_penduduk",$this);
+    }
+
+     function penduduknik($nik){
+        $this->db->where("nik =",$nik);
+        $query=$this->db->get("tb_penduduk");
+        return $query->row();
+    }
+
+    function datadetailhari($nik){
+        $this->db->select ('* ');
+        $this->db->from ('tb_penduduk');
+        //$this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik') ;
+        $this->db->where('tb_penduduk.nik', $nik);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
 	
 }
 

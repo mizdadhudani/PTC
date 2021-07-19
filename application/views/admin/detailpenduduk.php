@@ -81,24 +81,8 @@
                           <td class="text-primary"><?php echo $datapenduduk->status_dlm_keluarga?></td>
                       </tr>
                       <tr>
-                          <td>Status</td>
-                          <td class="text-primary">
-                          <?php if($datapenduduk->status=='KE') { ?>
-                            Kontak Erat
-                          <?php } ?>
-                          <?php if($datapenduduk->status=='positif') { ?>
-                            Positif
-                          <?php } ?>
-                          <?php if($datapenduduk->status=='Suspect') { ?>
-                            Suspect
-                          <?php } ?>
-                           <?php if($datapenduduk->status=='sehat') { ?>
-                            Sehat
-                          <?php } ?>
-                           <?php if($datapenduduk->status=='Meninggal Dunia') { ?>
-                            Meninggal Dunia
-                          <?php } ?>
-                          </td>
+                          <td>Pekerjaan</td>
+                          <td class="text-primary"><?php echo $datapenduduk->pekerjaan ?></td>
                       </tr>
                       <tr>
                           <td>Tempat Isolasi</td>
