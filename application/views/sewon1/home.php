@@ -19,7 +19,7 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>TGL PENDAFTARAN</th>
+                        <th>TGL DAFTAR</th>
                         <th>TERAKHIR LAPORAN</th>
                         <th>STATUS</th>
                         <th>DOMISILI</th>
@@ -52,7 +52,7 @@
                             <i class="fab fa-whatsapp"></i>
                           </a>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
-                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -73,7 +73,7 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>TGL PENDAFTARAN</th>
+                        <th>TGL DAFTAR</th>
                         <th>TERAKHIR LAPORAN</th>
                         <th>STATUS</th>
                         <th>DOMISILI</th>
@@ -106,7 +106,7 @@
                             <i class="fab fa-whatsapp"></i>
                           </a>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
-                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -128,7 +128,7 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>TGL PENDAFTARAN</th>
+                        <th>TGL DAFTAR</th>
                         <th>TERAKHIR LAPORAN</th>
                         <th>STATUS</th>
                         <th>DOMISILI</th>
@@ -161,7 +161,7 @@
                             <i class="fab fa-whatsapp"></i>
                           </a>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
-                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
@@ -184,7 +184,7 @@
                         <th>NO</th>
                         <th>NAMA</th>
                         <th>NOMOR HP</th>
-                        <th>TGL PENDAFTARAN</th>
+                        <th>TGL DAFTAR</th>
                         <th>TERAKHIR LAPORAN</th>
                         <th>STATUS</th>
                         <th>DOMISILI</th>
@@ -217,7 +217,7 @@
                             <i class="fab fa-whatsapp"></i>
                           </a>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/detailpenduduk"),'/',$datatku->nik ?>">Detail</a>
-                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">isi laporan harian</a>
+                          <a class="btn btn-warning" href="<?php echo base_url("admin/isidata"),'/',$datatku->nik?>">laporan harian</a>
                       </td>
                     </tr>
               <?php }?> 
