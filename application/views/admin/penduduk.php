@@ -42,107 +42,14 @@
                       <td><?php echo $datatku['nomorhp']?></td>
                       <td><?php echo $datatku['tempat_isolasi'] ?></td>
                       <td>
-                        <?php if ($datatku['penduduk']==1) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==2) {?>
-                              Dukuh Krapyak Wetan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==3) {?>
-                              Dukuh Dongkelan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==4) {?>
-                              Dukuh Glugo <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==5) {?>
-                              Dukuh Kweni <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==6) {?>
-                              Dukuh Pelemsewu <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==7) {?>
-                              Dukuh Sawit <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==8) {?>
-                              Dukuh Pandes <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==9) {?>
-                              Dukuh Glondong <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==10) {?>
-                              Dukuh Jaranan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==11) {?>
-                              Dukuh Geneng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==12) {?>
-                              Dukuh Ngireng-ngireng <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==13) {?>
-                              Dukuh Cabeyan <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==14) {?>
-                              Dukuh Garon <?php echo $datatku['alamat'] ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==15) {?>
-                              Dukuh Dadapan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==16) {?>
-                              Dukuh Tembi <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==17) {?>
-                              Dukuh Gatak <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==18) {?>
-                              Dukuh Balong <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==19) {?>
-                              Dukuh Gabusan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==20) {?>
-                              Dukuh Dagan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==21) {?>
-                              Dukuh Sewon <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==22) {?>
-                              Dukuh Mriyan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==23) {?>
-                              Dukuh Kowen I <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==24) {?>
-                              Dukuh Kowen II <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datatku['penduduk']==25) {?>
-                              Dukuh Dobalan <?php echo $datatku['alamat'] ?>, Timbulharjo, Sewon.
-                            <?php } ?>
+                        <?php echo $datatku['pedukuhan'] ?>, RT <?php echo $datatku['RT'] ?>, <?php echo $datatku['kelurahan'] ?>, <?php echo $datatku['kecamatan'] ?>.
                       </td>
                       <td>
+                          <?php $hp = '+62'.substr(trim($datatku['nomorhp']), 1); ?>
+                            <a class="btn btn-success" href="https://api.whatsapp.com/send?phone='<?php echo $hp ?>'&text=Salam tangguh...%0a%0aSalam semangat sehat, bagaimana kondisinya hari ini Saudara/i <?php echo $datatku['nama'] ?> ? Semoga semakin bugar dan tetap jaga stamina dengan konsumsi makanan/minuman untuk menambah energi.%0a%0aApabila dalam kondisi darurat, hubungi kami di nomor Hotline dan terus update kondisi harian di BantulTangguh.com%0a%0a*pastisembuh%0a*pastisehat
+                          " class="float" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                          </a>
                           <a class="btn btn-primary" href="<?php echo base_url("admin/isianpenduduk"),'/',$datatku['nik']?>">Detail</a>
                       </td>
                     </tr>

@@ -2,6 +2,8 @@
           <!-- Data ODP -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
+                <a class="btn btn-danger" href="<?php echo base_url("admin/penduduk") ?>"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-warning" href="<?php echo base_url("admin/statuspendudukshelter"),'/',$datapenduduk->nik ?>">Ubah Status</a><br><br>
               <h6 class="m-0 font-weight-bold text-primary">Detail Data Penduduk</h6>
             </div>
             <div class="card-body">
@@ -26,114 +28,12 @@
                       <tr>
                           <td>Alamat</td>
                           <td class="text-primary">
-                            <?php if ($datapenduduk->penduduk==1) {?>
-                              Dukuh Krapyak Wetan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==2) {?>
-                              Dukuh Krapyak Wetan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==3) {?>
-                              Dukuh Dongkelan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==4) {?>
-                              Dukuh Glugo <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==5) {?>
-                              Dukuh Kweni <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==6) {?>
-                              Dukuh Pelemsewu <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==7) {?>
-                              Dukuh Sawit <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==8) {?>
-                              Dukuh Pandes <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==9) {?>
-                              Dukuh Glondong <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==10) {?>
-                              Dukuh Jaranan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==11) {?>
-                              Dukuh Geneng <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==12) {?>
-                              Dukuh Ngireng-ngireng <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==13) {?>
-                              Dukuh Cabeyan <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==14) {?>
-                              Dukuh Garon <?php echo $datapenduduk->alamat ?>, Panggungharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==15) {?>
-                              Dukuh Dadapan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==16) {?>
-                              Dukuh Tembi <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==17) {?>
-                              Dukuh Gatak <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==18) {?>
-                              Dukuh Balong <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==19) {?>
-                              Dukuh Gabusan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==20) {?>
-                              Dukuh Dagan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==21) {?>
-                              Dukuh Sewon <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==22) {?>
-                              Dukuh Mriyan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==23) {?>
-                              Dukuh Kowen I <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==24) {?>
-                              Dukuh Kowen II <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
-
-                            <?php if ($datapenduduk->penduduk==25) {?>
-                              Dukuh Dobalan <?php echo $datapenduduk->alamat ?>, Timbulharjo, Sewon.
-                            <?php } ?>
+                            <?php echo $datapenduduk->pedukuhan ?>, RT <?php echo $datapenduduk->RT ?>, <?php echo $datapenduduk->kelurahan ?>, <?php echo $datapenduduk->kecamatan ?>.
                           </td>
                       </tr>
                       <tr>
                           <td>Usia</td>
                           <td class="text-primary"><?php echo $datapenduduk->usia?></td>
-                      </tr>
-                      <tr>
-                          <td>Mulai Isolasi</td>
-                          <td class="text-primary"><?php echo $datapenduduk->mulai_isolasi?></td>
                       </tr>
                       <tr>
                           <td>Status dalam Keluarga</td>
@@ -151,6 +51,12 @@
                           <?php if($datapenduduk->status=='Suspect') { ?>
                             Suspect
                           <?php } ?>
+                          <?php if($datapenduduk->status=='sehat') { ?>
+                            Sehat
+                          <?php } ?>
+                          <?php if($datapenduduk->status=='Meningal Dunia') { ?>
+                            Meningal Dunia
+                          <?php } ?>
                           </td>
                       </tr>
                       <tr>
@@ -160,19 +66,17 @@
                       <tr>
                           <td>KTP</td>
                           <td>
+                              <?php if ($datapenduduk->gambar_ktp = 'default.jpg'){ ?>
+                              KTP tidak ada
+                              <?php } else {?>
                               <img src="<?php echo base_url('assets/surat/'.$datapenduduk->gambar_ktp) ?>" width="64"/><br><a href="<?php echo base_url('assets/surat/'.$datapenduduk->gambar_ktp) ?>" download>Download</a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>Surat Tes Swab</td>
-                          <td>
-                              <img src="<?php echo base_url('assets/surat/'.$datapenduduk->gambar_surat) ?>" width="64"/><br><a href="<?php echo base_url('assets/surat/'.$datapenduduk->gambar_surat) ?>" download>Download</a>
+                            <?php } ?>
                           </td>
                       </tr>
               
                     </table>
 </div>
-            </div>
+            </div></div>
           </div>
         </div>
         <!-- /.container-fluid -->

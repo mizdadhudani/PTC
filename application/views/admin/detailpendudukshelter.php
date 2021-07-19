@@ -37,13 +37,12 @@
         <div class="container-fluid">
 
              <div class="card-body">
-                 <br>
-                <a class="btn btn-danger" href="<?php echo base_url("admin")?>"><i class="fas fa-arrow-left"></i> Kembali</a>
-                <a class="btn btn-warning" href="<?php echo base_url("admin/editdata"),'/',$datapenduduk->nik ?>"><i class="fas "></i> Edit Data</a>
-                <a class="btn btn-primary" href="<?php echo base_url("admin/statuspenduduk"),'/',$datapenduduk->nik ?>">Ubah Status</a>
+                 <a class="btn btn-danger" href="<?php echo base_url("admin/shelter") ?>"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-warning" href="<?php echo base_url("admin/editdatashelter"),'/',$datapenduduk->nik ?>"><i class="fas "></i> Edit Data</a>
                 <?php if ($datapenduduk->status == 'Positif' || $datapenduduk->status == 'KE' || $datapenduduk->status == 'Suspect')  {?>
-                 
-                <a href="<?php echo base_url("admin/sudahsehat"),'/',$datapenduduk->nik ?>" class="btn btn-success" window.location.reload(); > Sudah Sehat</a> 
+                
+                <a href="<?php echo base_url("admin/sudahsehatshelter"),'/',$datapenduduk->nik ?>" class="btn btn-success" window.location.reload(); > Sudah Sehat</a> 
+                <a target="_blank" href="<?php echo base_url("admin/printselesaiisolasi"),'/',$datapenduduk->nik ?>" class="btn btn-primary" window.location.reload(); > Selesai Isolasi di Shelter</a>
               <?php } ?>
 
              <div class="card-body">
@@ -69,25 +68,28 @@
                           <td>Alamat</td>
                           <td class="text-primary">
                             <?php echo $datapenduduk->pedukuhan ?>, RT <?php echo $datapenduduk->RT ?>, <?php echo $datapenduduk->kelurahan ?>, <?php echo $datapenduduk->kecamatan ?>.
-                            
                           </td>
                       </tr>
                       <tr>
                           <td>Usia</td>
                           <td class="text-primary"><?php echo $datapenduduk->usia?></td>
                       </tr>
+                     <!--  <tr>
+                          <td>Tanggal Swab</td>
+                          <td class="text-primary"><?php echo $datapenduduk->mulai_isolasi?></td>
+                      </tr>
+                      <tr>
+                          <td>Mulai Isolasi di Shelter</td>
+                          <td class="text-primary"><?php echo $datapenduduk->mulai_dishelter?></td>
+                      </tr> -->
                       <tr>
                           <td>Status dalam Keluarga</td>
                           <td class="text-primary"><?php echo $datapenduduk->status_dlm_keluarga?></td>
                       </tr>
                       <tr>
-                          <td>Pekerjaan</td>
-                          <td class="text-primary"><?php echo $datapenduduk->pekerjaan ?></td>
-                      </tr>
-                      <tr>
                           <td>Status</td>
                           <td class="text-primary">
-                            <?php if($datapenduduk->status=='KE') { ?>
+                          <?php if($datapenduduk->status=='KE') { ?>
                             Kontak Erat
                           <?php } ?>
                           <?php if($datapenduduk->status=='positif') { ?>
@@ -106,7 +108,7 @@
                       </tr>
                       <tr>
                           <td>Tempat Isolasi</td>
-                          <td class="text-primary"><?php echo $datapenduduk->tempat_isolasi?></td>
+                          <td class="text-primary"><?php echo $datapenduduk->jeniskelamin?></td>
                       </tr>
                       <tr>
                           <td>KTP</td>
@@ -118,7 +120,7 @@
                           <?php } ?>
                           </td>
                       </tr>
-<!--                       <tr>
+                      <tr>
                           <td>Surat Tes Swab</td>
                           <td>
                              <?php if ($datapenduduk->gambar_ktp = 'default.jpg'){ ?>
@@ -127,7 +129,7 @@
                             <img src="<?php echo base_url('assets/surat/'.$datapenduduk->gambar_surat) ?>" width="64"/><br><a href="<?php echo base_url('assets/surat/'.$datapenduduk->gambar_surat) ?>" download>Download</a>
                           <?php } ?>
                           </td>
-                      </tr> -->
+                      </tr>
               
                     </table>
 </div>
@@ -207,7 +209,7 @@
               <?php foreach ($datascore as $datatku) { ?>
                 <?php $initanggal=date("Ymd", strtotime($datatku['tanggal']))?>
                 
-                <form action="<?php echo base_url("admin/cekdatatanggal"),'/',$datapenduduk->nik?>" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url("admin/cekdatatanggalshelter"),'/',$datapenduduk->nik?>" method="post" enctype="multipart/form-data">
                 <input type="text" name="tanggal" hidden="" value="<?php echo $datatku['tanggal']?>">
   
                   

@@ -250,6 +250,7 @@ class Penduduk_model extends CI_Model {
         $this->RT = $post["RT"];
         $this->nomorhp = $post["nomorhp"];
         $this->alamat_ktp = $post["alamat_ktp"];
+        $this->status = $post["status"];
         $this->tempat_isolasi = $post["tempat_isolasi"];
 
         $this->db->where('id=',$this->id = $post["id"]);
@@ -271,6 +272,126 @@ class Penduduk_model extends CI_Model {
         return $query->row();
     }
 
+    function datalengkappenduduk() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    function databeratshelter() {
+            $this->db->distinct();
+            $this->db->select ('*');
+            $this->db->from ('tb_penduduk ');
+            $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+            $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+            $this->db->where("score =3");
+            $this->db->where('tb_penduduk.tempat_isolasi','Shelter SMKN 2 Sewon');
+            $this->db->where('tb_qusoner.data', 'terupdate');
+            $this->db->group_by('tb_penduduk.nik');
+            $query = $this->db->get();
+            return $query->result_array();
+
+    }
+        function datasedangshelter() {
+            $this->db->distinct();
+            $this->db->select ('*');
+            $this->db->from ('tb_penduduk ');
+            $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+            $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+            $this->db->where("score =2");
+            $this->db->where('tb_penduduk.tempat_isolasi','Shelter SMKN 2 Sewon');
+            $this->db->where('tb_qusoner.data', 'terupdate');
+            $this->db->group_by('tb_penduduk.nik');
+            $query = $this->db->get();
+            return $query->result_array();
+
+    }
+
+        function dataringanshelter() {
+            $this->db->distinct();
+            $this->db->select ('*');
+            $this->db->from ('tb_penduduk ');
+            $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+            $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+            $this->db->where("score =1");
+            $this->db->where('tb_penduduk.tempat_isolasi','Shelter SMKN 2 Sewon');
+            $this->db->where('tb_qusoner.data', 'terupdate');
+            $this->db->group_by('tb_penduduk.nik');
+            $query = $this->db->get();
+            return $query->result_array();
+
+    }
+
+        function dataotgshelter() {
+            $this->db->distinct();
+            $this->db->select ('*');
+            $this->db->from ('tb_penduduk ');
+            $this->db->where('status !=', 'sehat');
+            $this->db->where('status !=', 'Meninggal Dunia');
+            $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik'); 
+            $this->db->where("score =0");
+            $this->db->where('tb_penduduk.tempat_isolasi','Shelter SMKN 2 Sewon');
+            $this->db->where('tb_qusoner.data', 'terupdate');
+            $this->db->group_by('tb_penduduk.nik');
+            $query = $this->db->get();
+            return $query->result_array();
+
+    }
+
+    function datalengkapshelter() {
+        $this->db->distinct();
+        $this->db->select ('*');
+        $this->db->from ('tb_penduduk ');
+        $this->db->join ('tb_qusoner','tb_penduduk.nik = tb_qusoner.nik');
+        $this->db->where('tb_penduduk.tempat_isolasi','Shelter SMKN 2 Sewon');
+        $this->db->where('status !=', 'sehat');
+        $this->db->where('status !=', 'Meninggal Dunia');
+        $this->db->where('tb_qusoner.data', 'terupdate');
+        $this->db->group_by('tb_penduduk.nik');
+        $this->db->order_by("score", "DESC");
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    function ubahsehat($nik) {
+        $post = $this->input->post();
+        $this->db->select ('* ');
+        $this->db->from ('tb_penduduk ');
+        $this->db->where('tb_penduduk.nik', $nik);
+        $query = $this->db->update('tb_penduduk', array('status' => 'sehat'));
+
+    }
+
+    function getdataid($nomorhp){
+     return $this->db->get_where("tb_penduduk",["nomorhp" => $nomorhp])->row();
+
+    }
+
+    function tambahlistbaru(){
+        $post = $this->input->post();
+        $this->id='';
+        $this->link = $post["link"];
+        $this->nama = $post["nama"];
+        $this->nik = $post["nik"];
+        $this->tgl_lahir = $post["tgl_lahir"];
+        $this->usia = $post["usia"];
+        $this->jeniskelamin = $post["jeniskelamin"];
+        $this->pekerjaan = $post["pekerjaan"];
+        $this->status_dlm_keluarga = $post["status_dlm_keluarga"];
+        $this->RT = $post["RT"];
+        $this->nomorhp = $post["nomorhp"];
+        $this->alamat_ktp = $post["alamat_ktp"];
+        $this->status = $post["status"];
+        $this->tempat_isolasi = $post["tempat_isolasi"];
+        
+       $this->db->insert($this->table,$this);
+    }
 	
 }
 

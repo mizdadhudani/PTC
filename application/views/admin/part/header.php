@@ -17,15 +17,20 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item <?php if($this->uri->uri_string() == 'admin') { echo 'active'; } ?>">
         <a class="nav-link" href="<?php echo base_url('admin')?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item <?php if($this->uri->uri_string() == 'admin/penduduk') { echo 'active'; } ?>">
         <a class="nav-link" href="<?php echo base_url('admin/penduduk')?>">
           <i class="fas fa-fw fa-user-alt"></i>
           <span>Data Penduduk</span></a>
+      </li>
+      <li class="nav-item <?php if($this->uri->uri_string() == 'admin/shelter') { echo 'active'; } ?>">
+        <a class="nav-link" href="<?php echo base_url('admin/shelter')?>">
+          <i class="fas fa-building"></i>
+          <span> Data Shelter SMK Sewon</span></a>
       </li>
 <!--       <li class="nav-item active">
         <a class="nav-link" href="<?php echo base_url('admin/aplikasiku')?>">

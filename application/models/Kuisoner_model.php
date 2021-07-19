@@ -138,5 +138,11 @@ class Kuisoner_model extends CI_Model {
 
     }
 
+    function getdataidk($nik){
+
+     return $this->db->get_where("tb_qusoner", ["nik" => $nik])->row();
+
+    }
+
 }
 

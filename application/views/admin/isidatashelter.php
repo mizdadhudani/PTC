@@ -1,4 +1,4 @@
-<form action="<?php echo base_url('admin/laporanharian')?>"  method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url('admin/laporanharianshelter')?>"  method="post" enctype="multipart/form-data">
 
 <body>
 
@@ -311,7 +311,7 @@
         <td>Berapakah Denyut Nadi Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="number" class="form-control" id="kelimabelas" name="kelimabelas" value="0"max="200"></div>
+             <input type="number" class="form-control" id="klimabelas" name="klimabelas" value="0"max="200"></div>
 
         </td>
 
@@ -336,7 +336,7 @@
         <td>Berapakah Suhu Tubuh Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="number" class="form-control" id="keenambelas" name="keenambelas"  pattern="[0-9]+([\.,][0-9]+)?" step="0.1" value="00.0" max="100"></div>
+             <input type="number" class="form-control" id="kenambelas" name="kenambelas"  pattern="[0-9]+([\.,][0-9]+)?" step="0.1" value="00.0" max="100"></div>
 
         </td>
 
@@ -362,7 +362,7 @@
         <td>Berapakah Saturasi Oksigen  Anda?<br> *jika tidak dilakukan pengukuran, isikan dengan 0</td>
         <td colspan="2">  <div class="form-check">
 
-             <input type="number" class="form-control" id="ketujuhbelas" name="ketujuhbelas" value="0" max="100"></div>
+             <input type="number" class="form-control" id="ktujuhbelas" name="ktujuhbelas" value="0" max="100"></div>
 
         </td>
 
@@ -460,7 +460,7 @@
 
          <!-- Remind Passowrd -->
 
-        </div>
+        </div></div>
 
       </div>
 

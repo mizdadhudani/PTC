@@ -7,12 +7,12 @@
              <div class="card-body">
                
                 <br>
-                <a class="btn btn-danger" href="<?php echo base_url("admin/detailpenduduk"),'/',$datap->nik ?>"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-danger" href="<?php echo base_url("admin/detailpendudukshelter"),'/',$datap->nik ?>"><i class="fas fa-arrow-left"></i> Kembali</a>
 
              <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="datapTable" width="100%" cellspacing="0">                  
-                     <form action="<?php echo base_url('admin/editdatabaru')?>"  method="post" enctype="multipart/form-datap">
+                     <form action="<?php echo base_url('admin/editdatabarushelter')?>"  method="post" enctype="multipart/form-datap">
 
     <div class="container">
 
@@ -75,7 +75,7 @@
             <option name="status" value="KE" <?php if($datap->status == 'KE') echo 'selected' ?>>Kontak Erat</option>
             <option name="status" value="Positif" <?php if($datap->status =='positif') echo 'selected' ?>>Positif</option>
             <option name="status" value="Suspect" <?php if($datap->status =='Suspect') echo 'selected' ?>>Suspect</option>
-            <option name="status" value="Sehat" <?php if($datap->status =='sehat') echo 'selected' ?>>Sehat</option>
+            <option name="status" value="Sehat" <?php if($datap->status =='Sehat') echo 'selected' ?>>Sehat</option>
             <option name="status" value="Meninggal Dunia" <?php if($datap->status =='Meninggal Dunia') echo 'selected' ?>>Meninggal Dunia</option>
           </select>
   </div>
